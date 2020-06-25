@@ -1,6 +1,6 @@
 # Green API - Postman Collection
 
-This is a Postman collection of [Green API](https://green-api.com/). The provided environment contains the list of variables referenced by the API collection.
+This is a Postman collection of [Green API](https://green-api.com/). It provides access to the WhatsApp API to send and receive messages and media by HTTP-API requests. The provided environment contains the list of variables referenced by the API collection.
 
 See docs for usage.
 https://green-api.com/docs/
