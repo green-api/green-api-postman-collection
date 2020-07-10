@@ -2,7 +2,6 @@
 	"info": {
 		"_postman_id": "b4ac6ed2-1f53-4c80-9d70-59d5f11cbd90",
 		"name": "Green API",
-		"description": "Методы API для инстансов аккаунтов",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -25,7 +24,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для получения текущих настроек инстанса аккаунта;\r\n\r\nМожно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON)\r\n\r\ncountryInstance - код страны инстанса аккаунта по стандарту ISO 3166-2 (string:2);\r\n\r\nwebhookUrl - установленный URL для получения webhook уведомлений (string);\r\n\r\nproxyInstance - ip адрес текущего прокси инстанса аккаунта (string);"
+						"description": "Документация [GetSettings](https://green-api.com/docs/api/account/GetSettings/)"
 					},
 					"response": [
 						{
@@ -71,18 +70,18 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"countryInstance\": \"ru\",\n    \"webhookUrl\": \"\",\n    \"proxyInstance\": \"100.100.100.100\"\n}"
+							"body": "{\n    \"wid\": \"79001234567@c.us\", \n    \"countryInstance\": \"ru\",\n    \"typeAccount\": \"vip\",\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\n    \"outgoingWebhook\": \"yes\",\n    \"stateWebhook\": \"yes\",\n    \"incomingWebhook\": \"yes\",\n    \"deviceWebhook\": \"no\"\n}"
 						}
 					]
 				},
 				{
-					"name": "Сохранить настройки аккаунта",
+					"name": "Установить настройки аккаунта",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"countryInstance\": \"uk\",\r\n\t\"webhookUrl\": \"https://mysite.ru\",\r\n\t\"delaySendMessagesMilliseconds\": 1000,\r\n\t\"markIncomingMessagesReaded\": \"no\",\r\n\t\"proxyInstance\": \"100.100.100.100:39898:qGKqCo:Jb26Xz\"\r\n}\r\n",
+							"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"delaySendMessagesMilliseconds\": 1000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -100,7 +99,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для смены настроек инстанса аккаунта;\r\n\r\nпараметры можно указывать все сразу или по отдельности. При вызове данного метода инстанс перезапускается;\r\n\r\nв случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки.\r\n\r\n**Параметры:** (JSON)\r\n\r\ncountryInstance - код страны инстанса аккаунта по стандарту ISO 3166-2 (string:2);\r\n\r\nwebhookUrl - URL для отправки webhook оповещений (string), если необходимо убрать webhook url, необходимо в качестве значения указать пустую строку;\r\n\r\ndelaySendMessagesMilliseconds - задержка между отправкой исходящих сообщений в миллисекундах (int), минимальное значение 500 мс.;\r\n\r\nmarkIncomingMessagesReaded - отмечать входящие сообщения прочитанными или нет (string), возможные значения yes/no;\r\n\r\nproxyInstance - прокси для инстанса аккаунта (string:{ip}:{port}:{login}:{password}), если вы хотите что бы инстанс работал на вашем прокси, по умолчанию используются системные прокси;\r\n\r\n**Ответ:** (JSON)\r\n\r\nsaveSettings - флаг что настройки сохранены (bool);"
+						"description": "Документация [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
 					},
 					"response": [
 						{
@@ -175,7 +174,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для получения состояния инстанса аккаунта Whatsapp;\r\n\r\nможно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON)\r\n\r\nstateInstance - состояние авторизации инстанса аккаунта (string), возможные варианты notAuthorized || authorized || sleepMode;\r\n\r\nreason - причина почему состояние авторизации инстанса аккаунта не возвращено (string). Присутствует, если stateInstance=пустая строка;"
+						"description": "Документация [GetStateInstance](https://green-api.com/docs/api/account/GetStateInstance/)"
 					},
 					"response": [
 						{
@@ -241,7 +240,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для перезагрузки (перезапуска) аккаунта Whatsapp;\r\n\r\nможно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON)\r\n\r\nisReboot- результат перезапуска аккаунта Whatsapp (bool);\r\n\r\nreason - причина почему инстанс аккаунта не перезапущен (string). Присутствует, если isReboot= false;"
+						"description": "Документация [Reboot](https://green-api.com/docs/api/account/Reboot/)"
 					},
 					"response": [
 						{
@@ -307,7 +306,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для разлогинивание аккаунта Whatsapp;\r\n\r\nможно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON)\r\n\r\nisLogout - результат разлогинивания аккаунта Whatsapp (bool);\r\n\r\nreason - причина почему инстанс аккаунта не разлогинен (string). Присутствует, если isLogout = false;"
+						"description": "Документация [Logout](https://green-api.com/docs/api/account/Logout/)"
 					},
 					"response": [
 						{
@@ -373,7 +372,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для сканирования QR кода для авторизации аккаунта Whatsapp;\r\n\r\nАккаунт WhatsApp должен быть в неавторизованном состоянии, если инстан не новый, нужно предварительно разлогинить аккаунт методом logout;\r\n\r\nНеобходимо установить websocket соединение по адресу: {{host-websocket}}/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}}\r\n\r\nНапример:\r\n\r\nwss://api.green-api.com/waInstance123/scanqrcode/7716c760bb1b9853bcc126bc1b133fac489ccf1b3dc969d4b1\r\n\r\nАвторизовать аккаунт можно по ссылке вида {{host}}/waInstance{{idInstance}}/{{apiTokenInstance}}\r\n\r\nНапример:\r\n\r\nhttps://api.green-api.com/waInstance123/7716c760bb1b9853bcc126bc1b133fac489ccf1b3dc969d4b1\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON)\r\n\r\ntype - тип сообщения (string), возможные значения qrCode || error || accountData || alreadyLogged || timeoutExpired;\r\n\r\nmessage - содержание сообщение (string);\r\n\r\n* если type=qrCode, message=изображение QR кода в base64 кодировке. Для вывода в браузере нужно добавить \"data:image/png;base64, {message}\";\r\n\r\n* если type=error, message=описание ошибки;\r\n\r\n* если type=alreadyLogged значит аккаунт Whatsapp уже авторизован, вызов QR кода невозможен;\r\n\r\n* если type=timeoutExpired значит стекло время за которое QR код должен был отсканирован;\r\n\r\nwid - идентификатор аккаунта в формате Whatsapp (string), когда type=accountData;\r\n\r\npushname - имя аккаунта в Whatsapp (string), когда type=accountData;\r\n\r\nproxy - ip адрес закрепленного прокси за аккаунтом (string), когда type=accountData;\r\n\r\nwebhookUrl - URL для получения webhook уведомлений (string), когда type=accountData;"
+						"description": "Документация [Scanqrcode](https://green-api.com/docs/api/account/Scanqrcode/)"
 					},
 					"response": []
 				}
@@ -390,7 +389,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"message\": \"Hello man\"\r\n}",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -408,7 +407,91 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Подробное описание метода [SendMessage](https://green-api.com/documents/green-api.html#2e085ffd-6328-4440-882d-a88f6255f33b)"
+						"description": "Документация [SendMessage](https://green-api.com/docs/api/sending/SendMessage/)"
+					},
+					"response": [
+						{
+							"name": "sendMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"message\": \"Hello man\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Отправить текст в группу",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"79001234567-1581234048@g.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SendMessage](https://green-api.com/docs/api/sending/SendMessage/)"
 					},
 					"response": [
 						{
@@ -477,12 +560,7 @@
 							"formdata": [
 								{
 									"key": "chatId",
-									"value": "",
-									"type": "text"
-								},
-								{
-									"key": "phoneNumber",
-									"value": "79001234567",
+									"value": "79001234567@c.us",
 									"type": "text"
 								},
 								{
@@ -511,7 +589,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для отправки файла, загружаемого через форму (form-data);\r\n\r\nразмер принимаемых файлов ограничен 37 мегабайтами;\r\n\r\nсообщение будет добавлено в очередь на отправку;\r\n\r\nфайлы видео, аудио и изображений отправляются как и в родном Whatsapp с возможностью просмотра и прослушки;\r\n\r\nдокументы отправляются так же как в родном Whatsapp;\r\n\r\nтип отправляемого файла и способ его отправки определяется по расширению файла;\r\n\r\n**Параметры:** (form-data)\r\n\r\nchatId - идентификатор чата (string) в формате Whatsapp (17633123456@c.us - для личных сообщений). Обязателен, если не указан phoneNumber;\r\n\r\nphoneNumber - номер телефона получателя (int) в международном формате (без +) 11 или 12 цифр. Обязателен, если не указан chatId;\r\n\r\ncaption - описание под файлом (string), необязательный параметр. Описание добавляется видео, изображениям и документам;\r\n\r\nfile - отправляемый файл (file);\r\n\r\n**Ответ:** (JSON)\r\n\r\nidMessage  - идентификатор сообщения (string:20);\r\n\r\nreason - причина почему сообщение не было добавлено в очередь на отправку (string). Присутствует, если нет idMessage; Возможные значения reason:\r\n\r\n* instance in starting process try later - инстанс аккаунта находится в процессе запуска/перезапуска, попробовать спустя несколько секунд;\r\n\r\n* instance account not authorized - инстанс аккаунта не авторизован;\r\n\r\n* bad request data - данные запроса не валидны;"
+						"description": "Документация [SendFileByUpload](https://green-api.com/docs/api/sending/SendFileByUpload/)"
 					},
 					"response": [
 						{
@@ -598,7 +676,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \t\"chatId\": \"79001234567@c.us\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"urlFile\": \"https://avatars.mds.yandex.net/get-pdb/477388/77f64197-87d2-42cf-9305-14f49c65f1da/s375\",\r\n\t\"fileName\": \"horse.png\",\r\n\t\"caption\": \"лошадка\"\r\n}",
+							"raw": "{\r\n   \t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlFile\": \"https://avatars.mds.yandex.net/get-pdb/477388/77f64197-87d2-42cf-9305-14f49c65f1da/s375\",\r\n\t\"fileName\": \"horse.png\",\r\n\t\"caption\": \"лошадка\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -616,7 +694,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для отправки файла, загружаемого по ссылке;\r\n\r\nразмер принимаемых файлов ограничен 37 мегабайтами;\r\n\r\nсообщение будет добавлено в очередь на отправку;\r\n\r\nфайлы видео, аудио и изображений отправляются как и в родном Whatsapp с возможностью просмотра и прослушки;\r\n\r\nдокументы отправляются так же как в родном Whatsapp;\r\n\r\nтип отправляемого файла и способ его отправки определяется по расширению файла;\r\n\r\n**Параметры:** (JSON)\r\n\r\nchatId - идентификатор чата (string) в формате Whatsapp (17633123456@c.us - для личных сообщений). Обязателен, если не указан phoneNumber;\r\n\r\nphoneNumber - номер телефона получателя (int) в международном формате (без +) 11 или 12 цифр. Обязателен, если не указан chatId;\r\n\r\nurlFile - ссылка на отправляемый файл (string), обязательный параметр;\r\n\r\nfileName - название файла (string), обязательный параметр. Должен содержать расширение файла;\r\n\r\ncaption - описание под файлом (string), необязательный параметр. Описание добавляется видео, изображениям и документам;\r\n\r\n**Ответ:** (JSON)\r\n\r\nidMessage  - идентификатор сообщения (string:20);\r\n\r\nreason - причина почему сообщение не было добавлено в очередь на отправку (string). Присутствует, если нет idMessage; Возможные значения reason:\r\n\r\n* instance in starting process try later - инстанс аккаунта находится в процессе запуска/перезапуска, попробовать спустя несколько секунд;\r\n\r\n* instance account not authorized - инстанс аккаунта не авторизован;\r\n\r\n* bad request data - данные запроса не валидны;"
+						"description": "Документация [SendFileByUrl](https://green-api.com/docs/api/sending/SendFileByUrl/)"
 					},
 					"response": [
 						{
@@ -682,7 +760,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"chatId\": \"\",\r\n    \"phoneNumber\": 79001234567,\r\n    \"nameLocation\": \"Я здесь, приезжай\",\r\n    \"address\": \"613123, Perm\",\r\n   \t\"latitude\": 44.9370129,\r\n    \"longitude\": 89.8728409\r\n}\r\n",
+							"raw": "{\r\n    \"chatId\": \"79001234567@c.us\",\r\n    \"nameLocation\": \"Я здесь, приезжай\",\r\n    \"address\": \"613123, Perm\",\r\n   \t\"latitude\": 44.9370129,\r\n    \"longitude\": 89.8728409\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -700,7 +778,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для отправки сообщения геолокации;\r\n\r\nсообщение будет добавлено в очередь на отправку;\r\n\r\nв случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки. Возможные значения ошибки:\r\n\r\n* instance in starting process try later - инстанс аккаунта находится в процессе запуска/перезапуска, попробовать спустя несколько секунд;\r\n\r\n* instance account not authorized - инстанс аккаунта не авторизован;\r\n\r\n* bad request data - данные запроса не валидны;\r\n\r\n**Параметры:** (JSON)\r\n\r\nchatId - идентификатор чата (string) в формате Whatsapp (79001234567@c.us - для личных сообщений, 79001234567-1478491234@g.us - для сообщений в группу). Обязателен, если не указан phoneNumber;\r\n\r\nphoneNumber - номер телефона получателя (int) в международном формате (без +) 11 или 12 цифр. Обязателен, если не указан chatId;\r\n\r\nnameLocation - название локации (string), необязательный параметр;\r\n\r\naddress - адрес локации (string), необязательный параметр;\r\n\r\nlatitude - широта локации (double), обязательный параметр;\r\n\r\nlongitude - долгота локации (double), обязательный параметр;\r\n\r\n**Ответ:** (JSON)\r\n\r\nidMessage  - идентификатор сообщения (string:20);"
+						"description": "Документация [SendLocation](https://green-api.com/docs/api/sending/SendLocation/)"
 					},
 					"response": [
 						{
@@ -766,7 +844,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234568,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234568,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -784,7 +862,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для отправки сообщения с контактом;\r\n\r\nформируется визитная карточка контакта и отправляется в чат;\r\n\r\nсообщение будет добавлено в очередь на отправку;\r\n\r\nв случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки. Возможные значения ошибки:\r\n\r\n* instance in starting process try later - инстанс аккаунта находится в процессе запуска/перезапуска, попробовать спустя несколько секунд;\r\n\r\n* instance account not authorized - инстанс аккаунта не авторизован;\r\n\r\n* bad request data - данные запроса не валидны;\r\n\r\n**Параметры:** (JSON)\r\n\r\nchatId - идентификатор чата (string) в формате Whatsapp (79001234567@c.us - для личных сообщений, 79001234567-1478491234@g.us - для сообщений в группу). Обязателен, если не указан phoneNumber;\r\n\r\nphoneNumber - номер телефона получателя (int) в международном формате (без +) 11 или 12 цифр. Обязателен, если не указан chatId;\r\n\r\ncontact - объект о контакте. Обязательным условием является наличии хотя бы одного из полей (firstName || middleName || lastName || company). Поля:\r\n\r\n* phoneContact - номер телефона контакта (int), обязательный параметр в международном формате (без +) 11 или 12 цифр;\r\n\r\n* firstName - имя контакта (string);\r\n\r\n* middleName - отчество контакта (string);\r\n\r\n* lastName - фамилия контакта (string);\r\n\r\n* company - название компании контакта (string);\r\n\r\n**Ответ:** (JSON)\r\n\r\nidMessage  - идентификатор сообщения (string:20);"
+						"description": "Документация [SendContact](https://green-api.com/docs/api/sending/SendContact/)"
 					},
 					"response": [
 						{
@@ -850,7 +928,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"urlLink\": \"https://www.youtube.com/watch?v=00000000000\"\r\n}\r\n",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlLink\": \"https://green-api.com\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -868,7 +946,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для отправки сообщения со ссылкой, по которой будут добавлены превью изображения, заголовок и описание;\r\n\r\nкартинка, заголовок и описание получаются из Open Graph разметки страницы, на которую указывает ссылка;\r\n\r\nсообщение будет добавлено в очередь на отправку;\r\n\r\nв случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки. Возможные значения ошибки:\r\n\r\n* instance in starting process try later - инстанс аккаунта находится в процессе запуска/перезапуска, попробовать спустя несколько секунд;\r\n\r\n* instance account not authorized - инстанс аккаунта не авторизован;\r\n\r\n* bad request data - данные запроса не валидны;\r\n\r\n**Параметры:** (JSON)\r\n\r\nchatId - идентификатор чата (string) в формате Whatsapp (79001234567@c.us - для личных сообщений, 79001234567-1478491234@g.us - для сообщений в группу). Обязателен, если не указан phoneNumber;\r\n\r\nphoneNumber - номер телефона получателя (int) в международном формате (без +) 11 или 12 цифр. Обязателен, если не указан chatId;\r\n\r\nurlLink - адрес ссылки;\r\n\r\n**Ответ:** (JSON)\r\n\r\nidMessage  - идентификатор сообщения (string:20);"
+						"description": "Документация [SendLink](https://green-api.com/docs/api/sending/SendLink/)"
 					},
 					"response": [
 						{
@@ -1008,13 +1086,13 @@
 							"name": "Входящее сообщение",
 							"item": [
 								{
-									"name": "Входящее сообщение: текст",
+									"name": "Входящее текстовое сообщение",
 									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n\t\"typeWebhook\":\"incomingMessageReceived\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\":1,\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\":1586700997,\r\n\t\"idMessage\":\"5A5A9EE49FBAACC3E30C2704632FFA1B\",\r\n\t\"senderData\":{\r\n\t\t\"chatId\":\"79824784355@c.us\",\r\n\t\t\"sender\":\"79824784355@c.us\",\r\n\t\t\"senderName\":\"МТС Мой\"\r\n\t},\r\n\t\"messageData\":{\r\n\t\t\"typeMessage\":\"textMessage\",\r\n\t\t\"textMessageData\":{\r\n\t\t\t\"textMessage\":\"Text send\"\r\n\t\t}\r\n\t}\r\n}",
+											"raw": "{\r\n\t\"typeWebhook\":\"incomingMessageReceived\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\":1586700997,\r\n\t\"idMessage\":\"5A5A9EE49FBAACC3E30C2704632FFA1B\",\r\n\t\"senderData\":{\r\n\t\t\"chatId\":\"79001234568@c.us\",\r\n\t\t\"sender\":\"79001234568@c.us\",\r\n\t\t\"senderName\":\"Green API\"\r\n\t},\r\n\t\"messageData\":{\r\n\t\t\"typeMessage\":\"textMessage\",\r\n\t\t\"textMessageData\": {\r\n\t\t\t\"textMessage\": \"I use Green-API to send this message to you!\"\r\n\t\t}\r\n\t}\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1024,18 +1102,18 @@
 										"url": {
 											"raw": ""
 										},
-										"description": "typeWebhook=incomingMessageReceived\n\ntypeMessage = textMessage\n\nполучено входящее текстовое сообщение.\n\n**Параметры:** (JSON)\n\ntypeWebhook - тип webhook уведомления (string). Возможные варианты stateInstanceChanged || outgoingMessageStatus || incomingMessageReceived || deviceInfo;\n\ninstanceData - данные об инстансе аккаунта Whatsapp (object);\n\ntimestamp - время наступления события в UNIX формате (int);\n\nidMessage (string) - идентификатор входящего сообщения.\n\nsenderData (object), данные об отправителе сообщения/файла, где:\n\n* chatId - идентификатор чата (string), в котором получено сообщение/файл;\n\n* sender - идентификатор отправителя сообщения/файла (string);\n\n* senderName - имя отправителя (string);\n\nmessageData (object), данные о принятом сообщении/файле, где:\n\n* typeMessage - тип принятого сообщения (string), возможные значения:\n  * textMessage;\n  * imageMessage;\n  * videoMessage;\n  * documentMessage;\n  * audioMessage;\n  * locationMessage;\n  * contactMessage;\n  * extendedTextMessage\n \n* textMessageData - объект данных о текстовом сообщении, если typeMessage=textMessage;"
+										"description": "Документация [TextMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/TextMessage/)"
 									},
 									"response": []
 								},
 								{
-									"name": "Входящее сообщение: текст с URL",
+									"name": "Входящее текстовое сообщение с URL",
 									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1,\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588095273,\n    \"idMessage\": \"3EB0818D69F8B6C4774B\",\n    \"senderData\": {\n        \"chatId\": \"74433384355@c.us\",\n        \"sender\": \"74433384355@c.us\",\n        \"senderName\": \"МТС Мой\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"extendedTextMessage\",\n        \"extendedTextMessageData\": {\n            \"text\": \"https://www.youtube.com/watch?v=00000000000\",\n            \"description\": \"Друзья! Это новый проект на канале Чердак. Вы увидите как я купил Ford Mustang по цене Iphone. Я начинаю строить настоящий американский Muscle Car. Сейчас у ...\",\n            \"title\": \"Как купить Ford Mustang по цене Iphone XS\",\n            \"previewType\": \"video\",\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgAAAAAAAAAAAAA/2wAAAAAAAAAAAAYGBQYHBwYIChAKCgkJChQODwwQFxQYG==\"\n        }\n    }\n}",
+											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"79001234567@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588095273,\n    \"idMessage\": \"3EB0818D69F8B6C4774B\",\n    \"senderData\": {\n\t\t\"chatId\":\"79001234568@c.us\",\n\t\t\"sender\":\"79001234568@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"extendedTextMessage\",\n        \"extendedTextMessageData\": {\n            \"text\": \"https://green-api.com/docs/video\",\n            \"description\": \"Green API docs shows how you can develop the WhatsApp Bot\",\n            \"title\": \"How to develop WhatsApp Bot\",\n            \"previewType\": \"video\",\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgAAAAAAAAAAAAA/2wAAAAAAAAAAAAYGBQYHBwYIChAKCgkJChQODwwQFxQYG==\"\n        }\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1045,18 +1123,18 @@
 										"url": {
 											"raw": ""
 										},
-										"description": "typeWebhook=incomingMessageReceived\n\ntypeMessage = extendedTextMessage\n\nполучено входящее текстовое сообщение с ссылкой.\n\n**Параметры:** (JSON)\n\ntypeWebhook - тип webhook уведомления (string). Возможные варианты stateInstanceChanged || outgoingMessageStatus || incomingMessageReceived || deviceInfo;\n\ninstanceData - данные об инстансе аккаунта Whatsapp (object);\n\ntimestamp - время наступления события в UNIX формате (int);\n\nidMessage (string) - идентификатор входящего сообщения.\n\nsenderData (object), данные об отправителе сообщения/файла, где:\n\n* chatId - идентификатор чата (string), в котором получено сообщение/файл;\n\n* sender - идентификатор отправителя сообщения/файла (string);\n\n* senderName - имя отправителя (string);\n\nmessageData (object), данные о принятом сообщении/файле, где:\n\n* typeMessage - тип принятого сообщения (string), возможные значения:\n  * textMessage;\n  * imageMessage;\n  * videoMessage;\n  * documentMessage;\n  * audioMessage;\n  * locationMessage;\n  * contactMessage;\n  * extendedTextMessage\n \n* extendedTextMessageData - объект данных о принятой ссылке с метаданными, когда typeMessage = extendedTextMessage;"
+										"description": "Документация [ExtendedTextMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/ExtendedTextMessage/)"
 									},
 									"response": []
 								},
 								{
-									"name": "Входящее сообщение: видео, аудио, изображение, документ",
+									"name": "Входящее сообщение с изображением, видео, аудио, документом",
 									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n\t\"typeWebhook\":\"incomingMessageReceived\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\":1,\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\": 1586700802,\r\n\t\"idMessage\":\"19136A974392FA8CF584D70DD0E1AEDF\",\r\n\t\"senderData\":{\r\n\t\t\"chatId\":\"79824784355@c.us\",\r\n\t\t\"sender\":\"79824784355@c.us\",\r\n\t\t\"senderName\":\"МТС Мой\"\r\n\t},\r\n\t\"messageData\":{\r\n\t\t\"typeMessage\":\"imageMessage\",\r\n\t\t\"fileMessageData\":{\r\n\t\t\t\"downloadUrl\":\"https://api.zolloto.com/waInstance1/downloadFile/19136A974392FA8CF584D70DD0E1AEDF\",\r\n\t\t\t\"caption\":\"Картинка\"\r\n\t\t}\r\n\t}\r\n}\r\n",
+											"raw": "{\r\n\t\"typeWebhook\":\"incomingMessageReceived\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\": \"whatsapp\"\r\n\t},\r\n\t\"timestamp\": 1586700802,\r\n\t\"idMessage\":\"19136A974392FA8CF584D70DD0E1AEDF\",\r\n\t\"senderData\":{\r\n\t\t\"chatId\":\"79001234568@c.us\",\r\n\t\t\"sender\":\"79001234568@c.us\",\r\n\t\t\"senderName\":\"Green API\"\r\n\t},\r\n\t\"messageData\":{\r\n\t\t\"typeMessage\":\"imageMessage\",\r\n\t\t\"fileMessageData\":{\r\n\t\t\t\"downloadUrl\":\"https://api.green-api.com/waInstance1234/downloadFile/19136A974392FA8CF584D70DD0E1AEDF\",\r\n\t\t\t\"caption\": \"Картинка\"\r\n\t\t}\r\n\t}\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1066,18 +1144,18 @@
 										"url": {
 											"raw": ""
 										},
-										"description": "typeWebhook=incomingMessageReceived\n\ntypeMessage = (imageMessage || videoMessage || documentMessage || audioMessage)\n\nполучен файл.\n\n**Параметры:** (JSON)\n\ntypeWebhook - тип webhook уведомления (string). Возможные варианты stateInstanceChanged || outgoingMessageStatus || incomingMessageReceived || deviceInfo;\n\ninstanceData - данные об инстансе аккаунта Whatsapp (object);\n\ntimestamp - время наступления события в UNIX формате (int);\n\nidMessage (string) - идентификатор входящего сообщения.\n\nsenderData (object), данные об отправителе сообщения/файла, где:\n\n* chatId - идентификатор чата (string), в котором получено сообщение/файл;\n\n* sender - идентификатор отправителя сообщения/файла (string);\n\n* senderName - имя отправителя (string);\n\nmessageData (object), данные о принятом сообщении/файле, где:\n\n* typeMessage - тип принятого сообщения (string), возможные значения:\n  * textMessage;\n  * imageMessage;\n  * videoMessage;\n  * documentMessage;\n  * audioMessage;\n  * locationMessage;\n  * contactMessage;\n  * extendedTextMessage\n\n* fileMessageData - объект данных о принятом файле, когда typeMessage = (imageMessage || videoMessage || documentMessage || audioMessage). Скачать полученный файл можно по ссылке в downloadUrl."
+										"description": "Документация [ImageMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/ImageMessage/)"
 									},
 									"response": []
 								},
 								{
-									"name": "Входящее сообщение: геопозиция",
+									"name": "Входящее сообщение с геолокацией",
 									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1,\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588088591,\n    \"idMessage\": \"4EAAB7F6552F6F91785D1365C0358C58\",\n    \"senderData\": {\n        \"chatId\": \"74433384355@c.us\",\n        \"sender\": \"74433384355@c.us\",\n        \"senderName\": \"МТС Мой\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"locationMessage\",\n        \"locationMessageData\": {\n            \"latitude\": 57.940086364746094,\n            \"longitude\": 55.838706970214844,\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFx=\"\n        }\n    }\n}",
+											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"79001234567@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588088591,\n    \"idMessage\": \"4EAAB7F6552F6F91785D1365C0358C58\",\n    \"senderData\": {\n\t\t\"chatId\":\"79001234568@c.us\",\n\t\t\"sender\":\"79001234568@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"locationMessage\",\n        \"locationMessageData\": {\n            \"latitude\": 57.940086364746094,\n            \"longitude\": 55.838706970214844,\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFx=\"\n        }\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1087,18 +1165,18 @@
 										"url": {
 											"raw": ""
 										},
-										"description": "typeWebhook=incomingMessageReceived\n\ntypeMessage = locationMessage\n\nполучено входящее сообщение с геолокацией.\n\n**Параметры:** (JSON)\n\ntypeWebhook - тип webhook уведомления (string). Возможные варианты stateInstanceChanged || outgoingMessageStatus || incomingMessageReceived || deviceInfo;\n\ninstanceData - данные об инстансе аккаунта Whatsapp (object);\n\ntimestamp - время наступления события в UNIX формате (int);\n\nidMessage (string) - идентификатор входящего сообщения.\n\nsenderData (object), данные об отправителе сообщения/файла, где:\n\n* chatId - идентификатор чата (string), в котором получено сообщение/файл;\n\n* sender - идентификатор отправителя сообщения/файла (string);\n\n* senderName - имя отправителя (string);\n\nmessageData (object), данные о принятом сообщении/файле, где:\n\n* typeMessage - тип принятого сообщения (string), возможные значения:\n  * textMessage;\n  * imageMessage;\n  * videoMessage;\n  * documentMessage;\n  * audioMessage;\n  * locationMessage;\n  * contactMessage;\n  * extendedTextMessage\n \n* locationMessageData - объект данных о принятой геолокации, когда typeMessage = locationMessage;"
+										"description": "Документация [LocationMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/LocationMessage/)"
 									},
 									"response": []
 								},
 								{
-									"name": "Входящее сообщение: контакт",
+									"name": "Входящее сообщение с контактом",
 									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1,\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588091580,\n    \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\n    \"senderData\": {\n        \"chatId\": \"74433384355@c.us\",\n        \"sender\": \"74433384355@c.us\",\n        \"senderName\": \"МТС Мой\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"contactMessage\",\n        \"contactMessageData\": {\n            \"displayName\": \"Виктор Андреевич\",\n            \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Андреевич;Виктор;;;\\nFN:Виктор Андреевич\\nORG:Image\\nTITLE:\\nitem1.TEL;waid=79001234567:+7 900 123-45-67\\nitem1.X-ABLabel:Мобильный\\nEND:VCARD\"\n        }\n    }\n}",
+											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"79001234567@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588091580,\n    \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\n    \"senderData\": {\n\t\t\"chatId\":\"79001234568@c.us\",\n\t\t\"sender\":\"79001234568@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"contactMessage\",\n        \"contactMessageData\": {\n            \"displayName\": \"Виктор Андреевич\",\n            \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Андреевич;Виктор;;;\\nFN:Виктор Андреевич\\nORG:Image\\nTITLE:\\nitem1.TEL;waid=79001234567:+7 900 123-45-67\\nitem1.X-ABLabel:Мобильный\\nEND:VCARD\"\n        }\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1108,7 +1186,7 @@
 										"url": {
 											"raw": ""
 										},
-										"description": "typeWebhook=incomingMessageReceived\n\ntypeMessage = contactMessage\n\nполучено входящее сообщение с контактом.\n\n**Параметры:** (JSON)\n\ntypeWebhook - тип webhook уведомления (string). Возможные варианты stateInstanceChanged || outgoingMessageStatus || incomingMessageReceived || deviceInfo;\n\ninstanceData - данные об инстансе аккаунта Whatsapp (object);\n\ntimestamp - время наступления события в UNIX формате (int);\n\nidMessage (string) - идентификатор входящего сообщения.\n\nsenderData (object), данные об отправителе сообщения/файла, где:\n\n* chatId - идентификатор чата (string), в котором получено сообщение/файл;\n\n* sender - идентификатор отправителя сообщения/файла (string);\n\n* senderName - имя отправителя (string);\n\nmessageData (object), данные о принятом сообщении/файле, где:\n\n* typeMessage - тип принятого сообщения (string), возможные значения:\n  * textMessage;\n  * imageMessage;\n  * videoMessage;\n  * documentMessage;\n  * audioMessage;\n  * locationMessage;\n  * contactMessage;\n  * extendedTextMessage\n \n* contactMessageData - объект данных о принятом контакте, когда typeMessage = contactMessage;"
+										"description": "Документация [ContactMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/ContactMessage/)"
 									},
 									"response": []
 								}
@@ -1148,7 +1226,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n\t\"typeWebhook\":\"outgoingMessageStatus\",\r\n\t\"timestamp\":1586700802,\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\":1,\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"idMessage\":\"3EB0608D6A2901063D63\",\r\n\t\"status\":\"noAccount\"\r\n}\r\n",
+											"raw": "{\r\n\t\"typeWebhook\":\"outgoingMessageStatus\",\r\n\t\"timestamp\":1586700802,\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"idMessage\":\"3EB0608D6A2901063D63\",\r\n\t\"status\":\"noAccount\"\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1158,7 +1236,7 @@
 										"url": {
 											"raw": ""
 										},
-										"description": "typeWebhook=outgoingMessageStatus\n\nполучен статус отправленного исходящего сообщения или файла\n\n**Параметры:** (JSON)\n\ntypeWebhook - тип webhook уведомления (string). Возможные варианты stateInstanceChanged || outgoingMessageStatus || incomingMessageReceived || deviceInfo;\n\ninstanceData - данные об инстансе аккаунта Whatsapp (object);\n\ntimestamp - время наступления события в UNIX формате (int);\n\nidMessage - идентификатор исходящего сообщения или файла (string), отправленного методами sendMessage, sendFileByUrl, sendFileByUpload, sendLocation, sendContact, sendLink;\n\nstatus - статус отправленного исходящего сообщения или файла (string), которое может принимать пять значений:\n\n* noAccount - нет аккаунта на номере телефона;\n\n* notInGroup - не состоите в данной группе;\n\n* sent - отправлено;\n\n* delivered - доставлено;\n\n* read - прочитано/просмотрено/прослушано;"
+										"description": "Документация [OutgoingMessageStatus](https://green-api.com/docs/api/receiving/webhook/outgoing-message/OutgoingMessageStatus/)"
 									},
 									"response": []
 								}
@@ -1173,7 +1251,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"typeWebhook\":\"stateInstanceChanged\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\":1,\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\":1586700690,\r\n\t\"stateInstance\":\"notAuthorized\"\r\n}",
+									"raw": "{\r\n\t\"typeWebhook\":\"stateInstanceChanged\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\":1586700690,\r\n\t\"stateInstance\":\"notAuthorized\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1183,7 +1261,7 @@
 								"url": {
 									"raw": ""
 								},
-								"description": "typeWebhook=stateInstanceChanged\r\n\r\nизменение состояние авторизации аккаунта\r\n\r\n**Параметры:** (JSON)\r\n\r\ntypeWebhook - тип webhook уведомления (string). Возможные варианты stateInstanceChanged || outgoingMessageStatus || incomingMessageReceived || deviceInfo;\r\n\r\ninstanceData - данные об инстансе аккаунта Whatsapp (object);\r\n\r\ntimestamp - время наступления события в UNIX формате (int);\r\n\r\nstateInstance (string), которое может принимать три значения:\r\n\r\n* notAuthorized - инстанс аккаунта не авторизован;\r\n\r\n* authorized - инстанс аккаунта авторизован;\r\n\r\n* sleepMode - инстанс аккаунта ушел в спящий режим, возможен когда выключен телефон;"
+								"description": "Документация [StateInstanceChanged](https://green-api.com/docs/api/receiving/webhook/StateInstanceChanged/)"
 							},
 							"response": []
 						},
@@ -1194,7 +1272,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"typeWebhook\": \"deviceInfo\",\r\n\t\"instanceData\": {\r\n\t\t\"idInstance\": 1,\r\n\t\t\"typeInstance\": \"whatsapp\"\r\n\t},\r\n\t\"timestamp\": 1586700802,\r\n\t\"deviceData\": {\r\n\t\t\"platform\": \"iphone\",\r\n\t\t\"deviceManufacturer\": \"Apple\",\r\n\t\t\"deviceModel\": \"iPhone 11\",\r\n\t\t\"osVersion\": \"13.4.1\",\r\n\t\t\"waVersion\": \"2.20.42\",\r\n\t\t\"battery\": 90\r\n\t}\r\n}",
+									"raw": "{\r\n\t\"typeWebhook\": \"deviceInfo\",\r\n\t\"instanceData\": {\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\": \"whatsapp\"\r\n\t},\r\n\t\"timestamp\": 1586700802,\r\n\t\"deviceData\": {\r\n\t\t\"platform\": \"iphone\",\r\n\t\t\"deviceManufacturer\": \"Apple\",\r\n\t\t\"deviceModel\": \"iPhone 11\",\r\n\t\t\"osVersion\": \"13.4.1\",\r\n\t\t\"waVersion\": \"2.20.42\",\r\n\t\t\"battery\": 90\r\n\t}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1204,7 +1282,7 @@
 								"url": {
 									"raw": ""
 								},
-								"description": "typeWebhook=deviceInfo\n\nполучены данные об устройстве и уровне заряда батареи, на котором запущено приложение Whatsapp\n\n**Параметры:** (JSON)\n\ntypeWebhook - тип webhook уведомления (string). Возможные варианты stateInstanceChanged || outgoingMessageStatus || incomingMessageReceived || deviceInfo;\n\ninstanceData - данные об инстансе аккаунта Whatsapp (object);\n\ntimestamp - время наступления события в UNIX формате (int);\n\ndeviceData (object), поля которого имеют следующие значения:\n\n* platform - операционная система устройства на котором запущено приложение Whatsapp;\n\n* deviceManufacturer - производитель устройства;\n\n* deviceModel - модель устройства;\n\n* osVersion - версия операционной системы;\n\n* waVersion - версия приложения Whatsapp;\n\n* battery - уровень заряда батареи;"
+								"description": "Документация [DeviceInfo](https://green-api.com/docs/api/receiving/webhook/DeviceInfo/)"
 							},
 							"response": []
 						}
@@ -1231,7 +1309,7 @@
 										"{{idMessage}}"
 									]
 								},
-								"description": "Метод предназначен для скачивания принятых файлов инстансами аккаунтов Whatsapp во входящих сообщениях;\r\n\r\nссылки на принятые файлы передаются в webhook уведомлениях;\r\n\r\nсрок хранения принятых файлов и соответственно возможность их скачивания ограничено 24 часами;\r\n\r\nработает POST или GET запрос\r\n\r\n**Параметры:**\r\n\r\nВ URL запроса: idMessage - идентификатор сообщения, передаваемый  в webhook уведомлениях (string);\r\n\r\n**Ответ:**\r\n\r\nФайл, принятый инстансом аккаунта во входящем сообщении."
+								"description": "Документация [DownloadFile](https://green-api.com/docs/api/receiving/files/DownloadFile/)"
 							},
 							"response": []
 						}
@@ -1261,7 +1339,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод возвращает крайние входящие сообщения инстанса аккаунта Whatsapp;\r\n\r\nсрок хранения входящих сообщений на сервере равен 24 часа;\r\n\r\nможно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON, массив)\r\n\r\nidMessage - идентификатор входящего сообщения (string);\r\n\r\ntimestamp - время принятия сообщения в UNIX (int);\r\n\r\ntypeMessage - тип сообщения (string), возможные значения:\r\n\r\n* textMessage - текстовое сообщение;\r\n\r\n* imageMessage - сообщение с изображением;\r\n\r\n* videoMessage - видео сообщение;\r\n\r\n* documentMessage - сообщение с файлом документа;\r\n\r\n* audioMessage - аудио сообщение;\r\n\r\n* locationMessage - сообщение геолокации;\r\n\r\n* contactMessage - сообщение с контактом;\r\n\r\n* extendedTextMessage - сообщение со ссылкой и превью;\r\n\r\nchatId - идентификатор чата в котором получено сообщение (string);\r\n\r\nsenderId - идентификатор отправителя сообщения (string);\r\n\r\nsenderName - имя отправителя сообщения (string);\r\n\r\ntextMessage - текст сообщения (string), если typeMessage=textMessage;\r\n\r\ndownloadUrl - ссылка на скачивание файла (string), если typeMessage=imageMessage || videoMessage || documentMessage || audioMessage;\r\n\r\ncaption - описание файла (string);"
+						"description": "Документация [LastIncomingMessages](https://green-api.com/docs/api/journals/LastIncomingMessages/)"
 					},
 					"response": [
 						{
@@ -1327,7 +1405,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод возвращает крайние исходящие сообщения инстанса аккаунта Whatsapp;\r\n\r\nсрок хранения исходящих сообщений на сервере равен 24 часа;\r\n\r\nможно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON, массив)\r\n\r\nidMessage - идентификатор исходящего сообщения (string);\r\n\r\ntimestamp - время крайнего действия по сообщению в UNIX (int);\r\n\r\nstatusMessage - статус исходящего сообщения,  (string), возможные значения:\r\n\r\n* noAccount - нет аккаунта на номере телефона;\r\n\r\n* notInGroup - не состоите в данной группе;\r\n\r\n* sent - отправлено;\r\n\r\n* delivered - доставлено;\r\n\r\n* read - прочитано/просмотрено/прослушано;\r\n\r\ntypeMessage - тип сообщения (string), возможные значения:\r\n\r\n* textMessage - текстовое сообщение;\r\n\r\n* imageMessage - сообщение с изображением;\r\n\r\n* videoMessage - видео сообщение;\r\n\r\n* documentMessage - сообщение с файлом документа;\r\n\r\n* audioMessage - аудио сообщение;\r\n\r\n* locationMessage - сообщение геолокации;\r\n\r\n* contactMessage - сообщение с контактом;\r\n\r\n* extendedTextMessage - сообщение со ссылкой и превью;\r\n\r\nchatId - идентификатор чата в который сообщение было отправлено (string);\r\n\r\ntextMessage - текст сообщения (string), если typeMessage=textMessage;\r\n\r\ndownloadUrl - ссылка на скачивание файла (string), если typeMessage=imageMessage || videoMessage || documentMessage || audioMessage;\r\n\r\ncaption - описание файла (string);"
+						"description": "Документация [LastOutgoingMessages](https://green-api.com/docs/api/journals/LastOutgoingMessages/)"
 					},
 					"response": [
 						{
@@ -1421,7 +1499,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для получения списка сообщений, находящихся в очереди на отправку;\r\n\r\nможно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON, массив)\r\n\r\ntypeMessage - тип сообщения (string), возможные значения:\r\n\r\n* textMessage - текстовое сообщение;\r\n\r\n* imageMessage - сообщение с изображением;\r\n\r\n* videoMessage - видео сообщение;\r\n\r\n* documentMessage - сообщение с файлом документа;\r\n\r\n* audioMessage - аудио сообщение;\r\n\r\n* locationMessage - сообщение геолокации;\r\n\r\n* contactMessage - сообщение с контактом;\r\n\r\n* extendedTextMessage - сообщение со ссылкой и превью;\r\n\r\nchatId - идентификатор чата в который сообщение будет отправлено (string);\r\n\r\nmessage - текст сообщения (string), если typeMessage=textMessage;\r\n\r\nfileName - имя отправляемого файла (string), если typeMessage=imageMessage || videoMessage || documentMessage || audioMessage;"
+						"description": "Документация [ShowMessagesQueue](https://green-api.com/docs/api/queues/ShowMessagesQueue/)"
 					},
 					"response": [
 						{
@@ -1487,7 +1565,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для очистки очереди отправки сообщений;\r\n\r\nможно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON)\r\n\r\nisCleared - флаг очистки очереди сообщений (bool);\r\n\r\nreason - причина почему очередь сообщений не очищена (string), присутствует если isCleared=false;"
+						"description": "Документация [ClearMessagesQueue](https://green-api.com/docs/api/queues/ClearMessagesQueue/)"
 					},
 					"response": [
 						{
@@ -1550,7 +1628,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupName\": \"From API Group created\",\r\n\t\"chatIds\": [],\r\n\t\"phones\": [\r\n\t\t79001234567,\r\n\t\t79001234568\r\n\t]\r\n}\r\n",
+							"raw": "{\r\n\t\"groupName\": \"Group created by Green API\",\r\n    \"chatIds\": [\r\n        \"79001234568@c.us\",\r\n        \"79001234569@c.us\"\r\n    ]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1568,7 +1646,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для создания группы Whatsapp;\n\nв случае успеха в ответ на запрос отдается JSON строка с HTTP статусом 200;\n\nв случае неудачи отдается ответ с HTTP статусом 400 и текстом ошибки.\n\n**Параметры:** (JSON)\n\ngroupName - название группы (string), обязательный параметр;\n\nchatIds - коллекция идентификаторов участников группы (array<string>). Обязательный параметр, если не указана коллекция phones;\n\nphones - коллекция номеров телефонов участников группы (array<int>). Обязательный параметр, если не указана коллекция chatIds;\n\n**Ответ:** (JSON)\n\ncreated - флаг создания группы (bool);\n\nchatId - идентификатор группы;\n\ngroupInviteLink - ссылка приглашения в группу;"
+						"description": "Документация [CreateGroup](https://green-api.com/docs/api/groups/CreateGroup/)"
 					},
 					"response": [
 						{
@@ -1623,7 +1701,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"created\": true,\n    \"chatId\": \"79001234567-1581234048@g.us\",\n    \"groupInviteLink\": \"https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXXXX\"\n}"
+							"body": "{\n    \"created\": true,\n    \"chatId\": \"79001234567-1587570015@g.us\",\n    \"groupInviteLink\": \"https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXXXX\"\n}"
 						}
 					]
 				},
@@ -1634,7 +1712,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234568-1581234048@g.us\",\r\n\t\"groupName\":\"Changed name by API third\"\r\n}",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"groupName\": \"Group created by Green API+\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1652,7 +1730,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод изменяет название группы Whatsapp;\r\n\r\nв случае успеха в ответ на запрос отдается JSON строка с HTTP статусом 200;\r\n\r\nв случае неудачи отдается ответ с HTTP статусом 400 и текстом ошибки;\r\n\r\n**Параметры:** (JSON)\r\n\r\ngroupId - идентификатор группы (string), обязательный параметр;\r\n\r\ngroupName - название группы (string), обязательный параметр;\r\n\r\n**Ответ:** (JSON)\r\n\r\nupdateGroupName - флаг изменения названия группы (bool);"
+						"description": "Документация [UpdateGroupName](https://green-api.com/docs/api/groups/UpdateGroupName/)"
 					},
 					"response": [
 						{
@@ -1718,7 +1796,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\"\r\n}",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1736,7 +1814,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод получает данные о группе Whatsapp;\r\n\r\nв случае успеха в ответ на запрос отдается JSON строка с HTTP статусом 200;\r\n\r\nв случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки.\r\n\r\n**Параметры:** (JSON)\r\n\r\ngroupId - идентификатор группы (string), обязательный параметр;\r\n\r\n**Ответ:** (JSON)\r\n\r\ngroupId - идентификатор группы;\r\n\r\nowner - владелец группы;\r\n\r\nsubject - тема (название) группы;\r\n\r\ncreation - время создания группы в Unix;\r\n\r\nparticipants - коллекция участников группы, где:\r\n\r\n* id - идентификатор пользователя;\r\n\r\n* isAdmin - флаг является ли пользователь администратором группы;\r\n\r\n* isSuperAdmin - флаг является ли пользователь супер администратором группы;\r\n\r\nsubjectTime - время создание темы (названия) группы в Unix;\r\n\r\nsubjectOwner - идентификатор пользователя создавшего тему группы;\r\n\r\ngroupInviteLink - ссылка приглашения в группу;"
+						"description": "Документация [GetGroupData](https://green-api.com/docs/api/groups/GetGroupData/)"
 					},
 					"response": [
 						{
@@ -1791,7 +1869,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"groupId\": \"79001234567-1599084048@g.us\",\n    \"owner\": \"79001234567@c.us\",\n    \"subject\": \"From API Group created\",\n    \"creation\": 1677084048,\n    \"participants\": [\n        {\n            \"id\": \"79001234567@c.us\",\n            \"isAdmin\": true,\n            \"isSuperAdmin\": true\n        },\n        {\n            \"id\": \"79001234568@c.us\",\n            \"isAdmin\": false,\n            \"isSuperAdmin\": false\n        }\n    ],\n    \"subjectTime\": 1599084048,\n    \"subjectOwner\": \"79001234567@c.us\",\n    \"groupInviteLink\": \"https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXXXX\"\n}"
+							"body": "{\n\t\"groupId\": \"79001234567-1587570015@g.us\",\n\t\"owner\": \"79001234567@c.us\",\n\t\"subject\": \"Green API Group\",\n\t\"creation\": 1587570015,\n\t\"participants\": [\n\t\t{\n\t\t\t\"id\": \"79001234567@c.us\",\n\t\t\t\"isAdmin\": true,\n\t\t\t\"isSuperAdmin\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"79001234568@c.us\",\n\t\t\t\"isAdmin\": true,\n\t\t\t\"isSuperAdmin\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"79001234569@c.us\",\n\t\t\t\"isAdmin\": false,\n\t\t\t\"isSuperAdmin\": false\n\t\t}\n\t],\n\t\"subjectTime\": 1587737715,\n\t\"subjectOwner\": \"79001234567@c.us\",\n\t\"groupInviteLink\": \"https://chat.whatsapp.com/xxxxxxxxxxxxxxxxxxxxxx\"\n}"
 						}
 					]
 				},
@@ -1802,7 +1880,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 79001234567\r\n}",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1820,7 +1898,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод добавляет участника в группу Whatsapp;\n\nВ случае успеха в ответ на запрос отдается JSON строка с HTTP статусом 200;\n\nВ случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки.\n\n**Параметры:** (JSON)\n\ngroupId - идентификатор группы (string), обязательный параметр;\n\nparticipantChatId - идентификатор участника, добавляемого в группу (string). Обязательный параметр, если не указан participantPhone;\n\nparticipantPhone - номер телефона участника, добавляемого в группу (int). Обязательный параметр, если не указан participantChatId;\n\n**Ответ:** (JSON)\n\naddParticipant - флаг добавления участника в группу (bool);"
+						"description": "Документация [AddGroupParticipant](https://green-api.com/docs/api/groups/AddGroupParticipant/)"
 					},
 					"response": [
 						{
@@ -1886,7 +1964,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 79001234568\r\n}",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1904,7 +1982,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод удаляет участника из группы Whatsapp;\n\nв случае успеха в ответ на запрос отдается JSON строка с HTTP статусом 200;\n\nв случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки;\n\n**Параметры:** (JSON)\n\ngroupId - идентификатор группы (string), обязательный параметр;\n\nparticipantChatId - идентификатор участника, удаляемого из группы (string). Обязательный параметр, если не указан participantPhone;\n\nparticipantPhone - номер телефона участника, удаляемого из группы (int). Обязательный параметр, если не указан participantChatId;\n\n**Ответ:** (JSON)\n\nremoveParticipant - флаг удаления участника из группы (bool);"
+						"description": "Документация [RemoveGroupParticipant](https://green-api.com/docs/api/groups/RemoveGroupParticipant/)"
 					},
 					"response": [
 						{
@@ -1970,7 +2048,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 79001234568\r\n}\r\n",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1988,7 +2066,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод назначает участника группы администратором;\r\n\r\nв случае успеха в ответ на запрос отдается JSON строка с HTTP статусом 200;\r\n\r\nв случае неудачи отдается ответ с HTTP статусом 400 и текстом ошибки;\r\n\r\n**Параметры:** (JSON)\r\n\r\ngroupId - идентификатор группы (string), обязательный параметр;\r\n\r\nparticipantChatId - идентификатор участника группы, назначаемого в качестве администратора (string). Обязательный параметр, если не указан participantPhone;\r\n\r\nparticipantPhone - номер телефона участника группы, назначаемого в качестве администратора (int). Обязательный параметр, если не указан participantChatId;\r\n\r\n**Ответ:** (JSON)\r\n\r\nsetGroupAdmin - флаг назначения участника группы администратором (bool);"
+						"description": "Документация [SetGroupAdmin](https://green-api.com/docs/api/groups/SetGroupAdmin/)"
 					},
 					"response": [
 						{
@@ -2054,7 +2132,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 79001234568\r\n}",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2072,7 +2150,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод лишает участника прав администрирования группы;\n\nв случае успеха в ответ на запрос отдается JSON строка с HTTP статусом 200;\n\nв случае неудачи отдается ответ с HTTP статусом 400 и текстом ошибки;\n\n**Параметры:** (JSON)\n\ngroupId - идентификатор группы (string), обязательный параметр;\n\nparticipantChatId - идентификатор участника группы, которого лишают прав администрирования группы (string). Обязательный параметр, если не указан participantPhone;\n\nparticipantPhone - номер телефона участника группы, которого лишают прав администрирования группы (int). Обязательный параметр, если не указан participantChatId;\n\n**Ответ:** (JSON)\n\nremoveAdmin - флаг лишения участника группы прав администратора (bool);"
+						"description": "Документация [RemoveAdmin](https://green-api.com/docs/api/groups/RemoveAdmin/)"
 					},
 					"response": [
 						{
@@ -2138,7 +2216,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\"\r\n}\r\n",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2156,7 +2234,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод производит выход пользователя из группы;\n\nв случае успеха в ответ на запрос отдается JSON строка с HTTP статусом 200;\n\nв случае неудачи отдается ответ с HTTP статусом 400 и текстом ошибки;\n\n**Параметры:** (JSON)\n\ngroupId - идентификатор группы (string), обязательный параметр;\n\n**Ответ:** (JSON)\n\nleaveGroup - флаг выхода из группы (bool);"
+						"description": "Документация [LeaveGroup](https://green-api.com/docs/api/groups/LeaveGroup/)"
 					},
 					"response": [
 						{
@@ -2228,7 +2306,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"idMessage\": \"B275A7AA0D6EF89BB9245169BDF174E6\"\r\n}\r\n",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2246,7 +2324,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для отметки входящих сообщений в чате прочитанными;\n\nв случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки.\n\n**Параметры:** (JSON)\n\nchatId - идентификатор чата (string) в формате Whatsapp (79001234567@c.us - для личных сообщений, 79001234567-1478491234@g.us - для сообщений в группу). Обязателен, если не указан phoneNumber;\n\nphoneNumber - номер телефона получателя (int) в международном формате (без +) 11 или 12 цифр. Обязателен, если не указан chatId;\n\nidMessage - идентификатор входящего сообщения, который необходимо отметить прочитанным (string). Необязательный параметр, если не указан, то все непрочитанные входящие сообщения в чате будут отмечены прочитанными;\n\n**Ответ:** (JSON)\n\nsetRead - флаг отметки сообщений прочитанными (bool);"
+						"description": "Документация [ReadChat](https://green-api.com/docs/api/marks/ReadChat/)"
 					},
 					"response": [
 						{
@@ -2306,13 +2384,13 @@
 					]
 				},
 				{
-					"name": "Отметить сообщение прочитанным",
+					"name": "Отметить сообщение в чате прочитанным",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"idMessage\": \"B275A7AA0D6EF89BB9245169BDF174E6\"\r\n}\r\n",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"idMessage\": \"B275A7AA0D6EF89BB9245169BDF174E6\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2330,7 +2408,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для отметки входящих сообщений в чате прочитанными;\n\nв случае неудачи, отдается ответ с HTTP статусом 400 и текстом ошибки.\n\n**Параметры:** (JSON)\n\nchatId - идентификатор чата (string) в формате Whatsapp (79001234567@c.us - для личных сообщений, 79001234567-1478491234@g.us - для сообщений в группу). Обязателен, если не указан phoneNumber;\n\nphoneNumber - номер телефона получателя (int) в международном формате (без +) 11 или 12 цифр. Обязателен, если не указан chatId;\n\nidMessage - идентификатор входящего сообщения, который необходимо отметить прочитанным (string). Необязательный параметр, если не указан, то все непрочитанные входящие сообщения в чате будут отмечены прочитанными;\n\n**Ответ:** (JSON)\n\nsetRead - флаг отметки сообщений прочитанными (bool);"
+						"description": "Документация [ReadChat](https://green-api.com/docs/api/marks/ReadChat/)"
 					},
 					"response": [
 						{
@@ -2433,7 +2511,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для получения информации об устройстве на котором запущено приложение Whatsapp;\n\nможно выполнить POST или GET запрос;\n\n**Параметры:**\n\n**Ответ:** (JSON)\n\nplatform - операционная система устройства на котором запущено приложение Whatsapp (string);\n\ndeviceManufacturer - производитель устройства (string);\n\ndeviceModel - модель устройства (string);\n\nosVersion - версия операционной системы (string);\n\nwaVersion - версия приложения Whatsapp (string);\n\nbattery - уровень заряда батареи (int);"
+						"description": "Документация [GetDeviceInfo](https://green-api.com/docs/api/phone/GetDeviceInfo/)"
 					},
 					"response": [
 						{
@@ -2479,7 +2557,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"platform\": \"smba\",\n    \"deviceManufacturer\": \"samsung\",\n    \"deviceModel\": \"j6lte\",\n    \"osVersion\": \"9\",\n    \"waVersion\": \"2.20.44\",\n    \"battery\": 60\n}"
+							"body": "{\n    \"platform\": \"iphone\",\n    \"deviceManufacturer\": \"Apple\",\n    \"deviceModel\": \"iPhone 11\",\n    \"osVersion\": \"13.4.1\",\n    \"waVersion\": \"2.20.42\",\n    \"battery\": 90\n}"
 						}
 					]
 				}
@@ -2536,7 +2614,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод проверяет наличие аккаунта Whatsapp на номере телефона;\n\n**Параметры:** (JSON)\n\nphoneNumber - номер телефона в международном формате (int), обязательный параметр, состоящий из 11 или 12 цифр;\n\n**Ответ:** (JSON)\n\nexistsWhatsapp - флаг наличия Whatsapp на номере телефона (bool);\n\nreason - причина почему номер телефона не был проверен (string), присутствует когда не удалось выполнить проверку, возможные значения:\n\n* bad phone number, valid 11 or 12 digits - неверный формат номера телефона, должен быть 11 или 12 цифр;\n\n* check phone number timeout limit exceeded - превышен лимит времени ожидания ответа о проверке номера телефона;"
+						"description": "Документация [CheckWhatsapp](https://green-api.com/docs/api/service/CheckWhatsapp/)"
 					},
 					"response": [
 						{
@@ -2596,13 +2674,13 @@
 					]
 				},
 				{
-					"name": "Получить аватар",
+					"name": "Получить аватар контакта",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"chatId\": \"\",\r\n    \"phoneNumber\": 79001234567\r\n}",
+							"raw": "{\r\n    \"chatId\": \"79001234567@c.us\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2620,7 +2698,91 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод возвращает аватар аккаунта Whatsapp или группы\n\n**Параметры:** (JSON)\n\nchatId - идентификатор чата (string) в формате Whatsapp (17633123456@c.us / 17680561234-1479621234@g.us). Обязателен, если не указан phoneNumber;\n\nphoneNumber - номер телефона в международном формате (int), обязательный параметр, состоящий из 11 или 12 цифр;\n\n**Ответ:** (JSON)\n\nexistsWhatsapp - флаг наличия Whatsapp на номере телефона (bool);\n\nurlAvatar - ссылка на аватар пользователя/группы (string), пустое значение когда аватара нет или existsWhatsapp=false;\n\nreason - причина почему аватар не был проверен (string), присутствует когда не удалось выполнить проверку, возможные значения:\n\n* bad request data - неверный формат номера телефона, должен быть 11 или 12 цифр. Или идентификатора чата;\n\n* get avatar timeout limit exceeded - превышен лимит времени ожидания ответа о наличии аватара;"
+						"description": "Документация [GetAvatar](https://green-api.com/docs/api/service/GetAvatar/)"
+					},
+					"response": [
+						{
+							"name": "getAvatar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"\",\r\n    \"phoneNumber\": 79001234567\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getAvatar",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"existsWhatsapp\": true,\n    \"urlAvatar\": \"https://pps.whatsapp.net/v/avatar.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить аватар группы",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"79001234567-1581234048@g.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getAvatar",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [GetAvatar](https://green-api.com/docs/api/service/GetAvatar/)"
 					},
 					"response": [
 						{
@@ -2695,7 +2857,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Метод предназначен для получения списка контактов инстанса аккаунта Whatsapp;\r\n\r\nможно выполнить POST или GET запрос;\r\n\r\n**Параметры:**\r\n\r\n**Ответ:** (JSON, массив)\r\n\r\nid - идентификатор контакта (string);\r\n\r\nname - имя контакта (string);"
+						"description": "Документация [GetContacts](https://green-api.com/docs/api/service/GetContacts/)"
 					},
 					"response": [
 						{
@@ -2741,7 +2903,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"79001234567@c.us\",\n        \"name\": \"Андрей\"\n    },\n    {\n        \"id\": \"79001234568@c.us\",\n        \"name\": \"\"\n    },\n    {\n        \"id\": \"79001234569@c.us\",\n        \"name\": \"\"\n    },\n    {\n        \"id\": \"79001234510@c.us\",\n        \"name\": \"\"\n    }\n]"
+							"body": "[\n    {\n        \"id\": \"79001234567@c.us\",\n        \"name\": \"Иван Петров\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234568@c.us\",\n        \"name\": \"Люся Сидорова\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234569-1479621234@g.us\",\n        \"name\": \"Моя группа\",\n        \"type\": \"group\"\n    }\n]"
 						}
 					]
 				}
