@@ -15,7 +15,7 @@ A coleção e o ambiente do Postman da API verde exigem a instalação do [Postm
 2) Abra o Postman, clique em Importar e selecione os dois arquivos json.
 3) Depois de importada, uma nova coleção de API será criada, juntamente com o ambiente.
 
-Consulte [docs] (https://green-api.com/docs/) para obter detalhes.
+Consulte [docs](https://green-api.com/docs/) para obter detalhes.
 
 ## Licença
 
