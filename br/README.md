@@ -1,8 +1,5 @@
 # Green API - Postman Collection
 
-- [Документация на русском языке](ru/README.md)
-- [Brazil](br/README.md)
-
 This is a Postman collection of [Green API](https://green-api.com/). It provides access to the WhatsApp API to send and receive messages and media by HTTP-API requests. The provided environment contains the list of variables referenced by the API collection.
 
 See docs for usage.
@@ -18,7 +15,7 @@ The Green API Postman Collection and Environment requires the installation of [P
 2) Open Postman, click on Import and select the two json files.
 3) Once imported, a new API collection will be created, along with the environment.
 
-See [docs](https://green-api.com/docs/) for details.
+See [docs](https://green-api.com/docs/postman-collection/) for details.
 
 ## License
 
