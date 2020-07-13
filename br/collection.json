@@ -1,0 +1,2937 @@
+{
+	"info": {
+		"_postman_id": "b4ac6ed2-1f53-4c80-9d70-59d5f11cbd90",
+		"name": "Green API Brasil",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conta",
+			"item": [
+				{
+					"name": "Obter configurações da conta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getSettings",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [GetSettings] (https://green-api.com.br/docs/api/account/GetSettings/)"
+					},
+					"response": [
+						{
+							"name": "getSettings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getSettings",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:48:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"wid\": \"5521999990000@c.us\", \n    \"countryInstance\": \"ru\",\n    \"typeAccount\": \"vip\",\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\n    \"outgoingWebhook\": \"yes\",\n    \"stateWebhook\": \"yes\",\n    \"incomingWebhook\": \"yes\",\n    \"deviceWebhook\": \"no\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Definir configurações da conta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"delaySendMessagesMilliseconds\": 1000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"setSettings",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SetSettings](https://green-api.com.br/docs/api/account/SetSettings/)"
+					},
+					"response": [
+						{
+							"name": "setSettings",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n   \t\"proxyInstance\": \"100.100.100.100:39898:qGKqCo:Jb26Xz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"setSettings",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 13:16:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"saveSettings\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Obter Status da Conta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getStateInstance",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [GetStateInstance](https://green-api.com.br/docs/api/account/GetStateInstance/)"
+					},
+					"response": [
+						{
+							"name": "getStateInstance authorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getStateInstance",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:31:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"stateInstance\": \"authorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Reiniciar a Conta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"reboot",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [Reboot](https://green-api.com.br/docs/api/account/Reboot/)"
+					},
+					"response": [
+						{
+							"name": "reboot",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"reboot",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:29:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isReboot\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Sair da Conta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"logout",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [Logout](https://green-api.com.br/docs/api/account/Logout/)"
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"logout",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:24:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isLogout\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Autorizar via QR Code (via websocket)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host-websocket}}/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}}",
+							"host": [
+								"{{host-websocket}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"scanqrcode",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [Scanqrcode](https://green-api.com.br/docs/api/account/Scanqrcode/)"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Enviando Mensagens",
+			"item": [
+				{
+					"name": "Envie uma Mensagem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"5521999990000@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SendMessage](https://green-api.com.br/docs/api/sending/SendMessage/)"
+					},
+					"response": [
+						{
+							"name": "sendMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 5521999990000,\r\n\t\"message\": \"Hello man\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Envie uma mensagem para um Grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"5521999990000-1581234048@g.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SendMessage](https://green-api.com.br/docs/api/sending/SendMessage/)"
+					},
+					"response": [
+						{
+							"name": "sendMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 5521999990000,\r\n\t\"message\": \"Hello man\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Envie vídeo, áudio, imagem, documento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "chatId",
+									"value": "5521999990000@c.us",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "Описание",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Jose/Desktop/SB-409/window.jpg"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendFileByUpload",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SendFileByUpload](https://green-api.com.br/docs/api/sending/SendFileByUpload/)"
+					},
+					"response": [
+						{
+							"name": "sendFileByUpload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "chatId",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "5521999990000",
+											"type": "text"
+										},
+										{
+											"key": "caption",
+											"value": "Передаю изображение",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/mihai/Desktop/SB-409/window.jpg"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendFileByUpload",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:32:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0EA03CB2EAFD864F6\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Enviar vídeo, áudio, imagem, documento por URL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \t\"chatId\": \"5521999990000@c.us\",\r\n\t\"urlFile\": \"https://mysite.com/imagens/\",\r\n\t\"fileName\": \"horse.png\",\r\n\t\"caption\": \"cavalo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendFileByUrl",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SendFileByUrl](https://green-api.com.br/docs/api/sending/SendFileByUrl/)"
+					},
+					"response": [
+						{
+							"name": "sendFileByUrl",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \t\"chatId\": \"\",\r\n\t\"phoneNumber\": 5521999990000,\r\n\t\"urlFile\": \"https://mysite.com/imagens\",\r\n\t\"fileName\": \"horse.png\",\r\n\t\"caption\": \"cavalo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendFileByUrl",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:25:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB075A72D884153EFC5\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Enviar Geolocalização",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"5521999990000@c.us\",\r\n    \"nameLocation\": \"Cristo Redentor\",\r\n    \"address\": \"Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ\",\r\n   \t\"latitude\": -22.95162,\r\n    \"longitude\": -43.21077\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendLocation",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SendLocation](https://green-api.com.br/docs/api/sending/SendLocation/)"
+					},
+					"response": [
+						{
+							"name": "message.sendLocation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"\",\r\n    \"phoneNumber\": 5521999990000,\r\n    \"nameLocation\": \"Cristo Redentor\",\r\n    \"address\": \"Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ\",\r\n   \t\"latitude\": -22.95162,\r\n    \"longitude\": -43.21077\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendLocation",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 19:15:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0133DEBFA6BD6C5AA\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Enviar Contato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"5521999990000@c.us\",\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 5521999990001,\r\n    \t\"firstName\": \"André\",\r\n\t\t\"middleName\": \"Pedro\",\r\n\t\t\"lastName\": \"Silva\",\r\n\t\t\"company\": \"IBM\"\r\n\t}\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendContact",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SendContact](https://green-api.com.br/docs/api/sending/SendContact/)"
+					},
+					"response": [
+						{
+							"name": "message.sendContact",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 5521999990000,\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 5521999990001,\r\n    \t\"firstName\": \"André\",\r\n\t\t\"middleName\": \"Pedro\",\r\n\t\t\"lastName\": \"Silva\",\r\n\t\t\"company\": \"IBM\"\"\r\n\t}\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendContact",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 20:23:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0DF31710A9123EC75\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Enviar Link",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"5521999990000@c.us\",\r\n\t\"urlLink\": \"https://green-api.com.br\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendLink",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SendLink](https://green-api.com.br/docs/api/sending/SendLink/)"
+					},
+					"response": [
+						{
+							"name": "message.sendLink",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 5521999990000,\r\n\t\"urlLink\": \"https://www.youtube.com/watch?v=00000000000\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendLink",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 20:26:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0160E742127137282\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Recebendo Respostas",
+			"item": [
+				{
+					"name": "Webhook REST API",
+					"item": [
+						{
+							"name": "Obter Webhook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/receiveWebhook/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"receiveWebhook",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir webhook",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/deleteWebhook/{{apiTokenInstance}}/deliveryTag",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"deleteWebhook",
+										"{{apiTokenInstance}}",
+										"deliveryTag"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "95d5d1ed-b148-468f-814c-e13418b0bc90",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "79c9b975-71ce-42b7-a119-3928e5b5eb81",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Webhook",
+					"item": [
+						{
+							"name": "Mensagems recebidas",
+							"item": [
+								{
+									"name": "Mensagem de texto recebida",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"typeWebhook\":\"incomingMessageReceived\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"5521999990000@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\":1586700997,\r\n\t\"idMessage\":\"5A5A9EE49FBAACC3E30C2704632FFA1B\",\r\n\t\"senderData\":{\r\n\t\t\"chatId\":\"5521999990001@c.us\",\r\n\t\t\"sender\":\"5521999990001@c.us\",\r\n\t\t\"senderName\":\"Green API\"\r\n\t},\r\n\t\"messageData\":{\r\n\t\t\"typeMessage\":\"textMessage\",\r\n\t\t\"textMessageData\": {\r\n\t\t\t\"textMessage\": \"I use Green-API to send this message to you!\"\r\n\t\t}\r\n\t}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": ""
+										},
+										"description": "Documentação [TextMessage](https://green-api.com.br/docs/api/receiving/webhook/incoming-message/TextMessage/)"
+									},
+									"response": []
+								},
+								{
+									"name": "Mensagem de texto recebida com URL",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"5521999990000@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588095273,\n    \"idMessage\": \"3EB0818D69F8B6C4774B\",\n    \"senderData\": {\n\t\t\"chatId\":\"5521999990001@c.us\",\n\t\t\"sender\":\"5521999990001@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"extendedTextMessage\",\n        \"extendedTextMessageData\": {\n            \"text\": \"https://green-api.com.br/docs/video\",\n            \"description\": \"Green API docs shows how you can develop the WhatsApp Bot\",\n            \"title\": \"How to develop WhatsApp Bot\",\n            \"previewType\": \"video\",\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgAAAAAAAAAAAAA/2wAAAAAAAAAAAAYGBQYHBwYIChAKCgkJChQODwwQFxQYG==\"\n        }\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": ""
+										},
+										"description": "Documentação [ExtendedTextMessage](https://green-api.com.br/docs/api/receiving/webhook/incoming-message/ExtendedTextMessage/)"
+									},
+									"response": []
+								},
+								{
+									"name": "Mensagem recebida com imagem, vídeo, áudio, documento",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"typeWebhook\":\"incomingMessageReceived\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"5521999990000@c.us\",\r\n\t\t\"typeInstance\": \"whatsapp\"\r\n\t},\r\n\t\"timestamp\": 1586700802,\r\n\t\"idMessage\":\"19136A974392FA8CF584D70DD0E1AEDF\",\r\n\t\"senderData\":{\r\n\t\t\"chatId\":\"5521999990001@c.us\",\r\n\t\t\"sender\":\"5521999990001@c.us\",\r\n\t\t\"senderName\":\"Green API\"\r\n\t},\r\n\t\"messageData\":{\r\n\t\t\"typeMessage\":\"imageMessage\",\r\n\t\t\"fileMessageData\":{\r\n\t\t\t\"downloadUrl\":\"https://api.green-api.com/waInstance1234/downloadFile/19136A974392FA8CF584D70DD0E1AEDF\",\r\n\t\t\t\"caption\": \"Cenário\"\r\n\t\t}\r\n\t}\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": ""
+										},
+										"description": "Documentação [ImageMessage](https://green-api.com.br/docs/api/receiving/webhook/incoming-message/ImageMessage/)"
+									},
+									"response": []
+								},
+								{
+									"name": "Mensagem recebida com geolocalização",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"5521999990000@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588088591,\n    \"idMessage\": \"4EAAB7F6552F6F91785D1365C0358C58\",\n    \"senderData\": {\n\t\t\"chatId\":\"5521999990001@c.us\",\n\t\t\"sender\":\"5521999990001@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"locationMessage\",\n        \"locationMessageData\": {\n            \"latitude\": -22.95162,\n            \"longitude\": -43.21077,\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFx=\"\n        }\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": ""
+										},
+										"description": "Documentação [LocationMessage](https://green-api.com.br/docs/api/receiving/webhook/incoming-message/LocationMessage/)"
+									},
+									"response": []
+								},
+								{
+									"name": "Mensagem recebida com contato",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"5521999990000@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588091580,\n    \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\n    \"senderData\": {\n\t\t\"chatId\":\"5521999990001@c.us\",\n\t\t\"sender\":\"5521999990001@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"contactMessage\",\n        \"contactMessageData\": {\n            \"displayName\": \"Виктор Андреевич\",\n            \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Аndré;Carlos;;;\\nFN:André Carlos\\nORG:Image\\nTITLE:\\nitem1.TEL;waid=5521999990000:+55 21 99999-0000\\nitem1.X-ABLabel:Celular\\nEND:VCARD\"\n        }\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": ""
+										},
+										"description": "Documentação [ContactMessage](https://green-api.com.br/docs/api/receiving/webhook/incoming-message/ContactMessage/)"
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "b82ae002-aa79-4564-881f-72f0aeafa658",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "b9b54e7a-2d07-4d56-90d8-f3b7164f5ec6",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Mensagem enviada",
+							"item": [
+								{
+									"name": Status da mensagem enviada",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"typeWebhook\":\"outgoingMessageStatus\",\r\n\t\"timestamp\":1586700802,\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"5521999990000@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"idMessage\":\"3EB0608D6A2901063D63\",\r\n\t\"status\":\"noAccount\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": ""
+										},
+										"description": "Documentação [OutgoingMessageStatus](https://green-api.com.br/docs/api/receiving/webhook/outgoing-message/OutgoingMessageStatus/)"
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Status da Conta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"typeWebhook\":\"stateInstanceChanged\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"5521999990000@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\":1586700690,\r\n\t\"stateInstance\":\"notAuthorized\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": ""
+								},
+								"description": "Documentação [StateInstanceChanged](https://green-api.com.br/docs/api/receiving/webhook/StateInstanceChanged/)"
+							},
+							"response": []
+						},
+						{
+							"name": "Status do Dispositivo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"typeWebhook\": \"deviceInfo\",\r\n\t\"instanceData\": {\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"5521999990000@c.us\",\r\n\t\t\"typeInstance\": \"whatsapp\"\r\n\t},\r\n\t\"timestamp\": 1586700802,\r\n\t\"deviceData\": {\r\n\t\t\"platform\": \"iphone\",\r\n\t\t\"deviceManufacturer\": \"Apple\",\r\n\t\t\"deviceModel\": \"iPhone 11\",\r\n\t\t\"osVersion\": \"13.4.1\",\r\n\t\t\"waVersion\": \"2.20.42\",\r\n\t\t\"battery\": 90\r\n\t}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": ""
+								},
+								"description": "Documentação [DeviceInfo](https://green-api.com.br/docs/api/receiving/webhook/DeviceInfo/)"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Recebendo Arquivos",
+					"item": [
+						{
+							"name": "Baixar arquivo da mensagem recebida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/downloadFile/{{idMessage}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"downloadFile",
+										"{{idMessage}}"
+									]
+								},
+								"description": "Documentação [DownloadFile](https://green-api.com.br/docs/api/receiving/files/DownloadFile/)"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Lista de Mensagens",
+			"item": [
+				{
+					"name": "Obter log da caixa de entrada",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"lastIncomingMessages",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [LastIncomingMessages](https://green-api.com.br/docs/api/journals/LastIncomingMessages/)"
+					},
+					"response": [
+						{
+							"name": "lastIncomingMessages",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"lastIncomingMessages",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:57:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1643"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idMessage\": \"8E078426472FACECDFC2787173F05459\",\n        \"timestamp\": 1587412262,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"5521999990000@c.us\",\n        \"senderId\": \"5521999990000@c.us\",\n        \"senderName\": \"Nome\",\n        \"textMessage\": \"Resposta\"\n    },\n    {\n        \"idMessage\": \"75A35BA7745DB8FE6A8AD59C3F51C8CC\",\n        \"timestamp\": 1587412279,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"5521999990000@c.us\",\n        \"senderId\": \"5521999990000@c.us\",\n        \"senderName\": \"Nome\",\n        \"textMessage\": \"Resposta\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Obter o log de mensagens enviadas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/lastOutgoingMessages/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"lastOutgoingMessages",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [LastOutgoingMessages](https://green-api.com.br/docs/api/journals/LastOutgoingMessages/)"
+					},
+					"response": [
+						{
+							"name": "lastOutgoingMessages",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/lastOutgoingMessages/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"lastOutgoingMessages",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 20:01:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2900"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idMessage\": \"3EB0C732BC93864C25FB\",\n        \"timestamp\": 1587412276,\n        \"statusMessage\": \"read\",\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"5521999990000@c.us\",\n        \"textMessage\": \"Hello man\"\n    },\n    {\n        \"idMessage\": \"3EB0C37D09143B7F53A0\",\n        \"timestamp\": 1587412276,\n        \"statusMessage\": \"read\",\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"5521999990000@c.us\",\n        \"textMessage\": \"Hello man\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8fcf0bee-4af3-4c51-abc3-253e4500fa4c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7819e8b9-a6a1-40c1-916f-f3081a8c1ef0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Filas de Envio",
+			"item": [
+				{
+					"name": "Obter a fila de mensagens a serem enviadas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"showMessagesQueue",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [ShowMessagesQueue](https://green-api.com.br/docs/api/queues/ShowMessagesQueue/)"
+					},
+					"response": [
+						{
+							"name": "showMessagesQueue",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"showMessagesQueue",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:50:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "321"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"5521999990000@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"5521999990000@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"5521999990000@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"5521999990000@c.us\",\n        \"message\": \"Hello man\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Limpar fila de mensagens para envio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/clearMessagesQueue/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"clearMessagesQueue",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [ClearMessagesQueue](https://green-api.com.br/docs/api/queues/ClearMessagesQueue/)"
+					},
+					"response": [
+						{
+							"name": "clearMessagesQueue",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/clearMessagesQueue/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"clearMessagesQueue",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:53:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isCleared\": true\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Grupos",
+			"item": [
+				{
+					"name": "Criando um Grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupName\": \"Group created by Green API\",\r\n    \"chatIds\": [\r\n        \"5521999990001@c.us\",\r\n        \"5521999990002@c.us\"\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"createGroup",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [CreateGroup](https://green-api.com.br/docs/api/groups/CreateGroup/)"
+					},
+					"response": [
+						{
+							"name": "group.createGroup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupName\": \"From API Group created\",\r\n\t\"chatIds\": [],\r\n\t\"phones\": [\r\n\t\t5521999990000,\r\n\t\t5521999990001\r\n\t]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"createGroup",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:27:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"created\": true,\n    \"chatId\": \"5521999990000-1587570015@g.us\",\n    \"groupInviteLink\": \"https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXXXX\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Alterar nome do Grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"5521999990000-1587570015@g.us\",\r\n\t\"groupName\": \"Group created by Green API+\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"updateGroupName",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [UpdateGroupName](https://green-api.com.br/docs/api/groups/UpdateGroupName/)"
+					},
+					"response": [
+						{
+							"name": "group.updateGroupName",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"5521999990001-1581234048@g.us\",\r\n\t\"groupName\":\"Changed name by API third\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"updateGroupName",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:42:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"updateGroupName\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Obter informações do grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"5521999990000-1587570015@g.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getGroupData/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getGroupData",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [GetGroupData](https://green-api.com.br/docs/api/groups/GetGroupData/)"
+					},
+					"response": [
+						{
+							"name": "group.getGroupData",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"5521999990000-1581234048@g.us\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getGroupData/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getGroupData",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:32:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "457"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"groupId\": \"5521999990000-1587570015@g.us\",\n\t\"owner\": \"5521999990000@c.us\",\n\t\"subject\": \"Green API Group\",\n\t\"creation\": 1587570015,\n\t\"participants\": [\n\t\t{\n\t\t\t\"id\": \"5521999990000@c.us\",\n\t\t\t\"isAdmin\": true,\n\t\t\t\"isSuperAdmin\": true\n\t\t},\n\t\t{\n\t\t\t\"id\": \"5521999990001@c.us\",\n\t\t\t\"isAdmin\": true,\n\t\t\t\"isSuperAdmin\": false\n\t\t},\n\t\t{\n\t\t\t\"id\": \"5521999990002@c.us\",\n\t\t\t\"isAdmin\": false,\n\t\t\t\"isSuperAdmin\": false\n\t\t}\n\t],\n\t\"subjectTime\": 1587737715,\n\t\"subjectOwner\": \"5521999990000@c.us\",\n\t\"groupInviteLink\": \"https://chat.whatsapp.com/xxxxxxxxxxxxxxxxxxxxxx\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Adicionar membro ao grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"5521999990000-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"addGroupParticipant",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [AddGroupParticipant](https://green-api.com.br/docs/api/groups/AddGroupParticipant/)"
+					},
+					"response": [
+						{
+							"name": "group.addGroupParticipant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"5521999990000-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 5521999990000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"addGroupParticipant",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:37:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"addParticipant\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Remover membro do grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"5521999990000-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"removeGroupParticipant",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [RemoveGroupParticipant](https://green-api.com.br/docs/api/groups/RemoveGroupParticipant/)"
+					},
+					"response": [
+						{
+							"name": "group.removeGroupParticipant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"5521999990000-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 5521999990001\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"removeGroupParticipant",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:35:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"removeParticipant\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Atribuir direitos de administrador do grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"5521999990000-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/setGroupAdmin/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"setGroupAdmin",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [SetGroupAdmin](https://green-api.com.br/docs/api/groups/SetGroupAdmin/)"
+					},
+					"response": [
+						{
+							"name": "group.setGroupAdmin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"5521999990000-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 5521999990001\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/setGroupAdmin/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"setGroupAdmin",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:45:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"setGroupAdmin\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Revogar direitos de administrador do grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"5521999990000-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/removeAdmin/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"removeAdmin",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [RemoveAdmin](https://green-api.com.br/docs/api/groups/RemoveAdmin/)"
+					},
+					"response": [
+						{
+							"name": "group.removeAdmin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"5521999990000-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 5521999990001\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/removeAdmin/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"removeAdmin",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:49:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"removeAdmin\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Sair do Grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"5521999990000-1587570015@g.us\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"leaveGroup",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [LeaveGroup](https://green-api.com.br/docs/api/groups/LeaveGroup/)"
+					},
+					"response": [
+						{
+							"name": "group.leaveGroup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"5521999990000-1581234048@g.us\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"leaveGroup",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:58:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"leaveGroup\": true\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Leitura da Mensagem",
+			"item": [
+				{
+					"name": "Marcar conversa como lida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"5521999990000@c.us\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"readChat",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [ReadChat](https://green-api.com.br/docs/api/marks/ReadChat/)"
+					},
+					"response": [
+						{
+							"name": "message.readChat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 5521999990000\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"readChat",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 20:36:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"setRead\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Marcar a mensagem como lida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"5521999990000@c.us\",\r\n\t\"idMessage\": \"B275A7AA0D6EF89BB9245169BDF174E6\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"readChat",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [ReadChat](https://green-api.com.br/docs/api/marks/ReadChat/)"
+					},
+					"response": [
+						{
+							"name": "message.readChat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 5521999990000\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"readChat",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 20:36:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"setRead\": true\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a485d47b-01ad-40c8-8784-a1cc1d42c4ee",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0718c7f-1725-4df9-ae21-29792744bf84",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Dispositivo (telefone)",
+			"item": [
+				{
+					"name": "Получить информацию об устройстве",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getDeviceInfo/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getDeviceInfo",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [GetDeviceInfo](https://green-api.com.br/docs/api/phone/GetDeviceInfo/)"
+					},
+					"response": [
+						{
+							"name": "getDeviceInfo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getDeviceInfo/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getDeviceInfo",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:32:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "123"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"platform\": \"iphone\",\n    \"deviceManufacturer\": \"Apple\",\n    \"deviceModel\": \"iPhone 11\",\n    \"osVersion\": \"13.4.1\",\n    \"waVersion\": \"2.20.42\",\n    \"battery\": 90\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "51758b19-5a26-4ab6-bc8f-95d8ff9c671b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f8e43e10-de84-4308-932c-fea401bd44a0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Métodos de Serviço",
+			"item": [
+				{
+					"name": "Verificar se o número telefone é um WhatsApp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"phoneNumber\": 5521999990000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"checkWhatsapp",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [CheckWhatsapp](https://green-api.com.br/docs/api/service/CheckWhatsapp/)"
+					},
+					"response": [
+						{
+							"name": "checkWhatsapp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"phoneNumber\": 5521999990000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"checkWhatsapp",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:35:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"existsWhatsapp\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Obter a imagem de Perfil",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"5521999990000@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getAvatar",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [GetAvatar](https://green-api.com.br/docs/api/service/GetAvatar/)"
+					},
+					"response": [
+						{
+							"name": "getAvatar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"\",\r\n    \"phoneNumber\": 5521999990000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getAvatar",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"existsWhatsapp\": true,\n    \"urlAvatar\": \"https://pps.whatsapp.net/v/avatar.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Obter imagem de perfil do Grupo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"5521999990000-1581234048@g.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getAvatar",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [GetAvatar](https://green-api.com.br/docs/api/service/GetAvatar/)"
+					},
+					"response": [
+						{
+							"name": "getAvatar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"\",\r\n    \"phoneNumber\": 5521999990000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getAvatar",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"existsWhatsapp\": true,\n    \"urlAvatar\": \"https://pps.whatsapp.net/v/avatar.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Obter contatos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getContacts",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [GetContacts](https://green-api.com.br/docs/api/service/GetContacts/)"
+					},
+					"response": [
+						{
+							"name": "getContacts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getContacts",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:54:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "458"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"5521999990000@c.us\",\n        \"name\": \"Carlos da Silca\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"5521999990001@c.us\",\n        \"name\": \"José Carlos\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"5521999990002-1479621234@g.us\",\n        \"name\": \"Grupo de Exercicios\",\n        \"type\": \"group\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "474015d9-e5df-4fdb-9b95-7b8d6de92dec",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a527dc9a-dbd8-4868-89de-db6955b8f5fe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

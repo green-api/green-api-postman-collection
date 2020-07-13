@@ -1,22 +1,22 @@
-# Green API - Postman Collection
+# Green API Brasil - Postman Collection
 
-This is a Postman collection of [Green API](https://green-api.com/). It provides access to the WhatsApp API to send and receive messages and media by HTTP-API requests. The provided environment contains the list of variables referenced by the API collection.
+Esta é uma collection do Postman da [Green API](https://green-api.com.br/). Ele fornece acesso à API do WhatsApp para enviar e receber mensagens e mídia por solicitações da API HTTP do WhatsApp. O ambiente fornecido contém a lista de variáveis referenciadas pelos metodos da API.
 
-See docs for usage.
-https://green-api.com/docs/
+Veja os documentos para uso.
+https://green-api.com.br/docs/
 
-## Requirements
+## Requisitos
 
-The Green API Postman Collection and Environment requires the installation of [Postman](https://www.getpostman.com/).
+A coleção e o ambiente do Postman da API verde exigem a instalação do [Postman] (https://www.getpostman.com/).
 
-## Installing
+## Instalando
 
-1) Download `collection.json` and `environment.json` onto your local machine.
-2) Open Postman, click on Import and select the two json files.
-3) Once imported, a new API collection will be created, along with the environment.
+1) Faça o download de `collection.json` e` environment.json` na sua máquina local.
+2) Abra o Postman, clique em Importar e selecione os dois arquivos json.
+3) Depois de importada, uma nova coleção de API será criada, juntamente com o ambiente.
 
-See [docs](https://green-api.com/docs/postman-collection/) for details.
+Consulte [docs] (https://green-api.com/docs/) para obter detalhes.
 
-## License
+## Licença
 
-Please refer to the LICENSE file.
+Por favor, consulte o arquivo de LICENÇA.
