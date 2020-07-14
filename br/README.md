@@ -7,7 +7,7 @@ https://green-api.com.br/docs/
 
 ## Requisitos
 
-A coleção e o ambiente do Postman da API verde exigem a instalação do [Postman](https://www.getpostman.com/).
+A coleção e o ambiente do Postman da Green API exigem a instalação do [Postman](https://www.getpostman.com/).
 
 ## Instalando
 
