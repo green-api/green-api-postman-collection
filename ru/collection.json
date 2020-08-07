@@ -357,22 +357,22 @@
 					]
 				},
 				{
-					"name": "Авторизовать аккаунт (через websocket)",
+					"name": "Получить QR-код",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host-websocket}}/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}}",
+							"raw": "{{host}}/waInstance{{idInstance}}/qr/{{apiTokenInstance}}",
 							"host": [
-								"{{host-websocket}}"
+								"{{host}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
-								"scanqrcode",
+								"qr",
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [Scanqrcode](https://green-api.com/docs/api/account/Scanqrcode/)"
+						"description": "Документация [QR](https://green-api.com/docs/api/account/QR/)"
 					},
 					"response": []
 				}
@@ -1012,277 +1012,46 @@
 			"name": "Получение",
 			"item": [
 				{
-					"name": "Webhook REST API",
+					"name": "Получение уведомлений",
 					"item": [
 						{
-							"name": "Получить webhook",
+							"name": "Получить уведомление",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/receiveWebhook/{{apiTokenInstance}}",
+									"raw": "{{host}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"receiveWebhook",
+										"receiveNotification",
 										"{{apiTokenInstance}}"
 									]
-								}
+								},
+								"description": "Документация [ReceiveNotification](https://green-api.com/docs/api/receiving/technology-http-api/ReceiveNotification/)"
 							},
 							"response": []
 						},
 						{
-							"name": "Удалить webhook",
+							"name": "Удалить уведомление",
 							"request": {
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/deleteWebhook/{{apiTokenInstance}}/deliveryTag",
+									"raw": "{{host}}/waInstance{{idInstance}}/deleteNotification/{{apiTokenInstance}}/{{receiptId}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"deleteWebhook",
+										"deleteNotification",
 										"{{apiTokenInstance}}",
-										"deliveryTag"
+										"{{receiptId}}"
 									]
-								}
-							},
-							"response": []
-						}
-					],
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "95d5d1ed-b148-468f-814c-e13418b0bc90",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "79c9b975-71ce-42b7-a119-3928e5b5eb81",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Webhook",
-					"item": [
-						{
-							"name": "Входящее сообщение",
-							"item": [
-								{
-									"name": "Входящее текстовое сообщение",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n\t\"typeWebhook\":\"incomingMessageReceived\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\":1586700997,\r\n\t\"idMessage\":\"5A5A9EE49FBAACC3E30C2704632FFA1B\",\r\n\t\"senderData\":{\r\n\t\t\"chatId\":\"79001234568@c.us\",\r\n\t\t\"sender\":\"79001234568@c.us\",\r\n\t\t\"senderName\":\"Green API\"\r\n\t},\r\n\t\"messageData\":{\r\n\t\t\"typeMessage\":\"textMessage\",\r\n\t\t\"textMessageData\": {\r\n\t\t\t\"textMessage\": \"I use Green-API to send this message to you!\"\r\n\t\t}\r\n\t}\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": ""
-										},
-										"description": "Документация [TextMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/TextMessage/)"
-									},
-									"response": []
 								},
-								{
-									"name": "Входящее текстовое сообщение с URL",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"79001234567@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588095273,\n    \"idMessage\": \"3EB0818D69F8B6C4774B\",\n    \"senderData\": {\n\t\t\"chatId\":\"79001234568@c.us\",\n\t\t\"sender\":\"79001234568@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"extendedTextMessage\",\n        \"extendedTextMessageData\": {\n            \"text\": \"https://green-api.com/docs/video\",\n            \"description\": \"Green API docs shows how you can develop the WhatsApp Bot\",\n            \"title\": \"How to develop WhatsApp Bot\",\n            \"previewType\": \"video\",\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgAAAAAAAAAAAAA/2wAAAAAAAAAAAAYGBQYHBwYIChAKCgkJChQODwwQFxQYG==\"\n        }\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": ""
-										},
-										"description": "Документация [ExtendedTextMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/ExtendedTextMessage/)"
-									},
-									"response": []
-								},
-								{
-									"name": "Входящее сообщение с изображением, видео, аудио, документом",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n\t\"typeWebhook\":\"incomingMessageReceived\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\": \"whatsapp\"\r\n\t},\r\n\t\"timestamp\": 1586700802,\r\n\t\"idMessage\":\"19136A974392FA8CF584D70DD0E1AEDF\",\r\n\t\"senderData\":{\r\n\t\t\"chatId\":\"79001234568@c.us\",\r\n\t\t\"sender\":\"79001234568@c.us\",\r\n\t\t\"senderName\":\"Green API\"\r\n\t},\r\n\t\"messageData\":{\r\n\t\t\"typeMessage\":\"imageMessage\",\r\n\t\t\"fileMessageData\":{\r\n\t\t\t\"downloadUrl\":\"https://api.green-api.com/waInstance1234/downloadFile/19136A974392FA8CF584D70DD0E1AEDF\",\r\n\t\t\t\"caption\": \"Картинка\"\r\n\t\t}\r\n\t}\r\n}\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": ""
-										},
-										"description": "Документация [ImageMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/ImageMessage/)"
-									},
-									"response": []
-								},
-								{
-									"name": "Входящее сообщение с геолокацией",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"79001234567@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588088591,\n    \"idMessage\": \"4EAAB7F6552F6F91785D1365C0358C58\",\n    \"senderData\": {\n\t\t\"chatId\":\"79001234568@c.us\",\n\t\t\"sender\":\"79001234568@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"locationMessage\",\n        \"locationMessageData\": {\n            \"latitude\": 57.940086364746094,\n            \"longitude\": 55.838706970214844,\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFx=\"\n        }\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": ""
-										},
-										"description": "Документация [LocationMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/LocationMessage/)"
-									},
-									"response": []
-								},
-								{
-									"name": "Входящее сообщение с контактом",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"typeWebhook\": \"incomingMessageReceived\",\n    \"instanceData\": {\n        \"idInstance\": 1234,\n        \"wid\": \"79001234567@c.us\",\n        \"typeInstance\": \"whatsapp\"\n    },\n    \"timestamp\": 1588091580,\n    \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\n    \"senderData\": {\n\t\t\"chatId\":\"79001234568@c.us\",\n\t\t\"sender\":\"79001234568@c.us\",\n\t\t\"senderName\":\"Green API\"\n    },\n    \"messageData\": {\n        \"typeMessage\": \"contactMessage\",\n        \"contactMessageData\": {\n            \"displayName\": \"Виктор Андреевич\",\n            \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Андреевич;Виктор;;;\\nFN:Виктор Андреевич\\nORG:Image\\nTITLE:\\nitem1.TEL;waid=79001234567:+7 900 123-45-67\\nitem1.X-ABLabel:Мобильный\\nEND:VCARD\"\n        }\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": ""
-										},
-										"description": "Документация [ContactMessage](https://green-api.com/docs/api/receiving/webhook/incoming-message/ContactMessage/)"
-									},
-									"response": []
-								}
-							],
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "b82ae002-aa79-4564-881f-72f0aeafa658",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "b9b54e7a-2d07-4d56-90d8-f3b7164f5ec6",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "Отправленное сообщение",
-							"item": [
-								{
-									"name": "Статус отправленного сообщения",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n\t\"typeWebhook\":\"outgoingMessageStatus\",\r\n\t\"timestamp\":1586700802,\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"idMessage\":\"3EB0608D6A2901063D63\",\r\n\t\"status\":\"noAccount\"\r\n}\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": ""
-										},
-										"description": "Документация [OutgoingMessageStatus](https://green-api.com/docs/api/receiving/webhook/outgoing-message/OutgoingMessageStatus/)"
-									},
-									"response": []
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "Статус аккаунта",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"typeWebhook\":\"stateInstanceChanged\",\r\n\t\"instanceData\":{\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\":\"whatsapp\"\r\n\t},\r\n\t\"timestamp\":1586700690,\r\n\t\"stateInstance\":\"notAuthorized\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": ""
-								},
-								"description": "Документация [StateInstanceChanged](https://green-api.com/docs/api/receiving/webhook/StateInstanceChanged/)"
-							},
-							"response": []
-						},
-						{
-							"name": "Статус устройства",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"typeWebhook\": \"deviceInfo\",\r\n\t\"instanceData\": {\r\n\t\t\"idInstance\": 1234,\r\n\t\t\"wid\": \"79001234567@c.us\",\r\n\t\t\"typeInstance\": \"whatsapp\"\r\n\t},\r\n\t\"timestamp\": 1586700802,\r\n\t\"deviceData\": {\r\n\t\t\"platform\": \"iphone\",\r\n\t\t\"deviceManufacturer\": \"Apple\",\r\n\t\t\"deviceModel\": \"iPhone 11\",\r\n\t\t\"osVersion\": \"13.4.1\",\r\n\t\t\"waVersion\": \"2.20.42\",\r\n\t\t\"battery\": 90\r\n\t}\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": ""
-								},
-								"description": "Документация [DeviceInfo](https://green-api.com/docs/api/receiving/webhook/DeviceInfo/)"
+								"description": "Документация [DeleteNotification](https://green-api.com/docs/api/receiving/technology-http-api/DeleteNotification/)"
 							},
 							"response": []
 						}
