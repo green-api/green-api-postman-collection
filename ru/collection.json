@@ -9,224 +9,6 @@
 			"name": "Аккаунт",
 			"item": [
 				{
-					"name": "Разлогинить аккаунт",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"logout",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [Logout](https://green-api.com/docs/api/account/Logout/)"
-					},
-					"response": [
-						{
-							"name": "logout",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"logout",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 17 Apr 2020 14:24:29 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "22"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"isLogout\": true\n}"
-						}
-					]
-				},
-				{
-					"name": "Получить состояние аккаунта",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"getStateInstance",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [GetStateInstance](https://green-api.com/docs/api/account/GetStateInstance/)"
-					},
-					"response": [
-						{
-							"name": "getStateInstance authorized",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"getStateInstance",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 17 Apr 2020 14:31:40 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "35"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"stateInstance\": \"authorized\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Получить QR-код",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/qr/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"qr",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [QR](https://green-api.com/docs/api/account/QR/)"
-					},
-					"response": []
-				},
-				{
-					"name": "Перезапустить аккаунт",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"reboot",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [Reboot](https://green-api.com/docs/api/account/Reboot/)"
-					},
-					"response": [
-						{
-							"name": "reboot",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"reboot",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 17 Apr 2020 14:29:41 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "22"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"isReboot\": true\n}"
-						}
-					]
-				},
-				{
 					"name": "Получить настройки аккаунта",
 					"request": {
 						"method": "GET",
@@ -375,6 +157,306 @@
 							"body": "{\n    \"saveSettings\": true\n}"
 						}
 					]
+				},
+				{
+					"name": "Установить системный прокси",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/SetSystemProxy/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"SetSystemProxy",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SetSystemProxy](https://green-api.com/docs/api/account/SetSystemProxy/)"
+					},
+					"response": [
+						{
+							"name": "Установить системный прокси",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/SetSystemProxy/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"SetSystemProxy",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Nov 2020 05:53:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"setSystemProxy\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить состояние аккаунта",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getStateInstance",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [GetStateInstance](https://green-api.com/docs/api/account/GetStateInstance/)"
+					},
+					"response": [
+						{
+							"name": "getStateInstance authorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getStateInstance",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:31:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"stateInstance\": \"authorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Перезапустить аккаунт",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"reboot",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [Reboot](https://green-api.com/docs/api/account/Reboot/)"
+					},
+					"response": [
+						{
+							"name": "reboot",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"reboot",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:29:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isReboot\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Разлогинить аккаунт",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"logout",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [Logout](https://green-api.com/docs/api/account/Logout/)"
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"logout",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:24:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isLogout\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить QR-код",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/qr/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"qr",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [QR](https://green-api.com/docs/api/account/QR/)"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
