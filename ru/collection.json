@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b4ac6ed2-1f53-4c80-9d70-59d5f11cbd90",
+		"_postman_id": "8bc6f8ce-27d5-4342-9ce8-831111274582",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -8,6 +8,224 @@
 		{
 			"name": "Аккаунт",
 			"item": [
+				{
+					"name": "Разлогинить аккаунт",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"logout",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [Logout](https://green-api.com/docs/api/account/Logout/)"
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"logout",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:24:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isLogout\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить состояние аккаунта",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getStateInstance",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [GetStateInstance](https://green-api.com/docs/api/account/GetStateInstance/)"
+					},
+					"response": [
+						{
+							"name": "getStateInstance authorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getStateInstance",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:31:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"stateInstance\": \"authorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Получить QR-код",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/qr/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"qr",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [QR](https://green-api.com/docs/api/account/QR/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Перезапустить аккаунт",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"reboot",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [Reboot](https://green-api.com/docs/api/account/Reboot/)"
+					},
+					"response": [
+						{
+							"name": "reboot",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"reboot",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:29:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isReboot\": true\n}"
+						}
+					]
+				},
 				{
 					"name": "Получить настройки аккаунта",
 					"request": {
@@ -157,224 +375,6 @@
 							"body": "{\n    \"saveSettings\": true\n}"
 						}
 					]
-				},
-				{
-					"name": "Получить состояние аккаунта",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"getStateInstance",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [GetStateInstance](https://green-api.com/docs/api/account/GetStateInstance/)"
-					},
-					"response": [
-						{
-							"name": "getStateInstance authorized",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"getStateInstance",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 17 Apr 2020 14:31:40 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "35"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"stateInstance\": \"authorized\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Перезапустить аккаунт",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"reboot",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [Reboot](https://green-api.com/docs/api/account/Reboot/)"
-					},
-					"response": [
-						{
-							"name": "reboot",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"reboot",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 17 Apr 2020 14:29:41 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "22"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"isReboot\": true\n}"
-						}
-					]
-				},
-				{
-					"name": "Разлогинить аккаунт",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"logout",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [Logout](https://green-api.com/docs/api/account/Logout/)"
-					},
-					"response": [
-						{
-							"name": "logout",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"logout",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 17 Apr 2020 14:24:29 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "22"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"isLogout\": true\n}"
-						}
-					]
-				},
-				{
-					"name": "Получить QR-код",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/qr/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"qr",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [QR](https://green-api.com/docs/api/account/QR/)"
-					},
-					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -1015,26 +1015,6 @@
 					"name": "Получение уведомлений",
 					"item": [
 						{
-							"name": "Получить уведомление",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"receiveNotification",
-										"{{apiTokenInstance}}"
-									]
-								},
-								"description": "Документация [ReceiveNotification](https://green-api.com/docs/api/receiving/technology-http-api/ReceiveNotification/)"
-							},
-							"response": []
-						},
-						{
 							"name": "Удалить уведомление",
 							"request": {
 								"method": "DELETE",
@@ -1052,6 +1032,26 @@
 									]
 								},
 								"description": "Документация [DeleteNotification](https://green-api.com/docs/api/receiving/technology-http-api/DeleteNotification/)"
+							},
+							"response": []
+						},
+						{
+							"name": "Получить уведомление",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"receiveNotification",
+										"{{apiTokenInstance}}"
+									]
+								},
+								"description": "Документация [ReceiveNotification](https://green-api.com/docs/api/receiving/technology-http-api/ReceiveNotification/)"
 							},
 							"response": []
 						}
@@ -1092,6 +1092,90 @@
 		{
 			"name": "Журналы",
 			"item": [
+				{
+					"name": "Получить сообщения чата",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"count\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getChatHistory/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getChatHistory",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [GetChatHistory](https://green-api.com/docs/api/journals/GetChatHistory/)"
+					},
+					"response": [
+						{
+							"name": "sendMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"message\": \"Hello man\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
+				},
 				{
 					"name": "Получить журнал входящих сообщений",
 					"request": {
@@ -1229,7 +1313,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "8fcf0bee-4af3-4c51-abc3-253e4500fa4c",
+						"id": "59cf69f8-46ab-4b7d-94f9-8c75e3624f27",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1239,7 +1323,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7819e8b9-a6a1-40c1-916f-f3081a8c1ef0",
+						"id": "15e73c4c-4430-4cfe-a5a3-3b2169f5651a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1252,72 +1336,6 @@
 		{
 			"name": "Очереди",
 			"item": [
-				{
-					"name": "Получить очередь сообщений к отправке",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"showMessagesQueue",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [ShowMessagesQueue](https://green-api.com/docs/api/queues/ShowMessagesQueue/)"
-					},
-					"response": [
-						{
-							"name": "showMessagesQueue",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"showMessagesQueue",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 20 Apr 2020 19:50:48 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "321"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"message\": \"Hello man\"\n    }\n]"
-						}
-					]
-				},
 				{
 					"name": "Очистить очередь сообщений к отправке",
 					"request": {
@@ -1383,63 +1401,39 @@
 							"body": "{\n    \"isCleared\": true\n}"
 						}
 					]
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "Группы",
-			"item": [
+				},
 				{
-					"name": "Создать группу",
+					"name": "Получить очередь сообщений к отправке",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"groupName\": \"Group created by Green API\",\r\n    \"chatIds\": [\r\n        \"79001234568@c.us\",\r\n        \"79001234569@c.us\"\r\n    ]\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
+							"raw": "{{host}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
-								"createGroup",
+								"showMessagesQueue",
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [CreateGroup](https://green-api.com/docs/api/groups/CreateGroup/)"
+						"description": "Документация [ShowMessagesQueue](https://green-api.com/docs/api/queues/ShowMessagesQueue/)"
 					},
 					"response": [
 						{
-							"name": "group.createGroup",
+							"name": "showMessagesQueue",
 							"originalRequest": {
-								"method": "POST",
+								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"groupName\": \"From API Group created\",\r\n\t\"chatIds\": [],\r\n\t\"phones\": [\r\n\t\t79001234567,\r\n\t\t79001234568\r\n\t]\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
+									"raw": "{{host}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"createGroup",
+										"showMessagesQueue",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -1454,7 +1448,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 28 Apr 2020 14:27:29 GMT"
+									"value": "Mon, 20 Apr 2020 19:50:48 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -1462,7 +1456,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "124"
+									"value": "321"
 								},
 								{
 									"key": "Connection",
@@ -1470,10 +1464,16 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"created\": true,\n    \"chatId\": \"79001234567-1587570015@g.us\",\n    \"groupInviteLink\": \"https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXXXX\"\n}"
+							"body": "[\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"message\": \"Hello man\"\n    },\n    {\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"message\": \"Hello man\"\n    }\n]"
 						}
 					]
-				},
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Группы",
+			"item": [
 				{
 					"name": "Изменить имя группы",
 					"request": {
@@ -1643,13 +1643,13 @@
 					]
 				},
 				{
-					"name": "Добавить участника в группу",
+					"name": "Выйти из группы",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1657,27 +1657,27 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
+							"raw": "{{host}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
-								"addGroupParticipant",
+								"leaveGroup",
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [AddGroupParticipant](https://green-api.com/docs/api/groups/AddGroupParticipant/)"
+						"description": "Документация [LeaveGroup](https://green-api.com/docs/api/groups/LeaveGroup/)"
 					},
 					"response": [
 						{
-							"name": "group.addGroupParticipant",
+							"name": "group.leaveGroup",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 79001234567\r\n}",
+									"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1685,13 +1685,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
+									"raw": "{{host}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"addGroupParticipant",
+										"leaveGroup",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -1706,7 +1706,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 28 Apr 2020 14:37:57 GMT"
+									"value": "Tue, 28 Apr 2020 14:58:22 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -1714,7 +1714,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "28"
+									"value": "24"
 								},
 								{
 									"key": "Connection",
@@ -1722,91 +1722,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"addParticipant\": true\n}"
-						}
-					]
-				},
-				{
-					"name": "Удалить участника из группы",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"removeGroupParticipant",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [RemoveGroupParticipant](https://green-api.com/docs/api/groups/RemoveGroupParticipant/)"
-					},
-					"response": [
-						{
-							"name": "group.removeGroupParticipant",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 79001234568\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"removeGroupParticipant",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 28 Apr 2020 14:35:40 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "31"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"removeParticipant\": true\n}"
+							"body": "{\n    \"leaveGroup\": true\n}"
 						}
 					]
 				},
@@ -1895,6 +1811,90 @@
 					]
 				},
 				{
+					"name": "Удалить участника из группы",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"removeGroupParticipant",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [RemoveGroupParticipant](https://green-api.com/docs/api/groups/RemoveGroupParticipant/)"
+					},
+					"response": [
+						{
+							"name": "group.removeGroupParticipant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 79001234568\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"removeGroupParticipant",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:35:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"removeParticipant\": true\n}"
+						}
+					]
+				},
+				{
 					"name": "Отозвать права администратора группы",
 					"request": {
 						"method": "POST",
@@ -1979,13 +1979,13 @@
 					]
 				},
 				{
-					"name": "Выйти из группы",
+					"name": "Создать группу",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\"\r\n}\r\n",
+							"raw": "{\r\n\t\"groupName\": \"Group created by Green API\",\r\n    \"chatIds\": [\r\n        \"79001234568@c.us\",\r\n        \"79001234569@c.us\"\r\n    ]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1993,27 +1993,27 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
+							"raw": "{{host}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
-								"leaveGroup",
+								"createGroup",
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [LeaveGroup](https://green-api.com/docs/api/groups/LeaveGroup/)"
+						"description": "Документация [CreateGroup](https://green-api.com/docs/api/groups/CreateGroup/)"
 					},
 					"response": [
 						{
-							"name": "group.leaveGroup",
+							"name": "group.createGroup",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\"\r\n}\r\n",
+									"raw": "{\r\n\t\"groupName\": \"From API Group created\",\r\n\t\"chatIds\": [],\r\n\t\"phones\": [\r\n\t\t79001234567,\r\n\t\t79001234568\r\n\t]\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2021,13 +2021,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
+									"raw": "{{host}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"leaveGroup",
+										"createGroup",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -2042,7 +2042,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 28 Apr 2020 14:58:22 GMT"
+									"value": "Tue, 28 Apr 2020 14:27:29 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -2050,7 +2050,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "24"
+									"value": "124"
 								},
 								{
 									"key": "Connection",
@@ -2058,7 +2058,91 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"leaveGroup\": true\n}"
+							"body": "{\n    \"created\": true,\n    \"chatId\": \"79001234567-1587570015@g.us\",\n    \"groupInviteLink\": \"https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXXXX\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Добавить участника в группу",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n\t\"participantChatId\": \"79001234565@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"addGroupParticipant",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [AddGroupParticipant](https://green-api.com/docs/api/groups/AddGroupParticipant/)"
+					},
+					"response": [
+						{
+							"name": "group.addGroupParticipant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantChatId\": \"\",\r\n\t\"participantPhone\": 79001234567\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"addGroupParticipant",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:37:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"addParticipant\": true\n}"
 						}
 					]
 				}
@@ -2068,90 +2152,6 @@
 		{
 			"name": "Отметка прочтения",
 			"item": [
-				{
-					"name": "Отметить чат прочитанным",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"readChat",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [ReadChat](https://green-api.com/docs/api/marks/ReadChat/)"
-					},
-					"response": [
-						{
-							"name": "message.readChat",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"readChat",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 06 May 2020 20:36:35 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "21"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"setRead\": true\n}"
-						}
-					]
-				},
 				{
 					"name": "Отметить сообщение в чате прочитанным",
 					"request": {
@@ -2235,13 +2235,97 @@
 							"body": "{\n    \"setRead\": true\n}"
 						}
 					]
+				},
+				{
+					"name": "Отметить чат прочитанным",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"readChat",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [ReadChat](https://green-api.com/docs/api/marks/ReadChat/)"
+					},
+					"response": [
+						{
+							"name": "message.readChat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"readChat",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 20:36:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"setRead\": true\n}"
+						}
+					]
 				}
 			],
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a485d47b-01ad-40c8-8784-a1cc1d42c4ee",
+						"id": "2bbfec3b-e3d0-4d4e-b06f-d84b06d1050d",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2251,7 +2335,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e0718c7f-1725-4df9-ae21-29792744bf84",
+						"id": "01931706-fdbf-4f16-8625-be8512104aee",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2335,7 +2419,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "51758b19-5a26-4ab6-bc8f-95d8ff9c671b",
+						"id": "9a9ef27e-be52-43b4-94f9-acb995f82828",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2345,7 +2429,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f8e43e10-de84-4308-932c-fea401bd44a0",
+						"id": "1736c79a-3a1b-462e-aeca-63cb4c8cc3d7",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2359,55 +2443,37 @@
 			"name": "Сервисные методы",
 			"item": [
 				{
-					"name": "Проверить наличие WhatsApp",
+					"name": "Получить контакты",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"phoneNumber\": 79001234567\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
+							"raw": "{{host}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
-								"checkWhatsapp",
+								"getContacts",
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [CheckWhatsapp](https://green-api.com/docs/api/service/CheckWhatsapp/)"
+						"description": "Документация [GetContacts](https://green-api.com/docs/api/service/GetContacts/)"
 					},
 					"response": [
 						{
-							"name": "checkWhatsapp",
+							"name": "getContacts",
 							"originalRequest": {
-								"method": "POST",
+								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"phoneNumber\": 79001234567\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
+									"raw": "{{host}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"checkWhatsapp",
+										"getContacts",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -2422,7 +2488,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 17 Apr 2020 14:35:46 GMT"
+									"value": "Mon, 20 Apr 2020 19:54:33 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -2430,7 +2496,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "28"
+									"value": "458"
 								},
 								{
 									"key": "Connection",
@@ -2438,7 +2504,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"existsWhatsapp\": true\n}"
+							"body": "[\n    {\n        \"id\": \"79001234567@c.us\",\n        \"name\": \"Иван Петров\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234568@c.us\",\n        \"name\": \"Люся Сидорова\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234569-1479621234@g.us\",\n        \"name\": \"Моя группа\",\n        \"type\": \"group\"\n    }\n]"
 						}
 					]
 				},
@@ -2611,37 +2677,55 @@
 					]
 				},
 				{
-					"name": "Получить контакты",
+					"name": "Проверить наличие WhatsApp",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"phoneNumber\": 79001234567\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
+							"raw": "{{host}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
-								"getContacts",
+								"checkWhatsapp",
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [GetContacts](https://green-api.com/docs/api/service/GetContacts/)"
+						"description": "Документация [CheckWhatsapp](https://green-api.com/docs/api/service/CheckWhatsapp/)"
 					},
 					"response": [
 						{
-							"name": "getContacts",
+							"name": "checkWhatsapp",
 							"originalRequest": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"phoneNumber\": 79001234567\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
+									"raw": "{{host}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"getContacts",
+										"checkWhatsapp",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -2656,7 +2740,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 20 Apr 2020 19:54:33 GMT"
+									"value": "Fri, 17 Apr 2020 14:35:46 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -2664,7 +2748,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "458"
+									"value": "28"
 								},
 								{
 									"key": "Connection",
@@ -2672,7 +2756,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"79001234567@c.us\",\n        \"name\": \"Иван Петров\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234568@c.us\",\n        \"name\": \"Люся Сидорова\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234569-1479621234@g.us\",\n        \"name\": \"Моя группа\",\n        \"type\": \"group\"\n    }\n]"
+							"body": "{\n    \"existsWhatsapp\": true\n}"
 						}
 					]
 				}
@@ -2684,7 +2768,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "474015d9-e5df-4fdb-9b95-7b8d6de92dec",
+				"id": "93b61643-96b0-4d6f-8cad-abab1ab10f06",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2694,7 +2778,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "a527dc9a-dbd8-4868-89de-db6955b8f5fe",
+				"id": "00b61fdb-0c1f-4167-9d12-82c5d46f3418",
 				"type": "text/javascript",
 				"exec": [
 					""
