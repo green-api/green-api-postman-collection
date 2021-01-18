@@ -457,9 +457,98 @@
 						"description": "Документация [QR](https://green-api.com/docs/api/account/QR/)"
 					},
 					"response": []
+				},
+				{
+					"name": "Установить фото профиля",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/setProfilePicture/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"setProfilePicture",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SetProfilePicture](https://green-api.com/docs/api/account/SetProfilePicture/)"
+					},
+					"response": [
+						{
+							"name": "setSettings",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n   \t\"proxyInstance\": \"100.100.100.100:39898:qGKqCo:Jb26Xz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"setSettings",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 13:16:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"saveSettings\": true\n}"
+						}
+					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Отправка",
@@ -549,13 +638,13 @@
 					]
 				},
 				{
-					"name": "Отправить текст в группу",
+					"name": "Отправить контакт",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"79001234567-1581234048@g.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234568,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -563,27 +652,27 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
-								"sendMessage",
+								"sendContact",
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendMessage](https://green-api.com/docs/api/sending/SendMessage/)"
+						"description": "Документация [SendContact](https://green-api.com/docs/api/sending/SendContact/)"
 					},
 					"response": [
 						{
-							"name": "sendMessage",
+							"name": "message.sendContact",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"message\": \"Hello man\"\r\n}",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234567,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -591,13 +680,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"sendMessage",
+										"sendContact",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -612,7 +701,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+									"value": "Wed, 06 May 2020 20:23:18 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -628,7 +717,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+							"body": "{\n    \"idMessage\": \"3EB0DF31710A9123EC75\"\n}"
 						}
 					]
 				},
@@ -655,10 +744,7 @@
 									"type": "file",
 									"src": "/C:/Users/mihai/Desktop/SB-409/window.jpg"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": {
 							"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}",
@@ -836,6 +922,90 @@
 					]
 				},
 				{
+					"name": "Отправить текст в группу",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"79001234567-1581234048@g.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SendMessage](https://green-api.com/docs/api/sending/SendMessage/)"
+					},
+					"response": [
+						{
+							"name": "sendMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"message\": \"Hello man\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
+				},
+				{
 					"name": "Отправить геолокацию",
 					"request": {
 						"method": "POST",
@@ -916,90 +1086,6 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"idMessage\": \"3EB0133DEBFA6BD6C5AA\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Отправить контакт",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234568,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"sendContact",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [SendContact](https://green-api.com/docs/api/sending/SendContact/)"
-					},
-					"response": [
-						{
-							"name": "message.sendContact",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234567,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"sendContact",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 06 May 2020 20:23:18 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "41"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"idMessage\": \"3EB0DF31710A9123EC75\"\n}"
 						}
 					]
 				},
@@ -1087,8 +1173,7 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Получение",
@@ -1096,6 +1181,26 @@
 				{
 					"name": "Получение уведомлений",
 					"item": [
+						{
+							"name": "Получить уведомление",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"receiveNotification",
+										"{{apiTokenInstance}}"
+									]
+								},
+								"description": "Документация [ReceiveNotification](https://green-api.com/docs/api/receiving/technology-http-api/ReceiveNotification/)"
+							},
+							"response": []
+						},
 						{
 							"name": "Удалить уведомление",
 							"request": {
@@ -1116,30 +1221,8 @@
 								"description": "Документация [DeleteNotification](https://green-api.com/docs/api/receiving/technology-http-api/DeleteNotification/)"
 							},
 							"response": []
-						},
-						{
-							"name": "Получить уведомление",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"receiveNotification",
-										"{{apiTokenInstance}}"
-									]
-								},
-								"description": "Документация [ReceiveNotification](https://green-api.com/docs/api/receiving/technology-http-api/ReceiveNotification/)"
-							},
-							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Получение файлов",
@@ -1164,12 +1247,9 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Журналы",
@@ -1259,72 +1339,6 @@
 					]
 				},
 				{
-					"name": "Получить журнал входящих сообщений",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"lastIncomingMessages",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [LastIncomingMessages](https://green-api.com/docs/api/journals/LastIncomingMessages/)"
-					},
-					"response": [
-						{
-							"name": "lastIncomingMessages",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"lastIncomingMessages",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 20 Apr 2020 19:57:39 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "1643"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"idMessage\": \"8E078426472FACECDFC2787173F05459\",\n        \"timestamp\": 1587412262,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"senderId\": \"79001234567@c.us\",\n        \"senderName\": \"Имя\",\n        \"textMessage\": \"Ответ\"\n    },\n    {\n        \"idMessage\": \"75A35BA7745DB8FE6A8AD59C3F51C8CC\",\n        \"timestamp\": 1587412279,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"senderId\": \"79001234567@c.us\",\n        \"senderName\": \"Имя\",\n        \"textMessage\": \"Ответ\"\n    }\n]"
-						}
-					]
-				},
-				{
 					"name": "Получить журнал отправленных сообщений",
 					"request": {
 						"method": "GET",
@@ -1389,13 +1403,78 @@
 							"body": "[\n    {\n        \"idMessage\": \"3EB0C732BC93864C25FB\",\n        \"timestamp\": 1587412276,\n        \"statusMessage\": \"read\",\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\"\n    },\n    {\n        \"idMessage\": \"3EB0C37D09143B7F53A0\",\n        \"timestamp\": 1587412276,\n        \"statusMessage\": \"read\",\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\"\n    }\n]"
 						}
 					]
+				},
+				{
+					"name": "Получить журнал входящих сообщений",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"lastIncomingMessages",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [LastIncomingMessages](https://green-api.com/docs/api/journals/LastIncomingMessages/)"
+					},
+					"response": [
+						{
+							"name": "lastIncomingMessages",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"lastIncomingMessages",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:57:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1643"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idMessage\": \"8E078426472FACECDFC2787173F05459\",\n        \"timestamp\": 1587412262,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"senderId\": \"79001234567@c.us\",\n        \"senderName\": \"Имя\",\n        \"textMessage\": \"Ответ\"\n    },\n    {\n        \"idMessage\": \"75A35BA7745DB8FE6A8AD59C3F51C8CC\",\n        \"timestamp\": 1587412279,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"senderId\": \"79001234567@c.us\",\n        \"senderName\": \"Имя\",\n        \"textMessage\": \"Ответ\"\n    }\n]"
+						}
+					]
 				}
 			],
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "59cf69f8-46ab-4b7d-94f9-8c75e3624f27",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1405,15 +1484,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "15e73c4c-4430-4cfe-a5a3-3b2169f5651a",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Очереди",
@@ -1550,8 +1627,7 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Группы",
@@ -2228,8 +2304,7 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Отметка прочтения",
@@ -2407,7 +2482,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "2bbfec3b-e3d0-4d4e-b06f-d84b06d1050d",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2417,15 +2491,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "01931706-fdbf-4f16-8625-be8512104aee",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Устройство (телефон)",
@@ -2501,7 +2573,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "9a9ef27e-be52-43b4-94f9-acb995f82828",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2511,15 +2582,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1736c79a-3a1b-462e-aeca-63cb4c8cc3d7",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Сервисные методы",
@@ -2842,15 +2911,13 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "93b61643-96b0-4d6f-8cad-abab1ab10f06",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2860,13 +2927,11 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "00b61fdb-0c1f-4167-9d12-82c5d46f3418",
 				"type": "text/javascript",
 				"exec": [
 					""
 				]
 			}
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
