@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "8bc6f8ce-27d5-4342-9ce8-831111274582",
+		"_postman_id": "2e5dc46a-f751-4708-831c-084c4a46bd45",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -70,7 +70,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"wid\": \"79001234567@c.us\", \n    \"countryInstance\": \"ru\",\n    \"typeAccount\": \"vip\",\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\n    \"outgoingWebhook\": \"yes\",\n    \"stateWebhook\": \"yes\",\n    \"incomingWebhook\": \"yes\",\n    \"deviceWebhook\": \"no\"\n}"
+							"body": "{\n    \"wid\": \"79001234567@c.us\", \n    \"countryInstance\": \"ru\",\n    \"typeAccount\": \"vip\",\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"webhookUrlToken\": \"\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n    \"markIncomingMessagesReadedOnReply\": \"no\",\n    \"proxyInstance\": \"123.45.67.891:3435:hdhhd:i3ji3\",\n    \"outgoingWebhook\": \"yes\",\n    \"outgoingMessageWebhook\": \"yes\",\n    \"stateWebhook\": \"yes\",\n    \"incomingWebhook\": \"yes\",\n    \"deviceWebhook\": \"no\",\n    \"statusInstanceWebhook\": \"yes\",\n    \"sendFromUTC\": \"12:00\",\n    \"sendToUTC\": \"18:00\"\n}"
 						}
 					]
 				},
@@ -81,7 +81,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"delaySendMessagesMilliseconds\": 1000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\"\r\n}",
+							"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 1000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"yes\", \r\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"statusInstanceWebhook\": \"no\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\",\r\n    \"sendFromUTC\": \"12:00\",\r\n    \"sendToUTC\": \"18:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -307,6 +307,72 @@
 					]
 				},
 				{
+					"name": "Получить состояние сокета аккаунта",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getStatusInstance/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getStatusInstance",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [GetStatusInstance](https://green-api.com/docs/api/account/GetStatusInstance/)"
+					},
+					"response": [
+						{
+							"name": "getStatusInstance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getStatusInstance/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getStatusInstance",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:31:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"stateInstance\": \"online\"\n}"
+						}
+					]
+				},
+				{
 					"name": "Перезапустить аккаунт",
 					"request": {
 						"method": "GET",
@@ -469,12 +535,12 @@
 								{
 									"key": "file",
 									"type": "file",
-									"src": []
+									"src": "/E:/GreenApi/avatar.jpeg"
 								}
 							],
 							"options": {
 								"raw": {
-									"language": "json"
+									"language": "text"
 								}
 							}
 						},
@@ -491,62 +557,7 @@
 						},
 						"description": "Документация [SetProfilePicture](https://green-api.com/docs/api/account/SetProfilePicture/)"
 					},
-					"response": [
-						{
-							"name": "setSettings",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n   \t\"proxyInstance\": \"100.100.100.100:39898:qGKqCo:Jb26Xz\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"setSettings",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.10.3"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 21 Apr 2020 13:16:18 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "26"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"saveSettings\": true\n}"
-						}
-					]
+					"response": []
 				}
 			]
 		},
@@ -560,7 +571,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\",\r\n    \"quotedMessageId\":\"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -644,7 +655,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234568,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234568,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t},\r\n    \"quotedMessageId\":\"\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -737,12 +748,21 @@
 								{
 									"key": "caption",
 									"value": "Описание",
-									"type": "text"
+									"description": "Добавляется только для Фото и Видео",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "file",
 									"type": "file",
 									"src": "/C:/Users/mihai/Desktop/SB-409/window.jpg"
+								},
+								{
+									"key": "quotedMessageId",
+									"value": "",
+									"description": "ID цитируемого сообщения",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
@@ -844,7 +864,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlFile\": \"https://avatars.mds.yandex.net/get-pdb/477388/77f64197-87d2-42cf-9305-14f49c65f1da/s375\",\r\n\t\"fileName\": \"horse.png\",\r\n\t\"caption\": \"лошадка\"\r\n}",
+							"raw": "{\r\n   \t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlFile\": \"https://avatars.mds.yandex.net/get-pdb/477388/77f64197-87d2-42cf-9305-14f49c65f1da/s375\",\r\n\t\"fileName\": \"horse.png\",\r\n\t\"caption\": \"лошадка\",\r\n    \"quotedMessageId\":\"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -928,7 +948,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"79001234567-1581234048@g.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"raw": "{\r\n\t\"chatId\": \"79001234567-1581234048@g.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\",\r\n    \"quotedMessageId\":\"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1012,7 +1032,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"chatId\": \"79001234567@c.us\",\r\n    \"nameLocation\": \"Я здесь, приезжай\",\r\n    \"address\": \"613123, Perm\",\r\n   \t\"latitude\": 44.9370129,\r\n    \"longitude\": 89.8728409\r\n}\r\n",
+							"raw": "{\r\n    \"chatId\": \"79001234567@c.us\",\r\n    \"nameLocation\": \"Я здесь, приезжай\",\r\n    \"address\": \"613123, Perm\",\r\n   \t\"latitude\": 44.9370129,\r\n    \"longitude\": 89.8728409,\r\n    \"quotedMessageId\":\"\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1096,7 +1116,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlLink\": \"https://green-api.com\"\r\n}\r\n",
+							"raw": "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlLink\": \"https://green-api.com\",\r\n    \"quotedMessageId\":\"\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2301,6 +2321,97 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"addParticipant\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Установить фото группы",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "groupId",
+									"value": "",
+									"description": "идентификатор группы, например 74433384355-1585564682@g.us",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/setGroupPicture/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"setGroupPicture",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SetGroupPicture](https://green-api.com/docs/api/account/SetGroupPicture/)"
+					},
+					"response": [
+						{
+							"name": "setGroupPicture",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n   \t\"proxyInstance\": \"100.100.100.100:39898:qGKqCo:Jb26Xz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/setGroupPicture/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"setGroupPicture",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 13:16:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"setGroupPicture\": true,\n    \"urlAvatar\": \"https://pps.whatsapp.net/v/t61.24694-24/138639660_724754321806449_9118612187814397965_n.jpg?oh=997b0bb13b6bbb750432a86d4b8d935d&oe=600****BB4\",\n\t\"reason\": \"\"\n}"
 						}
 					]
 				}
