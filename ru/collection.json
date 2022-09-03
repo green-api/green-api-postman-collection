@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bad38efa-1311-4c1a-a70c-979d993286fb",
+		"_postman_id": "642a1e10-b091-481d-9f61-b4cf26ebb695",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "16921255"
@@ -652,7 +652,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"chatId\": \"79042190309@c.us\",\r\n    \"message\": \"Текст сообщения\",\r\n    \"title\": \"заголовок\",\r\n    \"footer\": \"подвал\",\r\n    \"buttonText\": \"Список действий\",\r\n    \"sections\": [\r\n        {\r\n            \"title\": \"Секция 1\",\r\n            \"rows\": [\r\n                {\r\n                    \"title\": \"Вариант 1\",\r\n                    \"rowId\": \"option1\"\r\n                },\r\n                {\r\n                    \"title\": \"Вариант 2\",\r\n                    \"rowId\": \"option2\",\r\n                    \"description\": \"Пояснение\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"Секция 2\",\r\n            \"rows\": [\r\n                {\r\n                    \"title\": \"Опция 3\",\r\n                    \"rowId\": \"option3\"\r\n                },\r\n                {\r\n                    \"title\": \"Опция 4\",\r\n                    \"rowId\": \"option4\",\r\n                    \"description\": \"Пояснение\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"raw": "{\r\n    \"chatId\": \"7123456789@c.us\",\r\n    \"message\": \"Текст сообщения\",\r\n    \"title\": \"заголовок\",\r\n    \"footer\": \"подвал\",\r\n    \"buttonText\": \"Список действий\",\r\n    \"sections\": [\r\n        {\r\n            \"title\": \"Секция 1\",\r\n            \"rows\": [\r\n                {\r\n                    \"title\": \"Вариант 1\",\r\n                    \"rowId\": \"option1\"\r\n                },\r\n                {\r\n                    \"title\": \"Вариант 2\",\r\n                    \"rowId\": \"option2\",\r\n                    \"description\": \"Пояснение\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"Секция 2\",\r\n            \"rows\": [\r\n                {\r\n                    \"title\": \"Опция 3\",\r\n                    \"rowId\": \"option3\"\r\n                },\r\n                {\r\n                    \"title\": \"Опция 4\",\r\n                    \"rowId\": \"option4\",\r\n                    \"description\": \"Пояснение\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -742,7 +742,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"chatId\": \"79065930340@c.us\",\r\n    \"title\": \"заголовок\",\r\n\t\"message\": \"Hello\",\r\n    \"footer\": \"What kind of action will you choose?\",\r\n    \"templateButtons\": [\r\n          \r\n                        {\"index\": 1, \"urlButton\": {\"displayText\": \"⭐ Star us on GitHub!\", \"url\": \"https://github.com/green-api/docs\"}},\r\n            {\"index\": 2, \"callButton\": {\"displayText\": \"Call us\", \"phoneNumber\": \"+1 (234) 5678-901\"}},\r\n            {\"index\": 3, \"quickReplyButton\": {\"displayText\": \"Plain button\", \"id\": \"plainButtonId\"}}\r\n        ]\r\n}",
+									"raw": "{\r\n\t\"chatId\": \"71234567891c.us\",\r\n    \"title\": \"заголовок\",\r\n\t\"message\": \"Hello\",\r\n    \"footer\": \"What kind of action will you choose?\",\r\n    \"templateButtons\": [\r\n          \r\n            {\"index\": 1, \"urlButton\": {\"displayText\": \"⭐ Star us on GitHub!\", \"url\": \"https://github.com/green-api/docs\"}},\r\n            {\"index\": 2, \"callButton\": {\"displayText\": \"Call us\", \"phoneNumber\": \"+1 (234) 5678-901\"}},\r\n            {\"index\": 3, \"quickReplyButton\": {\"displayText\": \"Plain button\", \"id\": \"plainButtonId\"}}\r\n        ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -828,7 +828,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"chatId\": \"79205157843@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"raw": "{\r\n\t\"chatId\": \"7123456789@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
