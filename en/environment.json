@@ -1,0 +1,24 @@
+{
+	"id": "b4ee7f99-cf42-4eb2-86c3-67d052f7d7b0",
+	"name": "Green API Developer",
+	"values": [
+		{
+			"key": "host",
+			"value": "https://api.green-api.com",
+			"enabled": true
+		},
+		{
+			"key": "idInstance",
+			"value": "<your instance id>",
+			"enabled": true
+		},
+		{
+			"key": "apiTokenInstance",
+			"value": "<your api token>",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-06-25T08:30:14.513Z",
+	"_postman_exported_using": "Postman/7.26.0"
+}
