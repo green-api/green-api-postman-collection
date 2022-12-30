@@ -71,7 +71,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"wid\": \"79001234567@c.us\", \n    \"countryInstance\": \"ru\",\n    \"typeAccount\": \"vip\",\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\n    \"outgoingWebhook\": \"yes\",\n    \"stateWebhook\": \"yes\",\n    \"incomingWebhook\": \"yes\",\n    \"deviceWebhook\": \"no\"\n}"
+							"body": "{\n    \"wid\": \"79001234567@c.us\", \n    \"countryInstance\": \"ru\",\n    \"typeAccount\": \"vip\",\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n    \"outgoingWebhook\": \"yes\",\n    \"stateWebhook\": \"yes\",\n    \"incomingWebhook\": \"yes\",\n    \"deviceWebhook\": \"no\"\n}"
 						}
 					]
 				},
@@ -82,7 +82,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"webhookUrl\": \"\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 1000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"proxyInstance\": \"system proxy\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"no\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\"\r\n}",
+							"raw": "{\r\n    \"webhookUrl\": \"\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 1000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"no\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -110,7 +110,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n   \t\"proxyInstance\": \"100.100.100.100:39898:qGKqCo:Jb26Xz\"\r\n}",
+									"raw": "{\r\n    \"countryInstance\": \"ru\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -156,88 +156,6 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"saveSettings\": true\n}"
-						}
-					]
-				},
-				{
-					"name": "Set system proxy",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/SetSystemProxy/{{apiTokenInstance}}",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"waInstance{{idInstance}}",
-								"SetSystemProxy",
-								"{{apiTokenInstance}}"
-							]
-						},
-						"description": "Документация [SetSystemProxy](https://green-api.com/docs/api/account/SetSystemProxy/)"
-					},
-					"response": [
-						{
-							"name": "Set system proxy",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/SetSystemProxy/{{apiTokenInstance}}",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"waInstance{{idInstance}}",
-										"SetSystemProxy",
-										"{{apiTokenInstance}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "nginx/1.14.0 (Ubuntu)"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 04 Nov 2020 05:53:37 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "28"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "SAMEORIGIN"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"setSystemProxy\": true\n}"
 						}
 					]
 				},
