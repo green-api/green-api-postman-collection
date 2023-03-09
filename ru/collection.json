@@ -1294,6 +1294,92 @@
 					]
 				},
 				{
+					"name": "Загрузить файл в хранилище",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/file.jpg"
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"uploadFile",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [UploadFile](https://green-api.com/docs/api/sending/UploadFile/)"
+					},
+					"response": [
+						{
+							"name": "uploadFile",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"file": {
+										"src": "/file.jpg"
+									},
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/UploadFile/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendFileByUpload",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:32:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"urlFile\": \"https://sw-media-out.storage.yandexcloud.net/9903789714/95917013-579d-429f-9145-469865c4a6e8.jpg\"\n}"
+						}
+					]
+				},
+				{
 					"name": "Отправить текст в группу",
 					"request": {
 						"method": "POST",
