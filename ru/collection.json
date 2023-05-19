@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "642a1e10-b091-481d-9f61-b4cf26ebb695",
+		"_postman_id": "e5d1aacb-dd69-40da-8225-50ab4c9c4684",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "16921255"
+		"_exporter_id": "26469032"
 	},
 	"item": [
 		{
@@ -3190,11 +3190,8 @@
 				},
 				{
 					"name": "Получить инфо контакта",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
