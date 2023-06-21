@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "17d0873b-e1fe-40f7-ac8b-54b48f22e0e5",
+		"_postman_id": "b8b13d55-f49d-406a-80e0-e36004362f6e",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26469032"
@@ -1200,6 +1200,92 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"idMessage\": \"3EB075A72D884153EFC5\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload file",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "mGiSlq-hE/test.jpg"
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"uploadFile",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [UploadFile](https://green-api.com/en/docs/api/sending/UploadFile/)"
+					},
+					"response": [
+						{
+							"name": "uploadFile",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/test.jpg"
+									},
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"uploadFile",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:32:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"urlFile\": \"https://sw-media-out.storage.yandexcloud.net/1101123456/95917013-579d-429f-9145-469865c4a6e8.jpg\"\n}"
 						}
 					]
 				},
