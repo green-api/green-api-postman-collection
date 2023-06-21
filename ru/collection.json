@@ -660,7 +660,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"chatId\": \"71234567891c.us\",\r\n    \"title\": \"заголовок\",\r\n\t\"message\": \"Hello\",\r\n    \"footer\": \"What kind of action will you choose?\",\r\n    \"templateButtons\": [\r\n          \r\n            {\"index\": 1, \"urlButton\": {\"displayText\": \"⭐ Star us on GitHub!\", \"url\": \"https://github.com/green-api/docs\"}},\r\n            {\"index\": 2, \"callButton\": {\"displayText\": \"Call us\", \"phoneNumber\": \"+1 (234) 5678-901\"}},\r\n            {\"index\": 3, \"quickReplyButton\": {\"displayText\": \"Plain button\", \"id\": \"plainButtonId\"}}\r\n        ]\r\n}",
+									"raw": "{\r\n\t\"chatId\": \"71234567891c.us\",\r\n    \"title\": \"заголовок\",\r\n\t\"message\": \"Hello\",\r\n    \"footer\": \"What kind of action will you choose?\",\r\n    \"templateButtons\": [\r\n          \r\n            {\"index\": 1, \"urlButton\": {\"displayText\": \"⭐ Star us on GitHub!\", \"url\": \"https://github.com/green-api\"}},\r\n            {\"index\": 2, \"callButton\": {\"displayText\": \"Call us\", \"phoneNumber\": \"+1 (234) 5678-901\"}},\r\n            {\"index\": 3, \"quickReplyButton\": {\"displayText\": \"Plain button\", \"id\": \"plainButtonId\"}}\r\n        ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3276,11 +3276,8 @@
 				},
 				{
 					"name": "Получить инфо контакта",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
