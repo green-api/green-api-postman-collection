@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "642a1e10-b091-481d-9f61-b4cf26ebb695",
+		"_postman_id": "b001c2c7-1e0f-4eb7-84ea-683a9e37c8fa",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "16921255"
+		"_exporter_id": "26469032"
 	},
 	"item": [
 		{
@@ -1304,7 +1304,7 @@
 						"body": {
 							"mode": "file",
 							"file": {
-								"src": "/file.jpg"
+								"src": "/test.jpg"
 							}
 						},
 						"url": {
@@ -1327,9 +1327,9 @@
 								"method": "POST",
 								"header": [],
 								"body": {
-									"mode": "formdata",
+									"mode": "file",
 									"file": {
-										"src": "/file.jpg"
+										"src": "/test.jpg"
 									},
 									"options": {
 										"raw": {
@@ -1338,13 +1338,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/UploadFile/{{apiTokenInstance}}",
+									"raw": "{{host}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"sendFileByUpload",
+										"uploadFile",
 										"{{apiTokenInstance}}"
 									]
 								}

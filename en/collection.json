@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "df21c260-f172-4420-b8c3-0e406fe5c925",
+		"_postman_id": "b8b13d55-f49d-406a-80e0-e36004362f6e",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26469032"
@@ -1238,7 +1238,9 @@
 								"header": [],
 								"body": {
 									"mode": "file",
-									"file": {},
+									"file": {
+										"src": "/test.jpg"
+									},
 									"options": {
 										"raw": {
 											"language": "json"
