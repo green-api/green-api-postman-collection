@@ -70,7 +70,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"wid\": \"79001234567@c.us\", \n    \"countryInstance\": \"ru\",\n    \"typeAccount\": \"vip\",\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\n    \"outgoingWebhook\": \"yes\",\n    \"stateWebhook\": \"yes\",\n    \"incomingWebhook\": \"yes\",\n    \"deviceWebhook\": \"no\"\n}"
+							"body": "{\n    \"wid\": \"79001234567@c.us\", \n    \"countryInstance\": \"ru\",\n    \"typeAccount\": \"vip\",\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n    \"outgoingWebhook\": \"yes\",\n    \"stateWebhook\": \"yes\",\n    \"incomingWebhook\": \"yes\",\n    \"deviceWebhook\": \"no\"\n}"
 						}
 					]
 				},
@@ -81,7 +81,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"countryInstance\": \"br\",\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"delaySendMessagesMilliseconds\": 1000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"proxyInstance\": \"100.100.100.100:3535:login:password\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\"\r\n}",
+							"raw": "{\r\n    \"countryInstance\": \"br\",\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"delaySendMessagesMilliseconds\": 1000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -109,7 +109,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"countryInstance\": \"ru\",\r\n   \t\"proxyInstance\": \"100.100.100.100:39898:qGKqCo:Jb26Xz\"\r\n}",
+									"raw": "{\r\n    \"countryInstance\": \"ru\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
