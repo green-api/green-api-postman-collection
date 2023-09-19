@@ -4,7 +4,7 @@
 	"values": [
 		{
 			"key": "host",
-			"value": "https://api.green-api.com",
+			"value": "https://api.greenapi.com",
 			"enabled": true
 		},
 		{
