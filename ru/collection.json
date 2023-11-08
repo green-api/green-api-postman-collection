@@ -1630,6 +1630,90 @@
 							"body": "{\n    \"idMessage\": \"3EB0160E742127137282\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Отправить опрос",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"11001234567@c.us\",\r\n    \"message\": \"Please choose the color:\",\r\n    \"options\": [\r\n        {\r\n            \"optionName\": \"green\"\r\n        },\r\n        {\r\n            \"optionName\": \"red\"\r\n        },\r\n        {\r\n            \"optionName\": \"blue\"\r\n        }\r\n    ],\r\n    \"multipleAnswers\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/sendPoll/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendPoll",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SendPoll](https://green-api.com/en/docs/api/sending/SendPoll/)"
+					},
+					"response": [
+						{
+							"name": "message.sendPoll",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"11001234567@c.us\",\r\n    \"message\": \"Please choose the color:\",\r\n    \"options\": [\r\n        {\r\n            \"optionName\": \"green\"\r\n        },\r\n        {\r\n            \"optionName\": \"red\"\r\n        },\r\n        {\r\n            \"optionName\": \"blue\"\r\n        }\r\n    ],\r\n    \"multipleAnswers\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/sendPoll/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendPoll",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 20:26:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0160E742127137282\"\n}"
+						}
+					]
 				}
 			]
 		},
