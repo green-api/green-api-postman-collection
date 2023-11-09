@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b001c2c7-1e0f-4eb7-84ea-683a9e37c8fa",
+		"_postman_id": "f2e8d06d-0a8c-4523-954a-e9c129b256b7",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26469032"
+		"_exporter_id": "30673016"
 	},
 	"item": [
 		{
@@ -459,6 +459,166 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"saveSettings\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Авторизации по номеру телефона",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"790421903509\",\n    \"name\": \"GreenApi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getAuthorizationCode/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getAuthorizationCode",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [getAuthorizationCode](https://green-api.com/docs/api/account/GetAuthorizationCode/)"
+					},
+					"response": [
+						{
+							"name": "getAuthorizationCode",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phoneNumber\": \"790421903509\",\n    \"name\": \"GreenApi\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getAuthorizationCode/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getAuthorizationCode",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Nov 2023 03:34:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Replenish-Rate",
+									"value": "1"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-ukXyz6cNtrprO06mQw9hLYnjAo8\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": \"Z2H2BMDZ\"\n}"
 						}
 					]
 				}
@@ -1638,7 +1798,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"chatId\": \"11001234567@c.us\",\r\n    \"message\": \"Please choose the color:\",\r\n    \"options\": [\r\n        {\r\n            \"optionName\": \"green\"\r\n        },\r\n        {\r\n            \"optionName\": \"red\"\r\n        },\r\n        {\r\n            \"optionName\": \"blue\"\r\n        }\r\n    ],\r\n    \"multipleAnswers\": false\r\n}",
+							"raw": "{\r\n    \"chatId\": \"79309995496@c.us\",\r\n    \"message\": \"Please choose the color:\",\r\n    \"options\": [\r\n        {\r\n            \"optionName\": \"green\"\r\n        },\r\n        {\r\n            \"optionName\": \"red\"\r\n        },\r\n        {\r\n            \"optionName\": \"blue\"\r\n        }\r\n    ],\r\n    \"multipleAnswers\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
