@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0bfccdd3-cdee-4403-8364-9d099c325c31",
+		"_postman_id": "bd16d631-7420-4d18-910e-ac53b4641aab",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30673016"
@@ -552,6 +552,147 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": true,\n    \"code\": \"JCRBZYE1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get WhatsApp account information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getWaSettings/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getWaSettings",
+								"{{apiTokenInstance}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getWaSettings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getWaSettings/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getWaSettings",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 05:24:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Replenish-Rate",
+									"value": "1"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13d-dgMMPovYU6CfktRuPzTVvuqhrMY\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"avatar\": \"https://pps.whatsapp.net/v/t61.24694-24/255450038_606301630687404_1229899540472209484_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSqyPjrKEC3j3ZOXOsakV0EUV7toKOGb7-eLr0vyqq0vQ&oe=655ADB17&_nc_sid=e6ed6c&_nc_cat=104\",\n    \"phone\": \"79111606788\",\n    \"stateInstance\": \"authorized\",\n    \"deviceId\": \"79111606788:8@s.whatsapp.net\"\n}"
 						}
 					]
 				}
