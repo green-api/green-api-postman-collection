@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b8b13d55-f49d-406a-80e0-e36004362f6e",
+		"_postman_id": "3a8aee01-1662-4684-85be-c166e96124d9",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26469032"
+		"_exporter_id": "30673016"
 	},
 	"item": [
 		{
@@ -25,7 +25,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [GetSettings](https://greenapi.com/en/docs/api/account/GetSettings/)"
+						"description": "Documentation [GetSettings](https://greenapi.com/en/docs/api/account/GetSettings/)"
 					},
 					"response": [
 						{
@@ -34,14 +34,17 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/getSettings/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"getSettings",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -100,7 +103,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/)"
+						"description": "Documentation [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/)"
 					},
 					"response": [
 						{
@@ -118,14 +121,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/setSettings/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"setSettings",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -175,7 +181,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [GetStateInstance](https://greenapi.com/en/docs/api/account/GetStateInstance/)"
+						"description": "Documentation [GetStateInstance](https://greenapi.com/en/docs/api/account/GetStateInstance/)"
 					},
 					"response": [
 						{
@@ -184,14 +190,17 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/getStateInstance/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"getStateInstance",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -241,7 +250,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [Reboot](https://greenapi.com/en/docs/api/account/Reboot/)"
+						"description": "Documentation [Reboot](https://greenapi.com/en/docs/api/account/Reboot/)"
 					},
 					"response": [
 						{
@@ -250,14 +259,17 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/reboot/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"reboot",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -307,7 +319,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [Logout](https://greenapi.com/en/docs/api/account/Logout/)"
+						"description": "Documentation [Logout](https://greenapi.com/en/docs/api/account/Logout/)"
 					},
 					"response": [
 						{
@@ -316,14 +328,17 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/logout/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"logout",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -373,9 +388,310 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [QR](https://greenapi.com/en/docs/api/account/QR/)"
+						"description": "Documentation [QR](https://greenapi.com/en/docs/api/account/QR/)"
 					},
 					"response": []
+				},
+				{
+					"name": "GetAuthorizationCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"79001234567\",\n    \"name\": \"GreenApi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getAuthorizationCode/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getAuthorizationCode",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [GetAuthorizationCode](https://green-api.com/docs/api/account/GetAuthorizationCode/)"
+					},
+					"response": [
+						{
+							"name": "GetAuthorizationCode",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phoneNumber\": 70123456789\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getAuthorizationCode/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getAuthorizationCode",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Nov 2023 05:55:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "49"
+								},
+								{
+									"key": "X-RateLimit-Replenish-Rate",
+									"value": "50"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-FQgmyY6rAFsWy5FpUtKA78fGAHU\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get WhatsApp account information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getWaSettings/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getWaSettings",
+								"{{apiTokenInstance}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getWaSettings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getWaSettings/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getWaSettings",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 05:24:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Replenish-Rate",
+									"value": "1"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13d-dgMMPovYU6CfktRuPzTVvuqhrMY\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"avatar\": \"https://pps.whatsapp.net/v/t61.24694-24/255450038_606301630687404_1229899540472209484_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSqyPjrKEC3j3ZOXOsakV0EUV7toKOGb7-eLr0vyqq0vQ&oe=655ADB17&_nc_sid=e6ed6c&_nc_cat=104\",\n    \"phone\": \"79111606788\",\n    \"stateInstance\": \"authorized\",\n    \"deviceId\": \"79111606788:8@s.whatsapp.net\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -416,7 +732,7 @@
 										"{{apiTokenInstance}}"
 									]
 								},
-								"description": "Документация [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
+								"description": "Documentation [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
 							},
 							"response": [
 								{
@@ -434,14 +750,17 @@
 											}
 										},
 										"url": {
-											"raw": "{{host}}/waInstance{{idInstance}}/SendButtons/{{apiTokenInstance}}",
+											"raw": "https://api.green-api.com/waInstance<your instance id>/SendButtons/<your api token>",
+											"protocol": "https",
 											"host": [
-												"{{host}}"
+												"api",
+												"green-api",
+												"com"
 											],
 											"path": [
-												"waInstance{{idInstance}}",
+												"waInstance<your instance id>",
 												"SendButtons",
-												"{{apiTokenInstance}}"
+												"<your api token>"
 											]
 										}
 									},
@@ -503,7 +822,7 @@
 										"{{apiTokenInstance}}"
 									]
 								},
-								"description": "Документация [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
+								"description": "Documentation [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
 							},
 							"response": [
 								{
@@ -521,14 +840,17 @@
 											}
 										},
 										"url": {
-											"raw": "{{host}}/waInstance{{idInstance}}/SendListMessage/{{apiTokenInstance}}",
+											"raw": "https://api.green-api.com/waInstance<your instance id>/SendListMessage/<your api token>",
+											"protocol": "https",
 											"host": [
-												"{{host}}"
+												"api",
+												"green-api",
+												"com"
 											],
 											"path": [
-												"waInstance{{idInstance}}",
+												"waInstance<your instance id>",
 												"SendListMessage",
-												"{{apiTokenInstance}}"
+												"<your api token>"
 											]
 										}
 									},
@@ -593,7 +915,7 @@
 										"{{apiTokenInstance}}"
 									]
 								},
-								"description": "Документация [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
+								"description": "Documentation [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
 							},
 							"response": [
 								{
@@ -611,14 +933,17 @@
 											}
 										},
 										"url": {
-											"raw": "{{host}}/waInstance{{idInstance}}/SendTemplateButtons/{{apiTokenInstance}}",
+											"raw": "https://api.green-api.com/waInstance<your instance id>/SendTemplateButtons/<your api token>",
+											"protocol": "https",
 											"host": [
-												"{{host}}"
+												"api",
+												"green-api",
+												"com"
 											],
 											"path": [
-												"waInstance{{idInstance}}",
+												"waInstance<your instance id>",
 												"SendTemplateButtons",
-												"{{apiTokenInstance}}"
+												"<your api token>"
 											]
 										}
 									},
@@ -679,7 +1004,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
+						"description": "Documentation [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
 					},
 					"response": [
 						{
@@ -697,14 +1022,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendMessage/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendMessage",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -766,7 +1094,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
+						"description": "Documentation [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
 					},
 					"response": [
 						{
@@ -784,14 +1112,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendMessage/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendMessage",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -853,7 +1184,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
+						"description": "Documentation [SendMessage](https://greenapi.com/en/docs/api/sending/SendMessage/)"
 					},
 					"response": [
 						{
@@ -871,14 +1202,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendMessage/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendMessage",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -937,7 +1271,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendContact](https://greenapi.com/en/docs/api/sending/SendContact/)"
+						"description": "Documentation [SendContact](https://greenapi.com/en/docs/api/sending/SendContact/)"
 					},
 					"response": [
 						{
@@ -955,14 +1289,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendContact/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendContact",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -1044,7 +1381,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendFileByUpload](https://greenapi.com/en/docs/api/sending/SendFileByUpload/)"
+						"description": "Documentation [SendFileByUpload](https://greenapi.com/en/docs/api/sending/SendFileByUpload/)"
 					},
 					"response": [
 						{
@@ -1078,14 +1415,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendFileByUpload/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendFileByUpload",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -1144,7 +1484,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendFileByUrl](https://greenapi.com/en/docs/api/sending/SendFileByUrl/)"
+						"description": "Documentation [SendFileByUrl](https://greenapi.com/en/docs/api/sending/SendFileByUrl/)"
 					},
 					"response": [
 						{
@@ -1162,14 +1502,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendFileByUrl/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendFileByUrl",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -1248,14 +1591,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/uploadFile/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"uploadFile",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -1314,7 +1660,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendLocation](https://greenapi.com/en/docs/api/sending/SendLocation/)"
+						"description": "Documentation [SendLocation](https://greenapi.com/en/docs/api/sending/SendLocation/)"
 					},
 					"response": [
 						{
@@ -1332,14 +1678,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendLocation/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendLocation",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -1398,7 +1747,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendLink](https://greenapi.com/en/docs/api/sending/SendLink/)"
+						"description": "Documentation [SendLink](https://greenapi.com/en/docs/api/sending/SendLink/)"
 					},
 					"response": [
 						{
@@ -1416,14 +1765,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendLink/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendLink",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -1500,14 +1852,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendPoll/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/sendPoll/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"sendPoll",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
@@ -1665,14 +2020,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getChatHistory/{{apiTokenInstance}}",
+									"raw": "https://api.green-api.com/waInstance<your instance id>/getChatHistory/<your api token>",
+									"protocol": "https",
 									"host": [
-										"{{host}}"
+										"api",
+										"green-api",
+										"com"
 									],
 									"path": [
-										"waInstance{{idInstance}}",
+										"waInstance<your instance id>",
 										"getChatHistory",
-										"{{apiTokenInstance}}"
+										"<your api token>"
 									]
 								}
 							},
