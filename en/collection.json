@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bd16d631-7420-4d18-910e-ac53b4641aab",
+		"_postman_id": "3a8aee01-1662-4684-85be-c166e96124d9",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30673016"
@@ -421,13 +421,13 @@
 					},
 					"response": [
 						{
-							"name": "getAuthorizationCode",
+							"name": "GetAuthorizationCode",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"phoneNumber\": \"790421903509\",\n    \"name\": \"GreenApi\"\n}",
+									"raw": "{\n    \"phoneNumber\": 70123456789\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -435,17 +435,14 @@
 									}
 								},
 								"url": {
-									"raw": "https://api.green-api.com/waInstance<your instance id>/getAuthorizationCode/<your api token>",
-									"protocol": "https",
+									"raw": "{{host}}/waInstance{{idInstance}}/getAuthorizationCode/{{apiTokenInstance}}",
 									"host": [
-										"api",
-										"green-api",
-										"com"
+										"{{host}}"
 									],
 									"path": [
-										"waInstance<your instance id>",
+										"waInstance{{idInstance}}",
 										"getAuthorizationCode",
-										"<your api token>"
+										"{{apiTokenInstance}}"
 									]
 								}
 							},
@@ -459,7 +456,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 09 Nov 2023 03:41:14 GMT"
+									"value": "Tue, 28 Nov 2023 05:55:15 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -467,7 +464,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "33"
+									"value": "26"
 								},
 								{
 									"key": "Connection",
@@ -487,11 +484,11 @@
 								},
 								{
 									"key": "X-RateLimit-Remaining",
-									"value": "0"
+									"value": "49"
 								},
 								{
 									"key": "X-RateLimit-Replenish-Rate",
-									"value": "1"
+									"value": "50"
 								},
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -547,11 +544,11 @@
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"21-23vJeRJji9O8J/ENNfBOa1BTqDA\""
+									"value": "W/\"1a-FQgmyY6rAFsWy5FpUtKA78fGAHU\""
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"code\": \"JCRBZYE1\"\n}"
+							"body": "{\n    \"status\": false,\n    \"code\": \"\"\n}"
 						}
 					]
 				},

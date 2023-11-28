@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bb49b34a-f1d8-4c48-9050-892194dbb7ff",
+		"_postman_id": "7b4e8bd0-07af-4c08-b991-cf430309868e",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30673016"
@@ -509,13 +509,13 @@
 					},
 					"response": [
 						{
-							"name": "getAuthorizationCode",
+							"name": "Авторизации по номеру телефона",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"phoneNumber\": \"790421903509\",\n    \"name\": \"GreenApi\"\n}",
+									"raw": "{\n    \"phoneNumber\": 790421903509\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -523,17 +523,14 @@
 									}
 								},
 								"url": {
-									"raw": "https://api.green-api.com/waInstance<your instance id>/getAuthorizationCode/<your api token>",
-									"protocol": "https",
+									"raw": "{{host}}/waInstance{{idInstance}}/getAuthorizationCode/{{apiTokenInstance}}",
 									"host": [
-										"api",
-										"green-api",
-										"com"
+										"{{host}}"
 									],
 									"path": [
-										"waInstance<your instance id>",
+										"waInstance{{idInstance}}",
 										"getAuthorizationCode",
-										"<your api token>"
+										"{{apiTokenInstance}}"
 									]
 								}
 							},
@@ -547,7 +544,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 09 Nov 2023 03:34:22 GMT"
+									"value": "Tue, 28 Nov 2023 05:56:26 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -555,7 +552,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "33"
+									"value": "26"
 								},
 								{
 									"key": "Connection",
@@ -575,11 +572,11 @@
 								},
 								{
 									"key": "X-RateLimit-Remaining",
-									"value": "0"
+									"value": "49"
 								},
 								{
 									"key": "X-RateLimit-Replenish-Rate",
-									"value": "1"
+									"value": "50"
 								},
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -635,11 +632,11 @@
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"21-ukXyz6cNtrprO06mQw9hLYnjAo8\""
+									"value": "W/\"1a-FQgmyY6rAFsWy5FpUtKA78fGAHU\""
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"code\": \"Z2H2BMDZ\"\n}"
+							"body": "{\n    \"status\": false,\n    \"code\": \"\"\n}"
 						}
 					]
 				},
@@ -648,6 +645,9 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"url": {
+							"raw": ""
+						},
 						"description": "Документация [GetWaSettings](https://green-api.com/docs/api/account/GetWaSettings/)"
 					},
 					"response": [
