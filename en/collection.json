@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "3a8aee01-1662-4684-85be-c166e96124d9",
+		"_postman_id": "11258633-4393-4f97-87c0-4ac35f7b93a9",
 		"name": "Green API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30673016"
+		"_exporter_id": "32035725"
 	},
 	"item": [
 		{
@@ -2061,6 +2061,269 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"idMessage\": \"3EB0C732BC93864C25FB\",\n        \"timestamp\": 1587412276,\n        \"statusMessage\": \"read\",\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\"\n    },\n    {\n        \"idMessage\": \"3EB0C37D09143B7F53A0\",\n        \"timestamp\": 1587412276,\n        \"statusMessage\": \"read\",\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get chat message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"chatId\": \"120363043968066561@g.us\",\r\n  \"idMessage\": \"BAE5F4886F6F2D05\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getMessage",
+								"{{apiTokenInstance}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "textMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"3EB0C732BC93864C25FB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"DE8CFFA93B95237B077F8FA08331A0B5\",\n    \"timestamp\": 1587129319,\n    \"typeMessage\": \"textMessage\",\n    \"chatId\": \"11001234567@c.us\",\n    \"senderId\": \"11001234567@c.us\",\n    \"senderName\": \"John\",\n    \"textMessage\": \"Hi\"\n}"
+						},
+						{
+							"name": "caption",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"3EB0C732BC93864C25FB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"EA0BD1AE042DC4F3609867126309D67C\",\n    \"timestamp\": 1587147598,\n    \"typeMessage\": \"imageMessage\",\n    \"chatId\": \"11001234567@c.us\",\n    \"senderId\": \"11001234567@c.us\",\n    \"senderName\": \"John\",\n    \"downloadUrl\": \"https://api.greenapi.com/waInstance1234/downloadFile/EA1BD1AE042DC4F3609867126309D67C\",\n    \"caption\": \"What do you think?\"\n}\n"
+						},
+						{
+							"name": "location",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"3EB0C732BC93864C25FB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"DE8CFFA93B95237B077F8FA08331A0B5\",\n    \"timestamp\": 1587129319,\n    \"typeMessage\": \"locationMessage\",\n    \"chatId\": \"71234567891@c.us\",\n    \"senderId\": \"1234567891@c.us\",\n    \"senderName\": \"John\",\n    \"location\": {\n        \"nameLocation\": \"I'm here, come\",\n        \"address\": \"614111, Perm\",\n        \"latitude\": 53.9370129,\n        \"longitude\": 54.8728409,\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wB==\"\n    }\n}\n"
+						},
+						{
+							"name": "contact",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"3EB0C732BC93864C25FB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"DE8CFFA93B95237B077F8FA08331A0B5\",\n    \"timestamp\": 1587129319,\n    \"typeMessage\": \"contactMessage\",\n    \"chatId\": \"1234567891@c.us\",\n    \"senderId\": \"71234567891@c.us\",\n    \"senderName\": \"John\",\n    \"contact\": {\n        \"displayName\": \"Victor Petrov\",\n        \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Andreevich;Victor;;;\\nFN:Victor Andreevich\\nORG:Image\\nTITLE:\\nitem1.TEL;waid=79099291652:+7 123 456-78-91\\nitem1.X-ABLabel:Мобильный\\nEND:VCARD\"\n    }\n}"
+						},
+						{
+							"name": "extendedTextMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"3EB0C732BC93864C25FB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"DE8CFFA93B95237B077F8FA08331A0B5\",\n    \"timestamp\": 1587129319,\n    \"typeMessage\": \"extendedTextMessage\",\n    \"chatId\": \"1234567891@c.us\",\n    \"senderId\": \"71234567891@c.us\",\n    \"senderName\": \"John\",\n    \"extendedTextMessage\": {\n        \"text\": \"https://www.youtube.com/watch?v=9lO06Zxhu8*8*\",\n        \"description\": \"Ролик\",\n        \"title\": \"Awesome video\",\n        \"previewType\": \"video\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wB==\"\n    }\n}\n"
+						},
+						{
+							"name": "extendedTextMessage1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"3EB0C732BC93864C25FB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"6195B3523153621DFDFC184D3317E80D\",\n    \"timestamp\": 1603182280,\n    \"typeMessage\": \"quotedMessage\",\n    \"chatId\": \"71234567891@c.us\",\n    \"senderId\": \"71234567891@c.us\",\n    \"senderName\": \"Мой\",\n    \"textMessage\": \"Quote test\",\n    \"extendedTextMessage\": {\n        \"stanzaId\": \"3A6424373F90A939B3C8\",\n        \"participant\": \"71987654321@c.us\"\n    }\n}\n"
 						}
 					]
 				},
