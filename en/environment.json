@@ -3,8 +3,13 @@
 	"name": "Green API Developer",
 	"values": [
 		{
-			"key": "host",
+			"key": "APIUrl",
 			"value": "https://api.greenapi.com",
+			"enabled": true
+		},
+		{
+			"key": "MediaUrl",
+			"value": "https://media.greenapi.com",
 			"enabled": true
 		},
 		{
