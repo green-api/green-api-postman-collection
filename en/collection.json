@@ -1922,7 +1922,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Documentation of [SendPoll](https://green-api.com/en/docs/api/sending/SendPoll/)"
+						"description": "Documentation [SendPoll](https://green-api.com/en/docs/api/sending/SendPoll/)"
 					},
 					"response": [
 						{
@@ -1951,6 +1951,90 @@
 										"waInstance<your instance id>",
 										"sendPoll",
 										"<your api token>"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 20:26:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0160E742127137282\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Forward messages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"79309995496@c.us\",\r\n    \"chatIdFrom\": \"79309995496@c.us\",\r\n    \"message\": [\"BAE587FA1CECF760\", \"BAE5608BC86F2B59\"] \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIUrl}}/waInstance{{idInstance}}/forwardMessages/{{apiTokenInstance}}",
+							"host": [
+								"{{APIUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"forwardMessages",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [ForwardMessages](https://green-api.com/en/docs/api/sending/ForwardMessages/)"
+					},
+					"response": [
+						{
+							"name": "message.forwardMessages",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"79309995496@c.us\",\r\n    \"chatIdFrom\": \"79309995496@c.us\",\r\n    \"message\": [\"BAE587FA1CECF760\", \"BAE5608BC86F2B59\"] \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{APIUrl}}/waInstance{{idInstance}}/forwardMessages/{{apiTokenInstance}}",
+									"host": [
+										"{{APIUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"forwardMessages",
+										"{{apiTokenInstance}}"
 									]
 								}
 							},
@@ -2429,6 +2513,14 @@
 								"waInstance{{idInstance}}",
 								"lastOutgoingMessages",
 								"{{apiTokenInstance}}"
+							],
+							"query": [
+								{
+									"key": "minutes",
+									"value": "1440",
+									"description": "Time in minutes",
+									"type": "integer"
+								}
 							]
 						},
 						"description": "Documentation [LastOutgoingMessages](https://greenapi.com/en/docs/api/journals/LastOutgoingMessages/)"
@@ -2448,6 +2540,14 @@
 										"waInstance{{idInstance}}",
 										"lastOutgoingMessages",
 										"{{apiTokenInstance}}"
+									],
+									"query": [
+										{
+											"key": "minutes",
+											"value": "1440",
+											"description": "Time in minutes",
+											"type": "integer"
+										}
 									]
 								}
 							},

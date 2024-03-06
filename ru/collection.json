@@ -646,7 +646,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "{{APIUrl}}/waInstance{{idInstance}}/getWaSettings/{{apiTokenInstance}}",
+							"host": [
+								"{{APIUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getWaSettings",
+								"{{apiTokenInstance}}"
+							]
 						},
 						"description": "Документация [GetWaSettings](https://green-api.com/docs/api/account/GetWaSettings/)"
 					},
@@ -1951,6 +1959,90 @@
 							"body": "{\n    \"idMessage\": \"3EB0160E742127137282\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Переслать сообщение",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"79309995496@c.us\",\r\n    \"chatIdFrom\": \"79309995496@c.us\",\r\n    \"message\": [\"BAE587FA1CECF760\", \"BAE5608BC86F2B59\"] \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIUrl}}/waInstance{{idInstance}}/forwardMessages/{{apiTokenInstance}}",
+							"host": [
+								"{{APIUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"forwardMessages",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [ForwardMessages](https://green-api.com/docs/api/sending/ForwardMessages/)"
+					},
+					"response": [
+						{
+							"name": "message.forwardMessages",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"79309995496@c.us\",\r\n    \"chatIdFrom\": \"79309995496@c.us\",\r\n    \"message\": [\"BAE587FA1CECF760\", \"BAE5608BC86F2B59\"] \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{APIUrl}}/waInstance{{idInstance}}/forwardMessages/{{apiTokenInstance}}",
+									"host": [
+										"{{APIUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"forwardMessages",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 May 2020 20:26:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0160E742127137282\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -2394,6 +2486,14 @@
 								"waInstance{{idInstance}}",
 								"lastOutgoingMessages",
 								"{{apiTokenInstance}}"
+							],
+							"query": [
+								{
+									"key": "minutes",
+									"value": "1440",
+									"description": "Время в минутах",
+									"type": "integer"
+								}
 							]
 						},
 						"description": "Документация [LastOutgoingMessages](https://green-api.com/docs/api/journals/LastOutgoingMessages/)"
@@ -2413,6 +2513,14 @@
 										"waInstance{{idInstance}}",
 										"lastOutgoingMessages",
 										"{{apiTokenInstance}}"
+									],
+									"query": [
+										{
+											"key": "minutes",
+											"value": "1440",
+											"description": "Время в минутах",
+											"type": "integer"
+										}
 									]
 								}
 							},
@@ -2460,6 +2568,14 @@
 								"waInstance{{idInstance}}",
 								"lastIncomingMessages",
 								"{{apiTokenInstance}}"
+							],
+							"query": [
+								{
+									"key": "minutes",
+									"value": "1440",
+									"description": "Время в минутах",
+									"type": "integer"
+								}
 							]
 						},
 						"description": "Документация [LastIncomingMessages](https://green-api.com/docs/api/journals/LastIncomingMessages/)"
@@ -2479,6 +2595,13 @@
 										"waInstance{{idInstance}}",
 										"lastIncomingMessages",
 										"{{apiTokenInstance}}"
+									], "query": [
+										{
+											"key": "minutes",
+											"value": "1440",
+											"description": "Время в минутах",
+											"type": "integer"
+										}
 									]
 								}
 							},

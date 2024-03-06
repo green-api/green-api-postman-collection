@@ -4,22 +4,22 @@
 	"values": [
 		{
 			"key": "APIUrl",
-			"value": "https://api.green-api.com",
+			"value": "<Your API url from your Green API account>",
 			"enabled": true
 		},
 		{
 			"key": "MediaUrl",
-			"value": "https://media.green-api.com",
+			"value": "<Your Media url from your Green API account>",
 			"enabled": true
 		},
 		{
 			"key": "idInstance",
-			"value": "<your instance id>",
+			"value": "<Your IdInstance from your Green API account>",
 			"enabled": true
 		},
 		{
 			"key": "apiTokenInstance",
-			"value": "<your api token>",
+			"value": "<Your ApiTokenInstance from your Green API account>",
 			"enabled": true
 		}
 	],
