@@ -2017,18 +2017,27 @@
 						{
 							"name": "Скачать файл из входящего сообщения",
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{APIUrl}}/waInstance{{idInstance}}/downloadFile/{{idMessage}}",
+									"raw": "{{APIUrl}}/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
 									"host": [
 										"{{APIUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
 										"downloadFile",
-										"{{idMessage}}"
+										"{{apiTokenInstance}}"
 									]
+								},
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"712345678910@c.us\",\r\n    \"idMessage\": \"BE1DC86343987976E39B5FF354D7FF12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
 								"description": "Документация [DownloadFile](https://green-api.com/docs/api/receiving/files/DownloadFile/)"
 							},
