@@ -3,23 +3,23 @@
 	"name": "Green API Developer",
 	"values": [
 		{
-			"key": "APIUrl",
-			"value": "<Ваш API url из личного кабинета Green API>",
+			"key": "apiUrl",
+			"value": "<Ваш apiUrl из личного кабинета Green API>",
 			"enabled": true
 		},
 		{
-			"key": "MediaUrl",
-			"value": "<Ваш Media url из личного кабинета Green API>",
+			"key": "mediaUrl",
+			"value": "<Ваш mediaUrl из личного кабинета Green API>",
 			"enabled": true
 		},
 		{
 			"key": "idInstance",
-			"value": "<Ваш IdInstance из личного кабинета Green API>",
+			"value": "<Ваш idInstance из личного кабинета Green API>",
 			"enabled": true
 		},
 		{
 			"key": "apiTokenInstance",
-			"value": "<Ваш ApiTokenInstance из личного кабинета Green API>",
+			"value": "<Ваш apiTokenInstance из личного кабинета Green API>",
 			"enabled": true
 		}
 	],

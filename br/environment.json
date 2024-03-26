@@ -3,23 +3,23 @@
 	"name": "Green API Developer",
 	"values": [
 		{
-			"key": "APIUrl",
-			"value": "<Seu URL de API da sua conta Green API>",
+			"key": "apiUrl",
+			"value": "<Seu apiUrl da sua conta Green API>",
 			"enabled": true
 		},
 		{
-			"key": "MediaUrl",
-			"value": "<Seu URL de mídia da sua conta Green API>",
+			"key": "mediaUrl",
+			"value": "<Seu mediaUrl da sua conta Green API>",
 			"enabled": true
 		},
 		{
 			"key": "idInstance",
-			"value": "<Seu IdInstance da sua conta Green API>",
+			"value": "<Seu idInstance da sua conta Green API>",
 			"enabled": true
 		},
 		{
 			"key": "apiTokenInstance",
-			"value": "<Seu ApiTokenInstance da sua conta Green API>",
+			"value": "<Seu apiTokenInstance da sua conta Green API>",
 			"enabled": true
 		}
 	],
