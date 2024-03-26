@@ -3,18 +3,23 @@
 	"name": "Green API Developer",
 	"values": [
 		{
-			"key": "host",
-			"value": "https://api.greenapi.com",
+			"key": "apiUrl",
+			"value": "<Your apiUrl from your Green API account>",
+			"enabled": true
+		},
+		{
+			"key": "mediaUrl",
+			"value": "<Your mediaUrl from your Green API account>",
 			"enabled": true
 		},
 		{
 			"key": "idInstance",
-			"value": "<your instance id>",
+			"value": "<Your idInstance from your Green API account>",
 			"enabled": true
 		},
 		{
 			"key": "apiTokenInstance",
-			"value": "<your api token>",
+			"value": "<Your apiTokenInstance from your Green API account>",
 			"enabled": true
 		}
 	],
