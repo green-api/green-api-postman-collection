@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c79fd4f5-3308-4755-b8ae-8b91fc1c0fdb",
+		"_postman_id": "a77f6250-04f5-4a39-bb15-fea62c44384f",
 		"name": "Green API EN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32221684"
@@ -82,7 +82,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 3000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Notification is temporarily not working\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
+							"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 3000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\", // Notification is temporarily not working\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Notification is temporarily not working\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -106,11 +106,11 @@
 						{
 							"name": "setSettings",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 5000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Notification is temporarily not working\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
+									"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 5000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\", // Notification is temporarily not working\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Notification is temporarily not working\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -393,10 +393,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": "\"https://qr.green-api.com/waInstance1101хххххх/7371e9fbcd2545c1889e4c2065ea72915943741eed9f333feg311\""
+							"body": "{\r\n    \"type\": \"qrCode\",\r\n    \"message\": \"iVBORw0KGgoAAAANSUhEUgAAARQAAAEUCAYAAADqcMl5AAAAAklEQVR4AewaftIAABJCSURBVO3BQY7gRpIAQXei/v9l3z7GKQGCWS2NNszsD9Za64KHtda65GGttS55WGutSx7WWuuSh7XWuuRhrbUueVhrrUse1lrrkoe11rrkYa21LnlYa61LHtZa65KHtda65GGttS55WGutS374SOVvqnhD5aRiUpkqTlSmiknlpGJS+aLiDZWpYlI5qXhDZaqYVKaKSeWLiptUpooTlZOKSeVvqvjiYa21LnlYa61LHtZa65IfLqu4SeUNlaniC5WTijcqJpWpYlKZKk5UpopJ5URlqripYlKZKt6oOFGZVL6omCr+poqbVG56WGutSx7WWuuSh7XWuuSHX6byRsUbKlPFicpvUpkqJpWpYlJ5Q2WqmFSmikllqphUTipOVN5QOamYVE4qJpWTikllUpkqTlR+k8obFb/pYa21LnlYa61LHtZa65If/mNUpoqbKk4qJpWp4qTijYqTiknlRGWqeEPli4pJ5aTii4pJ5aRiUnmjYlL5L3lYa61LHtZa65KHtda65If/mIqTikllqjhRmSomlaliUpkq3lD5m1TeqJhUTiomlROVqWJSmSreqJhUblKZKv5LHtZa65KHtda65GGttS754ZdV/E0qN6lMFScVk8pUMamcVJxUTCpTxaRyUvGGyqQyVUwqk8pU8YbKVDGpTBWTyknFScWkclJxU8W/ycNaa13ysNZalzystdYlP1ym8k+qmFSmiknlC5Wp4ouKSWWqmFSmikllqphUTlSmipOKSWWqmFROVKaK31QxqUwVk8pUMamcqEwVJyr/Zg9rrXXJw1prXfKw1lqX2B/8D1M5qThRmSq+UJkqJpWp4kTli4pJ5aTiDZWp4guVNyomlZsqvlA5qfgveVhrrUse1lrrkoe11rrkh49UpopJ5aaKqeINlROVqWJSmSpOVE5UpoqTiknlJpWbVN6ouKliUpkqTlTeqJgqTlSmiknlporf9LDWWpc8rLXWJQ9rrXWJ/cFFKm9UTCpTxRsqU8Wk8kbFpPJGxaQyVUwqU8WkclJxojJVnKi8UfGGyknFpPI3VbyhMlW8oXJSMalMFScqJxVfPKy11iUPa611ycNaa13yw0cqU8WJyqQyVUwqJxVTxaRyUnGiMlXcpDJVTCpT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\"\r\n}"
 						}
 					]
 				},
@@ -431,7 +431,7 @@
 						{
 							"name": "getAuthorizationCode",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -592,7 +592,7 @@
 						{
 							"name": "setSettings",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -823,7 +823,7 @@
 						{
 							"name": "sendMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -910,7 +910,7 @@
 						{
 							"name": "sendMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -997,7 +997,7 @@
 						{
 							"name": "sendMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1081,7 +1081,7 @@
 						{
 							"name": "sendPoll",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1145,27 +1145,32 @@
 								{
 									"key": "chatId",
 									"value": "790012345673442@c.us",
+									"description": "Chat Id",
 									"type": "text"
 								},
 								{
 									"key": "caption",
 									"value": "Description",
+									"description": "File caption. Caption added to video, images. The maximum field length is 20000 characters.",
 									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "file",
+									"description": "Outgoing file",
 									"type": "file",
 									"src": "/C:/Users/mihai/Desktop/SB-409/window.jpg"
 								},
 								{
 									"key": "fileName",
 									"value": "window.jpg",
+									"description": "File name. Must contain file extension. Requires UTF-8 encoding without BOM. For example: test.jpg",
 									"type": "text"
 								},
 								{
 									"key": "quotedMessageId",
 									"value": "",
+									"description": "Quoted message Id. If present, the message will be sent quoting the specified chat message.",
 									"type": "text",
 									"disabled": true
 								}
@@ -1188,7 +1193,7 @@
 						{
 							"name": "sendFileByUpload",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "formdata",
@@ -1196,26 +1201,31 @@
 										{
 											"key": "chatId",
 											"value": "120363043968066561@g.us",
+											"description": "Chat Id",
 											"type": "text"
 										},
 										{
 											"key": "caption",
 											"value": "This is image",
+											"description": "File caption. Caption added to video, images. The maximum field length is 20000 characters.",
 											"type": "text"
 										},
 										{
 											"key": "file",
+											"description": "Outgoing file",
 											"type": "file",
 											"src": "/C:/Users/mihai/Desktop/SB-409/window.jpg"
 										},
 										{
 											"key": "fileName",
 											"value": "window.jpg",
+											"description": "File name. Must contain file extension. Requires UTF-8 encoding without BOM. For example: test.jpg",
 											"type": "text"
 										},
 										{
 											"key": "quotedMessageId",
 											"value": "3EB0C767D097B7C7C030",
+											"description": "Quoted message Id. If present, the message will be sent quoting the specified chat message.",
 											"type": "text"
 										}
 									],
@@ -1298,7 +1308,7 @@
 						{
 							"name": "sendFileByUrl",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1358,7 +1368,20 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"description": "In the request header, you must specify the file type Content-Type in accordance with the List of MIME types.",
+								"type": "text"
+							},
+							{
+								"key": "GA-Filename",
+								"value": "",
+								"description": "If the file is not in the list of MIME types, you can pass the GA-Filename header, specifying the file name with the extension. This will allow you to upload files such as .go or .py.",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "file",
 							"file": {
@@ -1382,8 +1405,21 @@
 						{
 							"name": "uploadFile",
 							"originalRequest": {
-								"method": "POST",
-								"header": [],
+								"method": "VIEW",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "",
+										"description": "In the request header, you must specify the file type Content-Type in accordance with the List of MIME types.",
+										"type": "text"
+									},
+									{
+										"key": "GA-Filename",
+										"value": "",
+										"description": "If the file is not in the list of MIME types, you can pass the GA-Filename header, specifying the file name with the extension. This will allow you to upload files such as .go or .py.",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "file",
 									"file": {
@@ -1468,7 +1504,7 @@
 						{
 							"name": "sendLocation",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1552,7 +1588,7 @@
 						{
 							"name": "sendContact",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1636,7 +1672,7 @@
 						{
 							"name": "forwardMessages",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1703,7 +1739,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}?receiveTimeout=5",
 									"host": [
 										"{{apiUrl}}"
 									],
@@ -1711,6 +1747,13 @@
 										"waInstance{{idInstance}}",
 										"receiveNotification",
 										"{{apiTokenInstance}}"
+									],
+									"query": [
+										{
+											"key": "receiveTimeout",
+											"value": "5",
+											"description": "Notification waiting timeout, takes a value from 5 to 60 seconds"
+										}
 									]
 								},
 								"description": "Documentation [ReceiveNotification](https://greenapi.com/en/docs/api/receiving/technology-http-api/ReceiveNotification/)"
@@ -1722,7 +1765,7 @@
 										"method": "VIEW",
 										"header": [],
 										"url": {
-											"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
+											"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}?receiveTimeout=5",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -1730,13 +1773,20 @@
 												"waInstance{{idInstance}}",
 												"receiveNotification",
 												"{{apiTokenInstance}}"
+											],
+											"query": [
+												{
+													"key": "receiveTimeout",
+													"value": "5",
+													"description": "Notification waiting timeout, takes a value from 5 to 60 seconds"
+												}
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						},
@@ -1763,7 +1813,7 @@
 								{
 									"name": "deleteNotification",
 									"originalRequest": {
-										"method": "DELETE",
+										"method": "VIEW",
 										"header": [],
 										"url": {
 											"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteNotification/{{apiTokenInstance}}/{{receiptId}}",
@@ -1778,10 +1828,10 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						}
@@ -1821,7 +1871,7 @@
 								{
 									"name": "downloadFile",
 									"originalRequest": {
-										"method": "POST",
+										"method": "VIEW",
 										"header": [],
 										"body": {
 											"mode": "raw",
@@ -1844,8 +1894,8 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
 									"body": "\"https://sw-media.storage.yandexcloud.net/1101896860/6d57a5bf-0fd7-42ca-92c6-6d037d905174.jpeg\""
 								}
@@ -1889,7 +1939,7 @@
 						{
 							"name": "getChatHistory",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1973,7 +2023,7 @@
 						{
 							"name": "incomingTextMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2012,7 +2062,7 @@
 						{
 							"name": "outgoingTextMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2051,7 +2101,7 @@
 						{
 							"name": "incomingMediaMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2090,7 +2140,7 @@
 						{
 							"name": "outgoingMediaMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2129,7 +2179,7 @@
 						{
 							"name": "incomingReactionMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2152,15 +2202,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\",\r\n    },\r\n    \"senderId\": \"70000000013@c.us\",\r\n    \"senderName\": \"Rachel\",\r\n    \"senderContactName\": \"Rachel 2\"\r\n}"
 						},
 						{
 							"name": "outgoingReactionMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2183,15 +2233,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\",\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": false\r\n}"
 						},
 						{
 							"name": "incomingLocationMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2230,7 +2280,7 @@
 						{
 							"name": "outgoingLocationMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2269,7 +2319,7 @@
 						{
 							"name": "incomingContactMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2308,7 +2358,7 @@
 						{
 							"name": "outgoingContactMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2347,7 +2397,7 @@
 						{
 							"name": "incomingExtendedTextMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2386,7 +2436,7 @@
 						{
 							"name": "outgoingExtendedTextMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2425,7 +2475,7 @@
 						{
 							"name": "incomingPollMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2448,15 +2498,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A71511C3A0000000000\",\r\n    \"timestamp\": 1706676278,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Choose your favorite color\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Red\"\r\n            },\r\n            {\r\n                \"optionName\": \"Green\"\r\n            }\r\n        ],\r\n    \"multipleAnswers\": true\r\n    },\r\n    \"senderId\": \"70000000012@c.us\",\r\n    \"senderName\": \"Rachel\",\r\n    \"senderContactName\": \"Rachel 2\"\r\n}"
 						},
 						{
 							"name": "outgoingPollMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2479,15 +2529,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"460D84E00000000000\",\r\n    \"timestamp\": 1706762412,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Choose your favorite color\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Red\"\r\n            },\r\n            {\r\n                \"optionName\": \"Green\"\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}"
 						},
 						{
 							"name": "incomingPollUpdateMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2510,15 +2560,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A0493ED90000000000000\",\r\n    \"timestamp\": 1706676447,\r\n    \"typeMessage\": \"pollUpdateMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Where will we go?\",\r\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\r\n        \"votes\": [\r\n            {\r\n                \"optionName\": \"Beach\",\r\n                \"optionVoters\": [\r\n                    \"70000000012@c.us\"\r\n                ]\r\n            },\r\n            {\r\n                \"optionName\": \"Mountains\",\r\n                \"optionVoters\": []\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"senderId\": \"70000000012@c.us\",\r\n    \"senderName\": \"Rachel\",\r\n    \"senderContactName\": \"Rachel 2\"\r\n}"
 						},
 						{
 							"name": "incomingQuotedMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2557,7 +2607,7 @@
 						{
 							"name": "outgoingQuotedMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2868,7 +2918,7 @@
 						{
 							"name": "clearMessagesQueue",
 							"originalRequest": {
-								"method": "GET",
+								"method": "VIEW",
 								"header": [],
 								"url": {
 									"raw": "{{apiUrl}}/waInstance{{idInstance}}/clearMessagesQueue/{{apiTokenInstance}}",
@@ -2948,7 +2998,7 @@
 						{
 							"name": "createGroup",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3032,7 +3082,7 @@
 						{
 							"name": "updateGroupName",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3116,7 +3166,7 @@
 						{
 							"name": "getGroupData",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3200,7 +3250,7 @@
 						{
 							"name": "addGroupParticipant",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3284,7 +3334,7 @@
 						{
 							"name": "removeGroupParticipant",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3368,7 +3418,7 @@
 						{
 							"name": "setGroupAdmin",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3452,7 +3502,7 @@
 						{
 							"name": "removeAdmin",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3543,7 +3593,7 @@
 						{
 							"name": "setGroupPicture",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "formdata",
@@ -3638,7 +3688,7 @@
 						{
 							"name": "leaveGroup",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3703,7 +3753,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"message\": \"I use Green-API to send this message on story!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // the story will be available only to these two contacts\r\n}",
+							"raw": "{\r\n    \"message\": \"I use Green-API to send this message!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // the story will be available only to these two contacts\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3727,11 +3777,11 @@
 						{
 							"name": "sendTextStatus",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"message\": \"I use Green-API to send this message on story!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // the story will be available only to these two contacts\r\n}",
+									"raw": "{\r\n    \"message\": \"I use Green-API to send this message!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // the story will be available only to these two contacts\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3811,7 +3861,7 @@
 						{
 							"name": "sendVoiceStatus",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3895,7 +3945,7 @@
 						{
 							"name": "sendMediaStatus",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4149,7 +4199,7 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "GET {{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage={{id_Message}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage={{id_Message}}",
 							"host": [
 								"GET {{apiUrl}}"
 							],
@@ -4183,7 +4233,7 @@
 									}
 								},
 								"url": {
-									"raw": "GET {{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage={{id_Message}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage={{id_Message}}",
 									"host": [
 										"GET {{apiUrl}}"
 									],
@@ -4261,7 +4311,7 @@
 						{
 							"name": "deleteStatus",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4350,7 +4400,7 @@
 						{
 							"name": "readChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4434,7 +4484,7 @@
 						{
 							"name": "readChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4543,7 +4593,7 @@
 						{
 							"name": "checkWhatsapp",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4627,7 +4677,7 @@
 						{
 							"name": "getAvatar",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4711,7 +4761,7 @@
 						{
 							"name": "getAvatar",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4861,8 +4911,24 @@
 						{
 							"name": "getContactInfo",
 							"originalRequest": {
-								"method": "GET",
-								"header": [],
+								"method": "VIEW",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"71234567890@c.us\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{apiUrl}}/waInstance{{idInstance}}/GetContactInfo/{{apiTokenInstance}}",
 									"host": [
@@ -4936,7 +5002,7 @@
 						{
 							"name": "deleteMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -5020,7 +5086,7 @@
 						{
 							"name": "archiveChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -5104,7 +5170,7 @@
 						{
 							"name": "unarchiveChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -5188,7 +5254,7 @@
 						{
 							"name": "setDisappearingChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",

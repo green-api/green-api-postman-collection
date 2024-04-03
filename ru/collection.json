@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f86a3940-f975-4c0d-973e-904203650816",
+		"_postman_id": "e2c68577-de7c-4769-b237-169526ae171e",
 		"name": "Green API RU",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32221684"
@@ -32,7 +32,53 @@
 							"name": "getSettings",
 							"originalRequest": {
 								"method": "VIEW",
-								"header": [],
+								"header": [
+									{
+										"key": "Cache-Control",
+										"value": "no-cache",
+										"type": "text"
+									},
+									{
+										"key": "Postman-Token",
+										"value": "<calculated when request is sent>",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Length",
+										"value": "<calculated when request is sent>",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"type": "text"
+									},
+									{
+										"key": "Connection",
+										"value": "keep-alive",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
 									"host": [
@@ -42,6 +88,13 @@
 										"waInstance{{idInstance}}",
 										"getSettings",
 										"{{apiTokenInstance}}"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
 									]
 								}
 							},
@@ -82,7 +135,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 3000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Уведомление временно не работает\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
+							"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 3000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\", // Уведомление временно не работает\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Уведомление временно не работает\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -106,11 +159,11 @@
 						{
 							"name": "setSettings",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 5000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Уведомление временно не работает\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
+									"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 5000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\", // Уведомление временно не работает\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Уведомление временно не работает\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -393,10 +446,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": "\"https://qr.green-api.com/waInstance1101хххххх/7371e9fbcd2545c1889e4c2065ea72915943741eed9f333feg311\""
+							"body": "{\r\n    \"type\": \"qrCode\",\r\n    \"message\": \"iVBORw0KGgoAAAANSUhEUgAAARQAAAEUCAYAAADqcMl5AAAAAklEQVR4AewaftIAABJCSURBVO3BQY7gRpIAQXei/v9l3z7GKQGCWS2NNszsD9Za64KHtda65GGttS55WGutSx7WWuuSh7XWuuRhrbUueVhrrUse1lrrkoe11rrkYa21LnlYa61LHtZa65KHtda65GGttS55WGutS374SOVvqnhD5aRiUpkqTlSmiknlpGJS+aLiDZWpYlI5qXhDZaqYVKaKSeWLiptUpooTlZOKSeVvqvjiYa21LnlYa61LHtZa65IfLqu4SeUNlaniC5WTijcqJpWpYlKZKk5UpopJ5URlqripYlKZKt6oOFGZVL6omCr+poqbVG56WGutSx7WWuuSh7XWuuSHX6byRsUbKlPFicpvUpkqJpWpYlJ5Q2WqmFSmikllqphUTipOVN5QOamYVE4qJpWTikllUpkqTlR+k8obFb/pYa21LnlYa61LHtZa65If/mNUpoqbKk4qJpWp4qTijYqTiknlRGWqeEPli4pJ5aTii4pJ5aRiUnmjYlL5L3lYa61LHtZa65KHtda65If/mIqTikllqjhRmSomlaliUpkq3lD5m1TeqJhUTiomlROVqWJSmSreqJhUblKZKv5LHtZa65KHtda65GGttS754ZdV/E0qN6lMFScVk8pUMamcVJxUTCpTxaRyUvGGyqQyVUwqk8pU8YbKVDGpTBWTyknFSc3gerwWkclJxU8W/ycNaa13ysNZalzystdYlP1ym8k+qmFSmiknlC5Wp4ouKSWWqmFSmikllqphUTlSmipOKSWWqmFROVKaK31QxqUwVk8pUMamcqEwVJyr/Zg9rrXXJw1prXfKw1lqX2B/8D1M5qThRmSq+UJkqJpWp4kTli4pJ5aTiDZWp4guVNyomlZsqvlA5qfgveVhrrUse1lrrkoe11rrkh49UpopJ5aaKqeINlROVqWJSmSpOVE5UpoqTiknlJpWbVN6ouKliUpkqTlTeqJgqTlSmiknlporf9LDWWpc8rLXWJQ9rrXWJ/cFFKm9UTCpTxRsqU8Wk8kbFpPJGxaQyVUwqU8WkclJxojJVnKi8UfGGyknFpPI3VbyhMlW8oXJSMalMFScqJxVfPKy11iUPa611ycNaa13yw0cqU8WJyqQyVUwqJxVTxaRyUnGiMlXcpDJ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\"\r\n}"
 						}
 					]
 				},
@@ -431,7 +484,7 @@
 						{
 							"name": "getAuthorizationCode",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -592,7 +645,7 @@
 						{
 							"name": "setProfilePicture",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "formdata",
@@ -916,7 +969,7 @@
 						{
 							"name": "sendMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1003,7 +1056,7 @@
 						{
 							"name": "sendMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1087,7 +1140,7 @@
 						{
 							"name": "sendPoll",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1151,27 +1204,32 @@
 								{
 									"key": "chatId",
 									"value": "79001234567@c.us",
+									"description": "Идентификатор чата",
 									"type": "text"
 								},
 								{
 									"key": "caption",
 									"value": "Описание",
+									"description": "Описание под файлом. Описание добавляется к видео, изображениям. Максимальная длина поля 20000 символов.",
 									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "file",
+									"description": "Отправляемый файл",
 									"type": "file",
 									"src": "/C:/Users/mihai/Desktop/SB-409/window.jpg"
 								},
 								{
 									"key": "fileName",
 									"value": "window.jpg",
+									"description": "Название файла. Должно содержать расширение файла. Требуется использовать кодировку UTF-8 без BOM. Например: test.jpg",
 									"type": "text"
 								},
 								{
 									"key": "quotedMessageId",
 									"value": "",
+									"description": "Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата.",
 									"type": "text",
 									"disabled": true
 								}
@@ -1194,7 +1252,7 @@
 						{
 							"name": "sendFileByUpload",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "formdata",
@@ -1202,26 +1260,31 @@
 										{
 											"key": "chatId",
 											"value": "120363043968066561@g.us",
+											"description": "Идентификатор чата",
 											"type": "text"
 										},
 										{
 											"key": "caption",
 											"value": "Передаю изображение",
+											"description": "Описание под файлом. Описание добавляется к видео, изображениям. Максимальная длина поля 20000 символов.",
 											"type": "text"
 										},
 										{
 											"key": "file",
+											"description": "Отправляемый файл",
 											"type": "file",
 											"src": "/C:/Users/sergey.satanin/Desktop/файлы для тестирования/zyro-image-11.jpg"
 										},
 										{
 											"key": "fileName",
 											"value": "apple.jpg",
+											"description": "Название файла. Должно содержать расширение файла. Требуется использовать кодировку UTF-8 без BOM. Например: test.jpg",
 											"type": "text"
 										},
 										{
 											"key": "quotedMessageId",
 											"value": "3EB0C767D097B7C7C030",
+											"description": "Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата.",
 											"type": "text"
 										}
 									],
@@ -1304,7 +1367,7 @@
 						{
 							"name": "sendFileByUrl",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1364,7 +1427,22 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"description": "тип файла Content-Type в соответствии со списком MIME-типов.",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "GA-Filename",
+								"value": "",
+								"description": "Если файл отсутсвует в списке MIME-типов, вы можете передать заголовок GA-Filename, указав имя файла с расширением. Это позволит загружать такие файлы, как .go или .py.",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "file",
 							"file": {
@@ -1388,8 +1466,21 @@
 						{
 							"name": "uploadFile",
 							"originalRequest": {
-								"method": "POST",
-								"header": [],
+								"method": "VIEW",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "",
+										"description": "тип файла Content-Type в соответствии со списком MIME-типов.",
+										"type": "text"
+									},
+									{
+										"key": "GA-Filename",
+										"value": "",
+										"description": "Если файл отсутсвует в списке MIME-типов, вы можете передать заголовок GA-Filename, указав имя файла с расширением. Это позволит загружать такие файлы, как .go или .py.",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "file",
 									"file": {
@@ -1474,7 +1565,7 @@
 						{
 							"name": "sendLocation",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1558,7 +1649,7 @@
 						{
 							"name": "sendContact",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1612,13 +1703,13 @@
 					]
 				},
 				{
-					"name": "Переслать сообщение",
+					"name": "Переслать сообщения",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"chatId\": \"79309995496@c.us\",\r\n    \"chatIdFrom\": \"79309995496@c.us\",\r\n    \"message\": [\"BAE587FA1CECF760\", \"BAE5608BC86F2B59\"] \r\n}",
+							"raw": "{\r\n    \"chatId\": \"11001234567@c.us\",\r\n    \"chatIdFrom\": \"11001234567@c.us\",\r\n    \"messages\": [\r\n       \"BAE587FA1CECF760\",\r\n       \"BAE5608BC86F2B59\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1642,11 +1733,11 @@
 						{
 							"name": "forwardMessages",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"chatId\": \"79309995496@c.us\",\r\n    \"chatIdFrom\": \"79309995496@c.us\",\r\n    \"message\": \"BAE587FA1CECF760\"\r\n}",
+									"raw": "{\r\n    \"chatId\": \"11001234567@c.us\",\r\n    \"chatIdFrom\": \"11001234567@c.us\",\r\n    \"messages\": [\r\n       \"BAE587FA1CECF760\",\r\n       \"BAE5608BC86F2B59\"\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1691,7 +1782,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"idMessage\": \"BAE5DBB8DEABDA22\"\n}"
+							"body": "{\n  \"messages\": [\n    \"BAE5DBB8DEABDA22\",\n    \"BAE5BBA9BE3142D8\"\n  ]\n}"
 						}
 					]
 				}
@@ -1709,7 +1800,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}?receiveTimeout=5",
 									"host": [
 										"{{apiUrl}}"
 									],
@@ -1717,6 +1808,13 @@
 										"waInstance{{idInstance}}",
 										"receiveNotification",
 										"{{apiTokenInstance}}"
+									],
+									"query": [
+										{
+											"key": "receiveTimeout",
+											"value": "5",
+											"description": "Таймаут ожидания уведомления, принимает значение от 5 до 60 секунд"
+										}
 									]
 								},
 								"description": "Документация [ReceiveNotification](https://green-api.com/docs/api/receiving/technology-http-api/ReceiveNotification/)"
@@ -1728,7 +1826,7 @@
 										"method": "VIEW",
 										"header": [],
 										"url": {
-											"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}",
+											"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}?receiveTimeout=5",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -1736,11 +1834,18 @@
 												"waInstance{{idInstance}}",
 												"receiveNotification",
 												"{{apiTokenInstance}}"
+											],
+											"query": [
+												{
+													"key": "receiveTimeout",
+													"value": "5",
+													"description": "Таймаут ожидания уведомления, принимает значение от 5 до 60 секунд"
+												}
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
 									"body": "{\r\n    \"receiptId\": 1234567,\r\n    \"body\": {\r\n        \"typeWebhook\": \"incomingMessageReceived\",\r\n        \"instanceData\": {\r\n            \"idInstance\": 1234,\r\n            \"wid\": \"11001234567@c.us\",\r\n            \"typeInstance\": \"whatsapp\"\r\n        },\r\n        \"timestamp\": 1588091580,\r\n        \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n        \"senderData\": {\r\n            \"chatId\": \"79001234568@c.us\",\r\n            \"sender\": \"79001234568@c.us\",\r\n            \"senderName\": \"Green API\"\r\n        },\r\n        \"messageData\":{\r\n            \"typeMessage\":\"textMessage\",\r\n            \"textMessageData\":{\r\n                \"textMessage\":\"I use Green-API to send this message to you!\"\r\n            }\r\n        }\r\n    }\r\n}"
 								}
@@ -1784,8 +1889,8 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
 									"body": "{\r\n    \"result\": true\r\n}"
 								}
@@ -1827,7 +1932,7 @@
 								{
 									"name": "downloadFile",
 									"originalRequest": {
-										"method": "POST",
+										"method": "VIEW",
 										"header": [],
 										"body": {
 											"mode": "raw",
@@ -1850,8 +1955,8 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
 									"body": "\"https://sw-media.storage.yandexcloud.net/1101896860/6d57a5bf-0fd7-42ca-92c6-6d037d905174.jpeg\""
 								}
@@ -1895,7 +2000,7 @@
 						{
 							"name": "getChatHistory",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1979,7 +2084,7 @@
 						{
 							"name": "incomingTextMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2018,7 +2123,7 @@
 						{
 							"name": "outgoingTextMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2057,7 +2162,7 @@
 						{
 							"name": "incomingMediaMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2096,7 +2201,7 @@
 						{
 							"name": "outgoingMediaMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2135,7 +2240,7 @@
 						{
 							"name": "incomingReactionMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2158,15 +2263,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\",\r\n    },\r\n    \"senderId\": \"70000000013@c.us\",\r\n    \"senderName\": \"Николай\",\r\n    \"senderContactName\": \"Коля\"\r\n}"
 						},
 						{
 							"name": "outgoingReactionMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2189,15 +2294,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\",\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": false\r\n}"
 						},
 						{
 							"name": "incomingLocationMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2236,7 +2341,7 @@
 						{
 							"name": "outgoingLocationMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2275,7 +2380,7 @@
 						{
 							"name": "incomingContactMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2314,7 +2419,7 @@
 						{
 							"name": "outgoingContactMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2353,7 +2458,7 @@
 						{
 							"name": "incomingExtendedTextMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2392,7 +2497,7 @@
 						{
 							"name": "outgoingExtendedTextMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2431,7 +2536,7 @@
 						{
 							"name": "incomingPollMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2454,15 +2559,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A71511C3A0000000000\",\r\n    \"timestamp\": 1706676278,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Выберите любимый цвет\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Красный\"\r\n            },\r\n            {\r\n                \"optionName\": \"Зеленый\"\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"senderId\": \"70000000012@c.us\",\r\n    \"senderName\": \"Николай\",\r\n    \"senderContactName\": \"Коля\"\r\n}"
 						},
 						{
 							"name": "outgoingPollMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2485,15 +2590,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"460D84E00000000000\",\r\n    \"timestamp\": 1706762412,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Выберите любимый цвет\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Красный\"\r\n            },\r\n            {\r\n                \"optionName\": \"Зеленый\"\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}"
 						},
 						{
 							"name": "incomingPollUpdateMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2516,15 +2621,15 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A0493ED90000000000000\",\r\n    \"timestamp\": 1706676447,\r\n    \"typeMessage\": \"pollUpdateMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Куда пойдем?\",\r\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\r\n        \"votes\": [\r\n            {\r\n                \"optionName\": \"Пляж\",\r\n                \"optionVoters\": [\r\n                    \"70000000012@c.us\"\r\n                ]\r\n            },\r\n            {\r\n                \"optionName\": \"Горы\",\r\n                \"optionVoters\": []\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"senderId\": \"70000000012@c.us\",\r\n    \"senderName\": \"Николай\",\r\n    \"senderContactName\": \"Коля\"\r\n}"
 						},
 						{
 							"name": "incomingQuotedMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2563,7 +2668,7 @@
 						{
 							"name": "outgoingQuotedMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2954,7 +3059,7 @@
 						{
 							"name": "createGroup",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3038,7 +3143,7 @@
 						{
 							"name": "updateGroupName",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3122,7 +3227,7 @@
 						{
 							"name": "getGroupData",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3206,7 +3311,7 @@
 						{
 							"name": "addGroupParticipant",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3290,7 +3395,7 @@
 						{
 							"name": "removeGroupParticipant",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3374,7 +3479,7 @@
 						{
 							"name": "setGroupAdmin",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3458,7 +3563,7 @@
 						{
 							"name": "removeAdmin",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3522,7 +3627,7 @@
 								{
 									"key": "file",
 									"type": "file",
-									"src": "/C:/Users/sergey.satanin/Desktop/файлы для тестирования/25528187d8a32d1c998a63e3b301de86.jpg"
+									"src": "/C:/Users/sergey.satanin/Desktop/файлы для тестирования/scale_1200.jpg"
 								},
 								{
 									"key": "groupId",
@@ -3549,7 +3654,7 @@
 						{
 							"name": "setGroupPicture",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "formdata",
@@ -3644,7 +3749,7 @@
 						{
 							"name": "leaveGroup",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3709,7 +3814,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"message\": \"I use Green-API to send this message on story!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // сторис будет доступен только данным двум контактам\r\n}",
+							"raw": "{\r\n    \"message\": \"I use Green-API to send this message!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // сторис будет доступен только данным двум контактам\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3733,11 +3838,11 @@
 						{
 							"name": "sendTextStatus",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"message\": \"I use Green-API to send this message on story!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // сторис будет доступен только данным двум контактам\r\n}",
+									"raw": "{\r\n    \"message\": \"I use Green-API to send this message!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // сторис будет доступен только данным двум контактам\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3817,7 +3922,7 @@
 						{
 							"name": "sendVoiceStatus",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3901,7 +4006,7 @@
 						{
 							"name": "sendMediaStatus",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4155,9 +4260,9 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "GET {{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage={{id_Message}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage=BAE5826F1840C61A",
 							"host": [
-								"GET {{apiUrl}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -4167,7 +4272,7 @@
 							"query": [
 								{
 									"key": "idMessage",
-									"value": "{{id_Message}}"
+									"value": "BAE5826F1840C61A"
 								}
 							]
 						},
@@ -4189,7 +4294,7 @@
 									}
 								},
 								"url": {
-									"raw": "GET {{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage={{id_Message}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage=BAE5826F1840C61A",
 									"host": [
 										"GET {{apiUrl}}"
 									],
@@ -4201,7 +4306,7 @@
 									"query": [
 										{
 											"key": "idMessage",
-											"value": "{{id_Message}}"
+											"value": "BAE5826F1840C61A"
 										}
 									]
 								}
@@ -4267,7 +4372,7 @@
 						{
 							"name": "deleteStatus",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4356,7 +4461,7 @@
 						{
 							"name": "readChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4440,7 +4545,7 @@
 						{
 							"name": "readChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4561,7 +4666,7 @@
 						{
 							"name": "checkWhatsapp",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4645,7 +4750,7 @@
 						{
 							"name": "getAvatar",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4729,7 +4834,7 @@
 						{
 							"name": "getAvatar",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -4879,7 +4984,7 @@
 						{
 							"name": "getContactInfo",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [
 									{
 										"key": "Content-Type",
@@ -4970,7 +5075,7 @@
 						{
 							"name": "deleteMessage",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -5054,7 +5159,7 @@
 						{
 							"name": "archiveChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -5138,7 +5243,7 @@
 						{
 							"name": "unarchiveChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -5222,7 +5327,7 @@
 						{
 							"name": "setDisappearingChat",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
