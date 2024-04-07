@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "e2c68577-de7c-4769-b237-169526ae171e",
-		"name": "Green API RU",
+		"_postman_id": "d1854a09-6f7d-461a-a6bc-d02a130b9433",
+		"name": "Green API RU Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32221684"
 	},
@@ -124,7 +124,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"wid\": \"79001234567@c.us\", \n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n    \"delaySendMessagesMilliseconds\": 3000,\n    \"markIncomingMessagesReaded\": \"yes\",\n\t\"markIncomingMessagesReadedOnReply\": \"yes\",\n\t\"outgoingWebhook\": \"yes\",\n\t\"outgoingMessageWebhook\": \"yes\",\n\t\"outgoingAPIMessageWebhook\": \"yes\",\n\t\"incomingWebhook\": \"yes\",\n\t\"stateWebhook\": \"yes\",\n\t\"keepOnlineStatus\": \"yes\",\n\t\"pollMessageWebhook\": \"yes\",\n\t\"incomingBlockWebhook\": \"yes\",\n\t\"incomingCallWebhook\": \"yes\"\n}"
+							"body": "{\n\t\"wid\": \"79001234567@c.us\",\n\t\"countryInstance\": \"\", // Не используется\n\t\"typeAccount\": \"\", // Не используется\n\t\"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n\t\"webhookUrlToken\": \"\",\n\t\"delaySendMessagesMilliseconds\": 3000,\n\t\"markIncomingMessagesReaded\": \"no\",\n\t\"markIncomingMessagesReadedOnReply\": \"yes\",\n\t\"sharedSession\": \"no\", // Не используется\n\t\"proxyInstance\": \"system proxy\", // Не используется\n    \"outgoingWebhook\": \"yes\",\n\t\"outgoingMessageWebhook\": \"yes\",\n\t\"outgoingAPIMessageWebhook\": \"yes\",\n\t\"incomingWebhook\": \"yes\",\n\t\"deviceWebhook\": \"no\", // Временно не работает\n\t\"statusInstanceWebhook\": \"no\", // Не используется\n\t\"stateWebhook\": \"yes\",\n\t\"enableMessagesHistory\": \"no\", // Не используется\n\t\"keepOnlineStatus\": \"yes\",\n\t\"pollMessageWebhook\": \"yes\",\n\t\"incomingBlockWebhook\": \"no\", // Временно не работает\n\t\"incomingCallWebhook\": \"yes\"\n}"
 						}
 					]
 				},
@@ -135,7 +135,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 3000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\", // Уведомление временно не работает\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Уведомление временно не работает\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
+							"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 3000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -446,10 +446,18 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": "Text",
-							"header": [],
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
 							"cookie": [],
-							"body": "{\r\n    \"type\": \"qrCode\",\r\n    \"message\": \"iVBORw0KGgoAAAANSUhEUgAAARQAAAEUCAYAAADqcMl5AAAAAklEQVR4AewaftIAABJCSURBVO3BQY7gRpIAQXei/v9l3z7GKQGCWS2NNszsD9Za64KHtda65GGttS55WGutSx7WWuuSh7XWuuRhrbUueVhrrUse1lrrkoe11rrkYa21LnlYa61LHtZa65KHtda65GGttS55WGutS374SOVvqnhD5aRiUpkqTlSmiknlpGJS+aLiDZWpYlI5qXhDZaqYVKaKSeWLiptUpooTlZOKSeVvqvjiYa21LnlYa61LHtZa65IfLqu4SeUNlaniC5WTijcqJpWpYlKZKk5UpopJ5URlqripYlKZKt6oOFGZVL6omCr+poqbVG56WGutSx7WWuuSh7XWuuSHX6byRsUbKlPFicpvUpkqJpWpYlJ5Q2WqmFSmikllqphUTipOVN5QOamYVE4qJpWTikllUpkqTlR+k8obFb/pYa21LnlYa61LHtZa65If/mNUpoqbKk4qJpWp4qTijYqTiknlRGWqeEPli4pJ5aTii4pJ5aRiUnmjYlL5L3lYa61LHtZa65KHtda65If/mIqTikllqjhRmSomlaliUpkq3lD5m1TeqJhUTiomlROVqWJSmSreqJhUblKZKv5LHtZa65KHtda65GGttS754ZdV/E0qN6lMFScVk8pUMamcVJxUTCpTxaRyUvGGyqQyVUwqk8pU8YbKVDGpTBWTyknFSc3gerwWkclJxU8W/ycNaa13ysNZalzystdYlP1ym8k+qmFSmiknlC5Wp4ouKSWWqmFSmikllqphUTlSmipOKSWWqmFROVKaK31QxqUwVk8pUMamcqEwVJyr/Zg9rrXXJw1prXfKw1lqX2B/8D1M5qThRmSq+UJkqJpWp4kTli4pJ5aTiDZWp4guVNyomlZsqvlA5qfgveVhrrUse1lrrkoe11rrkh49UpopJ5aaKqeINlROVqWJSmSpOVE5UpoqTiknlJpWbVN6ouKliUpkqTlTeqJgqTlSmiknlporf9LDWWpc8rLXWJQ9rrXWJ/cFFKm9UTCpTxRsqU8Wk8kbFpPJGxaQyVUwqU8WkclJxojJVnKi8UfGGyknFpPI3VbyhMlW8oXJSMalMFScqJxVfPKy11iUPa611ycNaa13yw0cqU8WJyqQyVUwqJxVTxaRyUnGiMlXcpDJ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\"\r\n}"
+							"body": "{\n    \"type\": \"qrCode\",\n    \"message\": \"iVBORw0KGgoAAAANSUhEUgAAARQAAAEUCAYAAADqcMl5AAAAAklEQVR4AewaftIAABJCSURBVO3BQY7gRpIAQXei/v9l3z7GKQGCWS2NNszsD9Za64KHtda65GGttS55WGutSx7WWuuSh7XWuuRhrbUueVhrrUse1lrrkoe11rrkYa21LnlYa61LHtZa65KHtda65GGttS55WGutS374SOVvqnhD5aRiUpkqTlSmiknlpGJS+aLiDZWpYlI5qXhDZaqYVKaKSeWLiptUpooTlZOKSeVvqvjiYa21LnlYa61LHtZa65IfLqu4SeUNlaniC5WTijcqJpWpYlKZKk5UpopJ5URlqripYlKZKt6oOFGZVL6omCr+poqbVG56WGutSx7WWuuSh7XWuuSHX6byRsUbKlPFicpvUpkqJpWpYlJ5Q2WqmFSmikllqphUTipOVN5QOamYVE4qJpWTikllUpkqTlR+k8obFb/pYa21LnlYa61LHtZa65If/mNUpoqbKk4qJpWp4qTijYqTiknlRGWqeEPli4pJ5aTii4pJ5aRiUnmjYlL5L3lYa61LHtZa65KHtda65If/mIqTikllqjhRmSomlaliUpkq3lD5m1TeqJhUTiomlROVqWJSmSreqJhUblKZKv5LHtZa65KHtda65GGttS754ZdV/E0qN6lMFScVk8pUMamcVJxUTCpTxaRyUvGGyqQyVUwqk8pU8YbKVDGpTBWTyknFSc3gerwWkclJxU8W/ycNaa13ysNZalzystdYlP1ym8k+qmFSmiknlC5Wp4ouKSWWqmFSmikllqphUTlSmipOKSWWqmFROVKaK31QxqUwVk8pUMamcqEwVJyr/Zg9rrXXJw1prXfKw1lqX2B/8D1M5qThRmSq+UJkqJpWp4kTli4pJ5aTiDZWp4guVNyomlZsqvlA5qfgveVhrrUse1lrrkoe11rrkh49UpopJ5aaKqeINlROVqWJSmSpOVE5UpoqTiknlJpWbVN6ouKliUpkqTlTeqJgqTlSmiknlporf9LDWWpc8rLXWJQ9rrXWJ/cFFKm9UTCpTxRsqU8Wk8kbFpPJGxaQyVUwqU8WkclJxojJVnKi8UfGGyknFpPI3VbyhMlW8oXJSMalMFScqJxVfPKy11iUPa611ycNaa13yw0cqU8WJyqQyVUwqJxVTxaRyUnGiMlXcpDJ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\"\n}"
 						}
 					]
 				},
@@ -460,7 +468,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"phoneNumber\": 79001234567\n}",
+							"raw": "{\n    \"phoneNumber\": 79001234567 //Номер телефона в международном формате без + и 00\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -488,7 +496,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"phoneNumber\": 79001234567\n}",
+									"raw": "{\n    \"phoneNumber\": 79001234567 //Номер телефона в международном формате без + и 00\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -609,7 +617,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"code\":\"GAPI2018\"\n}"
+							"body": "{\n    \"status\": true,\n    \"code\":\"GAPI2015\"\n}"
 						}
 					]
 				},
@@ -623,8 +631,9 @@
 							"formdata": [
 								{
 									"key": "file",
+									"description": "Отправляемый файл в формате *.jpg",
 									"type": "file",
-									"src": []
+									"src": "/C:/Users/sergey.satanin/Desktop/файлы для тестирования/scale_1200.jpg"
 								}
 							]
 						},
@@ -652,8 +661,9 @@
 									"formdata": [
 										{
 											"key": "file",
+											"description": "Отправляемый файл в формате *.jpg",
 											"type": "file",
-											"src": []
+											"src": "/C:/Users/sergey.satanin/Desktop/файлы для тестирования/scale_1200.jpg"
 										}
 									],
 									"options": {
@@ -842,7 +852,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"avatar\": \"https://pps.whatsapp.net/v/t61.24694-24/255450038_606301630687404_1229899540472209484_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSqyPjrKEC3j3ZOXOsakV0EUV7toKOGb7-eLr0vyqq0vQ&oe=655ADB17&_nc_sid=e6ed6c&_nc_cat=104\",\n    \"phone\": \"79111606788\",\n    \"stateInstance\": \"authorized\",\n    \"deviceId\": \"79111606788:8@s.whatsapp.net\"\n}"
+							"body": "{\n    \"avatar\": \"https://pps.whatsapp.net/v/t61.24694-24/255450038_606301630687404_1229899540472209484_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSqyPjrKEC3j3ZOXOsakV0EUV7toKOGb7-eLr0vyqq0vQ&oe=655ADB17&_nc_sid=e6ed6c&_nc_cat=104\",\n    \"phone\": \"79001234567\",\n    \"stateInstance\": \"authorized\",\n    \"deviceId\": \"79001234567:8@s.whatsapp.net\"\n}"
 						}
 					]
 				}
@@ -1332,7 +1342,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"idMessage\": \"3EB0EA03CB2EAFD864F6\"\n}"
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\",\n    \"urlFile\": \"https://sw-media-out.storage.yandexcloud.net/1101776123/c1aabd48-c1c2-49b1-8f2d-f575a41777be.jpg\"\n}"
 						}
 					]
 				},
@@ -1844,10 +1854,18 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": "Text",
-									"header": [],
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
 									"cookie": [],
-									"body": "{\r\n    \"receiptId\": 1234567,\r\n    \"body\": {\r\n        \"typeWebhook\": \"incomingMessageReceived\",\r\n        \"instanceData\": {\r\n            \"idInstance\": 1234,\r\n            \"wid\": \"11001234567@c.us\",\r\n            \"typeInstance\": \"whatsapp\"\r\n        },\r\n        \"timestamp\": 1588091580,\r\n        \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n        \"senderData\": {\r\n            \"chatId\": \"79001234568@c.us\",\r\n            \"sender\": \"79001234568@c.us\",\r\n            \"senderName\": \"Green API\"\r\n        },\r\n        \"messageData\":{\r\n            \"typeMessage\":\"textMessage\",\r\n            \"textMessageData\":{\r\n                \"textMessage\":\"I use Green-API to send this message to you!\"\r\n            }\r\n        }\r\n    }\r\n}"
+									"body": "{\n    \"receiptId\": 1234567,\n    \"body\": {\n        \"typeWebhook\": \"incomingMessageReceived\",\n        \"instanceData\": {\n            \"idInstance\": 1234,\n            \"wid\": \"11001234567@c.us\",\n            \"typeInstance\": \"whatsapp\"\n        },\n        \"timestamp\": 1588091580,\n        \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\n        \"senderData\": {\n            \"chatId\": \"79001234568@c.us\",\n            \"sender\": \"79001234568@c.us\",\n            \"senderName\": \"Green API\"\n        },\n        \"messageData\": {\n            \"typeMessage\": \"textMessage\",\n            \"textMessageData\": {\n                \"textMessage\": \"I use Green-API to send this message to you!\"\n            }\n        }\n    }\n}"
 								}
 							]
 						},
@@ -1889,10 +1907,18 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": "Text",
-									"header": [],
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
 									"cookie": [],
-									"body": "{\r\n    \"result\": true\r\n}"
+									"body": "{\n    \"result\": true\n}"
 								}
 							]
 						}
@@ -1955,10 +1981,18 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": "Text",
-									"header": [],
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
 									"cookie": [],
-									"body": "\"https://sw-media.storage.yandexcloud.net/1101896860/6d57a5bf-0fd7-42ca-92c6-6d037d905174.jpeg\""
+									"body": "{\n    \"downloadUrl\": \"https://sw-media.storage.net/1101000000/f5f78319-c063-4ed1-95c5-568123456789.jpeg\"\n}"
 								}
 							]
 						}
@@ -2049,7 +2083,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"idMessage\": \"3EB0C732BC93864C25FB\",\n        \"timestamp\": 1587412276,\n        \"statusMessage\": \"read\",\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\"\n    },\n    {\n        \"idMessage\": \"3EB0C37D09143B7F53A0\",\n        \"timestamp\": 1587412276,\n        \"statusMessage\": \"read\",\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\"\n    }\n]"
+							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5D12345ABCDEF\",\n        \"timestamp\": 1587412276,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\",\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true\n    },\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"9DB14F14A253D33F4A9CD84123456789\",\n        \"timestamp\": 1587412276,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\",\n        \"senderId\": \"70000000012@c.us\",\n        \"senderName\": \"Николай\",\n        \"senderContactName\": \"Коля\"\n    }\n]"
 						}
 					]
 				},
@@ -2263,8 +2297,16 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": "Text",
-							"header": [],
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\",\r\n    },\r\n    \"senderId\": \"70000000013@c.us\",\r\n    \"senderName\": \"Николай\",\r\n    \"senderContactName\": \"Коля\"\r\n}"
 						},
@@ -2294,8 +2336,16 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": "Text",
-							"header": [],
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
 							"cookie": [],
 							"body": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\",\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": false\r\n}"
 						},
@@ -2559,10 +2609,18 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": "Text",
-							"header": [],
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
 							"cookie": [],
-							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A71511C3A0000000000\",\r\n    \"timestamp\": 1706676278,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Выберите любимый цвет\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Красный\"\r\n            },\r\n            {\r\n                \"optionName\": \"Зеленый\"\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"senderId\": \"70000000012@c.us\",\r\n    \"senderName\": \"Николай\",\r\n    \"senderContactName\": \"Коля\"\r\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A71511C3A0000000000\",\n    \"timestamp\": 1706676278,\n    \"typeMessage\": \"pollMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Выберите любимый цвет\",\n        \"options\": [\n            {\n                \"optionName\": \"Красный\"\n            },\n            {\n                \"optionName\": \"Зеленый\"\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Николай\",\n    \"senderContactName\": \"Коля\"\n}"
 						},
 						{
 							"name": "outgoingPollMessage",
@@ -2590,10 +2648,18 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": "Text",
-							"header": [],
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
 							"cookie": [],
-							"body": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"460D84E00000000000\",\r\n    \"timestamp\": 1706762412,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Выберите любимый цвет\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Красный\"\r\n            },\r\n            {\r\n                \"optionName\": \"Зеленый\"\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}"
+							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"460D84E00000000000\",\n    \"timestamp\": 1706762412,\n    \"typeMessage\": \"pollMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Выберите любимый цвет\",\n        \"options\": [\n            {\n                \"optionName\": \"Красный\"\n            },\n            {\n                \"optionName\": \"Зеленый\"\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"statusMessage\": \"delivered\",\n    \"sendByApi\": true\n}"
 						},
 						{
 							"name": "incomingPollUpdateMessage",
@@ -2621,10 +2687,18 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": "Text",
-							"header": [],
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
 							"cookie": [],
-							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A0493ED90000000000000\",\r\n    \"timestamp\": 1706676447,\r\n    \"typeMessage\": \"pollUpdateMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Куда пойдем?\",\r\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\r\n        \"votes\": [\r\n            {\r\n                \"optionName\": \"Пляж\",\r\n                \"optionVoters\": [\r\n                    \"70000000012@c.us\"\r\n                ]\r\n            },\r\n            {\r\n                \"optionName\": \"Горы\",\r\n                \"optionVoters\": []\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"senderId\": \"70000000012@c.us\",\r\n    \"senderName\": \"Николай\",\r\n    \"senderContactName\": \"Коля\"\r\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A0493ED90000000000000\",\n    \"timestamp\": 1706676447,\n    \"typeMessage\": \"pollUpdateMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Куда пойдем?\",\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\n        \"votes\": [\n            {\n                \"optionName\": \"Пляж\",\n                \"optionVoters\": [\n                    \"70000000012@c.us\"\n                ]\n            },\n            {\n                \"optionName\": \"Горы\",\n                \"optionVoters\": []\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Николай\",\n    \"senderContactName\": \"Коля\"\n}"
 						},
 						{
 							"name": "incomingQuotedMessage",
@@ -3627,6 +3701,7 @@
 								{
 									"key": "file",
 									"type": "file",
+									"description": "Отправляемый файл в формате *.jpg",
 									"src": "/C:/Users/sergey.satanin/Desktop/файлы для тестирования/scale_1200.jpg"
 								},
 								{
@@ -3662,11 +3737,13 @@
 										{
 											"key": "file",
 											"type": "file",
+											"description": "Отправляемый файл в формате *.jpg",
 											"src": "/C:/Users/sergey.satanin/Desktop/файлы для тестирования/scale_1200.jpg"
 										},
 										{
 											"key": "groupId",
 											"value": "120363022730913588@g.us",
+											"description": "идентификатор группы, например 74433384355-1585564682@g.us",
 											"type": "text"
 										}
 									],
@@ -3814,7 +3891,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"message\": \"I use Green-API to send this message!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // сторис будет доступен только данным двум контактам\r\n}",
+							"raw": "{\r\n    \"message\": \"I use Green-API to send this message!\",\r\n    \"backgroundColor\": \"#000000\",\r\n    \"font\": \"SERIF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // статус будет доступен только указанным контактам\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3898,7 +3975,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"urlFile\": \"https://my.site.com/audio/music.mp3\",\r\n    \"fileName\": \"music.mp3\",\r\n    \"backgroundColor\": \"#FFFFFF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // сторис будет доступен только данным двум контактам\r\n}",
+							"raw": "{\r\n    \"urlFile\": \"https://my.site.com/audio/music.mp3\",\r\n    \"fileName\": \"music.mp3\",\r\n    \"backgroundColor\": \"#FFFFFF\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // статус будет доступен только указанным контактам\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3982,7 +4059,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"urlFile\": \"https://my.site.com/img/horse.png\",\r\n    \"fileName\": \"horse.png\",\r\n    \"caption\": \"Little horse\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // сторис будет доступен только данным двум контактам\r\n}",
+							"raw": "{\r\n    \"urlFile\": \"https://my.site.com/img/horse.png\",\r\n    \"fileName\": \"horse.png\",\r\n    \"caption\": \"Little horse\",\r\n    \"participants\": [\"70000001234@c.us\", \"440000001234@c.us\"] // статус будет доступен только указанным контактам\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4149,7 +4226,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5018000000000\",\n        \"timestamp\": 1710134811,\n        \"typeMessage\": \"extendedTextMessage\",\n        \"chatId\": \"70000000001@c.us\",\n        \"textMessage\": \"I use Green-API to send this message on story!\",\n        \"extendedTextMessage\": {\n            \"text\": \"I use Green-API to send this message on story!\",\n            \"backgroundColor\": \"#F2F2F2\",\n            \"font\": \"SERIF\",\n            \"participants\": [ \n                \"70000000001@c.us\",\n                \"70000000002@c.us\" // сторис доступен только данным двум контактам\n            ]\n        },\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true\n    },\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5207000000000\",\n        \"timestamp\": 1710134814,\n        \"typeMessage\": \"imageMessage\", // \"videoMessage\" / \"audioMessage\"\n        \"chatId\": \"70000000001@c.us\",\n        \"participants\": [], // сторис доступен всем\n        \"downloadUrl\": \"https://sw-media.storage.yandexcloud.net/1101000000/dcf81410-bdbc-4aed-bf23-d1845c000000.jpg\",\n        \"caption\": \"I use Green-API to send this message on story!\",\n        \"fileName\": \"dcf81410-bdbc-4aed-bf23-d1845cd74754.jpg\",\n        \"jpegThumbnail\": \"/9j/2wCEABALDA4MChAODQ4SERATGCgaGBYWGDEjJ\",\n        \"mimeType\": \"image/jpeg\",\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true\n    }\n]"
+							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5018000000000\",\n        \"timestamp\": 1710134811,\n        \"typeMessage\": \"extendedTextMessage\",\n        \"chatId\": \"70000000001@c.us\",\n        \"textMessage\": \"I use Green-API to send this story!\",\n        \"extendedTextMessage\": {\n            \"text\": \"I use Green-API to send this story!\",\n            \"backgroundColor\": \"#228B22\",\n            \"font\": \"SERIF\",\n            \"participants\": [ \n                \"70000000001@c.us\",\n                \"70000000002@c.us\" // статус будет доступен только указанным контактам\n            ]\n        },\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true\n    },\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5207000000000\",\n        \"timestamp\": 1710134814,\n        \"typeMessage\": \"imageMessage\", // \"videoMessage\" / \"audioMessage\"\n        \"chatId\": \"70000000001@c.us\",\n        \"participants\": [], // сторис доступен всем\n        \"downloadUrl\": \"https://sw-media.storage.yandexcloud.net/1101000000/dcf81410-bdbc-4aed-bf23-d1845c000000.jpg\",\n        \"caption\": \"I use Green-API to send this message on story!\",\n        \"fileName\": \"dcf81410-bdbc-4aed-bf23-d1845cd74754.jpg\",\n        \"jpegThumbnail\": \"/9j/2wCEABALDA4MChAODQ4SERATGCgaGBYWGDEjJ\",\n        \"mimeType\": \"image/jpeg\",\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true\n    }\n]"
 						}
 					]
 				},
@@ -4243,7 +4320,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"1E1A12D337F2BFA5FC0000000000000\",\n        \"timestamp\": 1710232595,\n        \"typeMessage\": \"extendedTextMessage\",\n        \"chatId\": \"70000000001@c.us\",\n        \"textMessage\": \"Прекрасное утро!\",\n        \"extendedTextMessage\": {\n            \"text\": \"Прекрасное утро!\",\n            \"backgroundColor\": \"#74676A\",\n            \"font\": \"SANS_SERIF\"\n        },\n        \"senderId\": \"70000000001@c.us\",\n        \"senderName\": \"Николай\",\n        \"senderContactName\": \"Коля\"\n    },\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"38E322274FDEBA56047000000000000\",\n        \"timestamp\": 1710232636,\n        \"typeMessage\": \"imageMessage\", // \"videoMessage\" / \"audioMessage\"\n        \"chatId\": \"70000000001@c.us\",\n        \"downloadUrl\": \"https://sw-media.storage.yandexcloud.net/1101000000/dcf81410-bdbc-4aed-bf23-d1845c000000.jpg\",\n        \"caption\": \"Прекрасное утро!\",\n        \"fileName\": \"dcf81410-bdbc-4aed-bf23-d1845cd74754.jpg\",\n        \"jpegThumbnail\": \"/9j/2wCEABALDA4MChAODQ4SERATGCgaGBYWGDEjJ\",\n        \"mimeType\": \"image/jpeg\",\n        \"senderId\": \"70000000001@c.us\",\n        \"senderName\": \"Николай\",\n        \"senderContactName\": \"Коля\"\n    }\n]"
+							"body": "[\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"1E1A12D337F2BFA5FC0000000000000\",\n        \"timestamp\": 1710232595,\n        \"typeMessage\": \"extendedTextMessage\",\n        \"chatId\": \"70000000001@c.us\",\n        \"textMessage\": \"Прекрасное утро!\",\n        \"extendedTextMessage\": {\n            \"text\": \"Прекрасное утро!\",\n            \"backgroundColor\": \"#228B22\",\n            \"font\": \"SANS_SERIF\"\n        },\n        \"senderId\": \"70000000001@c.us\",\n        \"senderName\": \"Николай\",\n        \"senderContactName\": \"Коля\"\n    },\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"38E322274FDEBA56047000000000000\",\n        \"timestamp\": 1710232636,\n        \"typeMessage\": \"imageMessage\", // \"videoMessage\" / \"audioMessage\"\n        \"chatId\": \"70000000001@c.us\",\n        \"downloadUrl\": \"https://sw-media.storage.yandexcloud.net/1101000000/dcf81410-bdbc-4aed-bf23-d1845c000000.jpg\",\n        \"caption\": \"Прекрасное утро!\",\n        \"fileName\": \"dcf81410-bdbc-4aed-bf23-d1845cd74754.jpg\",\n        \"jpegThumbnail\": \"/9j/2wCEABALDA4MChAODQ4SERATGCgaGBYWGDEjJ\",\n        \"mimeType\": \"image/jpeg\",\n        \"senderId\": \"70000000001@c.us\",\n        \"senderName\": \"Николай\",\n        \"senderContactName\": \"Коля\"\n    }\n]"
 						}
 					]
 				},
@@ -4260,7 +4337,7 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage=BAE5826F1840C61A",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage={{id_Message}}",
 							"host": [
 								"{{apiUrl}}"
 							],
@@ -4272,7 +4349,7 @@
 							"query": [
 								{
 									"key": "idMessage",
-									"value": "BAE5826F1840C61A"
+									"value": "{{id_Message}}"
 								}
 							]
 						},
@@ -4294,7 +4371,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage=BAE5826F1840C61A",
+									"raw": "GET {{apiUrl}}/waInstance{{idInstance}}/getStatusStatistic/{{apiTokenInstance}}?idMessage=BAE5826123456789",
 									"host": [
 										"GET {{apiUrl}}"
 									],
@@ -4306,7 +4383,7 @@
 									"query": [
 										{
 											"key": "idMessage",
-											"value": "BAE5826F1840C61A"
+											"value": "BAE5826123456789"
 										}
 									]
 								}
