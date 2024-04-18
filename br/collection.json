@@ -14,9 +14,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -33,9 +33,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -89,9 +89,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -117,9 +117,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -164,9 +164,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -183,9 +183,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -230,9 +230,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -249,9 +249,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/reboot/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -296,9 +296,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -315,9 +315,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/logout/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -397,9 +397,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -425,9 +425,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -481,9 +481,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -509,9 +509,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -579,9 +579,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}",
+							"raw": "{{mediaUrl}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{mediaUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -628,9 +628,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}",
+									"raw": "{{MediaUrl}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{MediaUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -684,9 +684,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -712,9 +712,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -768,9 +768,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -796,9 +796,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -852,9 +852,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -880,9 +880,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -936,9 +936,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -964,9 +964,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1042,9 +1042,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/downloadFile/{{idMessage}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/downloadFile/{{idMessage}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1103,9 +1103,9 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/deleteNotification/{{apiTokenInstance}}/{{receiptId}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteNotification/{{apiTokenInstance}}/{{receiptId}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1156,9 +1156,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1175,9 +1175,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1222,9 +1222,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/lastOutgoingMessages/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/lastOutgoingMessages/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1241,9 +1241,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/lastOutgoingMessages/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/lastOutgoingMessages/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1316,9 +1316,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1335,9 +1335,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/showMessagesQueue/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1382,9 +1382,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/clearMessagesQueue/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/clearMessagesQueue/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1401,9 +1401,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/clearMessagesQueue/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/clearMessagesQueue/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1485,9 +1485,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1513,9 +1513,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1569,9 +1569,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1597,9 +1597,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1653,9 +1653,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getGroupData/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getGroupData/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1681,9 +1681,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getGroupData/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getGroupData/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1737,9 +1737,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1765,9 +1765,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1821,9 +1821,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1849,9 +1849,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1905,9 +1905,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/setGroupAdmin/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/setGroupAdmin/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -1933,9 +1933,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/setGroupAdmin/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/setGroupAdmin/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -1989,9 +1989,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/removeAdmin/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/removeAdmin/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2017,9 +2017,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/removeAdmin/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/removeAdmin/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -2073,9 +2073,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2101,9 +2101,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -2185,9 +2185,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2213,9 +2213,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -2269,9 +2269,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2297,9 +2297,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -2372,9 +2372,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getDeviceInfo/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getDeviceInfo/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2391,9 +2391,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getDeviceInfo/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getDeviceInfo/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -2475,9 +2475,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2503,9 +2503,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -2559,9 +2559,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2587,9 +2587,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -2643,9 +2643,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2671,9 +2671,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
@@ -2718,9 +2718,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
 							"host": [
-								"{{host}}"
+								"{{apiUrl}}"
 							],
 							"path": [
 								"waInstance{{idInstance}}",
@@ -2737,9 +2737,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
 									"host": [
-										"{{host}}"
+										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
