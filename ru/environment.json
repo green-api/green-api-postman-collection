@@ -21,6 +21,11 @@
 			"key": "apiTokenInstance",
 			"value": "<Ваш apiTokenInstance из личного кабинета Green API>",
 			"enabled": true
+		},
+		{
+			"key": "webhookUrl",
+			"value": "<URL вашего webhook сервера>",
+			"enabled": true
 		}
 	],
 	"_postman_variable_scope": "environment",
