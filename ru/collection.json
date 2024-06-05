@@ -5458,6 +5458,2396 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Уведомления Green API",
+			"item": [
+				{"name": "Входящее сообщение",
+				"item": [
+					{
+						"name": "Цитирование",
+						"item": [
+							{
+								"name": "Цитирование текстовым сообщением",
+								"item": [
+									{
+										"name": "Текстовое сообщение",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703014480,\r\n    \"idMessage\": \"165682394AEEFFB519B13DD51491DF65\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"quotedMessage\",\r\n        \"extendedTextMessageData\": {\r\n            \"text\": \"Quoting a text message\",\r\n            \"stanzaId\": \"3EB063C771F28EB323FAE3\",\r\n            \"participant\": \"71234567890@c.us\"\r\n        },\r\n        \"quotedMessage\": {\r\n            \"stanzaId\": \"3EB063C771F28EB323FAE3\",\r\n            \"participant\": \"71234567890@c.us\",\r\n            \"typeMessage\": \"textMessage\",\r\n            \"textMessage\": \"Hello! This is a text message.\"\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Входящее текстовое сообщение с цитированием текстового сообщения](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TextMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+										},
+										"response": [
+											{
+												"name": "Текстовое сообщение в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"165682394AEEFFB519B13DD51491DF65\",\r\n    \"timestamp\": 1709295823,\r\n    \"typeMessage\": \"quotedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"Quoting a text message\",\r\n        \"stanzaId\": \"3EB063C771F28EB323FAE3\",\r\n        \"participant\": \"71234567890@c.us\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"3EB063C771F28EB323FAE3\",\r\n        \"participant\": \"71234567890@c.us\",\r\n        \"typeMessage\": \"textMessage\",\r\n        \"textMessage\": \"Hello! This is a text message.\"\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": "Text",
+												"header": [],
+												"cookie": [],
+												"body": ""
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Медиа сообщения",
+						"item": [
+							{
+								"name": "Сообщение с изображением",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705466692,\r\n    \"idMessage\": \"B8C959F41DDF44C312053B420A16C217\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"imageMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04Mj4xcd0e1WQnSoyk9Mw6Eq5MasTa4Nt/C30j/2Q==\",\r\n            \"mimeType\": \"image/jpeg\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Входящее сообщение с изображением](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ImageMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								},
+								"response": [
+									{
+										"name": "Сообщение с изображением в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"B8C959F41DDF44C312053B420A16C217\",\r\n    \"timestamp\": 1705466693,\r\n    \"typeMessage\": \"imageMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04Mj4xcd0e1WQnSoyk9Mw6Eq5MasTa4Nt/C30j/2Q==\",\r\n    \"mimeType\": \"image/jpeg\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": null,
+										"header": null,
+										"cookie": [],
+										"body": null
+									}
+								]
+							},
+							{
+								"name": "Сообщение с видео",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705471069,\r\n    \"idMessage\": \"185B5DBAB29E36E19A8325F1F8A03B51\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"videoMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4h78dPYKMvYICZCsPz63JQ3/9k=\",\r\n            \"mimeType\": \"video/mp4\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Входящее сообщение с видео](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ImageMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								},
+								"response": [
+									{
+										"name": "Сообщение с видео в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"185B5DBAB29E36E19A8325F1F8A03B51\",\r\n    \"timestamp\": 1705471069,\r\n    \"typeMessage\": \"videoMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4h78dPYKMvYICZCsPz63JQ3/9k=\",\r\n    \"mimeType\": \"video/mp4\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": null,
+										"header": null,
+										"cookie": [],
+										"body": null
+									}
+								]
+							},
+							{
+								"name": "Сообщение с аудио",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705473041,\r\n    \"idMessage\": \"02392146E5104CE93C\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"documentMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"sample-6s.mp3\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"mimeType\": \"audio/mpeg\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Входящее сообщение с аудио](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ImageMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								},
+								"response": [
+									{
+										"name": "Сообщение с аудио в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"02392146E5104CE93C\",\r\n    \"timestamp\": 1705473041,\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"sample-6s.mp3\",\r\n    \"jpegThumbnail\": \"\",\r\n    \"mimeType\": \"audio/mpeg\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": null,
+										"header": null,
+										"cookie": [],
+										"body": null
+									}
+								]
+							},
+							{
+								"name": "Сообщение с документом",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705519058,\r\n    \"idMessage\": \"7FADFD718C6EB315B5\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"documentMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/d34044f0-c76e-4be3-b412-1befcce9d538.pdf\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"Harry-Potter-and-the-Philosophers-Stone.pdf\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgICAv75s6e15ObW3upriGHzG8uOV9od1XOAzCOMEjkhFz0FUqKKYH/2Q==\",\r\n            \"mimeType\": \"application/pdf\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Входящее сообщение с документом](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ImageMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								},
+								"response": [
+									{
+										"name": "Сообщение с документом в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"7FADFD718C6EB315B5\",\r\n    \"timestamp\": 1705519059,\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/d34044f0-c76e-4be3-b412-1befcce9d538.pdf\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"Harry-Potter-and-the-Philosophers-Stone.pdf\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgICAv75s6e15ObW3upriGHzG8uOV9od1XOAzCOMEjkhFz0FUqKKYH/2Q==\",\r\n    \"mimeType\": \"application/pdf\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": null,
+										"header": null,
+										"cookie": [],
+										"body": null
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Текстовое сообщение",
+						"protocolProfileBehavior": {
+							"disabledSystemHeaders": {}
+						},
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703014480,\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"textMessage\",\r\n        \"TextMessageData\": {\r\n            \"textMessage\": \"Hello! This is a text message.\"\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TextMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Текстовое сообщение в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"timestamp\": 1703014480,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"71234567890@g.us\",\r\n    \"textMessage\": \"Hello! This is a text message.\",\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Расширенное текстовое сообщение",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705898347,\r\n    \"idMessage\": \"BACB52BE2EDD30CAD9\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"extendedTextMessage\",\r\n        \"extendedTextMessageData\": {\r\n            \"text\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n            \"description\": \"\",\r\n            \"title\": \"Text or text with URL - GREEN API\",\r\n            \"previewType\": \"None\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее расширенное текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Расширенное текстовое сообщение в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"BACB52BE2EDD30CAD9\",\r\n    \"timestamp\": 1705898347,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"textMessage\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n        \"description\": \"\",\r\n        \"title\": \"Text or text with URL - GREEN API\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Сообщение с геолокацией",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703045678,\r\n    \"idMessage\": \"0C0F804DF9E9280268FE871321D393BD\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"locationMessage\",\r\n        \"locationMessageData\": {\r\n            \"nameLocation\": \"Empire State Building\",\r\n            \"address\": \"20 W 34th St., New York, NY 10001, USA\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"latitude\": 12.345678910111213,\r\n            \"longitude\": 14.151617181920212,\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение с геолокацией](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/LocationMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Сообщение с геолокацией в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"0C0F804DF9E9280268FE871321D393BD\",\r\n    \"timestamp\": 1703136808,\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"location\": {\r\n        \"nameLocation\": \"Empire State Building\",\r\n        \"address\": \"20 W 34th St., New York, NY 10001, USA\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"latitude\": 12.345678910111213,\r\n        \"longitude\": 14.151617181920212,\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Сообщение с контактом",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705520441,\r\n    \"idMessage\": \"E06893873B835B1A07\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"contactMessage\",\r\n        \"contactMessageData\": {\r\n            \"displayName\": \"Alex Smit\",\r\n            \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение с контактом](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ContactMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Сообщение с контактом в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"E06893873B835B1A07\",\r\n    \"timestamp\": 1705520441,\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"contact\": {\r\n        \"displayName\": \"Alex Smit\",\r\n        \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Сообщение с массивом контактов",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705521510,\r\n    \"idMessage\": \"3549C66825E67A2B3975C990BD85CB03\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"contactsArrayMessage\",\r\n        \"messageData\": {\r\n            \"contacts\": [\r\n                {\r\n                    \"displayName\": \"Anna Smit\",\r\n                    \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Anna;;\\nFN:Anna Smit\\nitem1.TEL;waid=72345678910:+7 234 567 8910\\nEND:VCARD\"\r\n                },\r\n                {\r\n                    \"displayName\": \"Alex Smit\",\r\n                    \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\"\r\n                }\r\n            ],\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение с массивом контактов](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ContactsArrayMessage/)  \n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Сообщение с массивом контактов в журнале",
+								"originalRequest": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3549C66825E67A2B3975C990BD85CB03\",\r\n    \"timestamp\": 1705521510,\r\n    \"typeMessage\": \"contactsArrayMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"messageData\": {\r\n        \"contacts\": [\r\n            {\r\n                \"displayName\": \"Anna Smit\",\r\n                \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Anna;;\\nFN:Anna Smit\\nitem1.TEL;waid=72345678910:+7 234 567 8910\\nEND:VCARD\",\r\n                \"contextInfo\": null\r\n            },\r\n            {\r\n                \"displayName\": \"Alex Smit\",\r\n                \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\",\r\n                \"contextInfo\": null\r\n            }\r\n        ],\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Сообщение с кнопками",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"buttonsMessage\",\r\n        \"buttonsMessage\": {\r\n            \"contentText\": \"Hello\",\r\n            \"footer\": \"Hello\",\r\n            \"buttons\": [\r\n                {\r\n                    \"buttonId\": \"1\",\r\n                    \"buttonText\": \"green\"\r\n                },\r\n                {\r\n                    \"buttonId\": \"2\",\r\n                    \"buttonText\": \"red\"\r\n                },\r\n                {\r\n                    \"buttonId\": \"3\",\r\n                    \"buttonText\": \"blue\"\r\n                }\r\n            ],\r\n             \"forwardingScore\": 4,\r\n             \"isForwarded\": true\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение с кнопками](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ButtonsMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": []
+					},
+					{
+						"name": "Сообщение со списком выбора",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"listMessage\",\r\n        \"listMessage\": {\r\n            \"contentText\": \"Hello\",\r\n            \"title\": \"Title\",\r\n            \"footer\": \"Hello\",\r\n            \"buttonText\": \"Action List\",\r\n            \"sections\": [\r\n                {\r\n                    \"title\": \"Section 1\",\r\n                    \"rows\": [\r\n                        {\r\n                            \"title\": \"Option 1\",\r\n                            \"rowId\": \"option1\"\r\n                        },\r\n                        {\r\n                            \"title\": \"Option 2\",\r\n                            \"rowId\": \"option2\",\r\n                            \"description\": \"Explanation\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"title\": \"Section 2\",\r\n                    \"rows\": [\r\n                        {\r\n                            \"title\": \"Option 3\",\r\n                            \"rowId\": \"option3\"\r\n                        },\r\n                        {\r\n                            \"title\": \"Option 4\",\r\n                            \"rowId\": \"option4\",\r\n                            \"description\": \"Explanation\"\r\n                        }\r\n                    ]\r\n                }\r\n            ],\r\n             \"forwardingScore\": 4,\r\n             \"isForwarded\": true\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение со списком выбора](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ListMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": []
+					},
+					{
+						"name": "Сообщение с шаблонными кнопками",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"templateMessage\",\r\n        \"templateMessage\": {\r\n            \"contentText\": \"Hello\",\r\n            \"footer\": \"Hello\",\r\n            \"buttons\": [\r\n                {\r\n                    \"urlButton\": {\r\n                        \"displayText\": \"⭐ Star us on GitHub!\",\r\n                        \"url\": \"https://github.com/green-api\"\r\n                    },\r\n                    \"index\": 1\r\n                },\r\n                {\r\n                    \"callButton\": {\r\n                        \"displayText\": \"Call us\",\r\n                        \"phoneNumber\": \"+1 (234) 5678-901\"\r\n                    },\r\n                    \"index\": 2\r\n                },\r\n                {\r\n                    \"quickReplyButton\": {\r\n                        \"displayText\": \"Hello\",\r\n                        \"id\": \"plainButtonId\"\r\n                    },\r\n                    \"index\": 3\r\n                }\r\n            ],\r\n             \"forwardingScore\": 4,\r\n             \"isForwarded\": true\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение с шаблонными кнопками](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TemplateMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": []
+					},
+					{
+						"name": "Сообщение с выбором обычной кнопки",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1656315272,\r\n    \"idMessage\": \"9BB19BB0D568BA7B185EEAD21A33D317\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"buttonsResponseMessage\",\r\n        \"buttonsResponseMessage\": {\r\n            \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n            \"selectedButtonId\": \"1\",\r\n            \"selectedButtonText\": \"green\"\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Выбор обычной кнопки](https://green-api.com/docs/api/receiving/notifications-format/selected-buttons/ButtonsResponseMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": []
+					},
+					{
+						"name": "Сообщение с выбором шаблонной кнопки",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1656315272,\r\n    \"idMessage\": \"9BB19BB0D568BA7B185EEAD21A33D317\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"templateButtonReplyMessage\",\r\n        \"templateButtonReplyMessage\": {\r\n            \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n            \"selectedIndex\": 2,\r\n            \"selectedId\": \"id1\",\r\n            \"selectedDisplayText\": \"red\"\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Выбор шаблонной кнопки](https://green-api.com/docs/api/receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": []
+					},
+					{
+						"name": "Сообщение с выбором элемента списка",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1657025112,\r\n    \"idMessage\": \"A36C68A09C54796295FCAD20C15C534C\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"listResponseMessage\",\r\n        \"listResponseMessage\": {\r\n            \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n            \"title\": \"Option 2\",\r\n            \"listType\": 1,\r\n            \"singleSelectReply\": \"option2\"\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Выбор элемента списка](https://green-api.com/docs/api/receiving/notifications-format/selected-buttons/ListResponseMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": []
+					},
+					{
+						"name": "Сообщение со стикером",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705522618,\r\n    \"idMessage\": \"20FC3FA19A1B18DED27E8CCB2CB7800D\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"stickerMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/a0128ca6-be8d-4813-9af7-54cdaf384317.webp\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"a0128ca6-be8d-4813-9af7-54cdaf384317.webp\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"isAnimated\": false,\r\n            \"mimeType\": \"image/webp\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение со стикером](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/StickerMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Сообщение со стикером в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"20FC3FA19A1B18DED27E8CCB2CB7800D\",\r\n    \"timestamp\": 1705522618,\r\n    \"typeMessage\": \"stickerMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/a0128ca6-be8d-4813-9af7-54cdaf384317.webp\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"a0128ca6-be8d-4813-9af7-54cdaf384317.webp\",\r\n    \"jpegThumbnail\": \"\",\r\n    \"mimeType\": \"image/webp\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Сообщение-реакция",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1103860726,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705895506,\r\n    \"idMessage\": \"135499D5547BEBD56EF2B28195659035\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"reactionMessage\",\r\n        \"extendedTextMessageData\": {\r\n            \"text\": \"👍\"\r\n        },\r\n        \"quotedMessage\": {\r\n            \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n            \"participant\": \"71234567890@c.us\"\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение-реакция](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ReactionMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Сообщение-реакция в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"135499D5547BEBD56EF2B28195659035\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"👍\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n        \"participant\": \"71234567890@c.us\",\r\n        \"type\": \"\",\r\n        \"typeMessage\": \"\"\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Сообщение с опросом",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705523078,\r\n    \"idMessage\": \"30F6A068486C79D01CC683822E9258AE\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"pollMessage\",\r\n        \"pollMessageData\": {\r\n            \"name\": \"Color\",\r\n            \"options\": [\r\n                {\r\n                    \"optionName\": \"Red\"\r\n                },\r\n                {\r\n                    \"optionName\": \"Black\"\r\n                }\r\n            ],\r\n            \"multipleAnswers\": true\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение с опросом](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/PollMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"incomingWebhook\": \"yes\",  \n\"pollMessageWebhook\": \"yes\""
+						},
+						"response": [
+							{
+								"name": "Сообщение с опросом в журнале",
+								"originalRequest": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"30F6A068486C79D01CC683822E9258AE\",\r\n    \"timestamp\": 1705523078,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Color\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Red\"\r\n            },\r\n            {\r\n                \"optionName\": \"Black\"\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Сообщение с обновлением опроса",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705548449,\r\n    \"idMessage\": \"119D6B569287C52ED2\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"pollUpdateMessage\",\r\n        \"pollMessageData\": {\r\n            \"stanzaId\": \"30F6A068486C79D01CC683822E9258AE\",\r\n            \"name\": \"Color\",\r\n            \"votes\": [\r\n                {\r\n                    \"optionName\": \"Red\",\r\n                    \"optionVoters\": []\r\n                },\r\n                {\r\n                    \"optionName\": \"Green\",\r\n                    \"optionVoters\": [\r\n                        \"71234567890@c.us\"\r\n                    ]\r\n                }\r\n            ],\r\n            \"multipleAnswers\": true\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение с обновлением опроса](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/PollUpdateMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\",  \n\"outgoingAPIMessageWebhook\": \"yes\",  \n\"incomingWebhook\": \"yes\",  \n\"pollMessageWebhook\": \"yes\""
+						},
+						"response": [
+							{
+								"name": "Сообщение с обновлением опроса в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"119D6B569287C52ED2\",\r\n    \"timestamp\": 1705548449,\r\n    \"typeMessage\": \"pollUpdateMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Color\",\r\n        \"votes\": [\r\n            {\r\n                \"optionName\": \"Red\",\r\n                \"optionVoters\": []\r\n            },\r\n            {\r\n                \"optionName\": \"Green\",\r\n                \"optionVoters\": [\r\n                    \"71234567890@c.us\"\r\n                ]\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Сообщение с приглашением в группу",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705896948,\r\n    \"idMessage\": \"8C62934E3081DFAA260878818B922DA4\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"groupInviteMessage\",\r\n        \"groupInviteMessageData\": {\r\n            \"groupJid\": \"120363207042056874@g.us\",\r\n            \"inviteCode\": \"ceUpGy2XACDmR4HQ\",\r\n            \"inviteExpiration\": {\r\n                \"low\": 1706156142,\r\n                \"high\": 0,\r\n                \"unsigned\": false\r\n            },\r\n            \"groupName\": \"Drawing school\",\r\n            \"caption\": \"Invitation to my WhatsApp group\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BthDJFFGML/9k=\"\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящее сообщение с приглашением в группу](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/GroupInviteMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Сообщение с приглашением в группу в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"8C62934E3081DFAA260878818B922DA4\",\r\n    \"timestamp\": 1705896948,\r\n    \"typeMessage\": \"groupInviteMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"groupInviteMessage\": null,\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Отправленное сообщение",
+				"item": [
+					{
+						"name": "Отправленное сообщение с телефона",
+						"item": [
+							{
+								"name": "Медиа сообщения",
+								"item": [
+									{
+										"name": "Сообщение с изображением",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705466692,\r\n    \"idMessage\": \"B8C959F41DDF44C312053B420A16C217\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"imageMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04Mj4xcd0e1WQnSoyk9Mw6Eq5MasTa4Nt/C30j/2Q==\",\r\n            \"mimeType\": \"image/jpeg\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Отправленное с телефона сообщение с изображением](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+										},
+										"response": [
+											{
+												"name": "Сообщение с изображением в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"B8C959F41DDF44C312053B420A16C217\",\r\n    \"timestamp\": 1705466693,\r\n    \"typeMessage\": \"imageMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04Mj4xcd0e1WQnSoyk9Mw6Eq5MasTa4Nt/C30j/2Q==\",\r\n    \"mimeType\": \"image/jpeg\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": null,
+												"header": null,
+												"cookie": [],
+												"body": null
+											}
+										]
+									},
+									{
+										"name": "Сообщение с видео",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705471069,\r\n    \"idMessage\": \"185B5DBAB29E36E19A8325F1F8A03B51\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"videoMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4h78dPYKMvYICZCsPz63JQ3/9k=\",\r\n            \"mimeType\": \"video/mp4\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Отправленное с телефона сообщение с видео](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+										},
+										"response": [
+											{
+												"name": "Сообщение с видео в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"185B5DBAB29E36E19A8325F1F8A03B51\",\r\n    \"timestamp\": 1705471069,\r\n    \"typeMessage\": \"videoMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4h78dPYKMvYICZCsPz63JQ3/9k=\",\r\n    \"mimeType\": \"video/mp4\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": null,
+												"header": null,
+												"cookie": [],
+												"body": null
+											}
+										]
+									},
+									{
+										"name": "Сообщение с аудио",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705473041,\r\n    \"idMessage\": \"02392146E5104CE93C\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"documentMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"sample-6s.mp3\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"mimeType\": \"audio/mpeg\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Отправленное с телефона сообщение с аудио](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+										},
+										"response": [
+											{
+												"name": "Сообщение с аудио в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"02392146E5104CE93C\",\r\n    \"timestamp\": 1705473041,\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"sample-6s.mp3\",\r\n    \"jpegThumbnail\": \"\",\r\n    \"mimeType\": \"audio/mpeg\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": null,
+												"header": null,
+												"cookie": [],
+												"body": null
+											}
+										]
+									},
+									{
+										"name": "Сообщение с документом",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705519058,\r\n    \"idMessage\": \"7FADFD718C6EB315B5\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"documentMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/d34044f0-c76e-4be3-b412-1befcce9d538.pdf\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"Harry-Potter-and-the-Philosophers-Stone.pdf\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgICAv75s6e15ObW3upriGHzG8uOV9od1XOAzCOMEjkhFz0FUqKKYH/2Q==\",\r\n            \"mimeType\": \"application/pdf\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Отправленное с телефона сообщение с документом](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+										},
+										"response": [
+											{
+												"name": "Сообщение с документом в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"7FADFD718C6EB315B5\",\r\n    \"timestamp\": 1705519059,\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/d34044f0-c76e-4be3-b412-1befcce9d538.pdf\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"Harry-Potter-and-the-Philosophers-Stone.pdf\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgICAv75s6e15ObW3upriGHzG8uOV9od1XOAzCOMEjkhFz0FUqKKYH/2Q==\",\r\n    \"mimeType\": \"application/pdf\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": null,
+												"header": null,
+												"cookie": [],
+												"body": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"name": "Текстовое сообщение",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703014480,\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"textMessage\",\r\n        \"TextMessageData\": {\r\n            \"textMessage\": \"Hello! This is a text message.\"\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное ](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [с телефона](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Текстовое сообщение в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"timestamp\": 1703014480,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"71231234567@g.us\",\r\n    \"textMessage\": \"Hello! This is a text message.\",\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Расширенное текстовое сообщение",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705898347,\r\n    \"idMessage\": \"BACB52BE2EDD30CAD9\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"extendedTextMessage\",\r\n        \"extendedTextMessageData\": {\r\n            \"text\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n            \"description\": \"\",\r\n            \"title\": \"Text or text with URL - GREEN API\",\r\n            \"previewType\": \"None\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное ](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [с телефона](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [расширенное текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Расширенное текстовое сообщение в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"BACB52BE2EDD30CAD9\",\r\n    \"timestamp\": 1705898347,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"textMessage\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n        \"description\": \"\",\r\n        \"title\": \"Text or text with URL - GREEN API\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение с геолокацией",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703045678,\r\n    \"idMessage\": \"0C0F804DF9E9280268FE871321D393BD\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"locationMessage\",\r\n        \"locationMessageData\": {\r\n            \"nameLocation\": \"Empire State Building\",\r\n            \"address\": \"20 W 34th St., New York, NY 10001, USA\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"latitude\": 12.345678910111213,\r\n            \"longitude\": 14.151617181920212,\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное ](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [с телефона](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [сообщение с геолокацией](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение с геолокацией в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"0C0F804DF9E9280268FE871321D393BD\",\r\n    \"timestamp\": 1703136808,\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"location\": {\r\n        \"nameLocation\": \"Empire State Building\",\r\n        \"address\": \"20 W 34th St., New York, NY 10001, USA\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"latitude\": 12.345678910111213,\r\n        \"longitude\": 14.151617181920212,\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение с контактом",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705520441,\r\n    \"idMessage\": \"E06893873B835B1A07\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"contactMessage\",\r\n        \"contactMessageData\": {\r\n            \"displayName\": \"Alex Smit\",\r\n            \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [с телефона](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [сообщение с контактом](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение с контактом в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"E06893873B835B1A07\",\r\n    \"timestamp\": 1705520441,\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"contact\": {\r\n        \"displayName\": \"Alex Smit\",\r\n        \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение с массивом контактов",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705521510,\r\n    \"idMessage\": \"3549C66825E67A2B3975C990BD85CB03\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"contactsArrayMessage\",\r\n        \"messageData\": {\r\n            \"contacts\": [\r\n                {\r\n                    \"displayName\": \"Anna Smit\",\r\n                    \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Anna;;\\nFN:Anna Smit\\nitem1.TEL;waid=72345678910:+7 234 567 8910\\nEND:VCARD\"\r\n                },\r\n                {\r\n                    \"displayName\": \"Alex Smit\",\r\n                    \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\"\r\n                }\r\n            ],\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное с телефона сообщение с массивом контактов](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение с массивом контактов в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"3549C66825E67A2B3975C990BD85CB03\",\r\n    \"timestamp\": 1705521510,\r\n    \"typeMessage\": \"contactsArrayMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"messageData\": {\r\n        \"contacts\": [\r\n            {\r\n                \"displayName\": \"Anna Smit\",\r\n                \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Anna;;\\nFN:Anna Smit\\nitem1.TEL;waid=72345678910:+7 234 567 8910\\nEND:VCARD\",\r\n                \"contextInfo\": null\r\n            },\r\n            {\r\n                \"displayName\": \"Alex Smit\",\r\n                \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\",\r\n                \"contextInfo\": null\r\n            }\r\n        ],\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение со стикером",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705522618,\r\n    \"idMessage\": \"20FC3FA19A1B18DED27E8CCB2CB7800D\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"stickerMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000002/a0128ca6-be8d-4813-9af7-54cdaf384317.webp\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"a0128ca6-be8d-4813-9af7-54cdaf384317.webp\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"isAnimated\": false,\r\n            \"mimeType\": \"image/webp\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное с телефона сообщение со стикером](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение со стикером в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"20FC3FA19A1B18DED27E8CCB2CB7800D\",\r\n    \"timestamp\": 1705522618,\r\n    \"typeMessage\": \"stickerMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000002/a0128ca6-be8d-4813-9af7-54cdaf384317.webp\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"a0128ca6-be8d-4813-9af7-54cdaf384317.webp\",\r\n    \"jpegThumbnail\": \"\",\r\n    \"mimeType\": \"image/webp\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение с опросом",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705523078,\r\n    \"idMessage\": \"30F6A068486C79D01CC683822E9258AE\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"pollMessage\",\r\n        \"pollMessageData\": {\r\n            \"name\": \"Color\",\r\n            \"options\": [\r\n                {\r\n                    \"optionName\": \"Red\"\r\n                },\r\n                {\r\n                    \"optionName\": \"Black\"\r\n                }\r\n            ],\r\n            \"multipleAnswers\": true\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное с телефона сообщение с опросом](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\",  \n\"pollMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение с опросом в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"30F6A068486C79D01CC683822E9258AE\",\r\n    \"timestamp\": 1705523078,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Color\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Red\"\r\n            },\r\n            {\r\n                \"optionName\": \"Black\"\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение-реакция",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705895506,\r\n    \"idMessage\": \"135499D5547BEBD56EF2B28195659035\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"reactionMessage\",\r\n        \"extendedTextMessageData\": {\r\n            \"text\": \"👍\"\r\n        },\r\n        \"quotedMessage\": {\r\n            \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n            \"participant\": \"71234567890@c.us\"\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное с телефона сообщение-реакция](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение-реакция в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"135499D5547BEBD56EF2B28195659035\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"👍\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n        \"participant\": \"71234567890@c.us\",\r\n        \"type\": \"\",\r\n        \"typeMessage\": \"\"\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение с приглашением в группу",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705896948,\r\n    \"idMessage\": \"8C62934E3081DFAA260878818B922DA4\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"groupInviteMessage\",\r\n        \"groupInviteMessageData\": {\r\n            \"groupJid\": \"120363207042056874@g.us\",\r\n            \"inviteCode\": \"ceUpGy2XACDmR4HQ\",\r\n            \"inviteExpiration\": {\r\n                \"low\": 1706156142,\r\n                \"high\": 0,\r\n                \"unsigned\": false\r\n            },\r\n            \"groupName\": \"Drawing school\",\r\n            \"caption\": \"Invitation to my WhatsApp group\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BthDJFFGML/9k=\"\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное с телефона сообщение с приглашением в группу](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение с приглашением в группу в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"8C62934E3081DFAA260878818B922DA4\",\r\n    \"timestamp\": 1705896948,\r\n    \"typeMessage\": \"groupInviteMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"groupInviteMessage\": null,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": false\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Статус отправленного сообщения",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageStatus\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705901090,\r\n    \"idMessage\": \"ECE6BBEA514B66872790C3D9D52C5C19\",\r\n    \"status\": \"sent\",\r\n    \"sendByApi\": false\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Статус отправленного сообщения](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/)\n\nДля получении уведомлении о статусах отправки/доставки/прочтении сообщений, отправленных с телефона необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\",  \n\"outgoingWebhook\": \"yes\""
+								},
+								"response": []
+							}
+						]
+					},
+					{
+						"name": "Отправленное сообщение через API",
+						"item": [
+							{
+								"name": "Медиа сообщения",
+								"item": [
+									{
+										"name": "Сообщение с изображением",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705466692,\r\n    \"idMessage\": \"B8C959F41DDF44C312053B420A16C217\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"imageMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04Mj4xcd0e1WQnSoyk9Mw6Eq5MasTa4Nt/C30j/2Q==\",\r\n            \"mimeType\": \"image/jpeg\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Отправленное через API сообщение с изображением](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+										},
+										"response": [
+											{
+												"name": "Сообщение с изображением в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"B8C959F41DDF44C312053B420A16C217\",\r\n    \"timestamp\": 1705466693,\r\n    \"typeMessage\": \"imageMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"15697d2c-397c-4fd0-8e1a-8be95f753aae.jpg\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04Mj4xcd0e1WQnSoyk9Mw6Eq5MasTa4Nt/C30j/2Q==\",\r\n    \"mimeType\": \"image/jpeg\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": null,
+												"header": null,
+												"cookie": [],
+												"body": null
+											}
+										]
+									},
+									{
+										"name": "Сообщение с видео",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705471069,\r\n    \"idMessage\": \"185B5DBAB29E36E19A8325F1F8A03B51\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"videoMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4h78dPYKMvYICZCsPz63JQ3/9k=\",\r\n            \"mimeType\": \"video/mp4\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Отправленное через API сообщение с видео](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+										},
+										"response": [
+											{
+												"name": "Сообщение с видео в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"185B5DBAB29E36E19A8325F1F8A03B51\",\r\n    \"timestamp\": 1705471069,\r\n    \"typeMessage\": \"videoMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"339bca7d-egg7-4add-89c4-9bac7023921f.mp4\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4h78dPYKMvYICZCsPz63JQ3/9k=\",\r\n    \"mimeType\": \"video/mp4\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": null,
+												"header": null,
+												"cookie": [],
+												"body": null
+											}
+										]
+									},
+									{
+										"name": "Сообщение с аудио",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705473041,\r\n    \"idMessage\": \"02392146E5104CE93C\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"documentMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"sample-6s.mp3\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"mimeType\": \"audio/mpeg\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Отправленное через API сообщение с аудио](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+										},
+										"response": [
+											{
+												"name": "Сообщение с аудио в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"02392146E5104CE93C\",\r\n    \"timestamp\": 1705473041,\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"sample-6s.mp3\",\r\n    \"jpegThumbnail\": \"\",\r\n    \"mimeType\": \"audio/mpeg\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": null,
+												"header": null,
+												"cookie": [],
+												"body": null
+											}
+										]
+									},
+									{
+										"name": "Сообщение с документом",
+										"request": {
+											"method": "POST",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705519058,\r\n    \"idMessage\": \"7FADFD718C6EB315B5\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"documentMessage\",\r\n        \"fileMessageData\": {\r\n            \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/d34044f0-c76e-4be3-b412-1befcce9d538.pdf\",\r\n            \"caption\": \"\",\r\n            \"fileName\": \"Harry-Potter-and-the-Philosophers-Stone.pdf\",\r\n            \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgICAv75s6e15ObW3upriGHzG8uOV9od1XOAzCOMEjkhFz0FUqKKYH/2Q==\",\r\n            \"mimeType\": \"application/pdf\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											},
+											"description": "Документация [Отправленное через API сообщение с документом](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+										},
+										"response": [
+											{
+												"name": "Сообщение с документом в журнале",
+												"originalRequest": {
+													"method": "VIEW",
+													"header": [],
+													"body": {
+														"mode": "raw",
+														"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"7FADFD718C6EB315B5\",\r\n    \"timestamp\": 1705519059,\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"downloadUrl\": \"https://sw-media-1101.storage.yandexcloud.net/1101000001/d34044f0-c76e-4be3-b412-1befcce9d538.pdf\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"Harry-Potter-and-the-Philosophers-Stone.pdf\",\r\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgICAv75s6e15ObW3upriGHzG8uOV9od1XOAzCOMEjkhFz0FUqKKYH/2Q==\",\r\n    \"mimeType\": \"application/pdf\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+														"options": {
+															"raw": {
+																"language": "json"
+															}
+														}
+													},
+													"url": {
+														"raw": "{{webhookUrl}}",
+														"host": [
+															"{{webhookUrl}}"
+														]
+													}
+												},
+												"_postman_previewlanguage": null,
+												"header": null,
+												"cookie": [],
+												"body": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"name": "Текстовое сообщение",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703014480,\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"textMessage\",\r\n        \"TextMessageData\": {\r\n            \"textMessage\": \"Hello! This is a text message.\"\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное через API текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Текстовое сообщение в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"timestamp\": 1703014480,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"71231234567@g.us\",\r\n    \"textMessage\": \"Hello! This is a text message.\",\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Расширенное текстовое сообщение",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705898347,\r\n    \"idMessage\": \"BACB52BE2EDD30CAD9\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"extendedTextMessage\",\r\n        \"extendedTextMessageData\": {\r\n            \"text\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n            \"description\": \"\",\r\n            \"title\": \"Text or text with URL - GREEN API\",\r\n            \"previewType\": \"None\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное через API расширенное текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Расширенное текстовое сообщение в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"BACB52BE2EDD30CAD9\",\r\n    \"timestamp\": 1705898347,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"textMessage\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/\",\r\n        \"description\": \"\",\r\n        \"title\": \"Text or text with URL - GREEN API\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение с геолокацией",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703045678,\r\n    \"idMessage\": \"0C0F804DF9E9280268FE871321D393BD\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"locationMessage\",\r\n        \"locationMessageData\": {\r\n            \"nameLocation\": \"Empire State Building\",\r\n            \"address\": \"20 W 34th St., New York, NY 10001, USA\",\r\n            \"jpegThumbnail\": \"\",\r\n            \"latitude\": 12.345678910111213,\r\n            \"longitude\": 14.151617181920212,\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное через API сообщение с геолокацией](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение с геолокацией в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"0C0F804DF9E9280268FE871321D393BD\",\r\n    \"timestamp\": 1703136808,\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"location\": {\r\n        \"nameLocation\": \"Empire State Building\",\r\n        \"address\": \"20 W 34th St., New York, NY 10001, USA\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"latitude\": 12.345678910111213,\r\n        \"longitude\": 14.151617181920212,\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение с контактом",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705520441,\r\n    \"idMessage\": \"E06893873B835B1A07\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"contactMessage\",\r\n        \"contactMessageData\": {\r\n            \"displayName\": \"Alex Smit\",\r\n            \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\",\r\n            \"forwardingScore\": 0,\r\n            \"isForwarded\": false\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное через API сообщение с контактом](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение с контактом в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"E06893873B835B1A07\",\r\n    \"timestamp\": 1705520441,\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"contact\": {\r\n        \"displayName\": \"Alex Smit\",\r\n        \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:Smit;Alex;;;\\nFN:Alex Smit\\nTEL;type=CELL;waid=72345678901:+7 234 567 8901\\nEND:VCARD\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Сообщение с опросом",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705523078,\r\n    \"idMessage\": \"30F6A068486C79D01CC683822E9258AE\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"pollMessage\",\r\n        \"pollMessageData\": {\r\n            \"name\": \"Color\",\r\n            \"options\": [\r\n                {\r\n                    \"optionName\": \"Red\"\r\n                },\r\n                {\r\n                    \"optionName\": \"Black\"\r\n                }\r\n            ],\r\n            \"multipleAnswers\": true\r\n        }\r\n    }\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Отправленное через API сообщение с опросом](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\"  \n\"pollMessageWebhook\": \"yes\""
+								},
+								"response": [
+									{
+										"name": "Сообщение с опросом в журнале",
+										"originalRequest": {
+											"method": "VIEW",
+											"header": [],
+											"body": {
+												"mode": "raw",
+												"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"30F6A068486C79D01CC683822E9258AE\",\r\n    \"timestamp\": 1705523078,\r\n    \"typeMessage\": \"pollMessage\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"pollMessageData\": {\r\n        \"name\": \"Color\",\r\n        \"options\": [\r\n            {\r\n                \"optionName\": \"Red\"\r\n            },\r\n            {\r\n                \"optionName\": \"Black\"\r\n            }\r\n        ],\r\n        \"multipleAnswers\": true\r\n    },\r\n    \"statusMessage\": \"delivered\",\r\n    \"sendByApi\": true\r\n}",
+												"options": {
+													"raw": {
+														"language": "json"
+													}
+												}
+											},
+											"url": {
+												"raw": "{{webhookUrl}}",
+												"host": [
+													"{{webhookUrl}}"
+												]
+											}
+										},
+										"_postman_previewlanguage": "Text",
+										"header": [],
+										"cookie": [],
+										"body": ""
+									}
+								]
+							},
+							{
+								"name": "Статус отправленного сообщения",
+								"request": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageStatus\",\r\n    \"chatId\": \"71231234567@c.us\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705901090,\r\n    \"idMessage\": \"ECE6BBEA514B66872790C3D9D52C5C19\",\r\n    \"status\": \"sent\",\r\n    \"sendByApi\": true\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									},
+									"description": "Документация [Статус отправленного сообщения](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/)\n\nДля получении уведомлении о статусах отправки/доставки/прочтении сообщений, отправленных с телефона необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\",  \n\"outgoingWebhook\": \"yes\""
+								},
+								"response": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Прочие",
+				"item": [
+					{
+						"name": "Статус аккаунта",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"stateInstanceChanged\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1705902314,\r\n    \"stateInstance\": \"authorized\"\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Статус аккаунта](https://green-api.com/docs/api/receiving/notifications-format/StateInstanceChanged/)\n\nДля получения данного типа уведомления необходимо включить настройку \"stateWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": []
+					},
+					{
+						"name": "Входящий звонок",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"from\": \"71234567890@c.us\",\r\n    \"typeWebhook\": \"incomingCall\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"status\": \"pickUp\",\r\n    \"timestamp\": 1706505874,\r\n    \"idMessage\": \"0CC5E9DB52F5C9A47E839707419F9582\"\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящий звонок](https://green-api.com/docs/api/receiving/notifications-format/IncomingCall/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingCallWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": []
+					},
+					{
+						"name": "Входящая блокировка",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingBlock\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1706587620,\r\n    \"chatId\": \"10000000000@c.us\",\r\n    \"chatState\": \"blocked\"\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Входящая блокировка](https://green-api.com/docs/api/receiving/notifications-format/IncomingBlock/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):[](https://green-api.com/docs/api/account/SetSettings/)\"  \nincomingBlockWebhook\": \"yes\"  \n\"incomingWebhook\": \"yes\""
+						},
+						"response": []
+					}
+				]
+			},
+			{
+				"name": "Исключения АПИ",
+				"item": [
+					{
+						"name": "Ошибка SWE001",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\":\r\n        {\r\n        \"idInstance\":1100000001,\r\n        \"wid\":\"71231234567@c.us\",\r\n        \"typeInstance\":\"whatsapp\"\r\n    },\r\n    \"timestamp\":1700545580,\r\n    \"idMessage\":\"3AE2864C77312000000\",\r\n    \"senderData\":\r\n        {\r\n        \"chatId\":\"71234567890@c.us\",\r\n        \"chatName\":\"Green API\",\r\n        \"sender\":\"71234567890@c.us\",\r\n        \"senderName\":\"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\":\r\n        {\r\n        \"typeMessage\":\"textMessage\",\r\n        \"textMessageData\":\r\n            {\r\n            \"textMessage\":\"{{SWE001}}\"\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Уведомление при получении ошибки SWE001](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TextMessage/#webhook-example-body-SWE001)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Cообщение в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3AE2864C77312000000\",\r\n    \"timestamp\": 1707154143,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"textMessage\": \"{{SWE001}}\",\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Ошибка SWE002",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\":\"incomingMessageReceived\",\r\n    \"instanceData\":\r\n        {\r\n        \"idInstance\":1100000001,\r\n        \"wid\":\"71231234567@c.us\",\r\n        \"typeInstance\":\"whatsapp\"\r\n    },\r\n    \"timestamp\":1700488335,\r\n    \"idMessage\":\"3EB0D00923D87A3FA01BAE\",\r\n    \"senderData\":\r\n        {\r\n        \"chatId\":\"71234567890@c.us\",\r\n        \"chatName\":\"Green API\",\r\n        \"sender\":\"71234567890@c.us\",\r\n        \"senderName\":\"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\":\r\n        {\r\n        \"typeMessage\":\"documentMessage\",\r\n        \"fileMessageData\":\r\n            {\r\n            \"downloadUrl\":\"{{SWE002}}\",\r\n            \"caption\":\"\",\r\n            \"fileName\":\"Harry Potter and the Philosopher's Stone.pdf\",\r\n            \"jpegThumbnail\":\"\",\r\n            \"mimeType\":\"application/pdf\",\r\n            \"forwardingScore\":0,\r\n            \"isForwarded\":false\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Уведомление при получении ошибки SWE002](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TextMessage/#webhook-example-body-SWE002)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Cообщение в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3EB0D00923D87A3FA01BAE\",\r\n    \"timestamp\": 1707198448,\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"downloadUrl\": \"{{SWE002}}\",\r\n    \"caption\": \"\",\r\n    \"fileName\": \"Harry Potter and the Philosopher's Stone.pdf\",\r\n    \"jpegThumbnail\": \"\",\r\n    \"mimeType\": \"application/pdf\",\r\n    \"isAnimated\": false,\r\n    \"isForwarded\": false,\r\n    \"forwardingScore\": 0,\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Ошибка SWE003",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\":\"incomingMessageReceived\",\r\n    \"instanceData\":\r\n        {\r\n        \"idInstance\":1100000001,\r\n        \"wid\":\"71231234567@c.us\",\r\n        \"typeInstance\":\"whatsapp\"\r\n    },\r\n    \"timestamp\":1700218861,\r\n    \"idMessage\":\"6E112CC05BA05DD9DF\",\r\n    \"senderData\":\r\n        {\r\n        \"chatId\":\"71234567890@c.us\",\r\n        \"chatName\":\"Green API\",\r\n        \"sender\":\"71234567890@c.us\",\r\n        \"senderName\":\"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n        },\r\n    \"messageData\":\r\n        {\r\n        \"typeMessage\":\"textMessage\",\r\n        \"textMessageData\":\r\n            {\r\n            \"textMessage\":\"{{SWE003}}\"\r\n        }\r\n    }\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Уведомление при получении ошибки SWE003](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TextMessage/#webhook-example-body-SWE003)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+						},
+						"response": [
+							{
+								"name": "Сообщение в журнале",
+								"originalRequest": {
+									"method": "VIEW",
+									"header": [],
+									"body": {
+										"mode": "raw",
+										"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"6E112CC05BA05DD9DF\",\r\n    \"timestamp\": 1707139248,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"71234567890@с.us\",\r\n    \"textMessage\": \"{{SWE003}}\",\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+										"options": {
+											"raw": {
+												"language": "json"
+											}
+										}
+									},
+									"url": {
+										"raw": "{{webhookUrl}}",
+										"host": [
+											"{{webhookUrl}}"
+										]
+									}
+								},
+								"_postman_previewlanguage": "Text",
+								"header": [],
+								"cookie": [],
+								"body": ""
+							}
+						]
+					},
+					{
+						"name": "Ошибка SWE004",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "raw",
+								"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageStatus\",\r\n    \"chatId\": \"120363039326117111@g.us\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1707200807,\r\n    \"idMessage\": \"B3Q599E4A3724D50\",\r\n    \"status\": \"failed\",\r\n    \"description\": \"SWE004: the number of participants in the group has been exceeded - 300\",\r\n    \"sendByApi\": true\r\n}",
+								"options": {
+									"raw": {
+										"language": "json"
+									}
+								}
+							},
+							"url": {
+								"raw": "{{webhookUrl}}",
+								"host": [
+									"{{webhookUrl}}"
+								]
+							},
+							"description": "Документация [Уведомление при получении ошибки SWE004](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/#webhook-example-body)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingWebhook\": \"yes\""
+						},
+						"response": []
+					}
+				]
+			}
+			]
 		}
 	],
 	"event": [
