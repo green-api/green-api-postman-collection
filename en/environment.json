@@ -21,6 +21,11 @@
 			"key": "apiTokenInstance",
 			"value": "<Your apiTokenInstance from your Green API account>",
 			"enabled": true
+		},
+		{
+			"key": "webhookUrl",
+			"value": "<Your webhook server URL>",
+			"enabled": true
 		}
 	],
 	"_postman_variable_scope": "environment",
