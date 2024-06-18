@@ -824,7 +824,13 @@
 					"name": "Send text",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n\t\"chatId\": \"7123456789@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
@@ -911,7 +917,13 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"chatId\": \"712345678989@c.us\",\r\n    \"message\": \"Hello\",\r\n    \"quotedMessageId\":\"953CA00E623C66D9ECAF118B63EA6B8B\"\r\n}",
@@ -998,7 +1010,13 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"chatId\": \"123456789012345678@g.us\", // May look like:XXXXXXXXXXXXXXXXXX@g.us or XXXXXXXXXXX-XXXXXXXXXXX@g.us\r\n    \"message\": \"test\"\r\n}",
