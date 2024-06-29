@@ -7626,6 +7626,25 @@
 								"description": "Documentation [Incoming block](https://greenapi.com/en/docs/api/receiving/notifications-format/IncomingBlock/)\n\nTo receive this type of notification, you must enable the settings in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method:\n\n[](https://green-api.com/docs/api/account/SetSettings/)\"incomingBlockWebhook\": \"yes\"  \n\"incomingWebhook\": \"yes\""
 							},
 							"response": []
+						},
+						{
+							"name": "Exceeding limitation on tariff",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeWebhook\": \"incomingBlock\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"quotaData\": {\r\n        \"method\": \"correspondents\",\r\n        \"used\": 3,\r\n        \"total\": 3,\r\n        \"status\": \"CORRESPONDENTS_QUOTA_EXCEEDED\",\r\n        \"description\": \"Monthly quota has been exceeded. You can only send or receive messages from following chats: 10001234560@c.us, 10001234561@c.us, 10001234562@c.us. Please go to your personal account and change the tariff to business https://console.green-api.com\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{webhookUrl}}",
+								"description": "Documentation [Incoming block](https://greenapi.com/en/docs/api/receiving/notifications-format/IncomingBlock/)\n\nTo receive this type of notification, you must enable the settings in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method:\n\n[](https://green-api.com/docs/api/account/SetSettings/)\"incomingBlockWebhook\": \"yes\"  \n\"incomingWebhook\": \"yes\""
+							},
+							"response": []
 						}
 					]
 				},
