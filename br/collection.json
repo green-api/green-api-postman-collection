@@ -386,7 +386,13 @@
 					"name": "Envie uma Mensagem",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n\t\"chatId\": \"5521999990000@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
@@ -414,7 +420,13 @@
 							"name": "sendMessage",
 							"originalRequest": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "GREEN-API_POSTMAN/1.0",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"message\": \"Hello man\"\r\n}",
@@ -470,7 +482,13 @@
 					"name": "Envie uma mensagem para um grupo",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n\t\"chatId\": \"79001234567-1581234048@g.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
