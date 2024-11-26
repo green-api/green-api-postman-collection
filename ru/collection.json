@@ -5140,6 +5140,90 @@
 					]
 				},
 				{
+					"name": "Изменить сообщение",
+					"request": {
+  					"method": "POST",
+  					"header": [],
+  					"body": {
+  						"mode": "raw",
+  						"raw": "{\r\n    \"chatId\": \"79123456789@c.us\",\r\n    \"idMessage\": \"BAE5367237E13A87\"\r\n    \"message\": \"I use Green-API to send this message to you!\"\r\n}",
+  						"options": {
+  							"raw": {
+  								"language": "json"
+  							}
+  						}
+  					},
+  					"url": {
+  						"raw": "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}",
+  						"host": [
+  							"{{apiUrl}}"
+  						],
+  						"path": [
+  							"waInstance{{idInstance}}",
+  							"editMessage",
+  							"{{apiTokenInstance}}"
+  						]
+  					},
+  					"description": "Документация [editMessage](https://green-api.com/docs/api/service/editMessage/)"
+					},
+					"response": [
+  				{
+  						"name": "editMessage",
+  						"originalRequest": {
+  							"method": "VIEW",
+  							"header": [],
+  							"body": {
+  								"mode": "raw",
+  								"raw": "{\r\n    \"chatId\": \"120363043968066561@g.us\",\r\n    \"idMessage\": \"BAE5F4886F6F2D05\"\r\n    \"message\": \"I use Green-API to send this message to you!\"\r\n}",
+  								"options": {
+  									"raw": {
+  										"language": "json"
+  									}
+  								}
+  							},
+  							"url": {
+  								"raw": "{{apiUrl}}/waInstance{{idInstance}}/edit/{{apiTokenInstance}}",
+  								"host": [
+  									"{{apiUrl}}"
+  								],
+  								"path": [
+  									"waInstance{{idInstance}}",
+  									"edit",
+  									"{{apiTokenInstance}}"
+  								]
+  							}
+  						},
+  						"status": "OK",
+  						"code": 200,
+  						"_postman_previewlanguage": "json",
+  						"header": [
+  							{
+  								"key": "Server",
+  								"value": "nginx/1.10.3"
+  							},
+  							{
+  								"key": "Date",
+  								"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+  							},
+  							{
+  								"key": "Content-Type",
+  								"value": "application/json"
+  							},
+  							{
+  								"key": "Content-Length",
+  								"value": "190"
+  							},
+  							{
+  								"key": "Connection",
+  								"value": "keep-alive"
+  							}
+  						],
+  						"cookie": [],
+  						"body": "//Тело ответа пустое. При успехе ответ сервера 200"
+  					}
+					]
+				},
+				{
 					"name": "Удалить сообщение",
 					"request": {
 						"method": "POST",
@@ -7330,7 +7414,7 @@
 									"header": [],
 									"body": {
 										"mode": "raw",
-										"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703014480,\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"textMessage\",\r\n        \"TextMessageData\": {\r\n            \"textMessage\": \"Hello! This is a text message.\"\r\n        }\r\n    }\r\n}",
+										"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703014480,\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"textMessage\",\r\n        \"textMessageData\": {\r\n            \"textMessage\": \"Hello! This is a text message.\"\r\n        }\r\n    }\r\n}",
 										"options": {
 											"raw": {
 												"language": "json"
