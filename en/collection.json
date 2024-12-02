@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "6b4cd079-b7a1-46a6-a3f9-04c169cd4047",
+		"_postman_id": "1df0ca61-3321-415f-b6eb-783604a67143",
 		"name": "Green API EN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "37785427"
+		"_exporter_id": "19971618"
 	},
 	"item": [
 		{
@@ -6438,6 +6438,106 @@
 									"body": ""
 								}
 							]
+						},
+						{
+							"name": "Edited message",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"New message\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Edited message in the journal",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"FDF8ED588D2F29774400938E400C0635\",\r\n    \"timestamp\": 1733150622,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"textMessage\": \"Text of edited message\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"Text of edited message\",\r\n        \"description\": \"\",\r\n        \"title\": \"\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\",\r\n    \"deletedMessageId\": \"\",\r\n    \"editedMessageId\": \"869B201F820235B1C5B7294D3201C590\",\r\n    \"isEdited\": true,\r\n    \"isDeleted\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Deleted Message",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\",\r\n            \"typeMessage\": \"text\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Deleted Message in journal",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"timestamp\": 1733136811,\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"84514217EF972039FC3F68A53C196306\",\r\n        \"typeMessage\": \"text\"\r\n    },\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
 						}
 					]
 				},
@@ -7138,6 +7238,106 @@
 										"description": "Documentation [Outgoing message status](https://greenapi.com/en/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/)\n\nTo receive notifications about the sending/delivery/reading statuses of messages sent from your phone, you must enable settings in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method:  \n\"outgoingMessageWebhook\": \"yes\",  \n\"outgoingWebhook\": \"yes\""
 									},
 									"response": []
+								},
+								{
+									"name": "Edited message",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"New message\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Edited message in the journal",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"FDF8ED588D2F29774400938E400C0635\",\r\n    \"timestamp\": 1733150622,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"textMessage\": \"Text of edited message\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"Text of edited message\",\r\n        \"description\": \"\",\r\n        \"title\": \"\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"sent\",\r\n    \"sendByApi\": false,\r\n    \"deletedMessageId\": \"\",\r\n    \"editedMessageId\": \"869B201F820235B1C5B7294D3201C590\",\r\n    \"isEdited\": true,\r\n    \"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Deleted Message",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Deleted Message in journal",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"timestamp\": 1733136811,\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n    },\r\n    \"statusMessage\": \"sent\",\r\n    \"sendByApi\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
 								}
 							]
 						},
@@ -7631,6 +7831,106 @@
 										"description": "Documentation [Outgoing message status](https://greenapi.com/en/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/)\n\nTo receive notifications about the sending/delivery/reading statuses of messages sent from your phone, you must enable settings in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method:  \n\"outgoingMessageWebhook\": \"yes\",  \n\"outgoingWebhook\": \"yes\""
 									},
 									"response": []
+								},
+								{
+									"name": "Edited message",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"New message\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Edited message in the journal",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"FDF8ED588D2F29774400938E400C0635\",\r\n    \"timestamp\": 1733150622,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"textMessage\": \"Text of edited message\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"Text of edited message\",\r\n        \"description\": \"\",\r\n        \"title\": \"\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"sent\",\r\n    \"sendByApi\": true,\r\n    \"deletedMessageId\": \"\",\r\n    \"editedMessageId\": \"869B201F820235B1C5B7294D3201C590\",\r\n    \"isEdited\": true,\r\n    \"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Deleted Message",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Deleted Message in journal",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"timestamp\": 1733136811,\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n    },\r\n    \"statusMessage\": \"sent\",\r\n    \"sendByApi\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
 								}
 							]
 						}
