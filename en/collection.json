@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1df0ca61-3321-415f-b6eb-783604a67143",
+		"_postman_id": "0bdeb421-0046-4831-a70c-a3557a3c1d24",
 		"name": "Green API EN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19971618"
+		"_exporter_id": "37785427"
 	},
 	"item": [
 		{
@@ -5109,7 +5109,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Documentation [editMessage](https://greenapi.com/en/docs/api/service/editMessage/)"
+						"description": "The method edits a message in a chat.\n\nTo display edited messages in the journal, you need to enable the webhook \"editedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [editMessage](https://greenapi.com/en/docs/api/service/editMessage/)"
 					},
 					"response": [
 						{
@@ -5193,7 +5193,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Documentation [DeleteMessage](https://greenapi.com/en/docs/api/service/deleteMessage/)"
+						"description": "The method deletes a message from a chat.\n\nTo display deleted messages in the journal, you need to enable the webhook \"deletedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [DeleteMessage](https://greenapi.com/en/docs/api/service/deleteMessage/)"
 					},
 					"response": [
 						{
@@ -6458,7 +6458,8 @@
 									"host": [
 										"{{webhookUrl}}"
 									]
-								}
+								},
+								"description": "To display edited messages in the journal, you need to enable the webhook \"editedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [editedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/incoming-message/editedMessage)"
 							},
 							"response": [
 								{
@@ -6482,10 +6483,10 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						},
@@ -6508,7 +6509,8 @@
 									"host": [
 										"{{webhookUrl}}"
 									]
-								}
+								},
+								"description": "To display deleted messages in the journal, you need to enable the webhook \"deletedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [deletedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/incoming-message/deletedMessage)"
 							},
 							"response": [
 								{
@@ -6532,10 +6534,10 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						}
@@ -7258,7 +7260,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "To display edited messages in the journal, you need to enable the webhook \"editedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [editedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/outgoing-message/editedMessage)"
 									},
 									"response": [
 										{
@@ -7282,10 +7285,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
@@ -7308,7 +7311,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "To display deleted messages in the journal, you need to enable the webhook \"deletedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [deletedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/outgoing-message/deletedMessage)"
 									},
 									"response": [
 										{
@@ -7332,10 +7336,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								}
@@ -7851,7 +7855,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "To display edited messages in the journal, you need to enable the webhook \"editedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [editedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/outgoing-message/editedMessageAPI)"
 									},
 									"response": [
 										{
@@ -7875,10 +7880,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
@@ -7901,7 +7906,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "To display deleted messages in the journal, you need to enable the webhook \"deletedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [deletedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/outgoing-message/deletedMessageAPI)"
 									},
 									"response": [
 										{
@@ -7925,10 +7931,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								}

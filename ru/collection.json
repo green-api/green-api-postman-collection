@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "f4daf870-4a77-4eb9-99a8-8016263d857e",
+		"_postman_id": "2b631a82-bada-4b4a-999c-4333899da2f2",
 		"name": "Green API RU",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19971618"
+		"_exporter_id": "37785427"
 	},
 	"item": [
 		{
@@ -5163,7 +5163,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [editMessage](https://green-api.com/docs/api/service/editMessage/)"
+						"description": "Метод редактирует сообщение в чате.\n\nДля отображения отредактированных сообщений в журнале необходимо включить вебхук \"editedMessageWebhook\": \"yes\" через метод [setSettings](https://green-api.com/docs/api/account/SetSettings/).\n\nДокументация [editMessage](https://green-api.com/docs/api/service/editMessage/)"
 					},
 					"response": [
 						{
@@ -5247,7 +5247,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [deleteMessage](https://green-api.com/docs/api/service/deleteMessage/)"
+						"description": "Для отображения удаленных сообщений в журнале необходимо включить вебхук \"deletedMessageWebhook\": \"yes\" через метод [setSettings](https://green-api.com/docs/api/account/SetSettings/).\n\nДокументация [deleteMessage](https://green-api.com/docs/api/service/deleteMessage/)"
 					},
 					"response": [
 						{
@@ -6512,7 +6512,8 @@
 									"host": [
 										"{{webhookUrl}}"
 									]
-								}
+								},
+								"description": "Для отображения отредактированных сообщений в журнале необходимо включить вебхук \"editedMessageWebhook\": \"yes\" через метод [setSettings](https://green-api.com/docs/api/account/SetSettings/).\n\nДокументация [editedMessage](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/editedMessage)"
 							},
 							"response": [
 								{
@@ -6536,10 +6537,10 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						},
@@ -6562,7 +6563,8 @@
 									"host": [
 										"{{webhookUrl}}"
 									]
-								}
+								},
+								"description": "Для отображения удаленных сообщений в журнале необходимо включить вебхук \"deletedMessageWebhook\": \"yes\" через метод [setSettings](https://green-api.com/docs/api/account/SetSettings/).\n\nДокументация [deletedMessage](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/deletedMessage)"
 							},
 							"response": [
 								{
@@ -6586,10 +6588,10 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						}
@@ -7312,7 +7314,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "Для отображения отредактированных сообщений в журнале необходимо включить вебхук \"editedMessageWebhook\": \"yes\" через метод [setSettings](https://green-api.com/docs/api/account/SetSettings/).\n\nДокументация [editedMessage](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/editedMessage)"
 									},
 									"response": [
 										{
@@ -7336,10 +7339,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
@@ -7362,7 +7365,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "Для отображения удаленных сообщений в журнале необходимо включить вебхук \"deletedMessageWebhook\": \"yes\" через метод [setSettings](https://green-api.com/docs/api/account/SetSettings/).\n\nДокументация [deletedMessage](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/deletedMessage)"
 									},
 									"response": [
 										{
@@ -7386,10 +7390,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								}
@@ -7905,7 +7909,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "Для отображения отредактированных сообщений в журнале необходимо включить вебхук \"editedMessageWebhook\": \"yes\" через метод [setSettings](https://green-api.com/docs/api/account/SetSettings/).\n\nДокументация [editedMessage](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/editedMessageAPI)"
 									},
 									"response": [
 										{
@@ -7929,10 +7934,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
@@ -7955,7 +7960,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "Для отображения удаленных сообщений в журнале необходимо включить вебхук \"deletedMessageWebhook\": \"yes\" через метод [setSettings](https://green-api.com/docs/api/account/SetSettings/).\n\nДокументация [deletedMessage](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/deletedMessageAPI)"
 									},
 									"response": [
 										{
@@ -7979,10 +7985,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								}
