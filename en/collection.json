@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b15c36b9-c441-4e2f-9e6f-65cd8999ebd3",
-		"name": "Green API EN Copy",
+		"_postman_id": "0bdeb421-0046-4831-a70c-a3557a3c1d24",
+		"name": "Green API EN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "32221684"
+		"_exporter_id": "37785427"
 	},
 	"item": [
 		{
@@ -51,7 +51,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -71,7 +71,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"wid\": \"79001234567@c.us\",\n\t\"countryInstance\": \"\", // Deprecated\n\t\"typeAccount\": \"\", // Deprecated\n\t\"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n\t\"webhookUrlToken\": \"\",\n\t\"delaySendMessagesMilliseconds\": 3000,\n\t\"markIncomingMessagesReaded\": \"no\",\n\t\"markIncomingMessagesReadedOnReply\": \"yes\",\n\t\"sharedSession\": \"no\", // Deprecated\n\t\"proxyInstance\": \"system proxy\", // Deprecated\n    \"outgoingWebhook\": \"yes\",\n\t\"outgoingMessageWebhook\": \"yes\",\n\t\"outgoingAPIMessageWebhook\": \"yes\",\n\t\"incomingWebhook\": \"yes\",\n\t\"deviceWebhook\": \"no\", // Temporarily not working\n\t\"statusInstanceWebhook\": \"no\", // Deprecated\n\t\"stateWebhook\": \"yes\",\n\t\"enableMessagesHistory\": \"no\", // Deprecated\n\t\"keepOnlineStatus\": \"yes\",\n\t\"pollMessageWebhook\": \"yes\",\n\t\"incomingBlockWebhook\": \"no\", // Temporarily not working\n\t\"incomingCallWebhook\": \"yes\"\n}"
+							"body": "{\n\t\"wid\": \"79001234567@c.us\",\n\t\"countryInstance\": \"\", // Deprecated\n\t\"typeAccount\": \"\", // Deprecated\n\t\"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n\t\"webhookUrlToken\": \"\",\n\t\"delaySendMessagesMilliseconds\": 3000,\n\t\"markIncomingMessagesReaded\": \"no\",\n\t\"markIncomingMessagesReadedOnReply\": \"yes\",\n\t\"sharedSession\": \"no\", // Deprecated\n\t\"proxyInstance\": \"system proxy\", // Deprecated\n    \"outgoingWebhook\": \"yes\",\n\t\"outgoingMessageWebhook\": \"yes\",\n\t\"outgoingAPIMessageWebhook\": \"yes\",\n\t\"incomingWebhook\": \"yes\",\n\t\"deviceWebhook\": \"no\", // Temporarily not working\n\t\"statusInstanceWebhook\": \"no\", // Deprecated\n\t\"stateWebhook\": \"yes\",\n\t\"enableMessagesHistory\": \"no\", // Deprecated\n\t\"keepOnlineStatus\": \"yes\",\n\t\"pollMessageWebhook\": \"yes\",\n\t\"incomingBlockWebhook\": \"no\", // Temporarily not working\n\t\"incomingCallWebhook\": \"yes\",\n    \"editedMessageWebhook\": \"no\",\n\t\"deletedMessageWebhook\": \"no\"\n}"
 						}
 					]
 				},
@@ -135,7 +135,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -201,7 +201,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -267,7 +267,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -333,7 +333,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -637,7 +637,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -886,7 +886,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -979,7 +979,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -1072,7 +1072,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -1156,7 +1156,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -1299,7 +1299,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -1383,7 +1383,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -1495,7 +1495,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -1579,7 +1579,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -1663,7 +1663,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -1747,7 +1747,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -2038,7 +2038,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -2050,7 +2050,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "41"
+									"value": "857"
 								},
 								{
 									"key": "Connection",
@@ -2058,7 +2058,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5D12345ABCDEF\",\n        \"timestamp\": 1587412276,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\",\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true\n    },\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"9DB14F14A253D33F4A9CD84123456789\",\n        \"timestamp\": 1706522263,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"120363153000000000@g.us\",\n        \"textMessage\": \"Hi\",\n        \"senderId\": \"70000000012@c.us\",\n        \"senderName\": \"Rachel\",\n        \"senderContactName\": \"Rachel 2\"\n    }\n]"
+							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5D12345ABCDEF\",\n        \"timestamp\": 1587412276,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"79001234567@c.us\",\n        \"textMessage\": \"Hello man\",\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true,\n        \"deletedMessageId\": \"\",\n        \"editedMessageId\": \"\",\n        \"isEdited\": false,\n        \"isDeleted\": false\n    },\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"9DB14F14A253D33F4A9CD84123456789\",\n        \"timestamp\": 1706522263,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"120363153000000000@g.us\",\n        \"textMessage\": \"Hi\",\n        \"senderId\": \"70000000012@c.us\",\n        \"senderName\": \"Rachel\",\n        \"senderContactName\": \"Rachel 2\",\n        \"deletedMessageId\": \"\",\n        \"editedMessageId\": \"\",\n        \"isEdited\": false,\n        \"isDeleted\": false\n    }\n]"
 						}
 					]
 				},
@@ -2127,7 +2127,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"9DB14F14A253D33F4A9CD84123456789\",\n    \"timestamp\": 1706522263,\n    \"typeMessage\": \"textMessage\",\n    \"chatId\": \"120363153000000000@g.us\",\n    \"textMessage\": \"Hi\",\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\"\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"9DB14F14A253D33F4A9CD84123456789\",\n    \"timestamp\": 1706522263,\n    \"typeMessage\": \"textMessage\",\n    \"chatId\": \"120363153000000000@g.us\",\n    \"textMessage\": \"Hi\",\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\",\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "outgoingTextMessage",
@@ -2166,7 +2166,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"BAE5143000000000\",\n    \"timestamp\": 1706761225,\n    \"typeMessage\": \"textMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"textMessage\": \"Hi\",\n    \"statusMessage\": \"read\",\n    \"sendByApi\": true\n}"
+							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"BAE5143000000000\",\n    \"timestamp\": 1706761225,\n    \"typeMessage\": \"textMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"textMessage\": \"Hi\",\n    \"statusMessage\": \"read\",\n    \"sendByApi\": true,\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "incomingMediaMessage",
@@ -2205,7 +2205,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"EAAE5A5CD000000000\",\n    \"timestamp\": 1706601620,\n    \"typeMessage\": \"imageMessage\",  //\"videoMessage\"/`documentMessage`/`audioMessage`/`stickerMessage`\n    \"chatId\": \"120363153000000000@g.us\",\n    \"downloadUrl\": \"https://api.green-api.com/waInstance1234/downloadFile/EA1BD1AE042DC4F3609867126309D67C.jpg\",\n    \"caption\": \"What do you think?\",\n    \"fileName\": \"03963bac-6020-423c-80df-1aa123456789.jpg\",\n    \"jpegThumbnail\": \"/9j/4AAQSkZJ/aAAgBAwEBPwCVYw//xAApEAACAx/2kOVh/VKAoAH/leFhX//+AAMA/9k=\",\n    \"mimeType\": \"image/jpeg\",\n    \"isAnimated\": false,\n    \"isForwarded\": true,\n    \"forwardingScore\": 1,\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\"\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"EAAE5A5CD000000000\",\n    \"timestamp\": 1706601620,\n    \"typeMessage\": \"imageMessage\",  //\"videoMessage\"/`documentMessage`/`audioMessage`/`stickerMessage`\n    \"chatId\": \"120363153000000000@g.us\",\n    \"downloadUrl\": \"https://api.green-api.com/waInstance1234/downloadFile/EA1BD1AE042DC4F3609867126309D67C.jpg\",\n    \"caption\": \"What do you think?\",\n    \"fileName\": \"03963bac-6020-423c-80df-1aa123456789.jpg\",\n    \"jpegThumbnail\": \"/9j/4AAQSkZJ/aAAgBAwEBPwCVYw//xAApEAACAx/2kOVh/VKAoAH/leFhX//+AAMA/9k=\",\n    \"mimeType\": \"image/jpeg\",\n    \"isAnimated\": false,\n    \"isForwarded\": true,\n    \"forwardingScore\": 1,\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\",\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "outgoingMediaMessage",
@@ -2244,7 +2244,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"BAE5F94000000000\",\n    \"timestamp\": 1706765613,\n    \"typeMessage\": \"imageMessage\", //\"videoMessage\"/`documentMessage`/`audioMessage`/`stickerMessage`\n    \"chatId\": \"70000000012@c.us\",\n    \"downloadUrl\": \"https://api.green-api.com/waInstance1234/downloadFile/3EB0BDDC94BFDFB3D4FA.jpg\",\n    \"caption\": \"What do you think?\",\n    \"fileName\": \"b89ded5e-1a3b-4168-895a-540123456789.jpg\",\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/FFFCF//Z\",\n    \"mimeType\": \"image/jpeg\",\n    \"isAnimated\": false,\n    \"isForwarded\": true,\n    \"forwardingScore\": 2,\n    \"statusMessage\": \"read\",\n    \"sendByApi\": false\n}"
+							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"BAE5F94000000000\",\n    \"timestamp\": 1706765613,\n    \"typeMessage\": \"imageMessage\", //\"videoMessage\"/`documentMessage`/`audioMessage`/`stickerMessage`\n    \"chatId\": \"70000000012@c.us\",\n    \"downloadUrl\": \"https://api.green-api.com/waInstance1234/downloadFile/3EB0BDDC94BFDFB3D4FA.jpg\",\n    \"caption\": \"What do you think?\",\n    \"fileName\": \"b89ded5e-1a3b-4168-895a-540123456789.jpg\",\n    \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/FFFCF//Z\",\n    \"mimeType\": \"image/jpeg\",\n    \"isAnimated\": false,\n    \"isForwarded\": true,\n    \"forwardingScore\": 2,\n    \"statusMessage\": \"read\",\n    \"sendByApi\": false,\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "incomingReactionMessage",
@@ -2283,7 +2283,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\",\r\n    },\r\n    \"senderId\": \"70000000013@c.us\",\r\n    \"senderName\": \"Rachel\",\r\n    \"senderContactName\": \"Rachel 2\"\r\n}"
+							"body": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\"\r\n    },\r\n    \"senderId\": \"70000000013@c.us\",\r\n    \"senderName\": \"Rachel\",\r\n    \"senderContactName\": \"Rachel 2\",\r\n    \"deletedMessageId\": \"\",\r\n    \"editedMessageId\": \"\",\r\n    \"isEdited\": false,\r\n    \"isDeleted\": false\r\n}"
 						},
 						{
 							"name": "outgoingReactionMessage",
@@ -2322,7 +2322,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\",\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": false\r\n}"
+							"body": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"3A1EBA0F23004BD415BB\",\r\n    \"timestamp\": 1706601621,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"70000000012@c.us\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"😄\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\r\n        \"participant\": \"70000000012@c.us\"\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": false,\r\n    \"deletedMessageId\": \"\",\r\n    \"editedMessageId\": \"\",\r\n    \"isEdited\": false,\r\n    \"isDeleted\": false\r\n}"
 						},
 						{
 							"name": "incomingLocationMessage",
@@ -2361,7 +2361,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A8427EF85F000000000\",\n    \"timestamp\": 1706674611,\n    \"typeMessage\": \"locationMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"location\": {\n        \"nameLocation\": \"Cafe\",\n        \"address\": \"Astana\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRX\",\n        \"latitude\": 51.1280000000000,\n        \"longitude\": 71.4307620000000,\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\"\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A8427EF85F000000000\",\n    \"timestamp\": 1706674611,\n    \"typeMessage\": \"locationMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"location\": {\n        \"nameLocation\": \"Cafe\",\n        \"address\": \"Astana\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRX\",\n        \"latitude\": 51.1280000000000,\n        \"longitude\": 71.4307620000000,\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\",\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "outgoingLocationMessage",
@@ -2400,7 +2400,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"BAE5870000000000\",\n    \"timestamp\": 1706761414,\n    \"typeMessage\": \"locationMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"location\": {\n        \"nameLocation\": \"Cafe\",\n        \"address\": \"Astana\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRX\",\n        \"latitude\": 51.1280000000000,\n        \"longitude\": 71.4307620000000,\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"statusMessage\": \"read\",\n    \"sendByApi\": true\n}"
+							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"BAE5870000000000\",\n    \"timestamp\": 1706761414,\n    \"typeMessage\": \"locationMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"location\": {\n        \"nameLocation\": \"Cafe\",\n        \"address\": \"Astana\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRX\",\n        \"latitude\": 51.1280000000000,\n        \"longitude\": 71.4307620000000,\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"statusMessage\": \"read\",\n    \"sendByApi\": true,\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "incomingContactMessage",
@@ -2439,7 +2439,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3AA2C1D83560000000000\",\n    \"timestamp\": 1706675513,\n    \"typeMessage\": \"contactMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"contact\": {\n        \"displayName\": \"Anastasia\",\n        \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:;Anastasia;;;\\nFN:Anastasia\\nTEL;type=CELL;type=VOICE;waid=70000000013:+7 000 000-00-13\\nEND:VCARD\",\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\"\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3AA2C1D83560000000000\",\n    \"timestamp\": 1706675513,\n    \"typeMessage\": \"contactMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"contact\": {\n        \"displayName\": \"Anastasia\",\n        \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:;Anastasia;;;\\nFN:Anastasia\\nTEL;type=CELL;type=VOICE;waid=70000000013:+7 000 000-00-13\\nEND:VCARD\",\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\",\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "outgoingContactMessage",
@@ -2478,7 +2478,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"F39F2DCE000000000\",\n    \"timestamp\": 1706762400,\n    \"typeMessage\": \"contactMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"contact\": {\n        \"displayName\": \"Anastasia\",\n        \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:;Anastasia;;;\\nFN:Anastasia\\nTEL;type=CELL;type=VOICE;waid=70000000013:+7 000 000-00-13\\nEND:VCARD\",\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"statusMessage\": \"read\",\n    \"sendByApi\": false\n}"
+							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"F39F2DCE000000000\",\n    \"timestamp\": 1706762400,\n    \"typeMessage\": \"contactMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"contact\": {\n        \"displayName\": \"Anastasia\",\n        \"vcard\": \"BEGIN:VCARD\\nVERSION:3.0\\nN:;Anastasia;;;\\nFN:Anastasia\\nTEL;type=CELL;type=VOICE;waid=70000000013:+7 000 000-00-13\\nEND:VCARD\",\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"statusMessage\": \"read\",\n    \"sendByApi\": false,\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "incomingExtendedTextMessage",
@@ -2517,7 +2517,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A66D7F0B50000000000\",\n    \"timestamp\": 1706675928,\n    \"typeMessage\": \"extendedTextMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"textMessage\": \"Hqhqhhqh\\nhttps://greenapi.com\",\n    \"extendedTextMessage\": {\n    \"text\": \"Hqhqhhqh\\nhttps://greenapi.com\",\n        \"description\": \"GREEN API: WhatsApp API on any language PHP, JavaScript, 1C, Python, Java, C#, VBA etc.\",\n        \"title\": \"GREEN API: send and receive WhatsApp messages\",\n        \"previewType\": \"None\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABZ\",\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\"\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A66D7F0B50000000000\",\n    \"timestamp\": 1706675928,\n    \"typeMessage\": \"extendedTextMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"textMessage\": \"Hqhqhhqh\\nhttps://greenapi.com\",\n    \"extendedTextMessage\": {\n    \"text\": \"Hqhqhhqh\\nhttps://greenapi.com\",\n        \"description\": \"GREEN API: WhatsApp API on any language PHP, JavaScript, 1C, Python, Java, C#, VBA etc.\",\n        \"title\": \"GREEN API: send and receive WhatsApp messages\",\n        \"previewType\": \"None\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABZ\",\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\",\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "outgoingExtendedTextMessage",
@@ -2556,7 +2556,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"BAE56E0000000000\",\n    \"timestamp\": 1706849285,\n    \"typeMessage\": \"extendedTextMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"textMessage\": \"https://greenapi.com\",\n    \"extendedTextMessage\": {\n        \"text\": \"https://greenapi.com\",\n        \"description\": \"GREEN API: WhatsApp API on any language PHP, JavaScript, 1C, Python, Java, C#, VBA etc.\",\n        \"title\": \"GREEN API: send and receive WhatsApp messages\",\n        \"previewType\": \"None\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABZ\",\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"statusMessage\": \"sent\",\n    \"sendByApi\": true\n}"
+							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"BAE56E0000000000\",\n    \"timestamp\": 1706849285,\n    \"typeMessage\": \"extendedTextMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"textMessage\": \"https://greenapi.com\",\n    \"extendedTextMessage\": {\n        \"text\": \"https://greenapi.com\",\n        \"description\": \"GREEN API: WhatsApp API on any language PHP, JavaScript, 1C, Python, Java, C#, VBA etc.\",\n        \"title\": \"GREEN API: send and receive WhatsApp messages\",\n        \"previewType\": \"None\",\n        \"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABZ\",\n        \"forwardingScore\": 0,\n        \"isForwarded\": false\n    },\n    \"statusMessage\": \"sent\",\n    \"sendByApi\": true,\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "incomingPollMessage",
@@ -2595,7 +2595,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A71511C3A0000000000\",\n    \"timestamp\": 1706676278,\n    \"typeMessage\": \"pollMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Choose your favorite color\",\n        \"options\": [\n            {\n                \"optionName\": \"Red\"\n            },\n            {\n                \"optionName\": \"Green\"\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\"\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A71511C3A0000000000\",\n    \"timestamp\": 1706676278,\n    \"typeMessage\": \"pollMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Choose your favorite color\",\n        \"options\": [\n            {\n                \"optionName\": \"Red\"\n            },\n            {\n                \"optionName\": \"Green\"\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\",\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "outgoingPollMessage",
@@ -2634,7 +2634,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"460D84E00000000000\",\n    \"timestamp\": 1706762412,\n    \"typeMessage\": \"pollMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Choose your favorite color\",\n        \"options\": [\n            {\n                \"optionName\": \"Red\"\n            },\n            {\n                \"optionName\": \"Green\"\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"statusMessage\": \"delivered\",\n    \"sendByApi\": true\n}"
+							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"460D84E00000000000\",\n    \"timestamp\": 1706762412,\n    \"typeMessage\": \"pollMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Choose your favorite color\",\n        \"options\": [\n            {\n                \"optionName\": \"Red\"\n            },\n            {\n                \"optionName\": \"Green\"\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"statusMessage\": \"delivered\",\n    \"sendByApi\": true,\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "incomingPollUpdateMessage",
@@ -2673,7 +2673,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A0493ED90000000000000\",\n    \"timestamp\": 1706676447,\n    \"typeMessage\": \"pollUpdateMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Where will we go?\",\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\n        \"votes\": [\n            {\n                \"optionName\": \"Beach\",\n                \"optionVoters\": [\n                    \"70000000012@c.us\"\n                ]\n            },\n            {\n                \"optionName\": \"Mountains\",\n                \"optionVoters\": []\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\"\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3A0493ED90000000000000\",\n    \"timestamp\": 1706676447,\n    \"typeMessage\": \"pollUpdateMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"pollMessageData\": {\n        \"name\": \"Where will we go?\",\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\n        \"votes\": [\n            {\n                \"optionName\": \"Beach\",\n                \"optionVoters\": [\n                    \"70000000012@c.us\"\n                ]\n            },\n            {\n                \"optionName\": \"Mountains\",\n                \"optionVoters\": []\n            }\n        ],\n        \"multipleAnswers\": true\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\",\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "incomingQuotedMessage",
@@ -2712,7 +2712,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3AB0EB938BA0000000000\",\n    \"timestamp\": 1706677013,\n    \"typeMessage\": \"quotedMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"extendedTextMessage\": {\n        \"text\": \"For the beach\",\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\n        \"participant\": \"70000000012@c.us\"\n    },\n    \"quotedMessage\": {\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\n        \"participant\": \"70000000012@c.us\",\n        \"typeMessage\": \"pollMessage\",\n        \"pollMessageData\": {\n            \"name\": \"Where will we go?\",\n            \"options\": [],\n            \"multipleAnswers\": true\n        }\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\"\n}"
+							"body": "{\n    \"type\": \"incoming\",\n    \"idMessage\": \"3AB0EB938BA0000000000\",\n    \"timestamp\": 1706677013,\n    \"typeMessage\": \"quotedMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"extendedTextMessage\": {\n        \"text\": \"For the beach\",\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\n        \"participant\": \"70000000012@c.us\"\n    },\n    \"quotedMessage\": {\n        \"stanzaId\": \"46618B98B3B9DF50F123456789123456\",\n        \"participant\": \"70000000012@c.us\",\n        \"typeMessage\": \"pollMessage\",\n        \"pollMessageData\": {\n            \"name\": \"Where will we go?\",\n            \"options\": [],\n            \"multipleAnswers\": true\n        }\n    },\n    \"senderId\": \"70000000012@c.us\",\n    \"senderName\": \"Rachel\",\n    \"senderContactName\": \"Rachel 2\",\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}"
 						},
 						{
 							"name": "outgoingQuotedMessage",
@@ -2751,7 +2751,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"B1494991277FD000000000000000000000\",\n    \"timestamp\": 1706849516,\n    \"typeMessage\": \"quotedMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"extendedTextMessage\": {\n        \"text\": \"Black\",\n        \"stanzaId\": \"460D84E00000000000\",\n        \"participant\": \"70000000012@c.us\"\n    },\n    \"quotedMessage\": {\n        \"stanzaId\": \"460D84E00000000000\",\n        \"participant\": \"70000000012@c.us\",\n        \"typeMessage\": \"pollMessage\",\n        \"pollMessageData\": {\n            \"name\": \"Choose your favorite color\",\n            \"options\": [],\n            \"multipleAnswers\": true\n        }\n    },\n    \"statusMessage\": \"delivered\",\n    \"sendByApi\": false\n}\n"
+							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"B1494991277FD000000000000000000000\",\n    \"timestamp\": 1706849516,\n    \"typeMessage\": \"quotedMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"extendedTextMessage\": {\n        \"text\": \"Black\",\n        \"stanzaId\": \"460D84E00000000000\",\n        \"participant\": \"70000000012@c.us\"\n    },\n    \"quotedMessage\": {\n        \"stanzaId\": \"460D84E00000000000\",\n        \"participant\": \"70000000012@c.us\",\n        \"typeMessage\": \"pollMessage\",\n        \"pollMessageData\": {\n            \"name\": \"Choose your favorite color\",\n            \"options\": [],\n            \"multipleAnswers\": true\n        }\n    },\n    \"statusMessage\": \"delivered\",\n    \"sendByApi\": false,\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}\n"
 						}
 					]
 				},
@@ -2811,7 +2811,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -2823,7 +2823,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "1643"
+									"value": "1786"
 								},
 								{
 									"key": "Connection",
@@ -2831,7 +2831,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"9DB14F14A253D33F4A9CD84123456789\",\n        \"timestamp\": 1706522263,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"120363153000000000@g.us\",\n        \"textMessage\": \"Hi\",\n        \"senderId\": \"70000000012@c.us\",\n        \"senderName\": \"Rachel\",\n        \"senderContactName\": \"Rachel 2\"\n    },\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"3A1EBA0F23004BD415BB\",\n        \"timestamp\": 1706601621,\n        \"typeMessage\": \"reactionMessage\",\n        \"chatId\": \"70000000012@c.us\",\n        \"extendedTextMessageData\": {\n            \"text\": \"😄\"\n        },\n        \"quotedMessage\": {\n            \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\n            \"participant\": \"70000000012@c.us\",\n        },\n        \"senderId\": \"70000000013@c.us\",\n        \"senderName\": \"Rachel\",\n        \"senderContactName\": \"Rachel 2\"\n    }\n]"
+							"body": "[\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"9DB14F14A253D33F4A9CD84123456789\",\n        \"timestamp\": 1706522263,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"120363153000000000@g.us\",\n        \"textMessage\": \"Hi\",\n        \"senderId\": \"70000000012@c.us\",\n        \"senderName\": \"Rachel\",\n        \"senderContactName\": \"Rachel 2\",\n        \"deletedMessageId\": \"\",\n        \"editedMessageId\": \"\",\n        \"isEdited\": false,\n        \"isDeleted\": false\n    },\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"3A1EBA0F23004BD415BB\",\n        \"timestamp\": 1706601621,\n        \"typeMessage\": \"reactionMessage\",\n        \"chatId\": \"70000000012@c.us\",\n        \"extendedTextMessageData\": {\n            \"text\": \"😄\"\n        },\n        \"quotedMessage\": {\n            \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\n            \"participant\": \"70000000012@c.us\"\n        },\n        \"senderId\": \"70000000013@c.us\",\n        \"senderName\": \"Rachel\",\n        \"senderContactName\": \"Rachel 2\",\n        \"deletedMessageId\": \"\",\n        \"editedMessageId\": \"\",\n        \"isEdited\": false,\n        \"isDeleted\": false\n    }\n]"
 						}
 					]
 				},
@@ -2891,7 +2891,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -2903,7 +2903,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "2900"
+									"value": "3143"
 								},
 								{
 									"key": "Connection",
@@ -2911,7 +2911,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5143000000000\",\n        \"timestamp\": 1706761225,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"70000000012@c.us\",\n        \"textMessage\": \"Hi\",\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true\n    },\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"3A1EBA0F23004BD415BB\",\n        \"timestamp\": 1706601621,\n        \"typeMessage\": \"reactionMessage\",\n        \"chatId\": \"70000000012@c.us\",\n        \"extendedTextMessageData\": {\n            \"text\": \"😄\"\n        },\n        \"quotedMessage\": {\n            \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\n            \"participant\": \"70000000012@c.us\"\n        },\n        \"statusMessage\": \"read\",\n        \"sendByApi\": false\n    }\n]"
+							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5143000000000\",\n        \"timestamp\": 1706761225,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"70000000012@c.us\",\n        \"textMessage\": \"Hi\",\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true,\n        \"deletedMessageId\": \"\",\n        \"editedMessageId\": \"\",\n        \"isEdited\": false,\n        \"isDeleted\": false\n    },\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"3A1EBA0F23004BD415BB\",\n        \"timestamp\": 1706601621,\n        \"typeMessage\": \"reactionMessage\",\n        \"chatId\": \"70000000012@c.us\",\n        \"extendedTextMessageData\": {\n            \"text\": \"😄\"\n        },\n        \"quotedMessage\": {\n            \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\n            \"participant\": \"70000000012@c.us\"\n        },\n        \"statusMessage\": \"read\",\n        \"sendByApi\": false,\n        \"deletedMessageId\": \"\",\n        \"editedMessageId\": \"\",\n        \"isEdited\": false,\n        \"isDeleted\": false\n    }\n]"
 						}
 					]
 				}
@@ -2982,7 +2982,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3048,7 +3048,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3137,7 +3137,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3221,7 +3221,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3305,7 +3305,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3389,7 +3389,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3473,7 +3473,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3557,7 +3557,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3641,7 +3641,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3746,7 +3746,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3830,7 +3830,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -3919,7 +3919,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4003,7 +4003,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4087,7 +4087,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4181,7 +4181,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4275,7 +4275,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4369,7 +4369,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4453,7 +4453,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4542,7 +4542,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4626,7 +4626,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4735,7 +4735,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4819,7 +4819,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4903,7 +4903,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -4969,7 +4969,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -5028,8 +5028,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"name": "Content-Type",
 										"value": "application/json",
+										"name": "Content-Type",
 										"type": "text"
 									}
 								],
@@ -5060,7 +5060,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -5081,6 +5081,90 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"avatar\": \"https://pps.whatsapp.net/v/t61.24694-24/24_1349471992200940_2091838963901201896_n.jpg?ccb=11-4&oh=01_AVzZilQn10nj9M9cfQV4PW5dgdXOkiOuD_jCqP2MCXIpyA\",\n    \"name\": \"Dealer\",\n    \"contactName\": \"Dealer\",\n    \"email\": \"24service@tt.tt\",\n    \"category\": \"Automotive Dealership\",\n    \"description\": \"Official service\",\n    \"products\": [\n        {\n            \"id\": \"42079728159\",\n            \"imageUrls\": {\n                \"requested\": \"https://mmg.whatsapp.net/v/t45.5328-4/263329037_6625110154227932_2879714823340281709_n.jpg?stp=dst-jpg_p100x100&ccb=1-7&_nc_sid=c48759&_nc_ohc=NKICbZlqfPMAX9077mo&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVwYzx7CckCFf8F8xIIZ5m2AGdeC8YTnLyd29\",\n                \"original\": \"https://mmg.whatsapp.net/v/t45.5328-4/263329037_6625110154227932_2879714823340281709_n.jpg?ccb=1-7&_nc_sid=c48759&_nc_ohc=NKICbZlqfPMAX9077mo&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVzn_O9azpKNRs1iPId0TQkGYk4D7HZFSQMeobvRiR\"\n            },\n            \"reviewStatus\": {\n                \"whatsapp\": \"APPROVED\"\n            },\n            \"availability\": \"in stock\",\n            \"name\": \"Replacement\",\n            \"description\": \"From 1000 RUB\",\n            \"price\": null,\n            \"isHidden\": false\n        },\n        {\n            \"id\": \"3545870328871389\",\n            \"imageUrls\": {\n                \"requested\": \"https://mmg.whatsapp.net/v/t45.5328-4/261250418_4513761695371199_1710541959703469822_n.jpg?stp=dst-jpg_p100x100&ccb=1-7&_nc_sid=c48759&_nc_ohc=eps8lAw2_3MAX_mWW8K&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVxT3HnbR04qKZJSOeK4d8p-noZokqly9QbpYFK-c_8kSA&oe\",\n                \"original\": \"https://mmg.whatsapp.net/v/t45.5328-4/261250418_4513761695371199_1710541959703469822_n.jpg?ccb=1-7&_nc_sid=c48759&_nc_ohc=eps8lAw2_3MAX_mWW8K&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVx2wTCmzof0BoZDmIUpD328CtpJmlvEXGdVzew&o\"\n            },\n            \"reviewStatus\": {\n                \"whatsapp\": \"APPROVED\"\n            },\n            \"availability\": \"in stock\",\n            \"name\": \"Technical maintenance\",\n            \"price\": null,\n            \"isHidden\": false\n        }\n    ],\n    \"chatId\": \"71234567890@c.us\",\n    \"lastSeen\": null,\n    \"isArchive\": false,\n    \"isDisappearing\": false,\n    \"isMute\": false,\n    \"messageExpiration\": 0,\n    \"muteExpiration\": null,\n    \"isBusiness\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"79123456789@c.us\",\r\n    \"idMessage\": \"BAE5367237E13A87\",\r\n    \"message\": \"I use Green-API to send this message to you!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"editMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "The method edits a message in a chat.\n\nTo display edited messages in the journal, you need to enable the webhook \"editedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [editMessage](https://greenapi.com/en/docs/api/service/editMessage/)"
+					},
+					"response": [
+						{
+							"name": "editMessage",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"120363043968066561@g.us\",\r\n    \"idMessage\": \"BAE5F4886F6F2D05\",\r\n    \"message\": \"I use Green-API to send this message to you!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"editMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 12 Dec 2024 11:44:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"idMessage\": \"BAE5367237E13A87\"\r\n}"
 						}
 					]
 				},
@@ -5109,7 +5193,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Documentation [DeleteMessage](https://greenapi.com/en/docs/api/service/deleteMessage/)"
+						"description": "The method deletes a message from a chat.\n\nTo display deleted messages in the journal, you need to enable the webhook \"deletedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [DeleteMessage](https://greenapi.com/en/docs/api/service/deleteMessage/)"
 					},
 					"response": [
 						{
@@ -5144,7 +5228,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -5228,7 +5312,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -5312,7 +5396,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -5361,7 +5445,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Documentation [setDisappearingChat](https://green-api.com/docs/api/service/SetDisappearingChat/)"
+						"description": "Documentation [setDisappearingChat](https://greenapi.com/en/docs/api/service/SetDisappearingChat/)"
 					},
 					"response": [
 						{
@@ -5396,7 +5480,7 @@
 							"header": [
 								{
 									"key": "Server",
-									"value": "nginx/1.10.3"
+									"value": "nginx"
 								},
 								{
 									"key": "Date",
@@ -5536,10 +5620,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
@@ -5587,10 +5671,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
@@ -5638,10 +5722,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
@@ -5689,10 +5773,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								}
@@ -6354,6 +6438,108 @@
 									"body": ""
 								}
 							]
+						},
+						{
+							"name": "Edited message",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"New message\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								},
+								"description": "To display edited messages in the journal, you need to enable the webhook \"editedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [editedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/incoming-message/editedMessage)"
+							},
+							"response": [
+								{
+									"name": "Edited message in the journal",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"FDF8ED588D2F29774400938E400C0635\",\r\n    \"timestamp\": 1733150622,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"textMessage\": \"Text of edited message\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"Text of edited message\",\r\n        \"description\": \"\",\r\n        \"title\": \"\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\",\r\n    \"deletedMessageId\": \"\",\r\n    \"editedMessageId\": \"869B201F820235B1C5B7294D3201C590\",\r\n    \"isEdited\": true,\r\n    \"isDeleted\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Deleted Message",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\",\r\n            \"typeMessage\": \"text\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								},
+								"description": "To display deleted messages in the journal, you need to enable the webhook \"deletedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [deletedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/incoming-message/deletedMessage)"
+							},
+							"response": [
+								{
+									"name": "Deleted Message in journal",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"timestamp\": 1733136811,\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"84514217EF972039FC3F68A53C196306\",\r\n        \"typeMessage\": \"text\"\r\n    },\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
 						}
 					]
 				},
@@ -6410,10 +6596,10 @@
 															]
 														}
 													},
-													"_postman_previewlanguage": null,
-													"header": null,
+													"_postman_previewlanguage": "Text",
+													"header": [],
 													"cookie": [],
-													"body": null
+													"body": ""
 												}
 											]
 										},
@@ -6461,10 +6647,10 @@
 															]
 														}
 													},
-													"_postman_previewlanguage": null,
-													"header": null,
+													"_postman_previewlanguage": "Text",
+													"header": [],
 													"cookie": [],
-													"body": null
+													"body": ""
 												}
 											]
 										},
@@ -6512,10 +6698,10 @@
 															]
 														}
 													},
-													"_postman_previewlanguage": null,
-													"header": null,
+													"_postman_previewlanguage": "Text",
+													"header": [],
 													"cookie": [],
-													"body": null
+													"body": ""
 												}
 											]
 										},
@@ -6563,10 +6749,10 @@
 															]
 														}
 													},
-													"_postman_previewlanguage": null,
-													"header": null,
+													"_postman_previewlanguage": "Text",
+													"header": [],
 													"cookie": [],
-													"body": null
+													"body": ""
 												}
 											]
 										}
@@ -7054,6 +7240,108 @@
 										"description": "Documentation [Outgoing message status](https://greenapi.com/en/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/)\n\nTo receive notifications about the sending/delivery/reading statuses of messages sent from your phone, you must enable settings in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method:  \n\"outgoingMessageWebhook\": \"yes\",  \n\"outgoingWebhook\": \"yes\""
 									},
 									"response": []
+								},
+								{
+									"name": "Edited message",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"New message\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "To display edited messages in the journal, you need to enable the webhook \"editedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [editedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/outgoing-message/editedMessage)"
+									},
+									"response": [
+										{
+											"name": "Edited message in the journal",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"FDF8ED588D2F29774400938E400C0635\",\r\n    \"timestamp\": 1733150622,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"textMessage\": \"Text of edited message\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"Text of edited message\",\r\n        \"description\": \"\",\r\n        \"title\": \"\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"sent\",\r\n    \"sendByApi\": false,\r\n    \"deletedMessageId\": \"\",\r\n    \"editedMessageId\": \"869B201F820235B1C5B7294D3201C590\",\r\n    \"isEdited\": true,\r\n    \"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deleted Message",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "To display deleted messages in the journal, you need to enable the webhook \"deletedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [deletedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/outgoing-message/deletedMessage)"
+									},
+									"response": [
+										{
+											"name": "Deleted Message in journal",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"timestamp\": 1733136811,\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n    },\r\n    \"statusMessage\": \"sent\",\r\n    \"sendByApi\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
 								}
 							]
 						},
@@ -7107,10 +7395,10 @@
 															]
 														}
 													},
-													"_postman_previewlanguage": null,
-													"header": null,
+													"_postman_previewlanguage": "Text",
+													"header": [],
 													"cookie": [],
-													"body": null
+													"body": ""
 												}
 											]
 										},
@@ -7158,10 +7446,10 @@
 															]
 														}
 													},
-													"_postman_previewlanguage": null,
-													"header": null,
+													"_postman_previewlanguage": "Text",
+													"header": [],
 													"cookie": [],
-													"body": null
+													"body": ""
 												}
 											]
 										},
@@ -7209,10 +7497,10 @@
 															]
 														}
 													},
-													"_postman_previewlanguage": null,
-													"header": null,
+													"_postman_previewlanguage": "Text",
+													"header": [],
 													"cookie": [],
-													"body": null
+													"body": ""
 												}
 											]
 										},
@@ -7260,10 +7548,10 @@
 															]
 														}
 													},
-													"_postman_previewlanguage": null,
-													"header": null,
+													"_postman_previewlanguage": "Text",
+													"header": [],
 													"cookie": [],
-													"body": null
+													"body": ""
 												}
 											]
 										}
@@ -7276,7 +7564,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703014480,\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"textMessage\",\r\n        \"TextMessageData\": {\r\n            \"textMessage\": \"Hello! This is a text message.\"\r\n        }\r\n    }\r\n}",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000002,\r\n        \"wid\": \"71234567890@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1703014480,\r\n    \"idMessage\": \"3EB063C771F28EB323FAE3\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71231234567@c.us\",\r\n        \"chatName\": \"Green API user\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"textMessage\",\r\n        \"textMessageData\": {\r\n            \"textMessage\": \"Hello! This is a text message.\"\r\n        }\r\n    }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7547,6 +7835,108 @@
 										"description": "Documentation [Outgoing message status](https://greenapi.com/en/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/)\n\nTo receive notifications about the sending/delivery/reading statuses of messages sent from your phone, you must enable settings in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method:  \n\"outgoingMessageWebhook\": \"yes\",  \n\"outgoingWebhook\": \"yes\""
 									},
 									"response": []
+								},
+								{
+									"name": "Edited message",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"New message\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "To display edited messages in the journal, you need to enable the webhook \"editedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [editedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/outgoing-message/editedMessageAPI)"
+									},
+									"response": [
+										{
+											"name": "Edited message in the journal",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"FDF8ED588D2F29774400938E400C0635\",\r\n    \"timestamp\": 1733150622,\r\n    \"typeMessage\": \"extendedTextMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"textMessage\": \"Text of edited message\",\r\n    \"extendedTextMessage\": {\r\n        \"text\": \"Text of edited message\",\r\n        \"description\": \"\",\r\n        \"title\": \"\",\r\n        \"previewType\": \"None\",\r\n        \"jpegThumbnail\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"sent\",\r\n    \"sendByApi\": true,\r\n    \"deletedMessageId\": \"\",\r\n    \"editedMessageId\": \"869B201F820235B1C5B7294D3201C590\",\r\n    \"isEdited\": true,\r\n    \"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Deleted Message",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "To display deleted messages in the journal, you need to enable the webhook \"deletedMessageWebhook\": \"yes\" with method [setSettings](https://green-api.com/en/docs/api/account/SetSettings/).\n\nDocumentation [deletedMessage](https://green-api.com/en/docs/api/receiving/notifications-format/outgoing-message/deletedMessageAPI)"
+									},
+									"response": [
+										{
+											"name": "Deleted Message in journal",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"timestamp\": 1733136811,\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n    },\r\n    \"statusMessage\": \"sent\",\r\n    \"sendByApi\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
 								}
 							]
 						}
@@ -7641,7 +8031,12 @@
 										}
 									}
 								},
-								"url": "{{webhookUrl}}",
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								},
 								"description": "Documentation [Incoming block](https://greenapi.com/en/docs/api/receiving/notifications-format/IncomingBlock/)\n\nTo receive this type of notification, you must enable the settings in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method:\n\n[](https://green-api.com/docs/api/account/SetSettings/)\"incomingBlockWebhook\": \"yes\"  \n\"incomingWebhook\": \"yes\""
 							},
 							"response": []

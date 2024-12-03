@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "78d69a86-00f3-43fc-b12c-d320e3a4c5bd",
-		"name": "Green API",
+		"name": "Green API BR",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -386,7 +386,13 @@
 					"name": "Envie uma Mensagem",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n\t\"chatId\": \"5521999990000@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
@@ -414,7 +420,13 @@
 							"name": "sendMessage",
 							"originalRequest": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "GREEN-API_POSTMAN/1.0",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"message\": \"Hello man\"\r\n}",
@@ -470,7 +482,13 @@
 					"name": "Envie uma mensagem para um grupo",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n\t\"chatId\": \"79001234567-1581234048@g.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}",
@@ -2467,7 +2485,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"phoneNumber\": 79001234567\r\n}",
+							"raw": "{\r\n\t\"phoneNumber\": 79001234561213\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2491,11 +2509,11 @@
 						{
 							"name": "checkWhatsapp",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"phoneNumber\": 79001234567\r\n}",
+									"raw": "{\r\n\t\"phoneNumber\": 79001234561213\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2551,7 +2569,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"chatId\": \"79001234567@c.us\"\r\n}",
+							"raw": "{\r\n    \"chatId\": \"7900123456732@c.us\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2575,11 +2593,11 @@
 						{
 							"name": "getAvatar",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"chatId\": \"\",\r\n    \"phoneNumber\": 79001234567\r\n}",
+									"raw": "{\r\n    \"chatId\": \"7900123456732@c.us\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2624,7 +2642,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"existsWhatsapp\": true,\n    \"urlAvatar\": \"https://pps.whatsapp.net/v/avatar.jpg\"\n}"
+							"body": "{\n      \"urlAvatar\": \"https://pps.whatsapp.net/v/link/to/the/image\",\n      \"available\": true\n}"
 						}
 					]
 				},
@@ -2653,17 +2671,17 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Documentação [GetAvatar](https://green-api.com/docs/api/service/GetAvatar/)"
+						"description": "Documentação [GetAvatar](https://green-api.com.br/docs/api/service/GetAvatar/)"
 					},
 					"response": [
 						{
 							"name": "getAvatar",
 							"originalRequest": {
-								"method": "POST",
+								"method": "VIEW",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"chatId\": \"\",\r\n    \"phoneNumber\": 79001234567\r\n}",
+									"raw": "{\r\n    \"chatId\": \"79001234567-1581234048@g.us\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2708,7 +2726,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"existsWhatsapp\": true,\n    \"urlAvatar\": \"https://pps.whatsapp.net/v/avatar.jpg\"\n}"
+							"body": "{\n   \"urlAvatar\": \"https://pps.whatsapp.net/v/t61.24694-24/4273448_2936578865433234872_5963139254683975433_n.jpg?ccb=11-4&oh=01_AdT76ECQgH2xpzu0Kt8GO3c8j7ChbnBK-G7796uIHdoE3g&oe=66041D5F&_nc_sid=e6ed6c&_nc_cat=104\",\n    \"available\": true\n}"
 						}
 					]
 				},
@@ -2734,7 +2752,7 @@
 						{
 							"name": "getContacts",
 							"originalRequest": {
-								"method": "GET",
+								"method": "VIEW",
 								"header": [],
 								"url": {
 									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}",
@@ -2774,7 +2792,518 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"79001234567@c.us\",\n        \"name\": \"Иван Петров\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234568@c.us\",\n        \"name\": \"Люся Сидорова\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234569-1479621234@g.us\",\n        \"name\": \"Моя группа\",\n        \"type\": \"group\"\n    }\n]"
+							"body": "[\n    {\n        \"id\": \"11001234567@c.us\",\n        \"name\": \"Ivan Petrov\",\n        \"contactName\": \"Ivan Petorov Work\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234568@c.us\",\n        \"name\": \"Lyusya Sidorova\",\n        \"contactName\": \"Liusya Sidorova Sewing Circle\",\n        \"type\": \"user\"\n    },\n    {\n        \"id\": \"79001234569-1479621234@g.us\",\n        \"name\": \"My group\",\n        \"type\": \"group\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Obter informações de contato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"7123456789@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/GetContactInfo/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"GetContactInfo",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [GetContactInfo](https://green-api.com.br/docs/api/service/GetContactInfo/)"
+					},
+					"response": [
+						{
+							"name": "getContactInfo",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"71234567890@c.us\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/GetContactInfo/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"GetContactInfo",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:54:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "458"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"avatar\": \"https://pps.whatsapp.net/v/t61.24694-24/24_1349471992200940_2091838963901201896_n.jpg?ccb=11-4&oh=01_AVzZilQn10nj9M9cfQV4PW5dgdXOkiOuD_jCqP2MCXIpyA\",\n    \"name\": \"Dealer\",\n    \"contactName\": \"Dealer\",\n    \"email\": \"24service@tt.tt\",\n    \"category\": \"Automotive Dealership\",\n    \"description\": \"Official service\",\n    \"products\": [\n        {\n            \"id\": \"42079728159\",\n            \"imageUrls\": {\n                \"requested\": \"https://mmg.whatsapp.net/v/t45.5328-4/263329037_6625110154227932_2879714823340281709_n.jpg?stp=dst-jpg_p100x100&ccb=1-7&_nc_sid=c48759&_nc_ohc=NKICbZlqfPMAX9077mo&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVwYzx7CckCFf8F8xIIZ5m2AGdeC8YTnLyd29\",\n                \"original\": \"https://mmg.whatsapp.net/v/t45.5328-4/263329037_6625110154227932_2879714823340281709_n.jpg?ccb=1-7&_nc_sid=c48759&_nc_ohc=NKICbZlqfPMAX9077mo&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVzn_O9azpKNRs1iPId0TQkGYk4D7HZFSQMeobvRiR\"\n            },\n            \"reviewStatus\": {\n                \"whatsapp\": \"APPROVED\"\n            },\n            \"availability\": \"in stock\",\n            \"name\": \"Replacement\",\n            \"description\": \"From 1000 RUB\",\n            \"price\": null,\n            \"isHidden\": false\n        },\n        {\n            \"id\": \"3545870328871389\",\n            \"imageUrls\": {\n                \"requested\": \"https://mmg.whatsapp.net/v/t45.5328-4/261250418_4513761695371199_1710541959703469822_n.jpg?stp=dst-jpg_p100x100&ccb=1-7&_nc_sid=c48759&_nc_ohc=eps8lAw2_3MAX_mWW8K&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVxT3HnbR04qKZJSOeK4d8p-noZokqly9QbpYFK-c_8kSA&oe\",\n                \"original\": \"https://mmg.whatsapp.net/v/t45.5328-4/261250418_4513761695371199_1710541959703469822_n.jpg?ccb=1-7&_nc_sid=c48759&_nc_ohc=eps8lAw2_3MAX_mWW8K&_nc_ad=z-m&_nc_cid=0&_nc_ht=mmg.whatsapp.net&oh=01_AVx2wTCmzof0BoZDmIUpD328CtpJmlvEXGdVzew&o\"\n            },\n            \"reviewStatus\": {\n                \"whatsapp\": \"APPROVED\"\n            },\n            \"availability\": \"in stock\",\n            \"name\": \"Technical maintenance\",\n            \"price\": null,\n            \"isHidden\": false\n        }\n    ],\n    \"chatId\": \"71234567890@c.us\",\n    \"lastSeen\": null,\n    \"isArchive\": false,\n    \"isDisappearing\": false,\n    \"isMute\": false,\n    \"messageExpiration\": 0,\n    \"muteExpiration\": null,\n    \"isBusiness\": true\n}"
+						}
+					]
+				},
+				{
+				  "name": "Editar mensagem",
+  				"request": {
+   					"method": "POST",
+   					"header": [],
+   					"body": {
+    						"mode": "raw",
+    						"raw": "{\r\n    \"chatId\": \"79123456789@c.us\",\r\n    \"idMessage\": \"BAE5367237E13A87\"\r\n    \"message\": \"I use Green-API to send this message to you!\"\r\n}",
+    						"options": {
+   							"raw": {
+    								"language": "json"
+   							}
+    						}
+   					},
+   					"url": {
+    						"raw": "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}",
+    						"host": [
+   							"{{apiUrl}}"
+    						],
+    						"path": [
+   							"waInstance{{idInstance}}",
+   							"editMessage",
+   							"{{apiTokenInstance}}"
+    						]
+   					},
+   					"description": "Documentação [editMessage](https://green-api.com.br/en/docs/api/service/editMessage/)"
+  				},
+  				"response": [
+    				{
+    						"name": "editMessage",
+    						"originalRequest": {
+   							"method": "VIEW",
+   							"header": [],
+   							"body": {
+    								"mode": "raw",
+    								"raw": "{\r\n    \"chatId\": \"120363043968066561@g.us\",\r\n    \"idMessage\": \"BAE5F4886F6F2D05\"\r\n    \"message\": \"I use Green-API to send this message to you!\"\r\n}",
+    								"options": {
+   									"raw": {
+    										"language": "json"
+   									}
+    								}
+   							},
+   							"url": {
+    								"raw": "{{apiUrl}}/waInstance{{idInstance}}/edit/{{apiTokenInstance}}",
+    								"host": [
+   									"{{apiUrl}}"
+    								],
+    								"path": [
+   									"waInstance{{idInstance}}",
+   									"edit",
+   									"{{apiTokenInstance}}"
+    								]
+   							}
+    						},
+    						"status": "OK",
+    						"code": 200,
+    						"_postman_previewlanguage": "json",
+    						"header": [
+   							{
+    								"key": "Server",
+    								"value": "nginx/1.10.3"
+   							},
+   							{
+    								"key": "Date",
+    								"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+   							},
+   							{
+    								"key": "Content-Type",
+    								"value": "application/json"
+   							},
+   							{
+    								"key": "Content-Length",
+    								"value": "190"
+   							},
+   							{
+    								"key": "Connection",
+    								"value": "keep-alive"
+   							}
+    						],
+    						"cookie": [],
+    						"body": "//O corpo da resposta está vazio. Se for bem-sucedido, a resposta do servidor será 200."
+   					}
+  				]
+  			},
+				{
+					"name": "Excluir mensagem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"120363043968066561@g.us\",\r\n    \"idMessage\": \"BAE5F4886F6F2D05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"deleteMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [DeleteMessage](https://green-api.com.br/docs/api/service/deleteMessage/)"
+					},
+					"response": [
+						{
+							"name": "deleteMessage",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"791234567893442@c.us\",\r\n    \"idMessage\": \"BAE5367237E13A87\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getAvatar",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "//O corpo da resposta está vazio. Se for bem-sucedido, a resposta do servidor será 200."
+						}
+					]
+				},
+				{
+					"name": "Arquivar chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"7123456789@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/archiveChat/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"archiveChat",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [ArchiveChat](https://green-api.com.br/docs/api/service/archiveChat/)"
+					},
+					"response": [
+						{
+							"name": "archiveChat",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"120363043968066561@g.us\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/archiveChat/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"archiveChat",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "//O corpo da resposta está vazio. Se for bem-sucedido, a resposta do servidor será 200."
+						}
+					]
+				},
+				{
+					"name": "Desarquivar chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"7123456789@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/unarchiveChat/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"unarchiveChat",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [UnarchiveChat](https://green-api.com.br/docs/api/service/unarchiveChat/)"
+					},
+					"response": [
+						{
+							"name": "unarchiveChat",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"120363043968066561@g.us\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/unarchiveChat/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"unarchiveChat",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "//O corpo da resposta está vazio. Se for bem-sucedido, a resposta do servidor será 200."
+						}
+					]
+				},
+				{
+					"name": "Definir configurações de mensagens temporárias",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"ephemeralExpiration\": 0 //Possible options: 0, 86400, 604800, 7776000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/setDisappearingChat/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"setDisappearingChat",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentação [setDisappearingChat](https://green-api.com.br/docs/api/service/SetDisappearingChat/)"
+					},
+					"response": [
+						{
+							"name": "setDisappearingChat",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"ephemeralExpiration\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/setDisappearingChat/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"setDisappearingChat",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:40:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"chatId\": \"712345678910@c.us\",\r\n    \"disappearingMessagesInChat\": false,\r\n    \"ephemeralExpiration\": 0\r\n}"
 						}
 					]
 				}
