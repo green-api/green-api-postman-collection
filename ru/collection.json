@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2b631a82-bada-4b4a-999c-4333899da2f2",
+		"_postman_id": "d46a86ce-0143-4b64-a402-2c75e30d4418",
 		"name": "Green API RU",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -6551,7 +6551,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\",\r\n            \"typeMessage\": \"text\"\r\n        }\r\n    }\r\n}",
+									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n        }\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7302,7 +7302,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"Отредактироанное сообщение\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"Отредактироанное сообщение\",\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n        }\r\n    }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7897,7 +7897,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"Отредактироанное сообщение\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"editedMessage\",\r\n        \"editedMessageData\": {\r\n            \"textMessage\": \"Отредактироанное сообщение\",\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7948,7 +7948,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"typeWebhook\": \"outgoingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n        }\r\n    }\r\n}",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1733146115,\r\n    \"idMessage\": \"BAE597DC5CB134F7\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"chatName\": \"Green API\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"deletedMessage\",\r\n        \"deletedMessageData\": {\r\n            \"stanzaId\": \"BAE5AFC355030F7A\"\r\n        }\r\n    }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
