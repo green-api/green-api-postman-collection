@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "41428764-3db2-4f93-9ef5-ce85847f9e1d",
+		"_postman_id": "6e23326b-1d61-45a1-a7c3-e7b9422190cf",
 		"name": "Green API EN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -5175,7 +5175,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"chatId\": \"120363043968066561@g.us\",\r\n    \"idMessage\": \"BAE5F4886F6F2D05\"\r\n}",
+							"raw": "{\r\n    \"chatId\": \"120363043968066561@g.us\",\r\n    \"idMessage\": \"BAE5F4886F6F2D05\",\r\n    \"onlySenderDelete\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5203,7 +5203,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"chatId\": \"791234567893442@c.us\",\r\n    \"idMessage\": \"BAE5367237E13A87\"\r\n}",
+									"raw": "{\r\n    \"chatId\": \"791234567893442@c.us\",\r\n    \"idMessage\": \"BAE5367237E13A87\",\r\n    \"onlySenderDelete\": false\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5211,13 +5211,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"getAvatar",
+										"deleteMessage",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -6520,7 +6520,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"timestamp\": 1733136811,\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"84514217EF972039FC3F68A53C196306\",\r\n        \"typeMessage\": \"text\"\r\n    },\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"10ECA1E0D26FAB972C24C56C8285ACAB\",\r\n    \"timestamp\": 1733136811,\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"senderId\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"84514217EF972039FC3F68A53C196306\"\r\n    },\r\n    \"senderContactName\": \"Green API inContacts\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
