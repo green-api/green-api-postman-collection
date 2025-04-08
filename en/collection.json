@@ -1893,7 +1893,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"result\": true\n}"
+									"body": "{\n    \"result\": true,\n    \"reason\": \"\"\n}"
 								}
 							]
 						}
