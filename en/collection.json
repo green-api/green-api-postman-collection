@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d6da39b7-20cb-4b3d-b7f2-221898470015",
+		"_postman_id": "a07f6d0f-049a-40d1-8a7b-01cda45c33a6",
 		"name": "Green API EN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -2941,7 +2941,73 @@
 			"name": "Queues",
 			"item": [
 				{
-					"name": "Show messages queue",
+					"name": "Get messages count to send",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessagesCount/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getMessagesCount",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [GetMessagesCount](https://greenapi.com/en/docs/api/queues/GetMessagesCount/)"
+					},
+					"response": [
+						{
+							"name": "getMessagesCount",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessagesCount/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessagesCount",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:53:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Show messages queue to send",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -3007,7 +3073,7 @@
 					]
 				},
 				{
-					"name": "Clear messages queue",
+					"name": "Clear messages queue to send",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -3073,7 +3139,7 @@
 					]
 				},
 				{
-					"name": "Get webhooks count",
+					"name": "Get webhooks count in the incoming queue",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -3139,7 +3205,7 @@
 					]
 				},
 				{
-					"name": "Clear webhooks queue",
+					"name": "Clear incoming Webhooks queue",
 					"request": {
 						"method": "DELETE",
 						"header": [],

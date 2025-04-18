@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c0bf4f9d-3ed9-4105-9a6c-c99f8478d1b2",
+		"_postman_id": "c5f09586-ddde-4785-a2c6-c6b8986ce4cd",
 		"name": "Green API RU",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -2983,6 +2983,72 @@
 			"name": "Очереди",
 			"item": [
 				{
+					"name": "Получить количество сообщений к отправке",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessagesCount/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getMessagesCount",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [GetMessagesCount](https://green-api.com/docs/api/queues/GetMessagesCount)"
+					},
+					"response": [
+						{
+							"name": "getMessagesCount",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessagesCount/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessagesCount",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:50:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "321"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0\n}"
+						}
+					]
+				},
+				{
 					"name": "Получить очередь сообщений к отправке",
 					"request": {
 						"method": "GET",
@@ -3115,7 +3181,7 @@
 					]
 				},
 				{
-					"name": "Получить количество уведомлений в очереди",
+					"name": "Получить количество уведомлений во входящей очереди",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -3181,7 +3247,7 @@
 					]
 				},
 				{
-					"name": "Очистить очередь уведомлений",
+					"name": "Очистить очередь входящих уведомлений",
 					"request": {
 						"method": "DELETE",
 						"header": [],
