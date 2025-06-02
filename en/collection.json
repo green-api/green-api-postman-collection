@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a07f6d0f-049a-40d1-8a7b-01cda45c33a6",
+		"_postman_id": "6f3c270b-ae89-4e9b-95ff-299dc9870c8e",
 		"name": "Green API EN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -1770,6 +1770,186 @@
 							"body": "{\n  \"messages\": [\n    \"BAE5DBB8DEABDA22\",\n    \"BAE5BBA9BE3142D8\"\n  ]\n}"
 						}
 					]
+				},
+				{
+					"name": "Send reply buttons",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"7123456789@c.us\",\r\n    \"header\": \"Header text\",\r\n    \"body\": \"I use Green-API to send this message to you!\",\r\n    \"footer\": \"Footer text\",\r\n    \"buttons\": [\r\n        {\r\n            \"buttonId\": \"1\",\r\n            \"buttonText\": \"First Button\"\r\n        },\r\n        {\r\n            \"buttonId\": \"2\",\r\n            \"buttonText\": \"Second Button\"\r\n        },\r\n        {\r\n            \"buttonId\": \"3\",\r\n            \"buttonText\": \"Third Button\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendInteractiveButtonsReply/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendInteractiveButtonsReply",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [SendInteractiveButtonsReply](https://green-api.com/en/docs/api/sending/SendInteractiveButtonsReply/)"
+					},
+					"response": [
+						{
+							"name": "sendInteractiveButtonsReply",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"7123456789@c.us\",\r\n    \"header\": \"Header text\",\r\n    \"body\": \"I use Green-API to send this message to you!\",\r\n    \"footer\": \"Footer text\",\r\n    \"buttons\": [\r\n        {\r\n            \"buttonId\": \"1\",\r\n            \"buttonText\": \"First Button\"\r\n        },\r\n        {\r\n            \"buttonId\": \"2\",\r\n            \"buttonText\": \"Second Button\"\r\n        },\r\n        {\r\n            \"buttonId\": \"3\",\r\n            \"buttonText\": \"Third Button\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendInteractiveButtonsReply/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendInteractiveButtonsReply",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Send interactive buttons",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"7123456789@c.us\",\r\n    \"header\": \"Header text\",\r\n    \"body\": \"I use Green-API to send this message to you!\",\r\n    \"footer\": \"Footer text\",\r\n    \"buttons\": [\r\n        {\r\n            \"type\": \"copy\",\r\n            \"buttonId\": \"1\",\r\n            \"buttonText\": \"Copy me\",\r\n            \"copyCode\": \"Text copied\"\r\n        },\r\n        {\r\n            \"type\": \"call\",\r\n            \"buttonId\": \"2\",\r\n            \"buttonText\": \"Call me\",\r\n            \"phoneNumber\": \"79329843267\"\r\n        },\r\n        {\r\n            \"type\": \"url\",\r\n            \"buttonId\": \"3\",\r\n            \"buttonText\": \"GREEN-API\",\r\n            \"url\": \"https://greenapi.com/\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendInteractiveButtons/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendInteractiveButtons",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [SendInteractiveButtons](https://green-api.com/en/docs/api/sending/SendInteractiveButtons/)"
+					},
+					"response": [
+						{
+							"name": "sendInteractiveButtons",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"7123456789@c.us\",\r\n    \"header\": \"Header text\",\r\n    \"body\": \"I use Green-API to send this message to you!\",\r\n    \"footer\": \"Footer text\",\r\n    \"buttons\": [\r\n        {\r\n            \"type\": \"copy\",\r\n            \"buttonId\": \"1\",\r\n            \"buttonText\": \"Copy me\",\r\n            \"copyCode\": \"Text copied\"\r\n        },\r\n        {\r\n            \"type\": \"call\",\r\n            \"buttonId\": \"2\",\r\n            \"buttonText\": \"Call me\",\r\n            \"phoneNumber\": \"79329843267\"\r\n        },\r\n        {\r\n            \"type\": \"url\",\r\n            \"buttonId\": \"3\",\r\n            \"buttonText\": \"GREEN-API\",\r\n            \"url\": \"https://greenapi.com/\"\r\n        }\r\n    ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendInteractiveButtons/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendInteractiveButtons",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -2752,6 +2932,82 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"type\": \"outgoing\",\n    \"idMessage\": \"B1494991277FD000000000000000000000\",\n    \"timestamp\": 1706849516,\n    \"typeMessage\": \"quotedMessage\",\n    \"chatId\": \"70000000012@c.us\",\n    \"extendedTextMessage\": {\n        \"text\": \"Black\",\n        \"stanzaId\": \"460D84E00000000000\",\n        \"participant\": \"70000000012@c.us\"\n    },\n    \"quotedMessage\": {\n        \"stanzaId\": \"460D84E00000000000\",\n        \"participant\": \"70000000012@c.us\",\n        \"typeMessage\": \"pollMessage\",\n        \"pollMessageData\": {\n            \"name\": \"Choose your favorite color\",\n            \"options\": [],\n            \"multipleAnswers\": true\n        }\n    },\n    \"statusMessage\": \"delivered\",\n    \"sendByApi\": false,\n    \"deletedMessageId\": \"\",\n    \"editedMessageId\": \"\",\n    \"isEdited\": false,\n    \"isDeleted\": false\n}\n"
+						},
+						{
+							"name": "incomingInteractiveButtons",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"9DB14F14A253D33F4A9CD84123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"type\": \"incoming\",\n\t\"idMessage\": \"BAE5638E264A66ED\",\n\t\"timestamp\": 1748851976,\n\t\"typeMessage\": \"interactiveButtons\",\n\t\"chatId\": \"7123456789@c.us\",\n\t\"interactiveButtons\": {\n\t\t\"titleText\": \"Header text\",\n\t\t\"contentText\": \"I use Green-API to send this message to you!\",\n\t\t\"footerText\": \"Footer text\",\n\t\t\"buttons\": [\n\t\t\t{\n\t\t\t\t\"type\": \"copy\",\n\t\t\t\t\"buttonId\": \"1\",\n\t\t\t\t\"buttonText\": \"Copy me\",\n\t\t\t\t\"copyCode\": \"Text copied\",\n\t\t\t\t\"phoneNumber\": \"\",\n\t\t\t\t\"url\": \"\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": \"call\",\n\t\t\t\t\"buttonId\": \"2\",\n\t\t\t\t\"buttonText\": \"Call me\",\n\t\t\t\t\"copyCode\": \"\",\n\t\t\t\t\"phoneNumber\": \"79329843267\",\n\t\t\t\t\"url\": \"\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": \"url\",\n\t\t\t\t\"buttonId\": \"3\",\n\t\t\t\t\"buttonText\": \"GREEN-API\",\n\t\t\t\t\"copyCode\": \"\",\n\t\t\t\t\"phoneNumber\": \"\",\n\t\t\t\t\"url\": \"https://greenapi.com/\"\n\t\t\t}\n\t\t]\n\t},\n\t\"senderId\": \"7987654321@c.us\",\n\t\"senderName\": \"\",\n\t\"senderContactName\": \"\",\n\t\"deletedMessageId\": \"\",\n\t\"editedMessageId\": \"\",\n\t\"isEdited\": false,\n\t\"isDeleted\": false\n}"
+						},
+						{
+							"name": "outgoingInteractiveButtons",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"BAE5143000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"type\": \"outgoing\",\n\t\"idMessage\": \"BAE5D141BD2E2035\",\n\t\"timestamp\": 1748851707,\n\t\"typeMessage\": \"interactiveButtons\",\n\t\"chatId\": \"7123456789@c.us\",\n\t\"interactiveButtons\": {\n\t\t\"titleText\": \"Header text\",\n\t\t\"contentText\": \"I use Green-API to send this message to you!\",\n\t\t\"footerText\": \"Footer text\",\n\t\t\"buttons\": [\n\t\t\t{\n\t\t\t\t\"type\": \"copy\",\n\t\t\t\t\"buttonId\": \"1\",\n\t\t\t\t\"buttonText\": \"Copy me\",\n\t\t\t\t\"copyCode\": \"Text copied\",\n\t\t\t\t\"phoneNumber\": \"\",\n\t\t\t\t\"url\": \"\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": \"call\",\n\t\t\t\t\"buttonId\": \"2\",\n\t\t\t\t\"buttonText\": \"Call me\",\n\t\t\t\t\"copyCode\": \"\",\n\t\t\t\t\"phoneNumber\": \"79329843267\",\n\t\t\t\t\"url\": \"\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": \"url\",\n\t\t\t\t\"buttonId\": \"3\",\n\t\t\t\t\"buttonText\": \"GREEN-API\",\n\t\t\t\t\"copyCode\": \"\",\n\t\t\t\t\"phoneNumber\": \"\",\n\t\t\t\t\"url\": \"https://greenapi.com/\"\n\t\t\t}\n\t\t]\n\t},\n\t\"statusMessage\": \"read\",\n\t\"sendByApi\": true,\n\t\"deletedMessageId\": \"\",\n\t\"editedMessageId\": \"\",\n\t\"isEdited\": false,\n\t\"isDeleted\": false\n}"
 						}
 					]
 				},
