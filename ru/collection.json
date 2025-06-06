@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7b6c805b-87a7-4e82-9f3a-8bd8469bafd6",
+		"_postman_id": "b02e36c2-cffd-4545-8703-5e61f985f3b7",
 		"name": "Green API RU",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -902,6 +902,186 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"chatId\": \"7123456789@с.us\",\r\n    \"message\": \"I use Green-API to send this message to you!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Отправить текст с превью ссылки (jpegThumbnail)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"7123456789@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you! \\nDocumentation: https://green-api.com/docs/api/sending/SendMessage/\",\r\n    \"linkPreview\": true,\r\n    \"typePreview\": \"small\", // размер изображения в ссылке сообщения. Может быть \"small\", \"large\"\r\n    \"customPreview\": {      // если этот блок существует, предварительный просмотр ссылки будет заменен его содержимым\r\n        \"title\": \"Заголовок ссылки превью\",\r\n        \"description\": \"Описание ссылки превью\",\r\n        \"link\": \"https://green-api.com/docs/api/sending/SendMessage/\",\r\n        \"jpegThumbnail\": \"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\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SendMessage](https://green-api.com/docs/api/sending/SendMessage/)"
+					},
+					"response": [
+						{
+							"name": "sendMessage",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"7123456789@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you! \\nDocumentation: https://green-api.com/docs/api/sending/SendMessage/\",\r\n    \"linkPreview\": true,\r\n    \"typePreview\": \"small\", // размер изображения в ссылке сообщения. Может быть \"small\", \"large\"\r\n    \"customPreview\": {      // если этот блок существует, предварительный просмотр ссылки будет заменен его содержимым\r\n        \"title\": \"Заголовок ссылки превью\",\r\n        \"description\": \"Описание ссылки превью\",\r\n        \"link\": \"https://green-api.com/docs/api/sending/SendMessage/\",\r\n        \"jpegThumbnail\": \"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\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"3EB0C767D097B7C7C030\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Отправить текст с превью ссылки (urlFile)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"7123456789@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you! \\nDocumentation: https://green-api.com/docs/api/sending/SendMessage/\",\r\n    \"linkPreview\": true,\r\n    \"typePreview\": \"large\", // размер изображения в ссылке сообщения. Может быть \"small\", \"large\"\r\n    \"customPreview\": {      // если этот блок существует, предварительный просмотр ссылки будет заменен его содержимым\r\n        \"title\": \"Заголовок ссылки превью\",\r\n        \"description\": \"Описание ссылки превью\",\r\n        \"link\": \"https://green-api.com/docs/api/sending/SendMessage/\",\r\n        \"urlFile\": \"https://storage.yandexcloud.net/green-api.com/logo/Logo_GREEN-API.jpg\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SendMessage](https://green-api.com/docs/api/sending/SendMessage/)"
+					},
+					"response": [
+						{
+							"name": "sendMessage",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"7123456789@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you! \\nDocumentation: https://green-api.com/docs/api/sending/SendMessage/\",\r\n    \"linkPreview\": true,\r\n    \"typePreview\": \"large\", // размер изображения в ссылке сообщения. Может быть \"small\", \"large\"\r\n    \"customPreview\": {      // если этот блок существует, предварительный просмотр ссылки будет заменен его содержимым\r\n        \"title\": \"Заголовок ссылки превью\",\r\n        \"description\": \"Описание ссылки превью\",\r\n        \"link\": \"https://green-api.com/docs/api/sending/SendMessage/\",\r\n        \"urlFile\": \"https://storage.yandexcloud.net/green-api.com/logo/Logo_GREEN-API.jpg\"\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3366,7 +3546,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"messageID\": \"BAE123456789\",\n        \"type\": \"sendMessage\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"message\": \"I use Green-API to send this message to you!\",\n            \"linkPreview\": true\n        }\n    },\n    {\n        \"messageID\": \"BAE1234567123\",\n        \"type\": \"sendMessage\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"message\": \"Hello\",\n            \"quotedMessageId\": \"BAE123456789\",\n            \"linkPreview\": true\n        }\n    },\n    {\n        \"messageID\": \"BAE5DE8CA912345\",\n        \"type\": \"sendPoll\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"message\": \"Please choose the color:\",\n            \"options\": [\n                {\n                    \"optionName\": \"green\"\n                },\n                {\n                    \"optionName\": \"red\"\n                }\n            ]\n        }\n    },\n    {\n        \"messageID\": \"BAE1234567789\",\n        \"type\": \"sendFileByUrl\",\n        \"body\": {\n            \"fileName\": \"test.jpg\",\n            \"chatId\": \"11001234567@c.us\",\n            \"quotedMessageId\": \"BAE1234567159\",\n            \"caption\": \"caption\",\n            \"archive\": false,\n            \"urlFile\": \"https://sw-media-out.storage.yandexcloud.net/1101123456/5005fe15-23ee-43ef-8535-35e1dff8315c.jpg\"\n        }\n    },\n    {\n        \"messageID\": \"BAE1234561230\",\n        \"type\": \"sendLocation\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"latitude\": 44.9370129,\n            \"longitude\": 89.8728409,\n            \"nameLocation\": \"I'm here, come\",\n            \"address\": \"613123, Perm\"\n        }\n    },\n    {\n        \"messageID\": \"BAE1234567456\",\n        \"type\": \"sendContact\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"contact\": {\n                \"phoneContact\": 79001234568,\n                \"firstName\": \"Артем\",\n                \"lastName\": \"Евпаторийский\",\n                \"middleName\": \"Петрович\",\n                \"company\": \"Велосипед\"\n            }\n        }\n    },\n    {\n        \"messageID\": \"BAE1234567891234\",\n        \"type\": \"sendLink\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"urlLink\": \"https://green-api.com/docs/api/sending/SendLink/\"\n        }\n    },\n    {\n        \"messagesIDs\": [\n            \"BAE1234561256\",\n            \"BAE1234561278\"\n        ],\n        \"type\": \"ForwardMessages\",\n        \"body\": {\n            \"chatId\": \"11001234567@g.us\",\n            \"chatIdFrom\": \"12036304684212345@g.us\",\n            \"messages\": [\n                \"BAE1234561296\",\n                \"BAE1234561205\"\n            ]\n        }\n    }\n]"
+							"body": "[\n    {\n        \"messageID\": \"BAE123456789\",\n        \"type\": \"sendMessage\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"message\": \"I use Green-API to send this message to you!\",\n            \"linkPreview\": true\n        }\n    },\n    {\n\t\t\"messageID\": \"BAE56CBAB9491861\",\n\t\t\"type\": \"sendMessage\",\n\t\t\"body\": {\n\t\t\t\"chatId\": \"120363196483809486@g.us\",\n\t\t\t\"message\": \"I use Green-API to send this message to you! \\nDocumentation: https://green-api.com/docs/api/sending/SendMessage/\",\n\t\t\t\"linkPreview\": true,\n\t\t\t\"typePreview\": \"large\",\n\t\t\t\"customPreview\": {\n\t\t\t\t\"title\": \"Заголовок ссылки превью\",\n\t\t\t\t\"description\": \"Описание ссылки превью\",\n\t\t\t\t\"urlFile\": \"https://storage.yandexcloud.net/green-api.com/logo/Logo_GREEN-API.jpg\",\n\t\t\t\t\"link\": \"https://green-api.com/docs/api/sending/SendMessage/\"\n\t\t\t},\n\t\t\t\"typingTime\": null\n\t\t}\n\t},\n    {\n        \"messageID\": \"BAE1234567123\",\n        \"type\": \"sendMessage\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"message\": \"Hello\",\n            \"quotedMessageId\": \"BAE123456789\",\n            \"linkPreview\": true\n        }\n    },\n    {\n        \"messageID\": \"BAE5DE8CA912345\",\n        \"type\": \"sendPoll\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"message\": \"Please choose the color:\",\n            \"options\": [\n                {\n                    \"optionName\": \"green\"\n                },\n                {\n                    \"optionName\": \"red\"\n                }\n            ]\n        }\n    },\n    {\n        \"messageID\": \"BAE1234567789\",\n        \"type\": \"sendFileByUrl\",\n        \"body\": {\n            \"fileName\": \"test.jpg\",\n            \"chatId\": \"11001234567@c.us\",\n            \"quotedMessageId\": \"BAE1234567159\",\n            \"caption\": \"caption\",\n            \"archive\": false,\n            \"urlFile\": \"https://sw-media-out.storage.yandexcloud.net/1101123456/5005fe15-23ee-43ef-8535-35e1dff8315c.jpg\"\n        }\n    },\n    {\n        \"messageID\": \"BAE1234561230\",\n        \"type\": \"sendLocation\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"latitude\": 44.9370129,\n            \"longitude\": 89.8728409,\n            \"nameLocation\": \"I'm here, come\",\n            \"address\": \"613123, Perm\"\n        }\n    },\n    {\n        \"messageID\": \"BAE1234567456\",\n        \"type\": \"sendContact\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"contact\": {\n                \"phoneContact\": 79001234568,\n                \"firstName\": \"Артем\",\n                \"lastName\": \"Евпаторийский\",\n                \"middleName\": \"Петрович\",\n                \"company\": \"Велосипед\"\n            }\n        }\n    },\n    {\n        \"messageID\": \"BAE1234567891234\",\n        \"type\": \"sendLink\",\n        \"body\": {\n            \"chatId\": \"11001234567@c.us\",\n            \"urlLink\": \"https://green-api.com/docs/api/sending/SendLink/\"\n        }\n    },\n    {\n        \"messagesIDs\": [\n            \"BAE1234561256\",\n            \"BAE1234561278\"\n        ],\n        \"type\": \"ForwardMessages\",\n        \"body\": {\n            \"chatId\": \"11001234567@g.us\",\n            \"chatIdFrom\": \"12036304684212345@g.us\",\n            \"messages\": [\n                \"BAE1234561296\",\n                \"BAE1234561205\"\n            ]\n        }\n    }\n]"
 						}
 					]
 				},
