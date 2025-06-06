@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b02e36c2-cffd-4545-8703-5e61f985f3b7",
+		"_postman_id": "fbc22341-d295-4470-a1c1-4a6ca2e5ac2b",
 		"name": "Green API RU",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -6729,13 +6729,13 @@
 							]
 						},
 						{
-							"name": "Сообщение с кнопками",
+							"name": "Сообщение с интерактивными кнопками",
 							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"buttonsMessage\",\r\n        \"buttonsMessage\": {\r\n            \"contentText\": \"Hello\",\r\n            \"footer\": \"Hello\",\r\n            \"buttons\": [\r\n                {\r\n                    \"buttonId\": \"1\",\r\n                    \"buttonText\": \"green\"\r\n                },\r\n                {\r\n                    \"buttonId\": \"2\",\r\n                    \"buttonText\": \"red\"\r\n                },\r\n                {\r\n                    \"buttonId\": \"3\",\r\n                    \"buttonText\": \"blue\"\r\n                }\r\n            ],\r\n             \"forwardingScore\": 4,\r\n             \"isForwarded\": true\r\n        }\r\n    }\r\n}",
+									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1749207554,\r\n  \"idMessage\": \"BAE5D4CC3DDCD905\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"sender\": \"71234567890@c.us\",\t\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"interactiveButtons\",\r\n    \"interactiveButtons\": {\r\n      \"titleText\": \"Header text\",\r\n      \"contentText\": \"I use Green-API to send this message to you!\",\r\n      \"footerText\": \"Footer text\",\r\n      \"buttons\": [\r\n        {\r\n          \"type\": \"copy\",\r\n          \"buttonId\": \"1\",\r\n          \"buttonText\": \"Copy me\",\r\n          \"copyCode\": \"Text copied\"\r\n        },\r\n        {\r\n          \"type\": \"call\",\r\n          \"buttonId\": \"2\",\r\n          \"buttonText\": \"Call me\",\r\n          \"phoneNumber\": \"79329843267\"\r\n        },\r\n        {\r\n          \"type\": \"url\",\r\n          \"buttonId\": \"3\",\r\n          \"buttonText\": \"GREEN-API\",\r\n          \"url\": \"https://green-api.com/\"\t\t\t\t\t\t\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6748,18 +6748,18 @@
 										"{{webhookUrl}}"
 									]
 								},
-								"description": "Документация [Входящее сообщение с кнопками](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ButtonsMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								"description": "Documentation [Incoming buttons message](https://greenapi.com/en/docs/api/receiving/notifications-format/incoming-message/ButtonsMessage/)\n\nTo receive this type of notification, you must enable the \"incomingWebhook\" setting: \"yes\" in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method"
 							},
 							"response": []
 						},
 						{
-							"name": "Сообщение со списком выбора",
+							"name": "Сообщение с выбором интерактивной кнопки",
 							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"listMessage\",\r\n        \"listMessage\": {\r\n            \"contentText\": \"Hello\",\r\n            \"title\": \"Title\",\r\n            \"footer\": \"Hello\",\r\n            \"buttonText\": \"Action List\",\r\n            \"sections\": [\r\n                {\r\n                    \"title\": \"Section 1\",\r\n                    \"rows\": [\r\n                        {\r\n                            \"title\": \"Option 1\",\r\n                            \"rowId\": \"option1\"\r\n                        },\r\n                        {\r\n                            \"title\": \"Option 2\",\r\n                            \"rowId\": \"option2\",\r\n                            \"description\": \"Explanation\"\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"title\": \"Section 2\",\r\n                    \"rows\": [\r\n                        {\r\n                            \"title\": \"Option 3\",\r\n                            \"rowId\": \"option3\"\r\n                        },\r\n                        {\r\n                            \"title\": \"Option 4\",\r\n                            \"rowId\": \"option4\",\r\n                            \"description\": \"Explanation\"\r\n                        }\r\n                    ]\r\n                }\r\n            ],\r\n             \"forwardingScore\": 4,\r\n             \"isForwarded\": true\r\n        }\r\n    }\r\n}",
+									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1749208313,\r\n  \"idMessage\": \"9EC825ACAB511DBFF27750DD0B4AFAE5\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"interactiveButtonsResponse\",\r\n    \"interactiveButtonsResponse\": {\r\n      \"stanzaId\": \"BAE5FB1FDA0E58E8\",\r\n      \"selectedIndex\": 1,\r\n      \"selectedId\": \"2\",\r\n      \"selectedDisplayText\": \"Second Button\"\r\n    }\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6772,18 +6772,18 @@
 										"{{webhookUrl}}"
 									]
 								},
-								"description": "Документация [Входящее сообщение со списком выбора](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ListMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								"description": "Documentation [Simple button selection](https://greenapi.com/en/docs/api/receiving/notifications-format/selected-buttons/ButtonsResponseMessage/)\n\nTo receive this type of notification, you must enable the \"incomingWebhook\" setting: \"yes\" in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method"
 							},
 							"response": []
 						},
 						{
-							"name": "Сообщение с шаблонными кнопками",
+							"name": "Сообщение с кнопками ответа",
 							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"templateMessage\",\r\n        \"templateMessage\": {\r\n            \"contentText\": \"Hello\",\r\n            \"footer\": \"Hello\",\r\n            \"buttons\": [\r\n                {\r\n                    \"urlButton\": {\r\n                        \"displayText\": \"⭐ Star us on GitHub!\",\r\n                        \"url\": \"https://github.com/green-api\"\r\n                    },\r\n                    \"index\": 1\r\n                },\r\n                {\r\n                    \"callButton\": {\r\n                        \"displayText\": \"Call us\",\r\n                        \"phoneNumber\": \"+1 (234) 5678-901\"\r\n                    },\r\n                    \"index\": 2\r\n                },\r\n                {\r\n                    \"quickReplyButton\": {\r\n                        \"displayText\": \"Hello\",\r\n                        \"id\": \"plainButtonId\"\r\n                    },\r\n                    \"index\": 3\r\n                }\r\n            ],\r\n             \"forwardingScore\": 4,\r\n             \"isForwarded\": true\r\n        }\r\n    }\r\n}",
+									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1749207532,\r\n  \"idMessage\": \"BAE5BBB8415CF1AA\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"interactiveButtons\",\r\n    \"interactiveButtons\": {\r\n      \"titleText\": \"Header text\",\r\n      \"contentText\": \"I use Green-API to send this message to you!\",\r\n      \"footerText\": \"Footer text\",\r\n      \"buttons\": [\r\n        {\r\n          \"type\": \"reply\",\r\n          \"buttonId\": \"1\",\r\n          \"buttonText\": \"First Button\"\r\n        },\r\n        {\r\n          \"type\": \"reply\",\r\n          \"buttonId\": \"2\",\r\n          \"buttonText\": \"Second Button\"\r\n        },\r\n        {\r\n          \"type\": \"reply\",\r\n          \"buttonId\": \"3\",\r\n          \"buttonText\": \"Third Button\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6796,18 +6796,18 @@
 										"{{webhookUrl}}"
 									]
 								},
-								"description": "Документация [Входящее сообщение с шаблонными кнопками](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TemplateMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								"description": "Documentation [Incoming template buttons message](https://greenapi.com/en/docs/api/receiving/notifications-format/incoming-message/TemplateMessage/)\n\nTo receive this type of notification, you must enable the \"incomingWebhook\" setting: \"yes\" in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method"
 							},
 							"response": []
 						},
 						{
-							"name": "Сообщение с выбором обычной кнопки",
+							"name": "Сообщение с выбором кнопки ответа",
 							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1656315272,\r\n    \"idMessage\": \"9BB19BB0D568BA7B185EEAD21A33D317\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"buttonsResponseMessage\",\r\n        \"buttonsResponseMessage\": {\r\n            \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n            \"selectedButtonId\": \"1\",\r\n            \"selectedButtonText\": \"green\"\r\n        }\r\n    }\r\n}",
+									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 1101000001,\r\n    \"wid\": \"71231234567@c.us\",\r\n    \"typeInstance\": \"whatsapp\"\r\n  },\r\n  \"timestamp\": 1749207740,\r\n  \"idMessage\": \"469B7C5BA12684DAA42F6FD6CC4364F3\",\r\n  \"senderData\": {\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"chatName\": \"Green API\",\r\n    \"sender\": \"71234567890@c.us\",\r\n    \"senderName\": \"Green API\",\r\n    \"senderContactName\": \"Green API inContacts\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"templateButtonsReplyMessage\",\r\n    \"templateButtonReplyMessage\": {\r\n      \"stanzaId\": \"BAE5BBB8415CF1AA\",\r\n      \"selectedIndex\": 0,\r\n      \"selectedId\": \"1\",\r\n      \"selectedDisplayText\": \"First Button\"\r\n    }\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6820,55 +6820,7 @@
 										"{{webhookUrl}}"
 									]
 								},
-								"description": "Документация [Выбор обычной кнопки](https://green-api.com/docs/api/receiving/notifications-format/selected-buttons/ButtonsResponseMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
-							},
-							"response": []
-						},
-						{
-							"name": "Сообщение с выбором шаблонной кнопки",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1656315272,\r\n    \"idMessage\": \"9BB19BB0D568BA7B185EEAD21A33D317\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"templateButtonReplyMessage\",\r\n        \"templateButtonReplyMessage\": {\r\n            \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n            \"selectedIndex\": 2,\r\n            \"selectedId\": \"id1\",\r\n            \"selectedDisplayText\": \"red\"\r\n        }\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{webhookUrl}}",
-									"host": [
-										"{{webhookUrl}}"
-									]
-								},
-								"description": "Документация [Выбор шаблонной кнопки](https://green-api.com/docs/api/receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
-							},
-							"response": []
-						},
-						{
-							"name": "Сообщение с выбором элемента списка",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"typeWebhook\": \"incomingMessageReceived\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1101000001,\r\n        \"wid\": \"71231234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1657025112,\r\n    \"idMessage\": \"A36C68A09C54796295FCAD20C15C534C\",\r\n    \"senderData\": {\r\n        \"chatId\": \"71234567890@c.us\",\r\n        \"sender\": \"71234567890@c.us\",\r\n        \"senderName\": \"Green API\",\r\n        \"senderContactName\": \"Green API inContacts\"\r\n    },\r\n    \"messageData\": {\r\n        \"typeMessage\": \"listResponseMessage\",\r\n        \"listResponseMessage\": {\r\n            \"stanzaId\": \"F7AEC1B7086ECDC7E6E45923F5EDB825\",\r\n            \"title\": \"Option 2\",\r\n            \"listType\": 1,\r\n            \"singleSelectReply\": \"option2\"\r\n        }\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{webhookUrl}}",
-									"host": [
-										"{{webhookUrl}}"
-									]
-								},
-								"description": "Документация [Выбор элемента списка](https://green-api.com/docs/api/receiving/notifications-format/selected-buttons/ListResponseMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								"description": "Documentation [Template button selection](https://greenapi.com/en/docs/api/receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage/)\n\nTo receive this type of notification, you must enable the \"incomingWebhook\" setting: \"yes\" in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method"
 							},
 							"response": []
 						},
