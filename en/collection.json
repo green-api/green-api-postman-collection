@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "dffd816c-76a1-44a9-98da-f84b4923d0e8",
+		"_postman_id": "ed1e0cf1-7463-4e9a-a26e-bea766fc4ea2",
 		"name": "Green API EN",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -4487,6 +4487,90 @@
 							"body": "{\n    \"leaveGroup\": true\n}"
 						}
 					]
+				},
+				{
+					"name": "Update group settings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"allowParticipantsEditGroupSettings\": true,\r\n    \"allowParticipantsSendMessages\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/updateGroupSettings/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"updateGroupSettings",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [LeaveGroup](https://greenapi.com/en/docs/api/groups/LeaveGroup/)"
+					},
+					"response": [
+						{
+							"name": "updateGroupSettings",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"allowParticipantsEditGroupSettings\": true,\r\n    \"allowParticipantsSendMessages\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/updateGroupSettings/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"updateGroupSettings",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Apr 2020 14:58:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"updateGroupSettings\": true,\n    \"reason\": \"\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -6135,6 +6219,156 @@
 							],
 							"cookie": [],
 							"body": "{\r\n    \"chatId\": \"712345678910@c.us\",\r\n    \"disappearingMessagesInChat\": false,\r\n    \"ephemeralExpiration\": 0\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Send typing (text)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"typingTime\": 5000 // [milliseconds]. The time is limited by values ​​from 1 to 20 seconds. If the field is missing, the notification will last for 1 second.\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendTyping/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendTyping",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [SendInteractiveButtons](https://green-api.com/en/docs/api/sending/SendInteractiveButtons/)"
+					},
+					"response": [
+						{
+							"name": "sendTyping",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "GREEN-API_POSTMAN/1.0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"typingTime\": 5000 // [milliseconds]. The time is limited by values ​​from 1 to 20 seconds. If the field is missing, the notification will last for 1 second.\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendTyping/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendTyping",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Send typing (recording)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"typingTime\": 5000, // [milliseconds]. The time is limited by values ​​from 1 to 20 seconds. If the field is missing, the notification will last for 1 second.\r\n    \"typingType\": \"recording\" // The value can be: “recording” (sending a voice message). If the field is missing, a text message will be sent.\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendTyping/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendTyping",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [SendInteractiveButtons](https://green-api.com/en/docs/api/sending/SendInteractiveButtons/)"
+					},
+					"response": [
+						{
+							"name": "sendTyping",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "GREEN-API_POSTMAN/1.0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"71234567890@c.us\",\r\n    \"typingTime\": 5000, // [milliseconds]. The time is limited by values ​​from 1 to 20 seconds. If the field is missing, the notification will last for 1 second.\r\n    \"typingType\": \"recording\" // The value can be: “recording” (sending a voice message). If the field is missing, a text message will be sent.\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendTyping/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendTyping",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
 						}
 					]
 				}
