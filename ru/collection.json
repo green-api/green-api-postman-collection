@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ae247102-9223-4383-9073-a71c35da18f6",
+		"_postman_id": "4666ac0d-ae36-4623-9303-ecea228e2f7a",
 		"name": "Green API RU",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -710,6 +710,72 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"reason\": null,\n\t\"urlAvatar\": \"https://pps.whatsapp.net/v/t61.24694-24/427363644_953670539673728_6611951982054139732_n.jpg?ccb=11-4&oh=01_AdQM0J6igeTosnmfic1q98Ae2lReQK3t63VSaxgrew44mAuow&oe=65FADA13&_nc_sid=e6ed6c&_nc_cat=643\",\n\t\"setProfilePicture\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Обновление API токена",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/updateApiToken/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"updateApiToken",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [updateApiToken](https://green-api.com/docs/api/account/updateApiToken)"
+					},
+					"response": [
+						{
+							"name": "updateApiToken",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/updateApiToken/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"updateApiToken",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 14:24:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiTokenInstance\": \"d4e5276df1017c259611ee08befc536022b441126d517a233d\"\n}"
 						}
 					]
 				},
@@ -6344,10 +6410,10 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				},
@@ -6419,10 +6485,10 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				}
