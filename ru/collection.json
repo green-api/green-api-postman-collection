@@ -6956,7 +6956,7 @@
 												"{{webhookUrl}}"
 											]
 										},
-										"description": "Документация [Входящее текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TextMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+										"description": "Документация [Входящий звонок](https://green-api.com/docs/api/receiving/notifications-format/IncomingCall)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"incomingCallWebhook\": \"yes\""
 									},
 									"response": [
 										{
@@ -9170,7 +9170,7 @@
 												"{{webhookUrl}}"
 											]
 										},
-										"description": "Документация [Отправленное ](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [с телефона](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+										"description": "Документация [Исходящий звонок](https://green-api.com/docs/api/receiving/notifications-format/OutgoingCall)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingCallWebhook\": \"yes\""
 									},
 									"response": [
 										{
