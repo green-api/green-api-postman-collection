@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4666ac0d-ae36-4623-9303-ecea228e2f7a",
+		"_postman_id": "64aa24ca-a180-4bb3-ae22-af501bfa12ab",
 		"name": "Green API RU",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -3458,6 +3458,166 @@
 							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"BAE5143000000000\",\n        \"timestamp\": 1706761225,\n        \"typeMessage\": \"textMessage\",\n        \"chatId\": \"70000000012@c.us\",\n        \"textMessage\": \"Привет\",\n        \"statusMessage\": \"read\",\n        \"sendByApi\": true,\n        \"deletedMessageId\": \"\",\n        \"editedMessageId\": \"\",\n        \"isEdited\": false,\n        \"isDeleted\": false\n    },\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"3A1EBA0F23004BD415BB\",\n        \"timestamp\": 1706601621,\n        \"typeMessage\": \"reactionMessage\",\n        \"chatId\": \"70000000012@c.us\",\n        \"extendedTextMessageData\": {\n            \"text\": \"😄\"\n        },\n        \"quotedMessage\": {\n            \"stanzaId\": \"B4D7D8A1A7D887D5580F000000000000\",\n            \"participant\": \"70000000012@c.us\"\n        },\n        \"statusMessage\": \"read\",\n        \"sendByApi\": false,\n        \"deletedMessageId\": \"\",\n        \"editedMessageId\": \"\",\n        \"isEdited\": false,\n        \"isDeleted\": false\n    }\n]"
 						}
 					]
+				},
+				{
+					"name": "Получить журнал входящих звонков",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/lastIncomingCalls/{{apiTokenInstance}}?minutes=1440",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"lastIncomingCalls",
+								"{{apiTokenInstance}}"
+							],
+							"query": [
+								{
+									"key": "minutes",
+									"value": "1440",
+									"description": "Время в минутах"
+								}
+							]
+						},
+						"description": "Документация [LastIncomingMessages](https://green-api.com/docs/api/journals/LastIncomingMessages/)"
+					},
+					"response": [
+						{
+							"name": "lastIncomingCalls",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}?minutes=1440",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"lastIncomingMessages",
+										"{{apiTokenInstance}}"
+									],
+									"query": [
+										{
+											"key": "minutes",
+											"value": "1440",
+											"description": "Время в минутах"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:57:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1643"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"type\": \"incoming\",\n        \"idMessage\": \"F33E8701AGHY4DE04254CBBAE21EC046\",\n        \"timestamp\": 1754455764,\n        \"typeMessage\": \"incomingCall\",\n        \"chatId\": \"79001234567@c.us\",\n        \"duration\": 3,\n        \"isVideo\": false,\n        \"status\": \"pickUp\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Получить журнал исходящих звонков",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/lastOutgoingCalls/{{apiTokenInstance}}?minutes=1440",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"lastOutgoingCalls",
+								"{{apiTokenInstance}}"
+							],
+							"query": [
+								{
+									"key": "minutes",
+									"value": "1440",
+									"description": "Время в минутах"
+								}
+							]
+						},
+						"description": "Документация [LastIncomingMessages](https://green-api.com/docs/api/journals/LastIncomingMessages/)"
+					},
+					"response": [
+						{
+							"name": "lastOutgoingCalls",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/lastOutgoingCalls/{{apiTokenInstance}}?minutes=1440",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"lastOutgoingCalls",
+										"{{apiTokenInstance}}"
+									],
+									"query": [
+										{
+											"key": "minutes",
+											"value": "1440",
+											"description": "Время в минутах"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Apr 2020 19:57:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1643"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"type\": \"outgoing\",\n        \"idMessage\": \"F33E8701AGHY4DE04254CBBAE21EC046\",\n        \"timestamp\": 1754455764,\n        \"typeMessage\": \"outgoingCall\",\n        \"chatId\": \"79001234567@c.us\",\n        \"duration\": 3,\n        \"isVideo\": false,\n        \"status\": \"pickUp\"\n    }\n]"
+						}
+					]
 				}
 			],
 			"event": [
@@ -6771,6 +6931,65 @@
 							]
 						},
 						{
+							"name": "Звонки",
+							"item": [
+								{
+									"name": "Входящий звонок",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"incomingCall\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1105000000,\r\n        \"wid\": \"79001234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1754456655,\r\n    \"idMessage\": \"A2CB5E67A0221B4B432A0508C815A487\",\r\n    \"from\": \"79111234567@c.us\",\r\n    \"status\": \"pickUp\",\r\n    \"isVideo\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Входящее текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/TextMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+									},
+									"response": [
+										{
+											"name": "Входящий звонок в журнале",
+											"originalRequest": {
+												"method": "VIEW",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": " {\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"A2CB5E67A0221B4B432A0508C815A487\",\r\n    \"timestamp\": 1754456655,\r\n    \"typeMessage\": \"incomingCall\",\r\n    \"chatId\": \"79111234567@c.us\",\r\n    \"duration\": 3,\r\n    \"isVideo\": false,\r\n    \"status\": \"pickUp\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
 							"name": "Текстовое сообщение",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {}
@@ -8925,6 +9144,62 @@
 										"description": "Documentation [Incoming template buttons message](https://greenapi.com/en/docs/api/receiving/notifications-format/incoming-message/TemplateMessage/)\n\nTo receive this type of notification, you must enable the \"incomingWebhook\" setting: \"yes\" in your personal account or using the [SetSettings](https://greenapi.com/en/docs/api/account/SetSettings/) method"
 									},
 									"response": []
+								}
+							]
+						},
+						{
+							"name": "Звонки",
+							"item": [
+								{
+									"name": "Исходящий звонок",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"typeWebhook\": \"outgoingCall\",\r\n    \"instanceData\": {\r\n        \"idInstance\": 1100000000,\r\n        \"wid\": \"79001234567@c.us\",\r\n        \"typeInstance\": \"whatsapp\"\r\n    },\r\n    \"timestamp\": 1754455764,\r\n    \"idMessage\": \"F33E8701AGHY4DE04254CBBAE21EC046\",\r\n    \"from\": \"79001234567@c.us\",\r\n    \"isVideo\": false,\r\n    \"duration\": 3,\r\n    \"status\": \"pickUp\",\r\n    \"participants\": [\r\n        {\r\n            \"id\": \"79111234567@c.us\",\r\n            \"status\": \"pickUp\"\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Отправленное ](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [с телефона](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/) [текстовое сообщение](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Исходящий звонок в журнале",
+											"originalRequest": {
+												"method": "VIEW",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"F33E8701AGHY4DE04254CBBAE21EC046\",\r\n    \"timestamp\": 1754455763386,\r\n    \"typeMessage\": \"outgoingCall\",\r\n    \"chatId\": \"79111234567@c.us\",\r\n    \"duration\": 3,\r\n    \"isVideo\": false,\r\n    \"status\": \"pickUp\",\r\n    \"participants\": [\r\n        {\r\n            \"id\": \"79111234567@c.us\",\r\n            \"status\": \"pickUp\"\r\n        }\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
 								}
 							]
 						}
