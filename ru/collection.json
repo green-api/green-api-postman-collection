@@ -6655,6 +6655,200 @@
 			]
 		},
 		{
+			"name": "Контакты",
+			"item": [
+				{
+					"name": "Добавить контакт",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"79876543210@c.us\",\r\n    \"firstName\": \"Иван\",\r\n    \"lastName\": \"Царевич\",\r\n    \"saveInAddressbook\": true \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/addContact/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"addContact",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [AddContact](https://green-api.com/docs/api/contacts/AddContact/)"
+					},
+					"response": [
+						{
+							"name": "addContact",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"79876543210@c.us\",\r\n    \"firstName\": \"Иван\",\r\n    \"lastName\": \"Царевич\",\r\n    \"saveInAddressbook\": true \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/addContact/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"addContact",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"addContact\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Редактировать контакт",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"79876543210@c.us\",\r\n    \"firstName\": \"Иван\",\r\n    \"lastName\": \"Царевич\",\r\n    \"saveInAddressbook\": true \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/editContact/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"editContact",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [EditContact](https://green-api.com/docs/api/contacts/EditContact/)"
+					},
+					"response": [
+						{
+							"name": "editContact",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"79876543210@c.us\",\r\n    \"firstName\": \"Иван\",\r\n    \"lastName\": \"Царевич\",\r\n    \"saveInAddressbook\": true \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/editContact/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"editContact",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"editContact\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Удалить контакт",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"79876543210@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteContact/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"deleteContact",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [DeleteContact](https://green-api.com/docs/api/contacts/DeleteContact/)"
+					},
+					"response": [
+						{
+							"name": "deleteContact",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"chatId\": \"79876543210@c.us\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteContact/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"deleteContact",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"deleteContact\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Уведомления Green API",
 			"item": [
 				{
