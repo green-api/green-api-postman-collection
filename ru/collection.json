@@ -123,7 +123,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"wid\": \"79001234567@c.us\",\n\t\"countryInstance\": \"\", // Не используется\n\t\"typeAccount\": \"\", // Не используется\n\t\"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n\t\"webhookUrlToken\": \"\",\n\t\"delaySendMessagesMilliseconds\": 3000,\n\t\"markIncomingMessagesReaded\": \"no\",\n\t\"markIncomingMessagesReadedOnReply\": \"yes\",\n\t\"sharedSession\": \"no\", // Не используется\n\t\"proxyInstance\": \"system proxy\", // Не используется\n    \"outgoingWebhook\": \"yes\",\n\t\"outgoingMessageWebhook\": \"yes\",\n\t\"outgoingAPIMessageWebhook\": \"yes\",\n\t\"incomingWebhook\": \"yes\",\n\t\"deviceWebhook\": \"no\", // Временно не работает\n\t\"statusInstanceWebhook\": \"no\", // Не используется\n\t\"stateWebhook\": \"yes\",\n\t\"enableMessagesHistory\": \"no\", // Не используется\n\t\"keepOnlineStatus\": \"yes\",\n\t\"pollMessageWebhook\": \"yes\",\n\t\"incomingBlockWebhook\": \"no\", // Временно не работает\n\t\"incomingCallWebhook\": \"yes\",\n    \"editedMessageWebhook\": \"no\",\n\t\"deletedMessageWebhook\": \"no\"\n}"
+							"body": "{\n\t\"wid\": \"79001234567@c.us\",\n\t\"countryInstance\": \"\", // Не используется\n\t\"typeAccount\": \"\", // Не используется\n\t\"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\n\t\"webhookUrlToken\": \"\",\n\t\"delaySendMessagesMilliseconds\": 3000,\n\t\"markIncomingMessagesReaded\": \"no\",\n\t\"markIncomingMessagesReadedOnReply\": \"yes\",\n\t\"sharedSession\": \"no\", // Не используется\n\t\"proxyInstance\": \"system proxy\", // Не используется\n    \"outgoingWebhook\": \"yes\",\n\t\"outgoingMessageWebhook\": \"yes\",\n\t\"outgoingAPIMessageWebhook\": \"yes\",\n\t\"incomingWebhook\": \"yes\",\n\t\"deviceWebhook\": \"no\", // Временно не работает\n\t\"statusInstanceWebhook\": \"no\", // Не используется\n\t\"stateWebhook\": \"yes\",\n\t\"enableMessagesHistory\": \"no\", // Не используется\n\t\"keepOnlineStatus\": \"yes\",\n\t\"pollMessageWebhook\": \"yes\",\n\t\"incomingBlockWebhook\": \"no\", // Временно не работает\n\t\"incomingCallWebhook\": \"yes\",\n    \"editedMessageWebhook\": \"no\",\n\t\"deletedMessageWebhook\": \"no\",\n\t\"catalogWebhook\": \"no\"\n}"
 						}
 					]
 				},
@@ -134,7 +134,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 3000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
+							"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 3000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingCallWebhook\": \"yes\",\r\n    \"catalogWebhook\": \"yes\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -162,7 +162,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 5000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\", // Уведомление временно не работает\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Уведомление временно не работает\r\n    \"incomingCallWebhook\": \"yes\"\r\n}",
+									"raw": "{\r\n    \"webhookUrl\": \"https://mysite.com/webhook/green-api/\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 5000,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"yes\",\r\n    \"outgoingMessageWebhook\": \"yes\",\r\n    \"outgoingAPIMessageWebhook\": \"yes\",\r\n    \"incomingWebhook\": \"yes\",\r\n    \"deviceWebhook\": \"no\", // Уведомление временно не работает\r\n    \"stateWebhook\": \"yes\",\r\n    \"keepOnlineStatus\": \"no\",\r\n    \"pollMessageWebhook\": \"yes\",\r\n    \"incomingBlockWebhook\": \"yes\", // Уведомление временно не работает\r\n    \"incomingCallWebhook\": \"yes\",\r\n    \"catalogWebhook\": \"yes\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3296,6 +3296,158 @@
 							],
 							"cookie": [],
 							"body": "{\n\t\"type\": \"outgoing\",\n\t\"idMessage\": \"BAE5D141BD2E2035\",\n\t\"timestamp\": 1748851707,\n\t\"typeMessage\": \"interactiveButtons\",\n\t\"chatId\": \"7123456789@c.us\",\n\t\"interactiveButtons\": {\n\t\t\"titleText\": \"Header text\",\n\t\t\"contentText\": \"I use Green-API to send this message to you!\",\n\t\t\"footerText\": \"Footer text\",\n\t\t\"buttons\": [\n\t\t\t{\n\t\t\t\t\"type\": \"copy\",\n\t\t\t\t\"buttonId\": \"1\",\n\t\t\t\t\"buttonText\": \"Copy me\",\n\t\t\t\t\"copyCode\": \"Text copied\",\n\t\t\t\t\"phoneNumber\": \"\",\n\t\t\t\t\"url\": \"\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": \"call\",\n\t\t\t\t\"buttonId\": \"2\",\n\t\t\t\t\"buttonText\": \"Call me\",\n\t\t\t\t\"copyCode\": \"\",\n\t\t\t\t\"phoneNumber\": \"79329843267\",\n\t\t\t\t\"url\": \"\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": \"url\",\n\t\t\t\t\"buttonId\": \"3\",\n\t\t\t\t\"buttonText\": \"GREEN-API\",\n\t\t\t\t\"copyCode\": \"\",\n\t\t\t\t\"phoneNumber\": \"\",\n\t\t\t\t\"url\": \"https://green-api.com/\"\n\t\t\t}\n\t\t]\n\t},\n\t\"statusMessage\": \"read\",\n\t\"sendByApi\": true,\n\t\"deletedMessageId\": \"\",\n\t\"editedMessageId\": \"\",\n\t\"isEdited\": false,\n\t\"isDeleted\": false\n}"
+						},
+						{
+							"name": "incomingProductMessage",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"BAE5143000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"type\": \"incoming\",\n\t\"idMessage\": \"BAE5638E264A66ED\",\n\t\"timestamp\": 1748851976,\n\t\"typeMessage\": \"productMessage\",\n\t\"chatId\": \"7987654321@c.us\",\n\t\"productMessage\": {\n\t\t\"productId\": \"6453048211460719\",\n\t\t\"title\": \"My product\",\n\t\t\"description\": \"Product description\",\n\t\t\"currencyCode\": \"USD\",\n\t\t\"price\": \"10.00\",\n\t\t\"url\": \"https://example.com/product\",\n\t\t\"productImageCount\": 1,\n\t\t\"fileMessageData\": {\n\t\t\t\"downloadUrl\": \"https://api.green-api.com/waInstance1234/downloadFile/EA1BD1AE042DC4F3609867126309D67C.jpg\",\n\t\t\t\"jpegThumbnail\": \"/9j/4AAQSkZJ/aAAgBAwEBPwCVYw//xAApEAACAx/2kOVh/VKAoAH/leFhX//+AAMA/9k=\",\n\t\t\t\"isAnimated\": false,\n\t\t\t\"mimeType\": \"image/jpeg\",\n\t\t\t\"caption\": \"\",\n\t\t\t\"forwardingScore\": 0,\n\t\t\t\"isForwarded\": false\n\t\t}\n\t},\n\t\"senderId\": \"7987654321@c.us\",\n\t\"senderName\": \"Buyer\",\n\t\"senderContactName\": \"\",\n\t\"deletedMessageId\": \"\",\n\t\"editedMessageId\": \"\",\n\t\"isEdited\": false,\n\t\"isDeleted\": false\n}"
+						},
+						{
+							"name": "outgoingProductMessage",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"BAE5143000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"type\": \"outgoing\",\n\t\"idMessage\": \"BAE5D141BD2E2035\",\n\t\"timestamp\": 1748851707,\n\t\"typeMessage\": \"productMessage\",\n\t\"chatId\": \"7987654321@c.us\",\n\t\"productMessage\": {\n\t\t\"productId\": \"6453048211460719\",\n\t\t\"title\": \"My product\",\n\t\t\"description\": \"Product description\",\n\t\t\"currencyCode\": \"USD\",\n\t\t\"price\": \"10.00\",\n\t\t\"url\": \"https://example.com/product\",\n\t\t\"productImageCount\": 1,\n\t\t\"fileMessageData\": {\n\t\t\t\"downloadUrl\": \"https://api.green-api.com/waInstance1234/downloadFile/3EB0BDDC94BFDFB3D4FA.jpg\",\n\t\t\t\"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/FFFCF//Z\",\n\t\t\t\"isAnimated\": false,\n\t\t\t\"mimeType\": \"image/jpeg\",\n\t\t\t\"caption\": \"\",\n\t\t\t\"forwardingScore\": 0,\n\t\t\t\"isForwarded\": false\n\t\t}\n\t},\n\t\"statusMessage\": \"read\",\n\t\"sendByApi\": true,\n\t\"deletedMessageId\": \"\",\n\t\"editedMessageId\": \"\",\n\t\"isEdited\": false,\n\t\"isDeleted\": false\n}"
+						},
+						{
+							"name": "incomingOrderMessage",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"BAE5143000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"type\": \"incoming\",\n\t\"idMessage\": \"BAE5638E264A66EE\",\n\t\"timestamp\": 1748851980,\n\t\"typeMessage\": \"orderMessage\",\n\t\"chatId\": \"7987654321@c.us\",\n\t\"orderMessage\": {\n\t\t\"orderId\": \"1292422363001382\",\n\t\t\"token\": \"AeBD7tvosdPMN4rv276nLCiEHI+ce79oubkPDL7B8YXLOQ==\",\n\t\t\"totalPrice\": \"30000\",\n\t\t\"totalCurrencyCode\": \"USD\",\n\t\t\"orderTitle\": \"2 items\",\n\t\t\"sellerJid\": \"79636191159@c.us\",\n\t\t\"itemsCount\": 2,\n\t\t\"jpegThumbnail\": \"/9j/4AAQSkZJ/aAAgBAwEBPwCVYw//xAApEAACAx/2kOVh/VKAoAH/leFhX//+AAMA/9k=\"\n\t},\n\t\"senderId\": \"7987654321@c.us\",\n\t\"senderName\": \"Buyer\",\n\t\"senderContactName\": \"\",\n\t\"deletedMessageId\": \"\",\n\t\"editedMessageId\": \"\",\n\t\"isEdited\": false,\n\t\"isDeleted\": false\n}"
+						},
+						{
+							"name": "outgoingOrderMessage",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"79005952023-1607343957@g.us\",\r\n\t\"idMessage\": \"BAE5143000000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"getMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"type\": \"outgoing\",\n\t\"idMessage\": \"BAE5D141BD2E2036\",\n\t\"timestamp\": 1748851720,\n\t\"typeMessage\": \"orderMessage\",\n\t\"chatId\": \"7987654321@c.us\",\n\t\"orderMessage\": {\n\t\t\"orderId\": \"1292422363001383\",\n\t\t\"token\": \"AeBD7tvosdPMN4rv276nLCiEHI+ce79oubkPDL7B8YXLOQ==\",\n\t\t\"totalPrice\": \"30000\",\n\t\t\"totalCurrencyCode\": \"USD\",\n\t\t\"orderTitle\": \"2 items\",\n\t\t\"sellerJid\": \"79636191159@c.us\",\n\t\t\"itemsCount\": 2,\n\t\t\"jpegThumbnail\": \"/9j/4AAQSkZJRgABAQAAAQABAAD/FFFCF//Z\"\n\t},\n\t\"statusMessage\": \"read\",\n\t\"sendByApi\": true,\n\t\"deletedMessageId\": \"\",\n\t\"editedMessageId\": \"\",\n\t\"isEdited\": false,\n\t\"isDeleted\": false\n}"
 						}
 					]
 				},
@@ -9681,6 +9833,477 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Каталог",
+			"item": [
+				{
+					"name": "Создать товар",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"My product\",\r\n    \"countryCode\": \"RU\",\r\n    \"currency\": \"USD\",\r\n    \"price\": \"10\",\r\n    \"description\": \"Product description\",\r\n    \"retailerId\": \"123\",\r\n    \"url\": \"https://example.com/product\",\r\n    \"imageUrl\": \"https://example.com/image.jpg\",\r\n    \"isHidden\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/createProduct/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"createProduct",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [createProduct](https://greenapi.com/docs/api/catalog/CreateProduct/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить товары",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productIds\": [\"6453048211460719\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteProduct/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"deleteProduct",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [deleteProduct](https://greenapi.com/docs/api/catalog/DeleteProduct/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Редактировать товар",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"6453048211460719\",\r\n    \"name\": \"Updated product\",\r\n    \"countryCode\": \"RU\",\r\n    \"currency\": \"USD\",\r\n    \"price\": \"15\",\r\n    \"description\": \"Updated description\",\r\n    \"retailerId\": \"123\",\r\n    \"url\": \"https://example.com/product\",\r\n    \"imageUrl\": \"https://example.com/image.jpg\",\r\n    \"isHidden\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/editProduct/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"editProduct",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [editProduct](https://greenapi.com/docs/api/catalog/EditProduct/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Получить товары",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71111111111@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getProducts/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getProducts",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [getProducts](https://greenapi.com/docs/api/catalog/GetProducts/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Получить товар",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71111111111@c.us\",\r\n    \"productId\": \"6453048211460719\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getProduct/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getProduct",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [getProduct](https://greenapi.com/docs/api/catalog/GetProduct/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Отправить товар",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71111111111@c.us\",\r\n    \"productId\": \"6453048211460719\",\r\n    \"quotedMessageId\": \"\",\r\n    \"archive\": false,\r\n    \"typingTime\": 5000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendProduct/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendProduct",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [sendProduct](https://greenapi.com/docs/api/catalog/SendProduct/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Отправить заказ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71111111111@c.us\",\r\n    \"productIds\": [\"6453048211460719\", \"6453048211460720\"],\r\n    \"quotedMessageId\": \"\",\r\n    \"archive\": false,\r\n    \"typingTime\": 5000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendOrder/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendOrder",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [sendOrder](https://greenapi.com/docs/api/catalog/SendOrder/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Получить детали заказа",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"1292422363001382\",\r\n    \"token\": \"AeBD7tvosdPMN4rv276nLCiEHI+ce79oubkPDL7B8YXLOQ==\",\r\n    \"sellerJid\": \"79636191159@c.us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getOrderDetails/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getOrderDetails",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [getOrderDetails](https://greenapi.com/docs/api/catalog/GetOrderDetails/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Получить коллекции",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71111111111@c.us\",\r\n    \"collectionLimit\": 10,\r\n    \"afterCollectionId\": \"\",\r\n    \"productLimit\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getCollections/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getCollections",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [getCollections](https://greenapi.com/docs/api/catalog/GetCollections/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Получить коллекцию",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chatId\": \"71111111111@c.us\",\r\n    \"collectionId\": \"1234567890\",\r\n    \"productLimit\": 10,\r\n    \"afterProduct\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/getCollection/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"getCollection",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [getCollection](https://greenapi.com/docs/api/catalog/GetCollection/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Создать коллекцию",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"My collection\",\r\n    \"productIds\": [\"6453048211460719\", \"6453048211460720\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/createCollection/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"createCollection",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [createCollection](https://greenapi.com/docs/api/catalog/CreateCollection/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить коллекцию",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"collectionId\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteCollection/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"deleteCollection",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [deleteCollection](https://greenapi.com/docs/api/catalog/DeleteCollection/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Редактировать коллекцию",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"collectionId\": \"1234567890\",\r\n    \"name\": \"Renamed collection\",\r\n    \"productIdsToAdd\": [\"6453048211460721\"],\r\n    \"productIdsToRemove\": [\"6453048211460719\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/editCollection/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"editCollection",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [editCollection](https://greenapi.com/docs/api/catalog/EditCollection/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Изменить порядок коллекций",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"collections\": [\r\n        {\r\n            \"collectionId\": \"1234567890\",\r\n            \"fromIndex\": 0,\r\n            \"toIndex\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/moveCollections/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"moveCollections",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Documentation [moveCollections](https://greenapi.com/docs/api/catalog/MoveCollections/)"
+					},
+					"response": []
 				}
 			]
 		}
